@@ -78,7 +78,7 @@ language = 'es'
 #
 # Else, today_fmt is used as the format for a strftime call.
 #
-# today_fmt = '%B %d, %Y'
+today_fmt = '%B de %Y'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -136,11 +136,11 @@ html_theme = 'sphinx_rtd_theme'
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
 #
-# html_title = u'Desarrollo web en entorno servidor v1.0'
+html_title = u'Desarrollo web en entorno servidor'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #
-# html_short_title = None
+html_short_title = u'DWESE'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -168,7 +168,7 @@ html_static_path = ['_static']
 # bottom, using the given strftime format.
 # The empty string is equivalent to '%b %d, %Y'.
 #
-# html_last_updated_fmt = None
+html_last_updated_fmt = '%d-%m-%Y'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
@@ -222,7 +222,7 @@ html_static_path = ['_static']
 #   'da', 'de', 'en', 'es', 'fi', 'fr', 'hu', 'it', 'ja'
 #   'nl', 'no', 'pt', 'ro', 'ru', 'sv', 'tr', 'zh'
 #
-# html_search_language = 'en'
+html_search_language = 'es'
 
 # A dictionary with options for the search language support, empty by default.
 # 'ja' uses this config value.
@@ -252,7 +252,7 @@ html_context = {
 latex_elements = {
      # The paper size ('letterpaper' or 'a4paper').
      #
-     # 'papersize': 'letterpaper',
+    'papersize': 'a4paper',
 
      # The font size ('10pt', '11pt' or '12pt').
      #
@@ -271,7 +271,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Desarrollowebenentornoservidor.tex', u'Desarrollo web en entorno servidor Documentation',
+    (master_doc, 'Desarrollowebenentornoservidor.tex', u'Desarrollo web en entorno servidor',
      u'Ricardo Pérez López', 'manual'),
 ]
 
@@ -313,7 +313,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'desarrollowebenentornoservidor', u'Desarrollo web en entorno servidor Documentation',
+    (master_doc, 'desarrollowebenentornoservidor', u'Desarrollo web en entorno servidor',
      [author], 1)
 ]
 
@@ -328,7 +328,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Desarrollowebenentornoservidor', u'Desarrollo web en entorno servidor Documentation',
+    (master_doc, 'Desarrollowebenentornoservidor', u'Desarrollo web en entorno servidor',
      author, 'Desarrollowebenentornoservidor', 'One line description of project.',
      'Miscellaneous'),
 ]
