@@ -256,11 +256,13 @@ latex_elements = {
 
      # The font size ('10pt', '11pt' or '12pt').
      #
-     # 'pointsize': '10pt',
+    'pointsize': '11pt',
 
      # Additional stuff for the LaTeX preamble.
      #
-     # 'preamble': '',
+    'fontpkg': '\setmonofont[Path=/home/ricardo/fonts/, BoldFont=Inconsolata-Bold.ttf, AutoFakeSlant, BoldItalicFeatures={FakeSlant}, Scale=MatchLowercase]{Inconsolata-Regular.ttf}',
+
+    'sphinxsetup': 'verbatimwithframe=false',
 
      # Latex figure (float) alignment
      #
@@ -271,7 +273,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Desarrollowebenentornoservidor.tex', u'Desarrollo web en entorno servidor',
+    (master_doc, 'dwese.tex', u'Desarrollo web en entorno servidor',
      u'Ricardo Pérez López', 'manual'),
 ]
 
@@ -284,6 +286,8 @@ latex_documents = [
 # not chapters.
 #
 # latex_use_parts = False
+
+latex_toplevel_sectioning = 'part'
 
 # If true, show page references after internal links.
 #

@@ -1,0 +1,28 @@
+\select@language {spanish}
+\contentsline {part}{I\hspace {1em}Overview}{3}{part.1}
+\contentsline {chapter}{\numberline {1}Requirements}{5}{chapter.1}
+\contentsline {chapter}{\numberline {2}Installation}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Bleeding edge}{7}{section.2.1}
+\contentsline {chapter}{\numberline {3}License}{9}{chapter.3}
+\contentsline {chapter}{\numberline {4}Contributing}{11}{chapter.4}
+\contentsline {section}{\numberline {4.1}Guidelines}{11}{section.4.1}
+\contentsline {section}{\numberline {4.2}Running the tests}{11}{section.4.2}
+\contentsline {chapter}{\numberline {5}Reporting a security vulnerability}{13}{chapter.5}
+\contentsline {part}{II\hspace {1em}Quickstart}{15}{part.2}
+\contentsline {chapter}{\numberline {6}Making a Request}{19}{chapter.6}
+\contentsline {section}{\numberline {6.1}Creating a Client}{19}{section.6.1}
+\contentsline {section}{\numberline {6.2}Sending Requests}{20}{section.6.2}
+\contentsline {section}{\numberline {6.3}Async Requests}{20}{section.6.3}
+\contentsline {section}{\numberline {6.4}Concurrent requests}{21}{section.6.4}
+\contentsline {chapter}{\numberline {7}Using Responses}{23}{chapter.7}
+\contentsline {chapter}{\numberline {8}Query String Parameters}{25}{chapter.8}
+\contentsline {chapter}{\numberline {9}Uploading Data}{27}{chapter.9}
+\contentsline {section}{\numberline {9.1}POST/Form Requests}{27}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Sending form fields}{28}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}Sending form files}{28}{subsection.9.1.2}
+\contentsline {chapter}{\numberline {10}Cookies}{29}{chapter.10}
+\contentsline {chapter}{\numberline {11}Redirects}{31}{chapter.11}
+\contentsline {chapter}{\numberline {12}Exceptions}{33}{chapter.12}
+\contentsline {chapter}{\numberline {13}Environment Variables}{35}{chapter.13}
+\contentsline {section}{\numberline {13.1}Relevant ini Settings}{35}{section.13.1}
+\contentsline {part}{III\hspace {1em}Indices and tables}{37}{part.3}
