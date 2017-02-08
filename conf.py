@@ -260,9 +260,20 @@ latex_elements = {
 
      # Additional stuff for the LaTeX preamble.
      #
-    'fontpkg': '\setmonofont[Path=/home/ricardo/fonts/, BoldFont=Inconsolata-Bold.ttf, AutoFakeSlant, BoldItalicFeatures={FakeSlant}, Scale=MatchLowercase]{Inconsolata-Regular.ttf}',
+    'fontpkg': """\usepackage{libertine}
+                  \setmonofont[
+                     Path=/home/ricardo/fonts/,
+                     BoldFont=Inconsolata-Bold.ttf,
+                     AutoFakeSlant,
+                     BoldItalicFeatures={FakeSlant},
+                     Scale=MatchLowercase
+                  ]{Inconsolata-Regular.ttf}""",
 
     'sphinxsetup': 'verbatimwithframe=false',
+
+    'preamble': r"""\usepackage[dotinlabels]{titletoc}
+                    \usepackage{titlesec}
+                    \titlelabel{\thetitle.\quad}""",
 
      # Latex figure (float) alignment
      #

@@ -13,7 +13,14 @@
 \usepackage{amsmath,amssymb,amstext}
 \usepackage{polyglossia}
 \setmainlanguage{spanish}
-\setmonofont[Path=/home/ricardo/fonts/, BoldFont=Inconsolata-Bold.ttf, AutoFakeSlant, BoldItalicFeatures={FakeSlant}, Scale=MatchLowercase]{Inconsolata-Regular.ttf}
+\usepackage{libertine}
+                  \setmonofont[
+                     Path=/home/ricardo/fonts/,
+                     BoldFont=Inconsolata-Bold.ttf,
+                     AutoFakeSlant,
+                     BoldItalicFeatures={FakeSlant},
+                     Scale=MatchLowercase
+                  ]{Inconsolata-Regular.ttf}
 \usepackage[Sonny]{fncychap}
 \usepackage{longtable}
 \usepackage{sphinx}
@@ -36,7 +43,9 @@
 
 \setcounter{tocdepth}{0}
 
-
+\usepackage[dotinlabels]{titletoc}
+                    \usepackage{titlesec}
+                    \titlelabel{\thetitle.\quad}
 
 \title{Desarrollo web en entorno servidor}
 \date{febrero de 2017}
