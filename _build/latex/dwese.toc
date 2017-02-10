@@ -1,29 +1,81 @@
 \select@language {spanish}
-\contentsline {part}{I\hspace {1em}Overview}{3}{part.1}
-\contentsline {chapter}{\numberline {1}Requirements}{5}{chapter.1}
-\contentsline {chapter}{\numberline {2}Installation}{7}{chapter.2}
-\contentsline {section}{\numberline {2.1}Bleeding edge}{7}{section.2.1}
-\contentsline {chapter}{\numberline {3}License}{9}{chapter.3}
-\contentsline {chapter}{\numberline {4}Contributing}{11}{chapter.4}
-\contentsline {section}{\numberline {4.1}Guidelines}{11}{section.4.1}
-\contentsline {section}{\numberline {4.2}Running the tests}{11}{section.4.2}
-\contentsline {chapter}{\numberline {5}Reporting a security vulnerability}{13}{chapter.5}
-\contentsline {part}{II\hspace {1em}Quickstart}{15}{part.2}
-\contentsline {chapter}{\numberline {6}Making a Request}{19}{chapter.6}
-\contentsline {section}{\numberline {6.1}Creating a Client}{19}{section.6.1}
-\contentsline {section}{\numberline {6.2}Sending Requests}{20}{section.6.2}
-\contentsline {section}{\numberline {6.3}Async Requests}{20}{section.6.3}
-\contentsline {section}{\numberline {6.4}Concurrent requests}{21}{section.6.4}
-\contentsline {chapter}{\numberline {7}Using Responses}{23}{chapter.7}
-\contentsline {chapter}{\numberline {8}Query String Parameters}{25}{chapter.8}
-\contentsline {chapter}{\numberline {9}Uploading Data}{27}{chapter.9}
-\contentsline {section}{\numberline {9.1}POST/Form Requests}{27}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}Sending form fields}{28}{subsection.9.1.1}
-\contentsline {subsection}{\numberline {9.1.2}Sending form files}{28}{subsection.9.1.2}
-\contentsline {chapter}{\numberline {10}Cookies}{29}{chapter.10}
-\contentsline {chapter}{\numberline {11}Redirects}{31}{chapter.11}
-\contentsline {chapter}{\numberline {12}Exceptions}{33}{chapter.12}
-\contentsline {chapter}{\numberline {13}Environment Variables}{35}{chapter.13}
-\contentsline {section}{\numberline {13.1}Relevant ini Settings}{35}{section.13.1}
-\contentsline {part}{III\hspace {1em}Indices and tables}{37}{part.3}
+\contentsline {part}{I\hspace {1em}Introducción}{1}{part.1}
+\contentsline {chapter}{\numberline {1}Introducción al desarrollo web}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Sistemas de control de versiones}{3}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Git básico}{3}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Git avanzado}{3}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Ramas remotas}{3}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}Repositorios de código (Github.com, GitLab.com, Bitbucket.org…)}{3}{subsection.1.1.4}
+\contentsline {part}{II\hspace {1em}PHP}{5}{part.2}
+\contentsline {chapter}{\numberline {2}Conceptos básicos de PHP}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}PHP como lenguaje embebido}{7}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Introducción a PHP}{7}{subsection.2.1.1}
+\contentsline {subsubsection}{Instalación de PHP}{7}{subsubsection*.3}
+\contentsline {subsubsection}{Página web de PHP}{7}{subsubsection*.4}
+\contentsline {subsubsection}{Documentación y búsqueda de información}{7}{subsubsection*.5}
+\contentsline {subsection}{\numberline {2.1.2}Funcionamiento del intérprete}{7}{subsection.2.1.2}
+\contentsline {subsubsection}{Modo dual de operación}{7}{subsubsection*.6}
+\contentsline {subsubsection}{Etiquetas \sphinxstyleliteralintitle {\textless {}?php} y \sphinxstyleliteralintitle {?\textgreater {}}}{7}{subsubsection*.7}
+\contentsline {subsection}{\numberline {2.1.3}Sintaxis básica}{7}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}SAPIs}{7}{subsection.2.1.4}
+\contentsline {subsubsection}{CLI: Uso en línea de comandos}{7}{subsubsection*.8}
+\contentsline {subsubsection}{Apache}{7}{subsubsection*.9}
+\contentsline {paragraph}{Integración de PHP con Apache}{7}{paragraph*.10}
+\contentsline {paragraph}{Configuración básica con \sphinxstyleliteralintitle {php.ini}}{7}{paragraph*.11}
+\contentsline {paragraph}{Etiqueta \sphinxstyleliteralintitle {\textless {}?=}}{7}{paragraph*.12}
+\contentsline {subsubsection}{CGI: PHP-FPM (FastCGI Process Manager)}{8}{subsubsection*.13}
+\contentsline {subsubsection}{Módulos de extensión}{8}{subsubsection*.14}
+\contentsline {section}{\numberline {2.2}Tipos de datos básicos}{8}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Enteros (\sphinxstyleliteralintitle {int}, sinónimo de \sphinxstyleliteralintitle {integer})}{8}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Números en coma flotante (\sphinxstyleliteralintitle {float}, sinónimo de \sphinxstyleliteralintitle {double})}{8}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Cadenas (\sphinxstyleliteralintitle {string})}{8}{subsection.2.2.3}
+\contentsline {subsubsection}{Funciones de manejo de cadenas}{8}{subsubsection*.15}
+\contentsline {subsubsection}{Extensión mbstring}{8}{subsubsection*.16}
+\contentsline {subsection}{\numberline {2.2.4}Lógicos (\sphinxstyleliteralintitle {bool}, sinónimo de \sphinxstyleliteralintitle {boolean})}{8}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}\sphinxstyleliteralintitle {NULL}}{8}{subsection.2.2.5}
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {is\_null()} vs. \sphinxstyleliteralintitle {=== null}}{8}{subsubsection*.17}
+\contentsline {subsection}{\numberline {2.2.6}Comparaciones}{8}{subsection.2.2.6}
+\contentsline {subsubsection}{Operadores de comparación}{8}{subsubsection*.18}
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {==} vs. \sphinxstyleliteralintitle {===}}{8}{subsubsection*.19}
+\contentsline {subsubsection}{Ternario (\sphinxstyleliteralintitle {?:})}{8}{subsubsection*.20}
+\contentsline {subsubsection}{Fusión de null (\sphinxstyleliteralintitle {??})}{8}{subsubsection*.21}
+\contentsline {subsubsection}{Reglas de comparación de tipos}{8}{subsubsection*.22}
+\contentsline {subsection}{\numberline {2.2.7}Comprobaciones}{8}{subsection.2.2.7}
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {gettype()}}{8}{subsubsection*.23}
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {is\_*()} (poco útiles en formularios, ya que sólo se reciben strings)}{8}{subsubsection*.24}
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {is\_numeric()}}{8}{subsubsection*.25}
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {ctype\_*()}}{8}{subsubsection*.26}
+\contentsline {subsection}{\numberline {2.2.8}Conversiones}{8}{subsection.2.2.8}
+\contentsline {subsubsection}{Coerción, moldeado, forzado o casting}{8}{subsubsection*.27}
+\contentsline {subsubsection}{intval(), floatval(), strval(), boolval()}{8}{subsubsection*.28}
+\contentsline {subsubsection}{number\_format(), money\_format(), setlocale()}{9}{subsubsection*.29}
+\contentsline {section}{\numberline {2.3}Variables}{9}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Conceptos básicos}{9}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Asignación por valor y por referencia}{9}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Ámbito: globales, superglobales}{9}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Variables predefinidas}{9}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}Constantes}{9}{section.2.4}
+\contentsline {section}{\numberline {2.5}Estructuras de control}{9}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}\sphinxstyleliteralintitle {require}, \sphinxstyleliteralintitle {require\_once}, \sphinxstyleliteralintitle {include}, \sphinxstyleliteralintitle {include\_once}}{9}{subsection.2.5.1}
+\contentsline {section}{\numberline {2.6}Funciones predefinidas}{9}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}\sphinxstyleliteralintitle {isset()}}{9}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}\sphinxstyleliteralintitle {empty()}}{9}{subsection.2.6.2}
+\contentsline {subsubsection}{Para evitar el problema de \sphinxstyleliteralintitle {empty("0") === true}:}{9}{subsubsection*.30}
+\contentsline {section}{\numberline {2.7}Arrays}{10}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Funciones de manejo de arrays}{10}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}\sphinxstyleliteralintitle {foreach}}{10}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}\sphinxstyleliteralintitle {isset()} vs. \sphinxstyleliteralintitle {array\_key\_exists()}}{10}{subsection.2.7.3}
+\contentsline {section}{\numberline {2.8}Funciones}{10}{section.2.8}
+\contentsline {subsection}{\numberline {2.8.1}Variables locales}{10}{subsection.2.8.1}
+\contentsline {subsection}{\numberline {2.8.2}Uso de global}{10}{subsection.2.8.2}
+\contentsline {subsection}{\numberline {2.8.3}Argumentos por defecto}{10}{subsection.2.8.3}
+\contentsline {subsection}{\numberline {2.8.4}Paso de argumentos por valor y por referencia}{10}{subsection.2.8.4}
+\contentsline {subsection}{\numberline {2.8.5}Declaraciones de tipos}{10}{subsection.2.8.5}
+\contentsline {subsubsection}{Declaraciones de tipo de argumento}{10}{subsubsection*.31}
+\contentsline {subsubsection}{Declaraciones de tipo de devolución}{10}{subsubsection*.32}
+\contentsline {subsubsection}{Tipificación estricta: \sphinxstyleliteralintitle {declare(strict\_types=1);}}{10}{subsubsection*.33}
+\contentsline {section}{\numberline {2.9}Manejo de datos de entrada: \sphinxstyleliteralintitle {\$\_GET} y \sphinxstyleliteralintitle {\$\_POST}}{10}{section.2.9}
+\contentsline {part}{III\hspace {1em}Yii2}{11}{part.3}
+\contentsline {chapter}{\numberline {3}Introducción a Yii2}{13}{chapter.3}
+\contentsline {part}{IV\hspace {1em}Índices y tablas}{15}{part.4}
 \contentsfinish 

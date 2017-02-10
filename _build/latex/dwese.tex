@@ -62,804 +62,294 @@
 \phantomsection\label{\detokenize{index::doc}}
 
 
-Contents:
 
+\part{Introducción}
+\label{\detokenize{introduccion:introduccion}}\label{\detokenize{introduccion:desarrollo-web-en-entorno-servidor}}\label{\detokenize{introduccion::doc}}
 
-\part{Overview}
-\label{\detokenize{overview:overview}}\label{\detokenize{overview::doc}}\label{\detokenize{overview:welcome-to-desarrollo-web-en-entorno-servidor-s-documentation}}
+\chapter{Introducción al desarrollo web}
+\label{\detokenize{introduccion:introduccion-al-desarrollo-web}}
 
-\chapter{Requirements}
-\label{\detokenize{overview:requirements}}\begin{enumerate}
+\section{Sistemas de control de versiones}
+\label{\detokenize{introduccion:sistemas-de-control-de-versiones}}
+
+\subsection{Git básico}
+\label{\detokenize{introduccion:git-basico}}\begin{enumerate}
 \item {} 
-PHP 5.5.0
+config, init, add, commit
 
 \item {} 
-To use the PHP stream handler, \sphinxcode{allow\_url\_fopen} must be enabled in your
-system's php.ini.
+status, log, diff
 
 \item {} 
-To use the cURL handler, you must have a recent version of cURL \textgreater{}= 7.19.4
-compiled with OpenSSL and zlib.
+Alias lg
+
+\item {} 
+checkout, reset, revert, --amend
+
+\item {} 
+show
+
+\item {} 
+rm, mv
+
+\item {} 
+Atom y Git
 
 \end{enumerate}
 
-\begin{sphinxadmonition}{note}{Nota:}
-Guzzle no longer requires cURL in order to send HTTP requests. Guzzle will
-use the PHP stream wrapper to send HTTP requests if cURL is not installed.
-Alternatively, you can provide your own HTTP handler used to send requests.
-\end{sphinxadmonition}
+
+\subsection{Git avanzado}
+\label{\detokenize{introduccion:git-avanzado}}\begin{enumerate}
+\item {} 
+Ramas: branch
+
+\item {} 
+merge, rebase
+
+\item {} 
+Resolución de conflictos
+
+\end{enumerate}
 
 
-\chapter{Installation}
-\label{\detokenize{overview:installation}}\label{\detokenize{overview:id1}}
-The recommended way to install Guzzle is with
-\href{http://getcomposer.org}{Composer}. Composer is a dependency management tool
-for PHP that allows you to declare the dependencies your project needs and
-installs them into your project.
+\subsection{Ramas remotas}
+\label{\detokenize{introduccion:ramas-remotas}}\begin{enumerate}
+\item {} 
+clone, fetch, push, pull
 
+\item {} 
+Ramas de seguimiento (tracking branch)
+
+\end{enumerate}
+
+
+\subsection{Repositorios de código (Github.com, GitLab.com, Bitbucket.org…)}
+\label{\detokenize{introduccion:repositorios-de-codigo-github-com-gitlab-com-bitbucket-org}}
+
+\part{PHP}
+\label{\detokenize{php:php}}\label{\detokenize{php::doc}}
+
+\chapter{Conceptos básicos de PHP}
+\label{\detokenize{php:conceptos-basicos-de-php}}
+
+\section{PHP como lenguaje embebido}
+\label{\detokenize{php:php-como-lenguaje-embebido}}
+
+\subsection{Introducción a PHP}
+\label{\detokenize{php:introduccion-a-php}}
+
+\subsubsection{Instalación de PHP}
+\label{\detokenize{php:instalacion-de-php}}
+
+\subsubsection{Página web de PHP}
+\label{\detokenize{php:pagina-web-de-php}}
+
+\subsubsection{Documentación y búsqueda de información}
+\label{\detokenize{php:documentacion-y-busqueda-de-informacion}}
+
+\subsection{Funcionamiento del intérprete}
+\label{\detokenize{php:funcionamiento-del-interprete}}
+
+\subsubsection{Modo dual de operación}
+\label{\detokenize{php:modo-dual-de-operacion}}
+
+\subsubsection{Etiquetas \sphinxstyleliteralintitle{\textless{}?php} y \sphinxstyleliteralintitle{?\textgreater{}}}
+\label{\detokenize{php:etiquetas-php-y}}
+
+\subsection{Sintaxis básica}
+\label{\detokenize{php:sintaxis-basica}}
+
+\subsection{SAPIs}
+\label{\detokenize{php:sapis}}
+
+\subsubsection{CLI: Uso en línea de comandos}
+\label{\detokenize{php:cli-uso-en-linea-de-comandos}}
+
+\subsubsection{Apache}
+\label{\detokenize{php:apache}}
+
+\paragraph{Integración de PHP con Apache}
+\label{\detokenize{php:integracion-de-php-con-apache}}
+
+\paragraph{Configuración básica con \sphinxstyleliteralintitle{php.ini}}
+\label{\detokenize{php:configuracion-basica-con-php-ini}}
+
+\paragraph{Etiqueta \sphinxstyleliteralintitle{\textless{}?=}}
+\label{\detokenize{php:etiqueta}}
+
+\subsubsection{CGI: PHP-FPM (FastCGI Process Manager)}
+\label{\detokenize{php:cgi-php-fpm-fastcgi-process-manager}}
+
+\subsubsection{Módulos de extensión}
+\label{\detokenize{php:modulos-de-extension}}
+
+\section{Tipos de datos básicos}
+\label{\detokenize{php:tipos-de-datos-basicos}}
+
+\subsection{Enteros (\sphinxstyleliteralintitle{int}, sinónimo de \sphinxstyleliteralintitle{integer})}
+\label{\detokenize{php:enteros-int-sinonimo-de-integer}}
+
+\subsection{Números en coma flotante (\sphinxstyleliteralintitle{float}, sinónimo de \sphinxstyleliteralintitle{double})}
+\label{\detokenize{php:numeros-en-coma-flotante-float-sinonimo-de-double}}
+
+\subsection{Cadenas (\sphinxstyleliteralintitle{string})}
+\label{\detokenize{php:cadenas-string}}
+
+\subsubsection{Funciones de manejo de cadenas}
+\label{\detokenize{php:funciones-de-manejo-de-cadenas}}
+
+\subsubsection{Extensión mbstring}
+\label{\detokenize{php:extension-mbstring}}
+
+\subsection{Lógicos (\sphinxstyleliteralintitle{bool}, sinónimo de \sphinxstyleliteralintitle{boolean})}
+\label{\detokenize{php:logicos-bool-sinonimo-de-boolean}}
+
+\subsection{\sphinxstyleliteralintitle{NULL}}
+\label{\detokenize{php:null}}
+
+\subsubsection{\sphinxstyleliteralintitle{is\_null()} vs. \sphinxstyleliteralintitle{=== null}}
+\label{\detokenize{php:is-null-vs-null}}
+
+\subsection{Comparaciones}
+\label{\detokenize{php:comparaciones}}
+
+\subsubsection{Operadores de comparación}
+\label{\detokenize{php:operadores-de-comparacion}}
+
+\subsubsection{\sphinxstyleliteralintitle{==} vs. \sphinxstyleliteralintitle{===}}
+\label{\detokenize{php:vs}}
+
+\subsubsection{Ternario (\sphinxstyleliteralintitle{?:})}
+\label{\detokenize{php:ternario}}
+
+\subsubsection{Fusión de null (\sphinxstyleliteralintitle{??})}
+\label{\detokenize{php:fusion-de-null}}
+
+\subsubsection{Reglas de comparación de tipos}
+\label{\detokenize{php:reglas-de-comparacion-de-tipos}}
+
+\subsection{Comprobaciones}
+\label{\detokenize{php:comprobaciones}}
+
+\subsubsection{\sphinxstyleliteralintitle{gettype()}}
+\label{\detokenize{php:gettype}}
+
+\subsubsection{\sphinxstyleliteralintitle{is\_*()} (poco útiles en formularios, ya que sólo se reciben strings)}
+\label{\detokenize{php:is-poco-utiles-en-formularios-ya-que-solo-se-reciben-strings}}
+
+\subsubsection{\sphinxstyleliteralintitle{is\_numeric()}}
+\label{\detokenize{php:is-numeric}}
+
+\subsubsection{\sphinxstyleliteralintitle{ctype\_*()}}
+\label{\detokenize{php:ctype}}
+
+\subsection{Conversiones}
+\label{\detokenize{php:conversiones}}
+
+\subsubsection{Coerción, moldeado, forzado o casting}
+\label{\detokenize{php:coercion-moldeado-forzado-o-casting}}
+
+\subsubsection{intval(), floatval(), strval(), boolval()}
+\label{\detokenize{php:intval-floatval-strval-boolval}}
+
+\subsubsection{number\_format(), money\_format(), setlocale()}
+\label{\detokenize{php:number-format-money-format-setlocale}}
+
+\section{Variables}
+\label{\detokenize{php:variables}}
+
+\subsection{Conceptos básicos}
+\label{\detokenize{php:conceptos-basicos}}
+
+\subsection{Asignación por valor y por referencia}
+\label{\detokenize{php:asignacion-por-valor-y-por-referencia}}
+
+\subsection{Ámbito: globales, superglobales}
+\label{\detokenize{php:ambito-globales-superglobales}}
+
+\subsection{Variables predefinidas}
+\label{\detokenize{php:variables-predefinidas}}
+
+\section{Constantes}
+\label{\detokenize{php:constantes}}
+
+\section{Estructuras de control}
+\label{\detokenize{php:estructuras-de-control}}
+
+\subsection{\sphinxstyleliteralintitle{require}, \sphinxstyleliteralintitle{require\_once}, \sphinxstyleliteralintitle{include}, \sphinxstyleliteralintitle{include\_once}}
+\label{\detokenize{php:require-require-once-include-include-once}}
+
+\section{Funciones predefinidas}
+\label{\detokenize{php:funciones-predefinidas}}
+
+\subsection{\sphinxstyleliteralintitle{isset()}}
+\label{\detokenize{php:isset}}
+
+\subsection{\sphinxstyleliteralintitle{empty()}}
+\label{\detokenize{php:empty}}
+
+\subsubsection{Para evitar el problema de \sphinxstyleliteralintitle{empty("0") === true}:}
+\label{\detokenize{php:para-evitar-el-problema-de-empty-0-true}}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{\PYGZsh{} Install Composer}
-curl \PYGZhy{}sS https://getcomposer.org/installer \PYG{p}{\textbar{}} php
-\end{sphinxVerbatim}
-
-You can add Guzzle as a dependency using the composer.phar CLI:
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-php composer.phar require guzzlehttp/guzzle:\PYGZti{}6.0
-\end{sphinxVerbatim}
-
-Alternatively, you can specify Guzzle as a dependency in your project's
-existing composer.json file:
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
- \PYG{p}{\PYGZob{}}
-   \PYG{l+s+s2}{\PYGZdq{}require\PYGZdq{}}\PYG{o}{:} \PYG{p}{\PYGZob{}}
-      \PYG{l+s+s2}{\PYGZdq{}guzzlehttp/guzzle\PYGZdq{}}\PYG{o}{:} \PYG{l+s+s2}{\PYGZdq{}\PYGZti{}6.0\PYGZdq{}}
-   \PYG{p}{\PYGZcb{}}
-\PYG{p}{\PYGZcb{}}
-\end{sphinxVerbatim}
-
-After installing, you need to require Composer's autoloader:
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{require} \PYG{l+s+s1}{\PYGZsq{}vendor/autoload.php\PYGZsq{}}\PYG{p}{;}
-\end{sphinxVerbatim}
-
-You can find out more on how to install Composer, configure autoloading, and
-other best-practices for defining dependencies at \href{http://getcomposer.org}{getcomposer.org}.
-
-
-\section{Bleeding edge}
-\label{\detokenize{overview:bleeding-edge}}
-During your development, you can keep up with the latest changes on the master
-branch by setting the version requirement for Guzzle to \sphinxcode{\textasciitilde{}6.0@dev}.
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k}{function} \PYG{n+nf}{is\PYGZus{}blank}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}value}\PYG{p}{)}
 \PYG{p}{\PYGZob{}}
-   \PYG{l+s+s2}{\PYGZdq{}require\PYGZdq{}}\PYG{o}{:} \PYG{p}{\PYGZob{}}
-      \PYG{l+s+s2}{\PYGZdq{}guzzlehttp/guzzle\PYGZdq{}}\PYG{o}{:} \PYG{l+s+s2}{\PYGZdq{}\PYGZti{}6.0@dev\PYGZdq{}}
-   \PYG{p}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{k}{empty}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}value}\PYG{p}{)} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{o}{!}\PYG{n+nb}{is\PYGZus{}numeric}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}value}\PYG{p}{);}
 \PYG{p}{\PYGZcb{}}
 \end{sphinxVerbatim}
 
 
-\chapter{License}
-\label{\detokenize{overview:license}}
-Licensed using the \href{http://opensource.org/licenses/MIT}{MIT license}.
-\begin{quote}
+\section{Arrays}
+\label{\detokenize{php:arrays}}
 
-Copyright (c) 2015 Michael Dowling \textless{}\url{https://github.com/mtdowling}\textgreater{}
+\subsection{Funciones de manejo de arrays}
+\label{\detokenize{php:funciones-de-manejo-de-arrays}}
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the ``Software''), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+\subsection{\sphinxstyleliteralintitle{foreach}}
+\label{\detokenize{php:foreach}}
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+\subsection{\sphinxstyleliteralintitle{isset()} vs. \sphinxstyleliteralintitle{array\_key\_exists()}}
+\label{\detokenize{php:isset-vs-array-key-exists}}
 
-THE SOFTWARE IS PROVIDED ``AS IS'', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-\end{quote}
+\section{Funciones}
+\label{\detokenize{php:funciones}}
 
+\subsection{Variables locales}
+\label{\detokenize{php:variables-locales}}
 
-\chapter{Contributing}
-\label{\detokenize{overview:contributing}}
+\subsection{Uso de global}
+\label{\detokenize{php:uso-de-global}}
 
-\section{Guidelines}
-\label{\detokenize{overview:guidelines}}\begin{enumerate}
-\item {} 
-Guzzle utilizes PSR-1, PSR-2, PSR-4, and PSR-7.
+\subsection{Argumentos por defecto}
+\label{\detokenize{php:argumentos-por-defecto}}
 
-\item {} 
-Guzzle is meant to be lean and fast with very few dependencies. This means
-that not every feature request will be accepted.
+\subsection{Paso de argumentos por valor y por referencia}
+\label{\detokenize{php:paso-de-argumentos-por-valor-y-por-referencia}}
 
-\item {} 
-Guzzle has a minimum PHP version requirement of PHP 5.5. Pull requests must
-not require a PHP version greater than PHP 5.5 unless the feature is only
-utilized conditionally.
+\subsection{Declaraciones de tipos}
+\label{\detokenize{php:declaraciones-de-tipos}}
 
-\item {} 
-All pull requests must include unit tests to ensure the change works as
-expected and to prevent regressions.
+\subsubsection{Declaraciones de tipo de argumento}
+\label{\detokenize{php:declaraciones-de-tipo-de-argumento}}
 
-\end{enumerate}
+\subsubsection{Declaraciones de tipo de devolución}
+\label{\detokenize{php:declaraciones-de-tipo-de-devolucion}}
 
+\subsubsection{Tipificación estricta: \sphinxstyleliteralintitle{declare(strict\_types=1);}}
+\label{\detokenize{php:tipificacion-estricta-declare-strict-types-1}}
 
-\section{Running the tests}
-\label{\detokenize{overview:running-the-tests}}
-In order to contribute, you'll need to checkout the source from GitHub and
-install Guzzle's dependencies using Composer:
+\section{Manejo de datos de entrada: \sphinxstyleliteralintitle{\$\_GET} y \sphinxstyleliteralintitle{\$\_POST}}
+\label{\detokenize{php:manejo-de-datos-de-entrada-get-y-post}}
 
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-git clone https://github.com/guzzle/guzzle.git
-\PYG{n+nb}{cd} guzzle \PYG{o}{\PYGZam{}\PYGZam{}} curl \PYGZhy{}s http://getcomposer.org/installer \PYG{p}{\textbar{}} php \PYG{o}{\PYGZam{}\PYGZam{}} ./composer.phar install \PYGZhy{}\PYGZhy{}dev
-\end{sphinxVerbatim}
+\part{Yii2}
+\label{\detokenize{yii2:yii2}}\label{\detokenize{yii2::doc}}
 
-Guzzle is unit tested with PHPUnit. Run the tests using the Makefile:
+\chapter{Introducción a Yii2}
+\label{\detokenize{yii2:introduccion-a-yii2}}
 
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-make \PYG{n+nb}{test}
-\end{sphinxVerbatim}
-
-\begin{sphinxadmonition}{note}{Nota:}
-You'll need to install node.js v0.5.0 or newer in order to perform
-integration tests on Guzzle's HTTP handlers.
-\end{sphinxadmonition}
-
-
-\chapter{Reporting a security vulnerability}
-\label{\detokenize{overview:reporting-a-security-vulnerability}}
-We want to ensure that Guzzle is a secure HTTP client library for everyone. If
-you've discovered a security vulnerability in Guzzle, we appreciate your help
-in disclosing it to us in a \href{http://en.wikipedia.org/wiki/Responsible\_disclosure}{responsible manner}.
-
-Publicly disclosing a vulnerability can put the entire community at risk. If
-you've discovered a security concern, please email us at
-\href{mailto:security@guzzlephp.org}{security@guzzlephp.org}. We'll work with you to make sure that we understand the
-scope of the issue, and that we fully address your concern. We consider
-correspondence sent to \href{mailto:security@guzzlephp.org}{security@guzzlephp.org} our highest priority, and work to
-address any issues that arise as quickly as possible.
-
-After a security vulnerability has been corrected, a security hotfix release will
-be deployed as soon as possible.
-
-
-\part{Quickstart}
-\label{\detokenize{quickstart::doc}}\label{\detokenize{quickstart:quickstart}}
-This page provides a quick introduction to Guzzle and introductory examples.
-If you have not already installed, Guzzle, head over to the {\hyperref[\detokenize{overview:installation}]{\sphinxcrossref{\DUrole{std,std-ref}{Installation}}}}
-page.
-
-
-\chapter{Making a Request}
-\label{\detokenize{quickstart:making-a-request}}
-You can send requests with Guzzle using a \sphinxcode{GuzzleHttp\textbackslash{}ClientInterface}
-object.
-
-
-\section{Creating a Client}
-\label{\detokenize{quickstart:creating-a-client}}
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{use} \PYG{n+nx}{GuzzleHttp\PYGZbs{}Client}\PYG{p}{;}
-
-\PYG{n+nv}{\PYGZdl{}client} \PYG{o}{=} \PYG{k}{new} \PYG{n+nx}{Client}\PYG{p}{([}
-    \PYG{c+c1}{// Base URI is used with relative requests}
-    \PYG{l+s+s1}{\PYGZsq{}base\PYGZus{}uri\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}http://httpbin.org\PYGZsq{}}\PYG{p}{,}
-    \PYG{c+c1}{// You can set any number of default request options.}
-    \PYG{l+s+s1}{\PYGZsq{}timeout\PYGZsq{}}  \PYG{o}{=\PYGZgt{}} \PYG{l+m+mf}{2.0}\PYG{p}{,}
-\PYG{p}{]);}
-\end{sphinxVerbatim}
-
-Clients are immutable in Guzzle 6, which means that you cannot change the defaults used by a client after it's created.
-
-The client constructor accepts an associative array of options:
-\begin{description}
-\item[{\sphinxcode{base\_uri}}] \leavevmode
-(string\textbar{}UriInterface) Base URI of the client that is merged into relative
-URIs. Can be a string or instance of UriInterface. When a relative URI
-is provided to a client, the client will combine the base URI with the
-relative URI using the rules described in
-\href{http://tools.ietf.org/html/rfc3986\#section-5.2}{RFC 3986, section 2}.
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{// Create a client with a base URI}
-\PYG{n+nv}{\PYGZdl{}client} \PYG{o}{=} \PYG{k}{new} \PYG{n+nx}{GuzzleHttp\PYGZbs{}Client}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}base\PYGZus{}uri\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}https://foo.com/api/\PYGZsq{}}\PYG{p}{]);}
-\PYG{c+c1}{// Send a request to https://foo.com/api/test}
-\PYG{n+nv}{\PYGZdl{}response} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}test\PYGZsq{}}\PYG{p}{);}
-\PYG{c+c1}{// Send a request to https://foo.com/root}
-\PYG{n+nv}{\PYGZdl{}response} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}/root\PYGZsq{}}\PYG{p}{);}
-\end{sphinxVerbatim}
-
-Don't feel like reading RFC 3986? Here are some quick examples on how a
-\sphinxcode{base\_uri} is resolved with another URI.
-
-\noindent\begin{tabulary}{\linewidth}{|L|L|L|}
-\hline
-\sphinxstylethead{\relax 
-base\_uri
-\unskip}\relax &\sphinxstylethead{\relax 
-URI
-\unskip}\relax &\sphinxstylethead{\relax 
-Result
-\unskip}\relax \\
-\hline
-\sphinxcode{http://foo.com}
-&
-\sphinxcode{/bar}
-&
-\sphinxcode{http://foo.com/bar}
-\\
-\hline
-\sphinxcode{http://foo.com/foo}
-&
-\sphinxcode{/bar}
-&
-\sphinxcode{http://foo.com/bar}
-\\
-\hline
-\sphinxcode{http://foo.com/foo}
-&
-\sphinxcode{bar}
-&
-\sphinxcode{http://foo.com/bar}
-\\
-\hline
-\sphinxcode{http://foo.com/foo/}
-&
-\sphinxcode{bar}
-&
-\sphinxcode{http://foo.com/foo/bar}
-\\
-\hline
-\sphinxcode{http://foo.com}
-&
-\sphinxcode{http://baz.com}
-&
-\sphinxcode{http://baz.com}
-\\
-\hline
-\sphinxcode{http://foo.com/?bar}
-&
-\sphinxcode{bar}
-&
-\sphinxcode{http://foo.com/bar}
-\\
-\hline\end{tabulary}
-
-
-\item[{\sphinxcode{handler}}] \leavevmode
-(callable) Function that transfers HTTP requests over the wire. The
-function is called with a \sphinxcode{Psr7\textbackslash{}Http\textbackslash{}Message\textbackslash{}RequestInterface} and array
-of transfer options, and must return a
-\sphinxcode{GuzzleHttp\textbackslash{}Promise\textbackslash{}PromiseInterface} that is fulfilled with a
-\sphinxcode{Psr7\textbackslash{}Http\textbackslash{}Message\textbackslash{}ResponseInterface} on success. \sphinxcode{handler} is a
-constructor only option that cannot be overridden in per/request options.
-
-\item[{\sphinxcode{...}}] \leavevmode
-(mixed) All other options passed to the constructor are used as default
-request options with every request created by the client.
-
-\end{description}
-
-
-\section{Sending Requests}
-\label{\detokenize{quickstart:sending-requests}}
-Magic methods on the client make it easy to send synchronous requests:
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n+nv}{\PYGZdl{}response} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/get\PYGZsq{}}\PYG{p}{);}
-\PYG{n+nv}{\PYGZdl{}response} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{delete}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/delete\PYGZsq{}}\PYG{p}{);}
-\PYG{n+nv}{\PYGZdl{}response} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{head}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/get\PYGZsq{}}\PYG{p}{);}
-\PYG{n+nv}{\PYGZdl{}response} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{options}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/get\PYGZsq{}}\PYG{p}{);}
-\PYG{n+nv}{\PYGZdl{}response} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{patch}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/patch\PYGZsq{}}\PYG{p}{);}
-\PYG{n+nv}{\PYGZdl{}response} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{post}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/post\PYGZsq{}}\PYG{p}{);}
-\PYG{n+nv}{\PYGZdl{}response} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{put}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/put\PYGZsq{}}\PYG{p}{);}
-\end{sphinxVerbatim}
-
-You can create a request and then send the request with the client when you're
-ready:
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{use} \PYG{n+nx}{GuzzleHttp\PYGZbs{}Psr7\PYGZbs{}Request}\PYG{p}{;}
-
-\PYG{n+nv}{\PYGZdl{}request} \PYG{o}{=} \PYG{k}{new} \PYG{n+nx}{Request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}PUT\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/put\PYGZsq{}}\PYG{p}{);}
-\PYG{n+nv}{\PYGZdl{}response} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{send}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}request}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}timeout\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{l+m+mi}{2}\PYG{p}{]);}
-\end{sphinxVerbatim}
-
-Client objects provide a great deal of flexibility in how request are
-transferred including default request options, default handler stack middleware
-that are used by each request, and a base URI that allows you to send requests
-with relative URIs.
-
-You can find out more about client middleware in the
-\DUrole{xref,doc}{handlers-and-middleware} page of the documentation.
-
-
-\section{Async Requests}
-\label{\detokenize{quickstart:async-requests}}
-You can send asynchronous requests using the magic methods provided by a client:
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n+nv}{\PYGZdl{}promise} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getAsync}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/get\PYGZsq{}}\PYG{p}{);}
-\PYG{n+nv}{\PYGZdl{}promise} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{deleteAsync}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/delete\PYGZsq{}}\PYG{p}{);}
-\PYG{n+nv}{\PYGZdl{}promise} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{headAsync}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/get\PYGZsq{}}\PYG{p}{);}
-\PYG{n+nv}{\PYGZdl{}promise} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{optionsAsync}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/get\PYGZsq{}}\PYG{p}{);}
-\PYG{n+nv}{\PYGZdl{}promise} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{patchAsync}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/patch\PYGZsq{}}\PYG{p}{);}
-\PYG{n+nv}{\PYGZdl{}promise} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{postAsync}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/post\PYGZsq{}}\PYG{p}{);}
-\PYG{n+nv}{\PYGZdl{}promise} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{putAsync}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/put\PYGZsq{}}\PYG{p}{);}
-\end{sphinxVerbatim}
-
-You can also use the \sphinxtitleref{sendAsync()} and \sphinxtitleref{requestAsync()} methods of a client:
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{use} \PYG{n+nx}{GuzzleHttp\PYGZbs{}Psr7\PYGZbs{}Request}\PYG{p}{;}
-
-\PYG{c+c1}{// Create a PSR\PYGZhy{}7 request object to send}
-\PYG{n+nv}{\PYGZdl{}headers} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}X\PYGZhy{}Foo\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}Bar\PYGZsq{}}\PYG{p}{];}
-\PYG{n+nv}{\PYGZdl{}body} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}Hello!\PYGZsq{}}\PYG{p}{;}
-\PYG{n+nv}{\PYGZdl{}request} \PYG{o}{=} \PYG{k}{new} \PYG{n+nx}{Request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}HEAD\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/head\PYGZsq{}}\PYG{p}{,} \PYG{n+nv}{\PYGZdl{}headers}\PYG{p}{,} \PYG{n+nv}{\PYGZdl{}body}\PYG{p}{);}
-
-\PYG{c+c1}{// Or, if you don\PYGZsq{}t need to pass in a request instance:}
-\PYG{n+nv}{\PYGZdl{}promise} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{requestAsync}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/get\PYGZsq{}}\PYG{p}{);}
-\end{sphinxVerbatim}
-
-The promise returned by these methods implements the
-\href{https://promisesaplus.com/}{Promises/A+ spec}, provided by the
-\href{https://github.com/guzzle/promises}{Guzzle promises library}. This means
-that you can chain \sphinxcode{then()} calls off of the promise. These then calls are
-either fulfilled with a successful \sphinxcode{Psr\textbackslash{}Http\textbackslash{}Message\textbackslash{}ResponseInterface} or
-rejected with an exception.
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{use} \PYG{n+nx}{Psr\PYGZbs{}Http\PYGZbs{}Message\PYGZbs{}ResponseInterface}\PYG{p}{;}
-\PYG{k}{use} \PYG{n+nx}{GuzzleHttp\PYGZbs{}Exception\PYGZbs{}RequestException}\PYG{p}{;}
-
-\PYG{n+nv}{\PYGZdl{}promise} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{requestAsync}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/get\PYGZsq{}}\PYG{p}{);}
-\PYG{n+nv}{\PYGZdl{}promise}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{then}\PYG{p}{(}
-    \PYG{k}{function} \PYG{p}{(}\PYG{n+nx}{ResponseInterface} \PYG{n+nv}{\PYGZdl{}res}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-        \PYG{k}{echo} \PYG{n+nv}{\PYGZdl{}res}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getStatusCode}\PYG{p}{()} \PYG{o}{.} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{;}
-    \PYG{p}{\PYGZcb{},}
-    \PYG{k}{function} \PYG{p}{(}\PYG{n+nx}{RequestException} \PYG{n+nv}{\PYGZdl{}e}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-        \PYG{k}{echo} \PYG{n+nv}{\PYGZdl{}e}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getMessage}\PYG{p}{()} \PYG{o}{.} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{;}
-        \PYG{k}{echo} \PYG{n+nv}{\PYGZdl{}e}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getRequest}\PYG{p}{()}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getMethod}\PYG{p}{();}
-    \PYG{p}{\PYGZcb{}}
-\PYG{p}{);}
-\end{sphinxVerbatim}
-
-
-\section{Concurrent requests}
-\label{\detokenize{quickstart:concurrent-requests}}
-You can send multiple requests concurrently using promises and asynchronous
-requests.
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{use} \PYG{n+nx}{GuzzleHttp\PYGZbs{}Client}\PYG{p}{;}
-\PYG{k}{use} \PYG{n+nx}{GuzzleHttp\PYGZbs{}Promise}\PYG{p}{;}
-
-\PYG{n+nv}{\PYGZdl{}client} \PYG{o}{=} \PYG{k}{new} \PYG{n+nx}{Client}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}base\PYGZus{}uri\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/\PYGZsq{}}\PYG{p}{]);}
-
-\PYG{c+c1}{// Initiate each request but do not block}
-\PYG{n+nv}{\PYGZdl{}promises} \PYG{o}{=} \PYG{p}{[}
-    \PYG{l+s+s1}{\PYGZsq{}image\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getAsync}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/image\PYGZsq{}}\PYG{p}{),}
-    \PYG{l+s+s1}{\PYGZsq{}png\PYGZsq{}}   \PYG{o}{=\PYGZgt{}} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getAsync}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/image/png\PYGZsq{}}\PYG{p}{),}
-    \PYG{l+s+s1}{\PYGZsq{}jpeg\PYGZsq{}}  \PYG{o}{=\PYGZgt{}} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getAsync}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/image/jpeg\PYGZsq{}}\PYG{p}{),}
-    \PYG{l+s+s1}{\PYGZsq{}webp\PYGZsq{}}  \PYG{o}{=\PYGZgt{}} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getAsync}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/image/webp\PYGZsq{}}\PYG{p}{)}
-\PYG{p}{];}
-
-\PYG{c+c1}{// Wait on all of the requests to complete. Throws a ConnectException}
-\PYG{c+c1}{// if any of the requests fail}
-\PYG{n+nv}{\PYGZdl{}results} \PYG{o}{=} \PYG{n+nx}{Promise\PYGZbs{}unwrap}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}promises}\PYG{p}{);}
-
-\PYG{c+c1}{// Wait for the requests to complete, even if some of them fail}
-\PYG{n+nv}{\PYGZdl{}results} \PYG{o}{=} \PYG{n+nx}{Promise\PYGZbs{}settle}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}promises}\PYG{p}{)}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{wait}\PYG{p}{();}
-
-\PYG{c+c1}{// You can access each result using the key provided to the unwrap}
-\PYG{c+c1}{// function.}
-\PYG{k}{echo} \PYG{n+nv}{\PYGZdl{}results}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}image\PYGZsq{}}\PYG{p}{]}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getHeader}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Content\PYGZhy{}Length\PYGZsq{}}\PYG{p}{);}
-\PYG{k}{echo} \PYG{n+nv}{\PYGZdl{}results}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}png\PYGZsq{}}\PYG{p}{]}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getHeader}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Content\PYGZhy{}Length\PYGZsq{}}\PYG{p}{);}
-\end{sphinxVerbatim}
-
-You can use the \sphinxcode{GuzzleHttp\textbackslash{}Pool} object when you have an indeterminate
-amount of requests you wish to send.
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{use} \PYG{n+nx}{GuzzleHttp\PYGZbs{}Pool}\PYG{p}{;}
-\PYG{k}{use} \PYG{n+nx}{GuzzleHttp\PYGZbs{}Client}\PYG{p}{;}
-\PYG{k}{use} \PYG{n+nx}{GuzzleHttp\PYGZbs{}Psr7\PYGZbs{}Request}\PYG{p}{;}
-
-\PYG{n+nv}{\PYGZdl{}client} \PYG{o}{=} \PYG{k}{new} \PYG{n+nx}{Client}\PYG{p}{();}
-
-\PYG{n+nv}{\PYGZdl{}requests} \PYG{o}{=} \PYG{k}{function} \PYG{p}{(}\PYG{n+nv}{\PYGZdl{}total}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-    \PYG{n+nv}{\PYGZdl{}uri} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}http://127.0.0.1:8126/guzzle\PYGZhy{}server/perf\PYGZsq{}}\PYG{p}{;}
-    \PYG{k}{for} \PYG{p}{(}\PYG{n+nv}{\PYGZdl{}i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n+nv}{\PYGZdl{}i} \PYG{o}{\PYGZlt{}} \PYG{n+nv}{\PYGZdl{}total}\PYG{p}{;} \PYG{n+nv}{\PYGZdl{}i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-        \PYG{k}{yield} \PYG{k}{new} \PYG{n+nx}{Request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}}\PYG{p}{,} \PYG{n+nv}{\PYGZdl{}uri}\PYG{p}{);}
-    \PYG{p}{\PYGZcb{}}
-\PYG{p}{\PYGZcb{};}
-
-\PYG{n+nv}{\PYGZdl{}pool} \PYG{o}{=} \PYG{k}{new} \PYG{n+nx}{Pool}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}client}\PYG{p}{,} \PYG{n+nv}{\PYGZdl{}requests}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{),} \PYG{p}{[}
-    \PYG{l+s+s1}{\PYGZsq{}concurrency\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{l+m+mi}{5}\PYG{p}{,}
-    \PYG{l+s+s1}{\PYGZsq{}fulfilled\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{k}{function} \PYG{p}{(}\PYG{n+nv}{\PYGZdl{}response}\PYG{p}{,} \PYG{n+nv}{\PYGZdl{}index}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-        \PYG{c+c1}{// this is delivered each successful response}
-    \PYG{p}{\PYGZcb{},}
-    \PYG{l+s+s1}{\PYGZsq{}rejected\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{k}{function} \PYG{p}{(}\PYG{n+nv}{\PYGZdl{}reason}\PYG{p}{,} \PYG{n+nv}{\PYGZdl{}index}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-        \PYG{c+c1}{// this is delivered each failed request}
-    \PYG{p}{\PYGZcb{},}
-\PYG{p}{]);}
-
-\PYG{c+c1}{// Initiate the transfers and create a promise}
-\PYG{n+nv}{\PYGZdl{}promise} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}pool}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{promise}\PYG{p}{();}
-
-\PYG{c+c1}{// Force the pool of requests to complete.}
-\PYG{n+nv}{\PYGZdl{}promise}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{wait}\PYG{p}{();}
-\end{sphinxVerbatim}
-
-Or using a closure that will return a promise once the pool calls the closure.
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n+nv}{\PYGZdl{}client} \PYG{o}{=} \PYG{k}{new} \PYG{n+nx}{Client}\PYG{p}{();}
-
-\PYG{n+nv}{\PYGZdl{}requests} \PYG{o}{=} \PYG{k}{function} \PYG{p}{(}\PYG{n+nv}{\PYGZdl{}total}\PYG{p}{)} \PYG{k}{use} \PYG{p}{(}\PYG{n+nv}{\PYGZdl{}client}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-    \PYG{n+nv}{\PYGZdl{}uri} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}http://127.0.0.1:8126/guzzle\PYGZhy{}server/perf\PYGZsq{}}\PYG{p}{;}
-    \PYG{k}{for} \PYG{p}{(}\PYG{n+nv}{\PYGZdl{}i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n+nv}{\PYGZdl{}i} \PYG{o}{\PYGZlt{}} \PYG{n+nv}{\PYGZdl{}total}\PYG{p}{;} \PYG{n+nv}{\PYGZdl{}i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-        \PYG{k}{yield} \PYG{k}{function}\PYG{p}{()} \PYG{k}{use} \PYG{p}{(}\PYG{n+nv}{\PYGZdl{}client}\PYG{p}{,} \PYG{n+nv}{\PYGZdl{}uri}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-            \PYG{k}{return} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getAsync}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}uri}\PYG{p}{);}
-        \PYG{p}{\PYGZcb{};}
-    \PYG{p}{\PYGZcb{}}
-\PYG{p}{\PYGZcb{};}
-
-\PYG{n+nv}{\PYGZdl{}pool} \PYG{o}{=} \PYG{k}{new} \PYG{n+nx}{Pool}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}client}\PYG{p}{,} \PYG{n+nv}{\PYGZdl{}requests}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{));}
-\end{sphinxVerbatim}
-
-
-\chapter{Using Responses}
-\label{\detokenize{quickstart:using-responses}}
-In the previous examples, we retrieved a \sphinxcode{\$response} variable or we were
-delivered a response from a promise. The response object implements a PSR-7
-response, \sphinxcode{Psr\textbackslash{}Http\textbackslash{}Message\textbackslash{}ResponseInterface}, and contains lots of
-helpful information.
-
-You can get the status code and reason phrase of the response:
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n+nv}{\PYGZdl{}code} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}response}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getStatusCode}\PYG{p}{();} \PYG{c+c1}{// 200}
-\PYG{n+nv}{\PYGZdl{}reason} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}response}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getReasonPhrase}\PYG{p}{();} \PYG{c+c1}{// OK}
-\end{sphinxVerbatim}
-
-You can retrieve headers from the response:
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{// Check if a header exists.}
-\PYG{k}{if} \PYG{p}{(}\PYG{n+nv}{\PYGZdl{}response}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{hasHeader}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Content\PYGZhy{}Length\PYGZsq{}}\PYG{p}{))} \PYG{p}{\PYGZob{}}
-    \PYG{k}{echo} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{It exists}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{;}
-\PYG{p}{\PYGZcb{}}
-
-\PYG{c+c1}{// Get a header from the response.}
-\PYG{k}{echo} \PYG{n+nv}{\PYGZdl{}response}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getHeader}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Content\PYGZhy{}Length\PYGZsq{}}\PYG{p}{);}
-
-\PYG{c+c1}{// Get all of the response headers.}
-\PYG{k}{foreach} \PYG{p}{(}\PYG{n+nv}{\PYGZdl{}response}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getHeaders}\PYG{p}{()} \PYG{k}{as} \PYG{n+nv}{\PYGZdl{}name} \PYG{o}{=\PYGZgt{}} \PYG{n+nv}{\PYGZdl{}values}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-    \PYG{k}{echo} \PYG{n+nv}{\PYGZdl{}name} \PYG{o}{.} \PYG{l+s+s1}{\PYGZsq{}: \PYGZsq{}} \PYG{o}{.} \PYG{n+nb}{implode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}, \PYGZsq{}}\PYG{p}{,} \PYG{n+nv}{\PYGZdl{}values}\PYG{p}{)} \PYG{o}{.} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}r}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{;}
-\PYG{p}{\PYGZcb{}}
-\end{sphinxVerbatim}
-
-The body of a response can be retrieved using the \sphinxcode{getBody} method. The body
-can be used as a string, cast to a string, or used as a stream like object.
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n+nv}{\PYGZdl{}body} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}response}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getBody}\PYG{p}{();}
-\PYG{c+c1}{// Implicitly cast the body to a string and echo it}
-\PYG{k}{echo} \PYG{n+nv}{\PYGZdl{}body}\PYG{p}{;}
-\PYG{c+c1}{// Explicitly cast the body to a string}
-\PYG{n+nv}{\PYGZdl{}stringBody} \PYG{o}{=} \PYG{p}{(}\PYG{n+nx}{string}\PYG{p}{)} \PYG{n+nv}{\PYGZdl{}body}\PYG{p}{;}
-\PYG{c+c1}{// Read 10 bytes from the body}
-\PYG{n+nv}{\PYGZdl{}tenBytes} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}body}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{read}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{);}
-\PYG{c+c1}{// Read the remaining contents of the body as a string}
-\PYG{n+nv}{\PYGZdl{}remainingBytes} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}body}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getContents}\PYG{p}{();}
-\end{sphinxVerbatim}
-
-
-\chapter{Query String Parameters}
-\label{\detokenize{quickstart:query-string-parameters}}
-You can provide query string parameters with a request in several ways.
-
-You can set query string parameters in the request's URI:
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n+nv}{\PYGZdl{}response} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}http://httpbin.org?foo=bar\PYGZsq{}}\PYG{p}{);}
-\end{sphinxVerbatim}
-
-You can specify the query string parameters using the \sphinxcode{query} request
-option as an array.
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}http://httpbin.org\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}
-    \PYG{l+s+s1}{\PYGZsq{}query\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}foo\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}bar\PYGZsq{}}\PYG{p}{]}
-\PYG{p}{]);}
-\end{sphinxVerbatim}
-
-Providing the option as an array will use PHP's \sphinxcode{http\_build\_query} function
-to format the query string.
-
-And finally, you can provide the \sphinxcode{query} request option as a string.
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}http://httpbin.org\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}query\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}foo=bar\PYGZsq{}}\PYG{p}{]);}
-\end{sphinxVerbatim}
-
-
-\chapter{Uploading Data}
-\label{\detokenize{quickstart:uploading-data}}
-Guzzle provides several methods for uploading data.
-
-You can send requests that contain a stream of data by passing a string,
-resource returned from \sphinxcode{fopen}, or an instance of a
-\sphinxcode{Psr\textbackslash{}Http\textbackslash{}Message\textbackslash{}StreamInterface} to the \sphinxcode{body} request option.
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{// Provide the body as a string.}
-\PYG{n+nv}{\PYGZdl{}r} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}POST\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/post\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}
-    \PYG{l+s+s1}{\PYGZsq{}body\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}raw data\PYGZsq{}}
-\PYG{p}{]);}
-
-\PYG{c+c1}{// Provide an fopen resource.}
-\PYG{n+nv}{\PYGZdl{}body} \PYG{o}{=} \PYG{n+nb}{fopen}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/path/to/file\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}r\PYGZsq{}}\PYG{p}{);}
-\PYG{n+nv}{\PYGZdl{}r} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}POST\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/post\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}body\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{n+nv}{\PYGZdl{}body}\PYG{p}{]);}
-
-\PYG{c+c1}{// Use the stream\PYGZus{}for() function to create a PSR\PYGZhy{}7 stream.}
-\PYG{n+nv}{\PYGZdl{}body} \PYG{o}{=} \PYG{n+nx}{\PYGZbs{}GuzzleHttp\PYGZbs{}Psr7\PYGZbs{}stream\PYGZus{}for}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}hello!\PYGZsq{}}\PYG{p}{);}
-\PYG{n+nv}{\PYGZdl{}r} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}POST\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/post\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}body\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{n+nv}{\PYGZdl{}body}\PYG{p}{]);}
-\end{sphinxVerbatim}
-
-An easy way to upload JSON data and set the appropriate header is using the
-\sphinxcode{json} request option:
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n+nv}{\PYGZdl{}r} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}PUT\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/put\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}
-    \PYG{l+s+s1}{\PYGZsq{}json\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}foo\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}bar\PYGZsq{}}\PYG{p}{]}
-\PYG{p}{]);}
-\end{sphinxVerbatim}
-
-
-\section{POST/Form Requests}
-\label{\detokenize{quickstart:post-form-requests}}
-In addition to specifying the raw data of a request using the \sphinxcode{body} request
-option, Guzzle provides helpful abstractions over sending POST data.
-
-
-\subsection{Sending form fields}
-\label{\detokenize{quickstart:sending-form-fields}}
-Sending \sphinxcode{application/x-www-form-urlencoded} POST requests requires that you
-specify the POST fields as an array in the \sphinxcode{form\_params} request options.
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n+nv}{\PYGZdl{}response} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}POST\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/post\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}
-    \PYG{l+s+s1}{\PYGZsq{}form\PYGZus{}params\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{p}{[}
-        \PYG{l+s+s1}{\PYGZsq{}field\PYGZus{}name\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}abc\PYGZsq{}}\PYG{p}{,}
-        \PYG{l+s+s1}{\PYGZsq{}other\PYGZus{}field\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}123\PYGZsq{}}\PYG{p}{,}
-        \PYG{l+s+s1}{\PYGZsq{}nested\PYGZus{}field\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{p}{[}
-            \PYG{l+s+s1}{\PYGZsq{}nested\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}hello\PYGZsq{}}
-        \PYG{p}{]}
-    \PYG{p}{]}
-\PYG{p}{]);}
-\end{sphinxVerbatim}
-
-
-\subsection{Sending form files}
-\label{\detokenize{quickstart:sending-form-files}}
-You can send files along with a form (\sphinxcode{multipart/form-data} POST requests),
-using the \sphinxcode{multipart} request option. \sphinxcode{multipart} accepts an array of
-associative arrays, where each associative array contains the following keys:
-\begin{itemize}
-\item {} 
-name: (required, string) key mapping to the form field name.
-
-\item {} 
-contents: (required, mixed) Provide a string to send the contents of the
-file as a string, provide an fopen resource to stream the contents from a
-PHP stream, or provide a \sphinxcode{Psr\textbackslash{}Http\textbackslash{}Message\textbackslash{}StreamInterface} to stream
-the contents from a PSR-7 stream.
-
-\end{itemize}
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n+nv}{\PYGZdl{}response} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}POST\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/post\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}
-    \PYG{l+s+s1}{\PYGZsq{}multipart\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{p}{[}
-        \PYG{p}{[}
-            \PYG{l+s+s1}{\PYGZsq{}name\PYGZsq{}}     \PYG{o}{=\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}field\PYGZus{}name\PYGZsq{}}\PYG{p}{,}
-            \PYG{l+s+s1}{\PYGZsq{}contents\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}abc\PYGZsq{}}
-        \PYG{p}{],}
-        \PYG{p}{[}
-            \PYG{l+s+s1}{\PYGZsq{}name\PYGZsq{}}     \PYG{o}{=\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}file\PYGZus{}name\PYGZsq{}}\PYG{p}{,}
-            \PYG{l+s+s1}{\PYGZsq{}contents\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{n+nb}{fopen}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/path/to/file\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}r\PYGZsq{}}\PYG{p}{)}
-        \PYG{p}{],}
-        \PYG{p}{[}
-            \PYG{l+s+s1}{\PYGZsq{}name\PYGZsq{}}     \PYG{o}{=\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}other\PYGZus{}file\PYGZsq{}}\PYG{p}{,}
-            \PYG{l+s+s1}{\PYGZsq{}contents\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}hello\PYGZsq{}}\PYG{p}{,}
-            \PYG{l+s+s1}{\PYGZsq{}filename\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}filename.txt\PYGZsq{}}\PYG{p}{,}
-            \PYG{l+s+s1}{\PYGZsq{}headers\PYGZsq{}}  \PYG{o}{=\PYGZgt{}} \PYG{p}{[}
-                \PYG{l+s+s1}{\PYGZsq{}X\PYGZhy{}Foo\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}this is an extra header to include\PYGZsq{}}
-            \PYG{p}{]}
-        \PYG{p}{]}
-    \PYG{p}{]}
-\PYG{p}{]);}
-\end{sphinxVerbatim}
-
-
-\chapter{Cookies}
-\label{\detokenize{quickstart:cookies}}
-Guzzle can maintain a cookie session for you if instructed using the
-\sphinxcode{cookies} request option. When sending a request, the \sphinxcode{cookies} option
-must be set to an instance of \sphinxcode{GuzzleHttp\textbackslash{}Cookie\textbackslash{}CookieJarInterface}.
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{// Use a specific cookie jar}
-\PYG{n+nv}{\PYGZdl{}jar} \PYG{o}{=} \PYG{k}{new} \PYG{n+nx}{\PYGZbs{}GuzzleHttp\PYGZbs{}Cookie\PYGZbs{}CookieJar}\PYG{p}{;}
-\PYG{n+nv}{\PYGZdl{}r} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/cookies\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}
-    \PYG{l+s+s1}{\PYGZsq{}cookies\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{n+nv}{\PYGZdl{}jar}
-\PYG{p}{]);}
-\end{sphinxVerbatim}
-
-You can set \sphinxcode{cookies} to \sphinxcode{true} in a client constructor if you would like
-to use a shared cookie jar for all requests.
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{// Use a shared client cookie jar}
-\PYG{n+nv}{\PYGZdl{}client} \PYG{o}{=} \PYG{k}{new} \PYG{n+nx}{\PYGZbs{}GuzzleHttp\PYGZbs{}Client}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}cookies\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{k}{true}\PYG{p}{]);}
-\PYG{n+nv}{\PYGZdl{}r} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}http://httpbin.org/cookies\PYGZsq{}}\PYG{p}{);}
-\end{sphinxVerbatim}
-
-
-\chapter{Redirects}
-\label{\detokenize{quickstart:redirects}}
-Guzzle will automatically follow redirects unless you tell it not to. You can
-customize the redirect behavior using the \sphinxcode{allow\_redirects} request option.
-\begin{itemize}
-\item {} 
-Set to \sphinxcode{true} to enable normal redirects with a maximum number of 5
-redirects. This is the default setting.
-
-\item {} 
-Set to \sphinxcode{false} to disable redirects.
-
-\item {} 
-Pass an associative array containing the `max' key to specify the maximum
-number of redirects and optionally provide a `strict' key value to specify
-whether or not to use strict RFC compliant redirects (meaning redirect POST
-requests with POST requests vs. doing what most browsers do which is
-redirect POST requests with GET requests).
-
-\end{itemize}
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n+nv}{\PYGZdl{}response} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}http://github.com\PYGZsq{}}\PYG{p}{);}
-\PYG{k}{echo} \PYG{n+nv}{\PYGZdl{}response}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getStatusCode}\PYG{p}{();}
-\PYG{c+c1}{// 200}
-\end{sphinxVerbatim}
-
-The following example shows that redirects can be disabled.
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n+nv}{\PYGZdl{}response} \PYG{o}{=} \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}http://github.com\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}
-    \PYG{l+s+s1}{\PYGZsq{}allow\PYGZus{}redirects\PYGZsq{}} \PYG{o}{=\PYGZgt{}} \PYG{k}{false}
-\PYG{p}{]);}
-\PYG{k}{echo} \PYG{n+nv}{\PYGZdl{}response}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getStatusCode}\PYG{p}{();}
-\PYG{c+c1}{// 301}
-\end{sphinxVerbatim}
-
-
-\chapter{Exceptions}
-\label{\detokenize{quickstart:exceptions}}
-Guzzle throws exceptions for errors that occur during a transfer.
-\begin{itemize}
-\item {} 
-In the event of a networking error (connection timeout, DNS errors, etc.),
-a \sphinxcode{GuzzleHttp\textbackslash{}Exception\textbackslash{}RequestException} is thrown. This exception
-extends from \sphinxcode{GuzzleHttp\textbackslash{}Exception\textbackslash{}TransferException}. Catching this
-exception will catch any exception that can be thrown while transferring
-requests.
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{use} \PYG{n+nx}{GuzzleHttp\PYGZbs{}Psr7}\PYG{p}{;}
-\PYG{k}{use} \PYG{n+nx}{GuzzleHttp\PYGZbs{}Exception\PYGZbs{}RequestException}\PYG{p}{;}
-
-\PYG{k}{try} \PYG{p}{\PYGZob{}}
-    \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}https://github.com/\PYGZus{}abc\PYGZus{}123\PYGZus{}404\PYGZsq{}}\PYG{p}{);}
-\PYG{p}{\PYGZcb{}} \PYG{k}{catch} \PYG{p}{(}\PYG{n+nx}{RequestException} \PYG{n+nv}{\PYGZdl{}e}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-    \PYG{k}{echo} \PYG{n+nx}{Psr7\PYGZbs{}str}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}e}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getRequest}\PYG{p}{());}
-    \PYG{k}{if} \PYG{p}{(}\PYG{n+nv}{\PYGZdl{}e}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{hasResponse}\PYG{p}{())} \PYG{p}{\PYGZob{}}
-        \PYG{k}{echo} \PYG{n+nx}{Psr7\PYGZbs{}str}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}e}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getResponse}\PYG{p}{());}
-    \PYG{p}{\PYGZcb{}}
-\PYG{p}{\PYGZcb{}}
-\end{sphinxVerbatim}
-
-\item {} 
-A \sphinxcode{GuzzleHttp\textbackslash{}Exception\textbackslash{}ConnectException} exception is thrown in the
-event of a networking error. This exception extends from
-\sphinxcode{GuzzleHttp\textbackslash{}Exception\textbackslash{}RequestException}.
-
-\item {} 
-A \sphinxcode{GuzzleHttp\textbackslash{}Exception\textbackslash{}ClientException} is thrown for 400
-level errors if the \sphinxcode{http\_errors} request option is set to true. This
-exception extends from \sphinxcode{GuzzleHttp\textbackslash{}Exception\textbackslash{}BadResponseException} and
-\sphinxcode{GuzzleHttp\textbackslash{}Exception\textbackslash{}BadResponseException} extends from
-\sphinxcode{GuzzleHttp\textbackslash{}Exception\textbackslash{}RequestException}.
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{k}{use} \PYG{n+nx}{GuzzleHttp\PYGZbs{}Exception\PYGZbs{}ClientException}\PYG{p}{;}
-
-\PYG{k}{try} \PYG{p}{\PYGZob{}}
-    \PYG{n+nv}{\PYGZdl{}client}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}https://github.com/\PYGZus{}abc\PYGZus{}123\PYGZus{}404\PYGZsq{}}\PYG{p}{);}
-\PYG{p}{\PYGZcb{}} \PYG{k}{catch} \PYG{p}{(}\PYG{n+nx}{ClientException} \PYG{n+nv}{\PYGZdl{}e}\PYG{p}{)} \PYG{p}{\PYGZob{}}
-    \PYG{k}{echo} \PYG{n+nx}{Psr7\PYGZbs{}str}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}e}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getRequest}\PYG{p}{());}
-    \PYG{k}{echo} \PYG{n+nx}{Psr7\PYGZbs{}str}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}e}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n+na}{getResponse}\PYG{p}{());}
-\PYG{p}{\PYGZcb{}}
-\end{sphinxVerbatim}
-
-\item {} 
-A \sphinxcode{GuzzleHttp\textbackslash{}Exception\textbackslash{}ServerException} is thrown for 500 level
-errors if the \sphinxcode{http\_errors} request option is set to true. This
-exception extends from \sphinxcode{GuzzleHttp\textbackslash{}Exception\textbackslash{}BadResponseException}.
-
-\item {} 
-A \sphinxcode{GuzzleHttp\textbackslash{}Exception\textbackslash{}TooManyRedirectsException} is thrown when too
-many redirects are followed. This exception extends from \sphinxcode{GuzzleHttp\textbackslash{}Exception\textbackslash{}RequestException}.
-
-\end{itemize}
-
-All of the above exceptions extend from
-\sphinxcode{GuzzleHttp\textbackslash{}Exception\textbackslash{}TransferException}.
-
-
-\chapter{Environment Variables}
-\label{\detokenize{quickstart:environment-variables}}
-Guzzle exposes a few environment variables that can be used to customize the
-behavior of the library.
-\begin{description}
-\item[{\sphinxcode{GUZZLE\_CURL\_SELECT\_TIMEOUT}}] \leavevmode
-Controls the duration in seconds that a curl\_multi\_* handler will use when
-selecting on curl handles using \sphinxcode{curl\_multi\_select()}. Some systems
-have issues with PHP's implementation of \sphinxcode{curl\_multi\_select()} where
-calling this function always results in waiting for the maximum duration of
-the timeout.
-
-\item[{\sphinxcode{HTTP\_PROXY}}] \leavevmode
-Defines the proxy to use when sending requests using the ``http'' protocol.
-
-Note: because the HTTP\_PROXY variable may contain arbitrary user input on some (CGI) environments, the variable is only used on the CLI SAPI. See \url{https://httpoxy.org} for more information.
-
-\item[{\sphinxcode{HTTPS\_PROXY}}] \leavevmode
-Defines the proxy to use when sending requests using the ``https'' protocol.
-
-\end{description}
-
-
-\section{Relevant ini Settings}
-\label{\detokenize{quickstart:relevant-ini-settings}}
-Guzzle can utilize PHP ini settings when configuring clients.
-\begin{description}
-\item[{\sphinxcode{openssl.cafile}}] \leavevmode
-Specifies the path on disk to a CA file in PEM format to use when sending
-requests over ``https''. See: \url{https://wiki.php.net/rfc/tls-peer-verification\#phpini\_defaults}
-
-\end{description}
-
-
-\part{Indices and tables}
-\label{\detokenize{index:indices-and-tables}}\begin{itemize}
+\part{Índices y tablas}
+\label{\detokenize{index:indices-y-tablas}}\begin{itemize}
 \item {} 
 \DUrole{xref,std,std-ref}{genindex}
-
-\item {} 
-\DUrole{xref,std,std-ref}{modindex}
 
 \item {} 
 \DUrole{xref,std,std-ref}{search}

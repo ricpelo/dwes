@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.1.15)  8 FEB 2017 15:37
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.1.15)  10 FEB 2017 12:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1815,15 +1815,6 @@ RB.otf
 ] [2
 
 ]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[1] [2
-
-]
 Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;mapping=tex-text;+tnum;+lnum;" at 20.74pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
@@ -1836,32 +1827,62 @@ Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-
 text;mapping=tex-text;+tnum;+lnum;" at 24.88pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
 RB.otf
- [3] [4]
+ [1
+
+] [2]
 Capítulo 1.
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 71.
+(Font)              scaled to size 24.88pt on input line 69.
 Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
 xt;mapping=tex-text;+tnum;" at 24.88pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
 .otf
-LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/m/n' will be
-(Font)              scaled to size 10.27914pt on input line 1.
-Requested font "[/home/ricardo/fonts/Inconsolata-Regular]/OT:script=latn;langua
-ge=DFLT;" at 10.27914pt
- -> /home/ricardo/fonts/Inconsolata-Regular.ttf
-[5
-
-] [6
+LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/bx/n' will be
+(Font)              scaled to size 14.4pt on input line 72.
+Requested font "[LinBiolinum_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-t
+ext;mapping=tex-text;+tnum;" at 14.4pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
+B.otf
+LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 75.
+Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
+xt;mapping=tex-text;+tnum;" at 12.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
+.otf
+[3
 
 ]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4
+
+] [5] [6]
 Capítulo 2.
+LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/bx/n' will be
+(Font)              scaled to size 10.06345pt on input line 1.
+Requested font "[/home/ricardo/fonts/Inconsolata-Bold]/OT:script=latn;language=
+DFLT;" at 10.06345pt
+ -> /home/ricardo/fonts/Inconsolata-Bold.ttf
+[7
+
+]
+LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/bx/n' will be
+(Font)              scaled to size 11.02844pt on input line 1.
+Requested font "[/home/ricardo/fonts/Inconsolata-Bold]/OT:script=latn;language=
+DFLT;" at 11.02844pt
+ -> /home/ricardo/fonts/Inconsolata-Bold.ttf
+ [8]
 LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/m/n' will be
-(Font)              scaled to size 9.38736pt on input line 100.
+(Font)              scaled to size 9.38736pt on input line 293.
 Requested font "[/home/ricardo/fonts/Inconsolata-Regular]/OT:script=latn;langua
 ge=DFLT;" at 9.38736pt
  -> /home/ricardo/fonts/Inconsolata-Regular.ttf
 LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/m/n' will be
-(Font)              scaled to size 5.63242pt on input line 100.
+(Font)              scaled to size 5.63242pt on input line 293.
 Requested font "[/home/ricardo/fonts/Inconsolata-Regular]/OT:script=latn;langua
 ge=DFLT;" at 5.63242pt
  -> /home/ricardo/fonts/Inconsolata-Regular.ttf
@@ -1891,190 +1912,40 @@ Requested font "msbm5" at 5.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 Requested font "cmr6" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
-LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/m/it' will be
-(Font)              scaled to size 9.38736pt on input line 101.
-Requested font "[/home/ricardo/fonts/Inconsolata-Regular]/OT:script=latn;langua
-ge=DFLT;slant=0.2;" at 9.38736pt
- -> /home/ricardo/fonts/Inconsolata-Regular.ttf
 LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/bx/n' will be
-(Font)              scaled to size 9.19037pt on input line 125.
+(Font)              scaled to size 9.19037pt on input line 294.
 Requested font "[/home/ricardo/fonts/Inconsolata-Bold]/OT:script=latn;language=
 DFLT;" at 9.19037pt
  -> /home/ricardo/fonts/Inconsolata-Bold.ttf
-LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/bx/n' will be
-(Font)              scaled to size 14.4pt on input line 132.
-Requested font "[LinBiolinum_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-t
-ext;mapping=tex-text;+tnum;" at 14.4pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
-B.otf
-[7] [8]
-Capítulo 3.
-Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
-ext;mapping=tex-text;+tnum;+lnum;" at 8.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
-R.otf
-Requested font "cmmi10" at 10.95pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
-Requested font "cmmi8" at 8.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
-Requested font "cmsy10" at 10.95pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-Requested font "cmsy8" at 8.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
-Requested font "cmex10" at 10.95pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-Requested font "cmex8" at 8.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
-Requested font "msam10" at 10.95pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-Requested font "msam10" at 8.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-Requested font "msbm10" at 10.95pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-Requested font "msbm10" at 8.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-Requested font "cmr8" at 8.0pt
- -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
-[9
-
-] [10
-
-]
-Capítulo 4.
-[11] [12
-
-]
-Capítulo 5.
-[13] [14
-
-] [15] [16]
-Requested font "[LinLibertine_RI.otf]/OT:script=latn;language=DFLT;mapping=tex-
-text;mapping=tex-text;+tnum;+lnum;" at 10.95pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
-RI.otf
- [17] [18
-
-]
-Capítulo 6.
+ [9]
 LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/bx/n' will be
-(Font)              scaled to size 10.06345pt on input line 1.
+(Font)              scaled to size 13.23412pt on input line 1.
 Requested font "[/home/ricardo/fonts/Inconsolata-Bold]/OT:script=latn;language=
-DFLT;" at 10.06345pt
+DFLT;" at 13.23412pt
  -> /home/ricardo/fonts/Inconsolata-Bold.ttf
-[19]
-Underfull \hbox (badness 7291) in paragraph at lines 339--346
-[]\EU1/LinLibertine(0)/m/n/10.95 (callable) Function that transfers HTTP reques
-ts over the wire. The function is
- []
+ [10] [11
 
+] [12]
+Capítulo 3.
+[13
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--346
-\EU1/LinLibertine(0)/m/n/10.95 called with a \EU1/Inconsolata-Regular.ttf(0)/m/
-n/10.95 Psr7\Http\Message\RequestInterface \EU1/LinLibertine(0)/m/n/10.95 and a
-rray of transfer options,
- []
+] [14
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 339--346
-\EU1/LinLibertine(0)/m/n/10.95 and must return a \EU1/Inconsolata-Regular.ttf(0
-)/m/n/10.95 GuzzleHttp\Promise\PromiseInterface \EU1/LinLibertine(0)/m/n/10.95 
-that is fulfilled with a
- []
-
-[20]
-Overfull \vbox (1.58742pt too high) detected at line 469
- []
-
-[21] [22]
-Capítulo 7.
-
-Overfull \vbox (2.49321pt too high) detected at line 567
- []
-
-[23
-
-] [24]
-Capítulo 8.
-[25
-
-] [26
-
-]
-Capítulo 9.
-LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 638.
-Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
-xt;mapping=tex-text;+tnum;" at 12.0pt
- -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
-.otf
-[27] [28]
-Capítulo 10.
-[29
-
-] [30
-
-]
-Capítulo 11.
-[31] [32
-
-]
-Capítulo 12.
-
-Underfull \hbox (badness 10000) in paragraph at lines 764--769
-\EU1/Inconsolata-Regular.ttf(0)/m/n/10.95 leHttp\Exception\RequestException \EU
-1/LinLibertine(0)/m/n/10.95 is thrown. This exception extends from \EU1/Inconso
-lata-Regular.ttf(0)/m/n/10.95 Guzz-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--795
-[]\EU1/LinLibertine(0)/m/n/10.95 A \EU1/Inconsolata-Regular.ttf(0)/m/n/10.95 Gu
-zzleHttp\Exception\ClientException \EU1/LinLibertine(0)/m/n/10.95 is thrown for
- 400 level errors if the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 790--795
-\EU1/Inconsolata-Regular.ttf(0)/m/n/10.95 http_errors \EU1/LinLibertine(0)/m/n/
-10.95 request option is set to true. This exception extends from \EU1/Inconsola
-ta-Regular.ttf(0)/m/n/10.95 Guzz-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 808--811
-[]\EU1/LinLibertine(0)/m/n/10.95 A \EU1/Inconsolata-Regular.ttf(0)/m/n/10.95 Gu
-zzleHttp\Exception\ServerException \EU1/LinLibertine(0)/m/n/10.95 is thrown for
- 500 level errors if the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 808--811
-\EU1/Inconsolata-Regular.ttf(0)/m/n/10.95 http_errors \EU1/LinLibertine(0)/m/n/
-10.95 request option is set to true. This exception extends from \EU1/Inconsola
-ta-Regular.ttf(0)/m/n/10.95 Guzz-
- []
-
-[33] [34]
-Capítulo 13.
-[35
-
-] [36
-
-] [37] [38] (./dwese.ind)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 873.
- [39]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 873.
+] [15] [16] (./dwese.ind)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 363.
+ [17]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 363.
  (./dwese.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 873.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 873.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 363.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 363.
  ) 
 Here is how much of TeX's memory you used:
- 34837 strings out of 493638
- 657543 string characters out of 6146796
- 631570 words of memory out of 5000000
- 37857 multiletter control sequences out of 15000+600000
- 13818 words of font info for 107 fonts, out of 8000000 for 9000
+ 34865 strings out of 493638
+ 658576 string characters out of 6146796
+ 585890 words of memory out of 5000000
+ 37893 multiletter control sequences out of 15000+600000
+ 10954 words of font info for 94 fonts, out of 8000000 for 9000
  1329 hyphenation exceptions out of 8191
- 48i,11n,105p,10381b,438s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,12n,105p,10381b,400s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dwese.pdf (43 pages).
+Output written on dwese.pdf (21 pages).
