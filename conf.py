@@ -257,7 +257,7 @@ latex_elements = {
      #
     'fontpkg': """\usepackage{libertine}
                   \setmonofont[
-                     Path=/home/ricardo/fonts/,
+                     Path=../../fonts/,
                      BoldFont=Inconsolata-Bold.ttf,
                      AutoFakeSlant,
                      BoldItalicFeatures={FakeSlant},
