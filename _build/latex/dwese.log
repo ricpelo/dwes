@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.1.15)  12 FEB 2017 16:12
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.1.15)  12 FEB 2017 15:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1136,23 +1136,23 @@ LaTeX Info: Redefining \liningnums on input line 459.
 (/usr/share/texlive/texmf-dist/tex/latex/libertine/LinBiolinum_K.tex)
 (/usr/share/texlive/texmf-dist/tex/latex/libertine/LinLibertine_I.tex)
 (/usr/share/texlive/texmf-dist/tex/latex/libertine/LKey.tex))
-Requested font "[../../_fonts/Inconsolata-Regular.ttf]/OT" at 10.95pt
- -> ../../_fonts/Inconsolata-Regular.ttf
+Requested font "[../../fonts/Inconsolata-Regular.ttf]/OT" at 10.95pt
+ -> ../../fonts/Inconsolata-Regular.ttf
 .................................................
 . fontspec info: "set-scale"
 . 
 . Inconsolata-Regular.ttf scale = 0.9387318875933064.
 .................................................
 \g__fontspec_family_Inconsolata-Regular.ttf_int=\count143
-Requested font "[../../_fonts/Inconsolata-Regular]/OT" at 10.95pt
- -> ../../_fonts/Inconsolata-Regular.ttf
+Requested font "[../../fonts/Inconsolata-Regular]/OT" at 10.95pt
+ -> ../../fonts/Inconsolata-Regular.ttf
 .................................................
 . fontspec info: "set-scale"
 . 
 . Inconsolata-Regular scale = 0.9387318875933064.
 .................................................
-Requested font "[../../_fonts/Inconsolata-Bold]/OT" at 10.95pt
- -> ../../_fonts/Inconsolata-Bold.ttf
+Requested font "[../../fonts/Inconsolata-Bold]/OT" at 10.95pt
+ -> ../../fonts/Inconsolata-Bold.ttf
 .................................................
 . fontspec info: "set-scale"
 . 
@@ -1168,28 +1168,28 @@ Requested font "[../../_fonts/Inconsolata-Bold]/OT" at 10.95pt
 . 
 . Font family 'Inconsolata-Regular.ttf(0)' created for font
 . 'Inconsolata-Regular.ttf' with options
-. [WordSpace={1,0,0},PunctuationSpace=WordSpace,Path=../../_fonts/,BoldFont=Inc
-onsolata-Bold.ttf,AutoFakeSlant,BoldItalicFeatures={FakeSlant},Scale=MatchLower
-case].
+. [WordSpace={1,0,0},PunctuationSpace=WordSpace,Path=../../fonts/,BoldFont=Inco
+nsolata-Bold.ttf,AutoFakeSlant,BoldItalicFeatures={FakeSlant},Scale=MatchLowerc
+ase].
 . 
 . This font family consists of the following NFSS series/shapes:
 . - 'normal' (m/n) with NFSS spec.:
-. <->s*[0.9387318875933064]"[../../_fonts/Inconsolata-Regular]/OT:script=latn;l
-anguage=DFLT;"
+. <->s*[0.9387318875933064]"[../../fonts/Inconsolata-Regular]/OT:script=latn;la
+nguage=DFLT;"
 . - 'small caps'  (m/sc) with NFSS spec.: 
 . and font adjustment code:
 . \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
 . \fontdimen 4\font =0\fontdimen 4\font \fontdimen 7\font =0\fontdimen 2\font
 . - 'bold' (bx/n) with NFSS spec.:
-. <->s*[0.9190314703476606]"[../../_fonts/Inconsolata-Bold]/OT:script=latn;lang
-uage=DFLT;"
+. <->s*[0.9190314703476606]"[../../fonts/Inconsolata-Bold]/OT:script=latn;langu
+age=DFLT;"
 . - 'bold small caps'  (bx/sc) with NFSS spec.: 
 . and font adjustment code:
 . \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
 . \fontdimen 4\font =0\fontdimen 4\font \fontdimen 7\font =0\fontdimen 2\font
 . - 'italic' (m/it) with NFSS spec.:
-. <->s*[0.9387318875933064]"[../../_fonts/Inconsolata-Regular]/OT:script=latn;l
-anguage=DFLT;slant=0.2;"
+. <->s*[0.9387318875933064]"[../../fonts/Inconsolata-Regular]/OT:script=latn;la
+nguage=DFLT;slant=0.2;"
 . - 'italic small caps'  (m/itsc) with NFSS spec.: 
 . and font adjustment code:
 . \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
@@ -1868,28 +1868,28 @@ Capítulo 2.
 Capítulo 3.
 LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/bx/n' will be
 (Font)              scaled to size 10.06345pt on input line 1.
-Requested font "[../../_fonts/Inconsolata-Bold]/OT:script=latn;language=DFLT;" 
-at 10.06345pt
- -> ../../_fonts/Inconsolata-Bold.ttf
+Requested font "[../../fonts/Inconsolata-Bold]/OT:script=latn;language=DFLT;" a
+t 10.06345pt
+ -> ../../fonts/Inconsolata-Bold.ttf
 [11
 
 ]
 LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/bx/n' will be
 (Font)              scaled to size 11.02844pt on input line 1.
-Requested font "[../../_fonts/Inconsolata-Bold]/OT:script=latn;language=DFLT;" 
-at 11.02844pt
- -> ../../_fonts/Inconsolata-Bold.ttf
+Requested font "[../../fonts/Inconsolata-Bold]/OT:script=latn;language=DFLT;" a
+t 11.02844pt
+ -> ../../fonts/Inconsolata-Bold.ttf
  [12]
 LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/m/n' will be
 (Font)              scaled to size 9.38736pt on input line 419.
-Requested font "[../../_fonts/Inconsolata-Regular]/OT:script=latn;language=DFLT
-;" at 9.38736pt
- -> ../../_fonts/Inconsolata-Regular.ttf
+Requested font "[../../fonts/Inconsolata-Regular]/OT:script=latn;language=DFLT;
+" at 9.38736pt
+ -> ../../fonts/Inconsolata-Regular.ttf
 LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/m/n' will be
 (Font)              scaled to size 5.63242pt on input line 419.
-Requested font "[../../_fonts/Inconsolata-Regular]/OT:script=latn;language=DFLT
-;" at 5.63242pt
- -> ../../_fonts/Inconsolata-Regular.ttf
+Requested font "[../../fonts/Inconsolata-Regular]/OT:script=latn;language=DFLT;
+" at 5.63242pt
+ -> ../../fonts/Inconsolata-Regular.ttf
 Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;mapping=tex-text;+tnum;+lnum;" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
@@ -1918,15 +1918,15 @@ Requested font "cmr6" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/bx/n' will be
 (Font)              scaled to size 9.19037pt on input line 420.
-Requested font "[../../_fonts/Inconsolata-Bold]/OT:script=latn;language=DFLT;" 
-at 9.19037pt
- -> ../../_fonts/Inconsolata-Bold.ttf
+Requested font "[../../fonts/Inconsolata-Bold]/OT:script=latn;language=DFLT;" a
+t 9.19037pt
+ -> ../../fonts/Inconsolata-Bold.ttf
  [13]
 LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/bx/n' will be
 (Font)              scaled to size 13.23412pt on input line 1.
-Requested font "[../../_fonts/Inconsolata-Bold]/OT:script=latn;language=DFLT;" 
-at 13.23412pt
- -> ../../_fonts/Inconsolata-Bold.ttf
+Requested font "[../../fonts/Inconsolata-Bold]/OT:script=latn;language=DFLT;" a
+t 13.23412pt
+ -> ../../fonts/Inconsolata-Bold.ttf
  [14] [15
 
 ] [16]
@@ -1945,8 +1945,8 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 489.
  ) 
 Here is how much of TeX's memory you used:
  34910 strings out of 493638
- 659183 string characters out of 6146796
- 588142 words of memory out of 5000000
+ 659167 string characters out of 6146796
+ 588136 words of memory out of 5000000
  37938 multiletter control sequences out of 15000+600000
  10954 words of font info for 94 fonts, out of 8000000 for 9000
  1329 hyphenation exceptions out of 8191

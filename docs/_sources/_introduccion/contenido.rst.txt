@@ -1,4 +1,0 @@
-.. include:: introduccion-al-desarrollo-web
-.. include:: protocolo-http-y-lenguaje-html
-.. include:: sistemas-de-control-de-versiones
-
