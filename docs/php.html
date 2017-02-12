@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Conceptos básicos de PHP &mdash; Desarrollo web en entorno servidor</title>
+  <title>2. PHP &mdash; Desarrollo web en entorno servidor</title>
   
 
   
@@ -84,10 +84,25 @@
             
             
                 <ul>
-<li class="toctree-l1"><a class="reference internal" href="contenidos.html">1. Introducción al desarrollo web</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contenidos.html#sistemas-de-control-de-versiones">2. Sistemas de control de versiones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contenidos.html#conceptos-basicos-de-php">3. Conceptos básicos de PHP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contenidos.html#introduccion-a-yii2">4. Introducción a Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduccion-al-desarrollo-web.html">1. Introducción al desarrollo web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocolo-http-y-lenguaje-html.html">2. Protocolo HTTP y lenguaje HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sistemas-de-control-de-versiones.html">3. Sistemas de control de versiones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conceptos-basicos-de-php.html">4. Conceptos básicos de PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="persistencia-de-datos-con-php.html">5. Persistencia de datos con PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="programacion-avanzada-en-php.html">6. Programación avanzada en PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interoperabilidad.html">7. Interoperabilidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduccion-a-yii2.html">8. Introducción a Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conceptos-fundamentales-de-yii2.html">9. Conceptos fundamentales de Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="estructura-de-una-aplicacion-yii2.html">10. Estructura de una aplicación Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gestion-de-peticiones-en-yii2.html">11. Gestión de peticiones en Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acceso-a-bases-de-datos-en-yii2.html">12. Acceso a bases de datos en Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recogida-de-datos-y-validacion-de-formularios-en-yii2.html">13. Recogida de datos y validación de formularios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualizacion-de-datos-en-yii2.html">14. Visualización de datos en Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="caracteristicas-adicionales-de-yii2.html">15. Características adicionales de Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seguridad-y-cacheado-en-yii2.html">16. Seguridad y cacheado en Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pruebas-documentacion-y-mantenimiento.html">17. Pruebas, documentación y mantenimiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="computacion-en-la-nube.html">18. Computación en la nube</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contenedores.html">19. Contenedores</a></li>
 </ul>
 
             
@@ -131,7 +146,7 @@
   <ul class="wy-breadcrumbs">
     
         
-      <li>Conceptos básicos de PHP</li>
+      <li>2. PHP</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -152,164 +167,166 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="conceptos-basicos-de-php">
-<h1>Conceptos básicos de PHP<a class="headerlink" href="#conceptos-basicos-de-php" title="Enlazar permanentemente con este título">¶</a></h1>
+  <div class="section" id="php">
+<h1>2. PHP<a class="headerlink" href="#php" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="conceptos-basicos-de-php">
+<h2>2.1. Conceptos básicos de PHP<a class="headerlink" href="#conceptos-basicos-de-php" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="php-como-lenguaje-embebido">
-<h2>PHP como lenguaje embebido<a class="headerlink" href="#php-como-lenguaje-embebido" title="Enlazar permanentemente con este título">¶</a></h2>
+<h3>2.1.1. PHP como lenguaje embebido<a class="headerlink" href="#php-como-lenguaje-embebido" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="section" id="introduccion-a-php">
-<h3>Introducción a PHP<a class="headerlink" href="#introduccion-a-php" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.1.1. Introducción a PHP<a class="headerlink" href="#introduccion-a-php" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="instalacion-de-php">
-<h4>Instalación de PHP<a class="headerlink" href="#instalacion-de-php" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.1.1.1. Instalación de PHP<a class="headerlink" href="#instalacion-de-php" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="pagina-web-de-php">
-<h4>Página web de PHP<a class="headerlink" href="#pagina-web-de-php" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.1.1.2. Página web de PHP<a class="headerlink" href="#pagina-web-de-php" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="documentacion-y-busqueda-de-informacion">
-<h4>Documentación y búsqueda de información<a class="headerlink" href="#documentacion-y-busqueda-de-informacion" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.1.1.3. Documentación y búsqueda de información<a class="headerlink" href="#documentacion-y-busqueda-de-informacion" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 </div>
 <div class="section" id="funcionamiento-del-interprete">
-<h3>Funcionamiento del intérprete<a class="headerlink" href="#funcionamiento-del-interprete" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.1.2. Funcionamiento del intérprete<a class="headerlink" href="#funcionamiento-del-interprete" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="modo-dual-de-operacion">
-<h4>Modo dual de operación<a class="headerlink" href="#modo-dual-de-operacion" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.1.2.1. Modo dual de operación<a class="headerlink" href="#modo-dual-de-operacion" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="etiquetas-php-y">
-<h4>Etiquetas <code class="docutils literal"><span class="pre">&lt;?php</span></code> y <code class="docutils literal"><span class="pre">?&gt;</span></code><a class="headerlink" href="#etiquetas-php-y" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.1.2.2. Etiquetas <code class="docutils literal"><span class="pre">&lt;?php</span></code> y <code class="docutils literal"><span class="pre">?&gt;</span></code><a class="headerlink" href="#etiquetas-php-y" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 </div>
 <div class="section" id="sintaxis-basica">
-<h3>Sintaxis básica<a class="headerlink" href="#sintaxis-basica" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.1.3. Sintaxis básica<a class="headerlink" href="#sintaxis-basica" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 <div class="section" id="sapis">
-<h3>SAPIs<a class="headerlink" href="#sapis" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.1.4. SAPIs<a class="headerlink" href="#sapis" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="cli-uso-en-linea-de-comandos">
-<h4>CLI: Uso en línea de comandos<a class="headerlink" href="#cli-uso-en-linea-de-comandos" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.1.4.1. CLI: Uso en línea de comandos<a class="headerlink" href="#cli-uso-en-linea-de-comandos" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="apache">
-<h4>Apache<a class="headerlink" href="#apache" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.1.4.2. Apache<a class="headerlink" href="#apache" title="Enlazar permanentemente con este título">¶</a></h5>
 <div class="section" id="integracion-de-php-con-apache">
-<h5>Integración de PHP con Apache<a class="headerlink" href="#integracion-de-php-con-apache" title="Enlazar permanentemente con este título">¶</a></h5>
+<h6>2.1.1.4.2.1. Integración de PHP con Apache<a class="headerlink" href="#integracion-de-php-con-apache" title="Enlazar permanentemente con este título">¶</a></h6>
 </div>
 <div class="section" id="configuracion-basica-con-php-ini">
-<h5>Configuración básica con <code class="docutils literal"><span class="pre">php.ini</span></code><a class="headerlink" href="#configuracion-basica-con-php-ini" title="Enlazar permanentemente con este título">¶</a></h5>
+<h6>2.1.1.4.2.2. Configuración básica con <code class="docutils literal"><span class="pre">php.ini</span></code><a class="headerlink" href="#configuracion-basica-con-php-ini" title="Enlazar permanentemente con este título">¶</a></h6>
 </div>
 <div class="section" id="etiqueta">
-<h5>Etiqueta <code class="docutils literal"><span class="pre">&lt;?=</span></code><a class="headerlink" href="#etiqueta" title="Enlazar permanentemente con este título">¶</a></h5>
+<h6>2.1.1.4.2.3. Etiqueta <code class="docutils literal"><span class="pre">&lt;?=</span></code><a class="headerlink" href="#etiqueta" title="Enlazar permanentemente con este título">¶</a></h6>
 </div>
 </div>
 <div class="section" id="cgi-php-fpm-fastcgi-process-manager">
-<h4>CGI: PHP-FPM (FastCGI Process Manager)<a class="headerlink" href="#cgi-php-fpm-fastcgi-process-manager" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.1.4.3. CGI: PHP-FPM (FastCGI Process Manager)<a class="headerlink" href="#cgi-php-fpm-fastcgi-process-manager" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="modulos-de-extension">
-<h4>Módulos de extensión<a class="headerlink" href="#modulos-de-extension" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.1.4.4. Módulos de extensión<a class="headerlink" href="#modulos-de-extension" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 </div>
 </div>
 <div class="section" id="tipos-de-datos-basicos">
-<h2>Tipos de datos básicos<a class="headerlink" href="#tipos-de-datos-basicos" title="Enlazar permanentemente con este título">¶</a></h2>
+<h3>2.1.2. Tipos de datos básicos<a class="headerlink" href="#tipos-de-datos-basicos" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="section" id="enteros-int-sinonimo-de-integer">
-<h3>Enteros (<code class="docutils literal"><span class="pre">int</span></code>, sinónimo de <code class="docutils literal"><span class="pre">integer</span></code>)<a class="headerlink" href="#enteros-int-sinonimo-de-integer" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.2.1. Enteros (<code class="docutils literal"><span class="pre">int</span></code>, sinónimo de <code class="docutils literal"><span class="pre">integer</span></code>)<a class="headerlink" href="#enteros-int-sinonimo-de-integer" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 <div class="section" id="numeros-en-coma-flotante-float-sinonimo-de-double">
-<h3>Números en coma flotante (<code class="docutils literal"><span class="pre">float</span></code>, sinónimo de <code class="docutils literal"><span class="pre">double</span></code>)<a class="headerlink" href="#numeros-en-coma-flotante-float-sinonimo-de-double" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.2.2. Números en coma flotante (<code class="docutils literal"><span class="pre">float</span></code>, sinónimo de <code class="docutils literal"><span class="pre">double</span></code>)<a class="headerlink" href="#numeros-en-coma-flotante-float-sinonimo-de-double" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 <div class="section" id="cadenas-string">
-<h3>Cadenas (<code class="docutils literal"><span class="pre">string</span></code>)<a class="headerlink" href="#cadenas-string" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.2.3. Cadenas (<code class="docutils literal"><span class="pre">string</span></code>)<a class="headerlink" href="#cadenas-string" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="funciones-de-manejo-de-cadenas">
-<h4>Funciones de manejo de cadenas<a class="headerlink" href="#funciones-de-manejo-de-cadenas" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.2.3.1. Funciones de manejo de cadenas<a class="headerlink" href="#funciones-de-manejo-de-cadenas" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="extension-mbstring">
-<h4>Extensión mbstring<a class="headerlink" href="#extension-mbstring" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.2.3.2. Extensión mbstring<a class="headerlink" href="#extension-mbstring" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 </div>
 <div class="section" id="logicos-bool-sinonimo-de-boolean">
-<h3>Lógicos (<code class="docutils literal"><span class="pre">bool</span></code>, sinónimo de <code class="docutils literal"><span class="pre">boolean</span></code>)<a class="headerlink" href="#logicos-bool-sinonimo-de-boolean" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.2.4. Lógicos (<code class="docutils literal"><span class="pre">bool</span></code>, sinónimo de <code class="docutils literal"><span class="pre">boolean</span></code>)<a class="headerlink" href="#logicos-bool-sinonimo-de-boolean" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 <div class="section" id="null">
-<h3><code class="docutils literal"><span class="pre">NULL</span></code><a class="headerlink" href="#null" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.2.5. <code class="docutils literal"><span class="pre">NULL</span></code><a class="headerlink" href="#null" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="is-null-vs-null">
-<h4><code class="docutils literal"><span class="pre">is_null()</span></code> vs. <code class="docutils literal"><span class="pre">===</span> <span class="pre">null</span></code><a class="headerlink" href="#is-null-vs-null" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.2.5.1. <code class="docutils literal"><span class="pre">is_null()</span></code> vs. <code class="docutils literal"><span class="pre">===</span> <span class="pre">null</span></code><a class="headerlink" href="#is-null-vs-null" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 </div>
 <div class="section" id="comparaciones">
-<h3>Comparaciones<a class="headerlink" href="#comparaciones" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.2.6. Comparaciones<a class="headerlink" href="#comparaciones" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="operadores-de-comparacion">
-<h4>Operadores de comparación<a class="headerlink" href="#operadores-de-comparacion" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.2.6.1. Operadores de comparación<a class="headerlink" href="#operadores-de-comparacion" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="vs">
-<h4><code class="docutils literal"><span class="pre">==</span></code> vs. <code class="docutils literal"><span class="pre">===</span></code><a class="headerlink" href="#vs" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.2.6.2. <code class="docutils literal"><span class="pre">==</span></code> vs. <code class="docutils literal"><span class="pre">===</span></code><a class="headerlink" href="#vs" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="ternario">
-<h4>Ternario (<code class="docutils literal"><span class="pre">?:</span></code>)<a class="headerlink" href="#ternario" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.2.6.3. Ternario (<code class="docutils literal"><span class="pre">?:</span></code>)<a class="headerlink" href="#ternario" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="fusion-de-null">
-<h4>Fusión de null (<code class="docutils literal"><span class="pre">??</span></code>)<a class="headerlink" href="#fusion-de-null" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.2.6.4. Fusión de null (<code class="docutils literal"><span class="pre">??</span></code>)<a class="headerlink" href="#fusion-de-null" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="reglas-de-comparacion-de-tipos">
-<h4>Reglas de comparación de tipos<a class="headerlink" href="#reglas-de-comparacion-de-tipos" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.2.6.5. Reglas de comparación de tipos<a class="headerlink" href="#reglas-de-comparacion-de-tipos" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 </div>
 <div class="section" id="comprobaciones">
-<h3>Comprobaciones<a class="headerlink" href="#comprobaciones" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.2.7. Comprobaciones<a class="headerlink" href="#comprobaciones" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="gettype">
-<h4><code class="docutils literal"><span class="pre">gettype()</span></code><a class="headerlink" href="#gettype" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.2.7.1. <code class="docutils literal"><span class="pre">gettype()</span></code><a class="headerlink" href="#gettype" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="is-poco-utiles-en-formularios-ya-que-solo-se-reciben-strings">
-<h4><code class="docutils literal"><span class="pre">is_*()</span></code> (poco útiles en formularios, ya que sólo se reciben strings)<a class="headerlink" href="#is-poco-utiles-en-formularios-ya-que-solo-se-reciben-strings" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.2.7.2. <code class="docutils literal"><span class="pre">is_*()</span></code> (poco útiles en formularios, ya que sólo se reciben strings)<a class="headerlink" href="#is-poco-utiles-en-formularios-ya-que-solo-se-reciben-strings" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="is-numeric">
-<h4><code class="docutils literal"><span class="pre">is_numeric()</span></code><a class="headerlink" href="#is-numeric" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.2.7.3. <code class="docutils literal"><span class="pre">is_numeric()</span></code><a class="headerlink" href="#is-numeric" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="ctype">
-<h4><code class="docutils literal"><span class="pre">ctype_*()</span></code><a class="headerlink" href="#ctype" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.2.7.4. <code class="docutils literal"><span class="pre">ctype_*()</span></code><a class="headerlink" href="#ctype" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 </div>
 <div class="section" id="conversiones">
-<h3>Conversiones<a class="headerlink" href="#conversiones" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.2.8. Conversiones<a class="headerlink" href="#conversiones" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="coercion-moldeado-forzado-o-casting">
-<h4>Coerción, moldeado, forzado o casting<a class="headerlink" href="#coercion-moldeado-forzado-o-casting" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.2.8.1. Coerción, moldeado, forzado o casting<a class="headerlink" href="#coercion-moldeado-forzado-o-casting" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="intval-floatval-strval-boolval">
-<h4>intval(), floatval(), strval(), boolval()<a class="headerlink" href="#intval-floatval-strval-boolval" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.2.8.2. intval(), floatval(), strval(), boolval()<a class="headerlink" href="#intval-floatval-strval-boolval" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="number-format-money-format-setlocale">
-<h4>number_format(), money_format(), setlocale()<a class="headerlink" href="#number-format-money-format-setlocale" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.2.8.3. number_format(), money_format(), setlocale()<a class="headerlink" href="#number-format-money-format-setlocale" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 </div>
 </div>
 <div class="section" id="variables">
-<h2>Variables<a class="headerlink" href="#variables" title="Enlazar permanentemente con este título">¶</a></h2>
+<h3>2.1.3. Variables<a class="headerlink" href="#variables" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="section" id="conceptos-basicos">
-<h3>Conceptos básicos<a class="headerlink" href="#conceptos-basicos" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.3.1. Conceptos básicos<a class="headerlink" href="#conceptos-basicos" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 <div class="section" id="asignacion-por-valor-y-por-referencia">
-<h3>Asignación por valor y por referencia<a class="headerlink" href="#asignacion-por-valor-y-por-referencia" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.3.2. Asignación por valor y por referencia<a class="headerlink" href="#asignacion-por-valor-y-por-referencia" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 <div class="section" id="ambito-globales-superglobales">
-<h3>Ámbito: globales, superglobales<a class="headerlink" href="#ambito-globales-superglobales" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.3.3. Ámbito: globales, superglobales<a class="headerlink" href="#ambito-globales-superglobales" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 <div class="section" id="variables-predefinidas">
-<h3>Variables predefinidas<a class="headerlink" href="#variables-predefinidas" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.3.4. Variables predefinidas<a class="headerlink" href="#variables-predefinidas" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 </div>
 <div class="section" id="constantes">
-<h2>Constantes<a class="headerlink" href="#constantes" title="Enlazar permanentemente con este título">¶</a></h2>
+<h3>2.1.4. Constantes<a class="headerlink" href="#constantes" title="Enlazar permanentemente con este título">¶</a></h3>
 </div>
 <div class="section" id="estructuras-de-control">
-<h2>Estructuras de control<a class="headerlink" href="#estructuras-de-control" title="Enlazar permanentemente con este título">¶</a></h2>
+<h3>2.1.5. Estructuras de control<a class="headerlink" href="#estructuras-de-control" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="section" id="require-require-once-include-include-once">
-<h3><code class="docutils literal"><span class="pre">require</span></code>, <code class="docutils literal"><span class="pre">require_once</span></code>, <code class="docutils literal"><span class="pre">include</span></code>, <code class="docutils literal"><span class="pre">include_once</span></code><a class="headerlink" href="#require-require-once-include-include-once" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.5.1. <code class="docutils literal"><span class="pre">require</span></code>, <code class="docutils literal"><span class="pre">require_once</span></code>, <code class="docutils literal"><span class="pre">include</span></code>, <code class="docutils literal"><span class="pre">include_once</span></code><a class="headerlink" href="#require-require-once-include-include-once" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 </div>
 <div class="section" id="funciones-predefinidas">
-<h2>Funciones predefinidas<a class="headerlink" href="#funciones-predefinidas" title="Enlazar permanentemente con este título">¶</a></h2>
+<h3>2.1.6. Funciones predefinidas<a class="headerlink" href="#funciones-predefinidas" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="section" id="isset">
-<h3><code class="docutils literal"><span class="pre">isset()</span></code><a class="headerlink" href="#isset" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.6.1. <code class="docutils literal"><span class="pre">isset()</span></code><a class="headerlink" href="#isset" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 <div class="section" id="empty">
-<h3><code class="docutils literal"><span class="pre">empty()</span></code><a class="headerlink" href="#empty" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.6.2. <code class="docutils literal"><span class="pre">empty()</span></code><a class="headerlink" href="#empty" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="para-evitar-el-problema-de-empty-0-true">
-<h4>Para evitar el problema de <code class="docutils literal"><span class="pre">empty(&quot;0&quot;)</span> <span class="pre">===</span> <span class="pre">true</span></code>:<a class="headerlink" href="#para-evitar-el-problema-de-empty-0-true" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.6.2.1. Para evitar el problema de <code class="docutils literal"><span class="pre">empty(&quot;0&quot;)</span> <span class="pre">===</span> <span class="pre">true</span></code>:<a class="headerlink" href="#para-evitar-el-problema-de-empty-0-true" title="Enlazar permanentemente con este título">¶</a></h5>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="nf">is_blank</span><span class="p">(</span><span class="nv">$value</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">return</span> <span class="k">empty</span><span class="p">(</span><span class="nv">$value</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nb">is_numeric</span><span class="p">(</span><span class="nv">$value</span><span class="p">);</span>
@@ -320,46 +337,56 @@
 </div>
 </div>
 <div class="section" id="arrays">
-<h2>Arrays<a class="headerlink" href="#arrays" title="Enlazar permanentemente con este título">¶</a></h2>
+<h3>2.1.7. Arrays<a class="headerlink" href="#arrays" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="section" id="funciones-de-manejo-de-arrays">
-<h3>Funciones de manejo de arrays<a class="headerlink" href="#funciones-de-manejo-de-arrays" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.7.1. Funciones de manejo de arrays<a class="headerlink" href="#funciones-de-manejo-de-arrays" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 <div class="section" id="foreach">
-<h3><code class="docutils literal"><span class="pre">foreach</span></code><a class="headerlink" href="#foreach" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.7.2. <code class="docutils literal"><span class="pre">foreach</span></code><a class="headerlink" href="#foreach" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 <div class="section" id="isset-vs-array-key-exists">
-<h3><code class="docutils literal"><span class="pre">isset()</span></code> vs. <code class="docutils literal"><span class="pre">array_key_exists()</span></code><a class="headerlink" href="#isset-vs-array-key-exists" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.7.3. <code class="docutils literal"><span class="pre">isset()</span></code> vs. <code class="docutils literal"><span class="pre">array_key_exists()</span></code><a class="headerlink" href="#isset-vs-array-key-exists" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 </div>
 <div class="section" id="funciones">
-<h2>Funciones<a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">¶</a></h2>
+<h3>2.1.8. Funciones<a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="section" id="variables-locales">
-<h3>Variables locales<a class="headerlink" href="#variables-locales" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.8.1. Variables locales<a class="headerlink" href="#variables-locales" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 <div class="section" id="uso-de-global">
-<h3>Uso de global<a class="headerlink" href="#uso-de-global" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.8.2. Uso de global<a class="headerlink" href="#uso-de-global" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 <div class="section" id="argumentos-por-defecto">
-<h3>Argumentos por defecto<a class="headerlink" href="#argumentos-por-defecto" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.8.3. Argumentos por defecto<a class="headerlink" href="#argumentos-por-defecto" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 <div class="section" id="paso-de-argumentos-por-valor-y-por-referencia">
-<h3>Paso de argumentos por valor y por referencia<a class="headerlink" href="#paso-de-argumentos-por-valor-y-por-referencia" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.8.4. Paso de argumentos por valor y por referencia<a class="headerlink" href="#paso-de-argumentos-por-valor-y-por-referencia" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 <div class="section" id="declaraciones-de-tipos">
-<h3>Declaraciones de tipos<a class="headerlink" href="#declaraciones-de-tipos" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>2.1.8.5. Declaraciones de tipos<a class="headerlink" href="#declaraciones-de-tipos" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="declaraciones-de-tipo-de-argumento">
-<h4>Declaraciones de tipo de argumento<a class="headerlink" href="#declaraciones-de-tipo-de-argumento" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.8.5.1. Declaraciones de tipo de argumento<a class="headerlink" href="#declaraciones-de-tipo-de-argumento" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="declaraciones-de-tipo-de-devolucion">
-<h4>Declaraciones de tipo de devolución<a class="headerlink" href="#declaraciones-de-tipo-de-devolucion" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.8.5.2. Declaraciones de tipo de devolución<a class="headerlink" href="#declaraciones-de-tipo-de-devolucion" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="tipificacion-estricta-declare-strict-types-1">
-<h4>Tipificación estricta: <code class="docutils literal"><span class="pre">declare(strict_types=1);</span></code><a class="headerlink" href="#tipificacion-estricta-declare-strict-types-1" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>2.1.8.5.3. Tipificación estricta: <code class="docutils literal"><span class="pre">declare(strict_types=1);</span></code><a class="headerlink" href="#tipificacion-estricta-declare-strict-types-1" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 </div>
 </div>
 <div class="section" id="manejo-de-datos-de-entrada-get-y-post">
-<h2>Manejo de datos de entrada: <code class="docutils literal"><span class="pre">$_GET</span></code> y <code class="docutils literal"><span class="pre">$_POST</span></code><a class="headerlink" href="#manejo-de-datos-de-entrada-get-y-post" title="Enlazar permanentemente con este título">¶</a></h2>
+<h3>2.1.9. Manejo de datos de entrada: <code class="docutils literal"><span class="pre">$_GET</span></code> y <code class="docutils literal"><span class="pre">$_POST</span></code><a class="headerlink" href="#manejo-de-datos-de-entrada-get-y-post" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
+</div>
+<div class="section" id="persistencia-de-datos-con-php">
+<h2>2.2. Persistencia de datos con PHP<a class="headerlink" href="#persistencia-de-datos-con-php" title="Enlazar permanentemente con este título">¶</a></h2>
+</div>
+<div class="section" id="programacion-avanzada-en-php">
+<h2>2.3. Programación avanzada en PHP<a class="headerlink" href="#programacion-avanzada-en-php" title="Enlazar permanentemente con este título">¶</a></h2>
+</div>
+<div class="section" id="interoperabilidad">
+<h2>2.4. Interoperabilidad<a class="headerlink" href="#interoperabilidad" title="Enlazar permanentemente con este título">¶</a></h2>
 </div>
 </div>
 

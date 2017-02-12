@@ -14,7 +14,25 @@ Desarrollo web en entorno servidor
    :maxdepth: 2
    :numbered:
 
-   contenidos
+   introduccion-al-desarrollo-web
+   protocolo-http-y-lenguaje-html
+   sistemas-de-control-de-versiones
+   conceptos-basicos-de-php
+   persistencia-de-datos-con-php
+   programacion-avanzada-en-php
+   interoperabilidad
+   introduccion-a-yii2
+   conceptos-fundamentales-de-yii2
+   estructura-de-una-aplicacion-yii2
+   gestion-de-peticiones-en-yii2
+   acceso-a-bases-de-datos-en-yii2
+   recogida-de-datos-y-validacion-de-formularios-en-yii2
+   visualizacion-de-datos-en-yii2
+   caracteristicas-adicionales-de-yii2
+   seguridad-y-cacheado-en-yii2
+   pruebas-documentacion-y-mantenimiento
+   computacion-en-la-nube
+   contenedores
 
 Índices y tablas
 ================

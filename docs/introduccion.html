@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Introducción al desarrollo web &mdash; Desarrollo web en entorno servidor</title>
+  <title>1. Introducción &mdash; Desarrollo web en entorno servidor</title>
   
 
   
@@ -84,10 +84,25 @@
             
             
                 <ul>
-<li class="toctree-l1"><a class="reference internal" href="contenidos.html">1. Introducción al desarrollo web</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contenidos.html#sistemas-de-control-de-versiones">2. Sistemas de control de versiones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contenidos.html#conceptos-basicos-de-php">3. Conceptos básicos de PHP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contenidos.html#introduccion-a-yii2">4. Introducción a Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduccion-al-desarrollo-web.html">1. Introducción al desarrollo web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocolo-http-y-lenguaje-html.html">2. Protocolo HTTP y lenguaje HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sistemas-de-control-de-versiones.html">3. Sistemas de control de versiones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conceptos-basicos-de-php.html">4. Conceptos básicos de PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="persistencia-de-datos-con-php.html">5. Persistencia de datos con PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="programacion-avanzada-en-php.html">6. Programación avanzada en PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interoperabilidad.html">7. Interoperabilidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduccion-a-yii2.html">8. Introducción a Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conceptos-fundamentales-de-yii2.html">9. Conceptos fundamentales de Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="estructura-de-una-aplicacion-yii2.html">10. Estructura de una aplicación Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gestion-de-peticiones-en-yii2.html">11. Gestión de peticiones en Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acceso-a-bases-de-datos-en-yii2.html">12. Acceso a bases de datos en Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recogida-de-datos-y-validacion-de-formularios-en-yii2.html">13. Recogida de datos y validación de formularios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualizacion-de-datos-en-yii2.html">14. Visualización de datos en Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="caracteristicas-adicionales-de-yii2.html">15. Características adicionales de Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seguridad-y-cacheado-en-yii2.html">16. Seguridad y cacheado en Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pruebas-documentacion-y-mantenimiento.html">17. Pruebas, documentación y mantenimiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="computacion-en-la-nube.html">18. Computación en la nube</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contenedores.html">19. Contenedores</a></li>
 </ul>
 
             
@@ -131,7 +146,7 @@
   <ul class="wy-breadcrumbs">
     
         
-      <li>Introducción al desarrollo web</li>
+      <li>1. Introducción</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -152,139 +167,144 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="introduccion-al-desarrollo-web">
-<h1>Introducción al desarrollo web<a class="headerlink" href="#introduccion-al-desarrollo-web" title="Enlazar permanentemente con este título">¶</a></h1>
+  <div class="section" id="introduccion">
+<h1>1. Introducción<a class="headerlink" href="#introduccion" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="introduccion-al-desarrollo-web">
+<h2>1.1. Introducción al desarrollo web<a class="headerlink" href="#introduccion-al-desarrollo-web" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="introduccion-a-la-tecnologia-web">
-<h2>Introducción a la tecnología web<a class="headerlink" href="#introduccion-a-la-tecnologia-web" title="Enlazar permanentemente con este título">¶</a></h2>
+<h3>1.1.1. Introducción a la tecnología web<a class="headerlink" href="#introduccion-a-la-tecnologia-web" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="section" id="conceptos-basicos">
-<h3>Conceptos básicos<a class="headerlink" href="#conceptos-basicos" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>1.1.1.1. Conceptos básicos<a class="headerlink" href="#conceptos-basicos" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="navegadores-y-servidores-web">
-<h4>Navegadores y servidores web<a class="headerlink" href="#navegadores-y-servidores-web" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.1.1.1. Navegadores y servidores web<a class="headerlink" href="#navegadores-y-servidores-web" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="web-estatica-vs-dinamica">
-<h4>Web estática vs. dinámica<a class="headerlink" href="#web-estatica-vs-dinamica" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.1.1.2. Web estática vs. dinámica<a class="headerlink" href="#web-estatica-vs-dinamica" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="estructura-vs-contenido">
-<h4>Estructura vs. contenido<a class="headerlink" href="#estructura-vs-contenido" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.1.1.3. Estructura vs. contenido<a class="headerlink" href="#estructura-vs-contenido" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 </div>
 <div class="section" id="ejemplos-de-aplicaciones-web">
-<h3>Ejemplos de aplicaciones web<a class="headerlink" href="#ejemplos-de-aplicaciones-web" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>1.1.1.2. Ejemplos de aplicaciones web<a class="headerlink" href="#ejemplos-de-aplicaciones-web" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="redes-sociales-facebook-twitter">
-<h4>Redes sociales: Facebook, Twitter...<a class="headerlink" href="#redes-sociales-facebook-twitter" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.1.2.1. Redes sociales: Facebook, Twitter...<a class="headerlink" href="#redes-sociales-facebook-twitter" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="comercio-electronico-amazon-ebay">
-<h4>Comercio electrónico: Amazon, eBay...<a class="headerlink" href="#comercio-electronico-amazon-ebay" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.1.2.2. Comercio electrónico: Amazon, eBay...<a class="headerlink" href="#comercio-electronico-amazon-ebay" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="administracion-electronica">
-<h4>Administración electrónica…<a class="headerlink" href="#administracion-electronica" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.1.2.3. Administración electrónica…<a class="headerlink" href="#administracion-electronica" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="portales">
-<h4>Portales<a class="headerlink" href="#portales" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.1.2.4. Portales<a class="headerlink" href="#portales" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="erp-crm">
-<h4>ERP, CRM<a class="headerlink" href="#erp-crm" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.1.2.5. ERP, CRM<a class="headerlink" href="#erp-crm" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 </div>
 <div class="section" id="tecnologias-de-desarrollo-de-aplicaciones-web">
-<h3>Tecnologías de desarrollo de aplicaciones web<a class="headerlink" href="#tecnologias-de-desarrollo-de-aplicaciones-web" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>1.1.1.3. Tecnologías de desarrollo de aplicaciones web<a class="headerlink" href="#tecnologias-de-desarrollo-de-aplicaciones-web" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="net">
-<h4>.NET<a class="headerlink" href="#net" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.1.3.1. .NET<a class="headerlink" href="#net" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="java">
-<h4>Java<a class="headerlink" href="#java" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.1.3.2. Java<a class="headerlink" href="#java" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="ruby-rails">
-<h4>Ruby/Rails<a class="headerlink" href="#ruby-rails" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.1.3.3. Ruby/Rails<a class="headerlink" href="#ruby-rails" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="python-django">
-<h4>Python/Django<a class="headerlink" href="#python-django" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.1.3.4. Python/Django<a class="headerlink" href="#python-django" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="php">
-<h4>PHP<a class="headerlink" href="#php" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.1.3.5. PHP<a class="headerlink" href="#php" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="el-kung-fu-de-la-programacion">
-<h4>El Kung-Fu de la programación<a class="headerlink" href="#el-kung-fu-de-la-programacion" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.1.3.6. El Kung-Fu de la programación<a class="headerlink" href="#el-kung-fu-de-la-programacion" title="Enlazar permanentemente con este título">¶</a></h5>
 <div class="section" id="odoo">
-<h5>Odoo<a class="headerlink" href="#odoo" title="Enlazar permanentemente con este título">¶</a></h5>
+<h6>1.1.1.3.6.1. Odoo<a class="headerlink" href="#odoo" title="Enlazar permanentemente con este título">¶</a></h6>
 </div>
 <div class="section" id="prestashop">
-<h5>PrestaShop<a class="headerlink" href="#prestashop" title="Enlazar permanentemente con este título">¶</a></h5>
+<h6>1.1.1.3.6.2. PrestaShop<a class="headerlink" href="#prestashop" title="Enlazar permanentemente con este título">¶</a></h6>
 </div>
 <div class="section" id="drupal">
-<h5>Drupal<a class="headerlink" href="#drupal" title="Enlazar permanentemente con este título">¶</a></h5>
+<h6>1.1.1.3.6.3. Drupal<a class="headerlink" href="#drupal" title="Enlazar permanentemente con este título">¶</a></h6>
 </div>
 <div class="section" id="wordpress">
-<h5>WordPress<a class="headerlink" href="#wordpress" title="Enlazar permanentemente con este título">¶</a></h5>
+<h6>1.1.1.3.6.4. WordPress<a class="headerlink" href="#wordpress" title="Enlazar permanentemente con este título">¶</a></h6>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="preparacion-del-entorno-de-desarrollo">
-<h2>Preparación del entorno de desarrollo<a class="headerlink" href="#preparacion-del-entorno-de-desarrollo" title="Enlazar permanentemente con este título">¶</a></h2>
+<h3>1.1.2. Preparación del entorno de desarrollo<a class="headerlink" href="#preparacion-del-entorno-de-desarrollo" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="section" id="terminal">
-<h3>Terminal<a class="headerlink" href="#terminal" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>1.1.2.1. Terminal<a class="headerlink" href="#terminal" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="zsh">
-<h4>Zsh<a class="headerlink" href="#zsh" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.2.1.1. Zsh<a class="headerlink" href="#zsh" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="oh-my-zsh">
-<h4>Oh My Zsh<a class="headerlink" href="#oh-my-zsh" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.2.1.2. Oh My Zsh<a class="headerlink" href="#oh-my-zsh" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 </div>
 <div class="section" id="navegador">
-<h3>Navegador<a class="headerlink" href="#navegador" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>1.1.2.2. Navegador<a class="headerlink" href="#navegador" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="herramientas-de-desarrollador">
-<h4>Herramientas de desarrollador<a class="headerlink" href="#herramientas-de-desarrollador" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.2.2.1. Herramientas de desarrollador<a class="headerlink" href="#herramientas-de-desarrollador" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="complementos-de-depuracion">
-<h4>Complementos de depuración<a class="headerlink" href="#complementos-de-depuracion" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.2.2.2. Complementos de depuración<a class="headerlink" href="#complementos-de-depuracion" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 </div>
 <div class="section" id="editor">
-<h3>Editor<a class="headerlink" href="#editor" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>1.1.2.3. Editor<a class="headerlink" href="#editor" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="atom">
-<h4>Atom<a class="headerlink" href="#atom" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.2.3.1. Atom<a class="headerlink" href="#atom" title="Enlazar permanentemente con este título">¶</a></h5>
 <div class="section" id="instalacion">
-<h5>Instalación<a class="headerlink" href="#instalacion" title="Enlazar permanentemente con este título">¶</a></h5>
+<h6>1.1.2.3.1.1. Instalación<a class="headerlink" href="#instalacion" title="Enlazar permanentemente con este título">¶</a></h6>
 </div>
 <div class="section" id="configuracion">
-<h5>Configuración<a class="headerlink" href="#configuracion" title="Enlazar permanentemente con este título">¶</a></h5>
+<h6>1.1.2.3.1.2. Configuración<a class="headerlink" href="#configuracion" title="Enlazar permanentemente con este título">¶</a></h6>
 </div>
 <div class="section" id="paquetes">
-<h5>Paquetes<a class="headerlink" href="#paquetes" title="Enlazar permanentemente con este título">¶</a></h5>
+<h6>1.1.2.3.1.3. Paquetes<a class="headerlink" href="#paquetes" title="Enlazar permanentemente con este título">¶</a></h6>
 <div class="section" id="sync-settings">
-<h6>sync-settings<a class="headerlink" href="#sync-settings" title="Enlazar permanentemente con este título">¶</a></h6>
+<h7>1.1.2.3.1.3.1. sync-settings<a class="headerlink" href="#sync-settings" title="Enlazar permanentemente con este título">¶</a></h7>
 </div>
 </div>
 </div>
 <div class="section" id="alternativa-phpstorm">
-<h4>Alternativa: PhpStorm<a class="headerlink" href="#alternativa-phpstorm" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.2.3.2. Alternativa: PhpStorm<a class="headerlink" href="#alternativa-phpstorm" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="vim">
-<h4>Vim<a class="headerlink" href="#vim" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.2.3.3. Vim<a class="headerlink" href="#vim" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="cloud9">
-<h4>Cloud9<a class="headerlink" href="#cloud9" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.2.3.4. Cloud9<a class="headerlink" href="#cloud9" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 </div>
 <div class="section" id="dokuwiki">
-<h3>DokuWiki<a class="headerlink" href="#dokuwiki" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>1.1.2.4. DokuWiki<a class="headerlink" href="#dokuwiki" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="elaboracion-de-documentacion">
-<h4>Elaboración de documentación<a class="headerlink" href="#elaboracion-de-documentacion" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.2.4.1. Elaboración de documentación<a class="headerlink" href="#elaboracion-de-documentacion" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="la-wiki-como-sistema-de-control-de-versiones">
-<h4>La wiki como sistema de control de versiones<a class="headerlink" href="#la-wiki-como-sistema-de-control-de-versiones" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.2.4.2. La wiki como sistema de control de versiones<a class="headerlink" href="#la-wiki-como-sistema-de-control-de-versiones" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 <div class="section" id="la-wiki-como-herramienta-colaborativa">
-<h4>La wiki como herramienta colaborativa<a class="headerlink" href="#la-wiki-como-herramienta-colaborativa" title="Enlazar permanentemente con este título">¶</a></h4>
+<h5>1.1.2.4.3. La wiki como herramienta colaborativa<a class="headerlink" href="#la-wiki-como-herramienta-colaborativa" title="Enlazar permanentemente con este título">¶</a></h5>
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="protocolo-http-y-lenguaje-html">
+<h2>1.2. Protocolo HTTP y lenguaje HTML<a class="headerlink" href="#protocolo-http-y-lenguaje-html" title="Enlazar permanentemente con este título">¶</a></h2>
 </div>
 <div class="section" id="sistemas-de-control-de-versiones">
-<h1>Sistemas de control de versiones<a class="headerlink" href="#sistemas-de-control-de-versiones" title="Enlazar permanentemente con este título">¶</a></h1>
+<h2>1.3. Sistemas de control de versiones<a class="headerlink" href="#sistemas-de-control-de-versiones" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="git-basico">
-<h2>Git básico<a class="headerlink" href="#git-basico" title="Enlazar permanentemente con este título">¶</a></h2>
+<h3>1.3.1. Git básico<a class="headerlink" href="#git-basico" title="Enlazar permanentemente con este título">¶</a></h3>
 <ol class="lowerroman simple">
 <li>config, init, add, commit</li>
 <li>status, log, diff</li>
@@ -296,7 +316,7 @@
 </ol>
 </div>
 <div class="section" id="git-avanzado">
-<h2>Git avanzado<a class="headerlink" href="#git-avanzado" title="Enlazar permanentemente con este título">¶</a></h2>
+<h3>1.3.2. Git avanzado<a class="headerlink" href="#git-avanzado" title="Enlazar permanentemente con este título">¶</a></h3>
 <ol class="lowerroman simple">
 <li>Ramas: branch</li>
 <li>merge, rebase</li>
@@ -304,14 +324,15 @@
 </ol>
 </div>
 <div class="section" id="ramas-remotas">
-<h2>Ramas remotas<a class="headerlink" href="#ramas-remotas" title="Enlazar permanentemente con este título">¶</a></h2>
+<h3>1.3.3. Ramas remotas<a class="headerlink" href="#ramas-remotas" title="Enlazar permanentemente con este título">¶</a></h3>
 <ol class="lowerroman simple">
 <li>clone, fetch, push, pull</li>
 <li>Ramas de seguimiento (tracking branch)</li>
 </ol>
 </div>
 <div class="section" id="repositorios-de-codigo-github-com-gitlab-com-bitbucket-org">
-<h2>Repositorios de código (Github.com, GitLab.com, Bitbucket.org…)<a class="headerlink" href="#repositorios-de-codigo-github-com-gitlab-com-bitbucket-org" title="Enlazar permanentemente con este título">¶</a></h2>
+<h3>1.3.4. Repositorios de código (Github.com, GitLab.com, Bitbucket.org…)<a class="headerlink" href="#repositorios-de-codigo-github-com-gitlab-com-bitbucket-org" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
 </div>
 </div>
 
