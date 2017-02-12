@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.1.15)  12 FEB 2017 13:35
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.1.15)  12 FEB 2017 15:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1136,23 +1136,23 @@ LaTeX Info: Redefining \liningnums on input line 459.
 (/usr/share/texlive/texmf-dist/tex/latex/libertine/LinBiolinum_K.tex)
 (/usr/share/texlive/texmf-dist/tex/latex/libertine/LinLibertine_I.tex)
 (/usr/share/texlive/texmf-dist/tex/latex/libertine/LKey.tex))
-Requested font "[/home/ricardo/fonts/Inconsolata-Regular.ttf]/OT" at 10.95pt
- -> /home/ricardo/fonts/Inconsolata-Regular.ttf
+Requested font "[../../fonts/Inconsolata-Regular.ttf]/OT" at 10.95pt
+ -> ../../fonts/Inconsolata-Regular.ttf
 .................................................
 . fontspec info: "set-scale"
 . 
 . Inconsolata-Regular.ttf scale = 0.9387318875933064.
 .................................................
 \g__fontspec_family_Inconsolata-Regular.ttf_int=\count143
-Requested font "[/home/ricardo/fonts/Inconsolata-Regular]/OT" at 10.95pt
- -> /home/ricardo/fonts/Inconsolata-Regular.ttf
+Requested font "[../../fonts/Inconsolata-Regular]/OT" at 10.95pt
+ -> ../../fonts/Inconsolata-Regular.ttf
 .................................................
 . fontspec info: "set-scale"
 . 
 . Inconsolata-Regular scale = 0.9387318875933064.
 .................................................
-Requested font "[/home/ricardo/fonts/Inconsolata-Bold]/OT" at 10.95pt
- -> /home/ricardo/fonts/Inconsolata-Bold.ttf
+Requested font "[../../fonts/Inconsolata-Bold]/OT" at 10.95pt
+ -> ../../fonts/Inconsolata-Bold.ttf
 .................................................
 . fontspec info: "set-scale"
 . 
@@ -1168,28 +1168,28 @@ Requested font "[/home/ricardo/fonts/Inconsolata-Bold]/OT" at 10.95pt
 . 
 . Font family 'Inconsolata-Regular.ttf(0)' created for font
 . 'Inconsolata-Regular.ttf' with options
-. [WordSpace={1,0,0},PunctuationSpace=WordSpace,Path=/home/ricardo/fonts/,BoldF
-ont=Inconsolata-Bold.ttf,AutoFakeSlant,BoldItalicFeatures={FakeSlant},Scale=Mat
-chLowercase].
+. [WordSpace={1,0,0},PunctuationSpace=WordSpace,Path=../../fonts/,BoldFont=Inco
+nsolata-Bold.ttf,AutoFakeSlant,BoldItalicFeatures={FakeSlant},Scale=MatchLowerc
+ase].
 . 
 . This font family consists of the following NFSS series/shapes:
 . - 'normal' (m/n) with NFSS spec.:
-. <->s*[0.9387318875933064]"[/home/ricardo/fonts/Inconsolata-Regular]/OT:script
-=latn;language=DFLT;"
+. <->s*[0.9387318875933064]"[../../fonts/Inconsolata-Regular]/OT:script=latn;la
+nguage=DFLT;"
 . - 'small caps'  (m/sc) with NFSS spec.: 
 . and font adjustment code:
 . \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
 . \fontdimen 4\font =0\fontdimen 4\font \fontdimen 7\font =0\fontdimen 2\font
 . - 'bold' (bx/n) with NFSS spec.:
-. <->s*[0.9190314703476606]"[/home/ricardo/fonts/Inconsolata-Bold]/OT:script=la
-tn;language=DFLT;"
+. <->s*[0.9190314703476606]"[../../fonts/Inconsolata-Bold]/OT:script=latn;langu
+age=DFLT;"
 . - 'bold small caps'  (bx/sc) with NFSS spec.: 
 . and font adjustment code:
 . \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
 . \fontdimen 4\font =0\fontdimen 4\font \fontdimen 7\font =0\fontdimen 2\font
 . - 'italic' (m/it) with NFSS spec.:
-. <->s*[0.9387318875933064]"[/home/ricardo/fonts/Inconsolata-Regular]/OT:script
-=latn;language=DFLT;slant=0.2;"
+. <->s*[0.9387318875933064]"[../../fonts/Inconsolata-Regular]/OT:script=latn;la
+nguage=DFLT;slant=0.2;"
 . - 'italic small caps'  (m/itsc) with NFSS spec.: 
 . and font adjustment code:
 . \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
@@ -1858,34 +1858,38 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4
+[4] [5] [6
 
-] [5] [6]
+]
 Capítulo 2.
+[7] [8
+
+] [9] [10]
+Capítulo 3.
 LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/bx/n' will be
 (Font)              scaled to size 10.06345pt on input line 1.
-Requested font "[/home/ricardo/fonts/Inconsolata-Bold]/OT:script=latn;language=
-DFLT;" at 10.06345pt
- -> /home/ricardo/fonts/Inconsolata-Bold.ttf
-[7
+Requested font "[../../fonts/Inconsolata-Bold]/OT:script=latn;language=DFLT;" a
+t 10.06345pt
+ -> ../../fonts/Inconsolata-Bold.ttf
+[11
 
 ]
 LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/bx/n' will be
 (Font)              scaled to size 11.02844pt on input line 1.
-Requested font "[/home/ricardo/fonts/Inconsolata-Bold]/OT:script=latn;language=
-DFLT;" at 11.02844pt
- -> /home/ricardo/fonts/Inconsolata-Bold.ttf
- [8]
+Requested font "[../../fonts/Inconsolata-Bold]/OT:script=latn;language=DFLT;" a
+t 11.02844pt
+ -> ../../fonts/Inconsolata-Bold.ttf
+ [12]
 LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/m/n' will be
-(Font)              scaled to size 9.38736pt on input line 293.
-Requested font "[/home/ricardo/fonts/Inconsolata-Regular]/OT:script=latn;langua
-ge=DFLT;" at 9.38736pt
- -> /home/ricardo/fonts/Inconsolata-Regular.ttf
+(Font)              scaled to size 9.38736pt on input line 419.
+Requested font "[../../fonts/Inconsolata-Regular]/OT:script=latn;language=DFLT;
+" at 9.38736pt
+ -> ../../fonts/Inconsolata-Regular.ttf
 LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/m/n' will be
-(Font)              scaled to size 5.63242pt on input line 293.
-Requested font "[/home/ricardo/fonts/Inconsolata-Regular]/OT:script=latn;langua
-ge=DFLT;" at 5.63242pt
- -> /home/ricardo/fonts/Inconsolata-Regular.ttf
+(Font)              scaled to size 5.63242pt on input line 419.
+Requested font "[../../fonts/Inconsolata-Regular]/OT:script=latn;language=DFLT;
+" at 5.63242pt
+ -> ../../fonts/Inconsolata-Regular.ttf
 Requested font "[LinLibertine_R.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;mapping=tex-text;+tnum;+lnum;" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_
@@ -1913,39 +1917,39 @@ Requested font "msbm5" at 5.0pt
 Requested font "cmr6" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/bx/n' will be
-(Font)              scaled to size 9.19037pt on input line 294.
-Requested font "[/home/ricardo/fonts/Inconsolata-Bold]/OT:script=latn;language=
-DFLT;" at 9.19037pt
- -> /home/ricardo/fonts/Inconsolata-Bold.ttf
- [9]
+(Font)              scaled to size 9.19037pt on input line 420.
+Requested font "[../../fonts/Inconsolata-Bold]/OT:script=latn;language=DFLT;" a
+t 9.19037pt
+ -> ../../fonts/Inconsolata-Bold.ttf
+ [13]
 LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/bx/n' will be
 (Font)              scaled to size 13.23412pt on input line 1.
-Requested font "[/home/ricardo/fonts/Inconsolata-Bold]/OT:script=latn;language=
-DFLT;" at 13.23412pt
- -> /home/ricardo/fonts/Inconsolata-Bold.ttf
- [10] [11
+Requested font "[../../fonts/Inconsolata-Bold]/OT:script=latn;language=DFLT;" a
+t 13.23412pt
+ -> ../../fonts/Inconsolata-Bold.ttf
+ [14] [15
 
-] [12]
-Capítulo 3.
-[13
+] [16]
+Capítulo 4.
+[17
 
-] [14
+] [18
 
-] [15] [16] (./dwese.ind)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 363.
- [17]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 363.
+] [19] [20] (./dwese.ind)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 489.
+ [21]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 489.
  (./dwese.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 363.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 363.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 489.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 489.
  ) 
 Here is how much of TeX's memory you used:
- 34865 strings out of 493638
- 658576 string characters out of 6146796
- 585890 words of memory out of 5000000
- 37893 multiletter control sequences out of 15000+600000
+ 34910 strings out of 493638
+ 659853 string characters out of 6146796
+ 588136 words of memory out of 5000000
+ 37938 multiletter control sequences out of 15000+600000
  10954 words of font info for 94 fonts, out of 8000000 for 9000
  1329 hyphenation exceptions out of 8191
  48i,12n,105p,10381b,400s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dwese.pdf (21 pages).
+Output written on dwese.pdf (25 pages).
