@@ -1,7 +1,3 @@
-####
-Yii2
-####
-
 .. include:: introduccion-a-yii2.rst
 .. include:: conceptos-fundamentales-de-yii2.rst
 .. include:: estructura-de-una-aplicacion-yii2.rst

@@ -14,9 +14,7 @@ Desarrollo web en entorno servidor
    :maxdepth: 2
    :numbered:
 
-   introduccion
-   php
-   yii2
+   contenidos
 
 Índices y tablas
 ================
