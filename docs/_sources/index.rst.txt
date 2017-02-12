@@ -24,3 +24,7 @@ Desarrollo web en entorno servidor
 * :ref:`genindex`
 * :ref:`search`
 
+.. only:: html
+
+   Descargar :download:`versión en PDF <_build/latex/dwese.pdf>`.
+
