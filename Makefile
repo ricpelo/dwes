@@ -15,7 +15,7 @@ help:
 .PHONY: help Makefile
 
 latexpdf:
-	sed -ie "/\.\. BEGIN_HTML/,/\.\. END_HTML/d" *.rst
+	./filter.sh
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) -D exclude_patterns='_build','Thumbs.db','.DS_Store','index.rst' -D master_doc=index_latex
 	./restore.sh
 
