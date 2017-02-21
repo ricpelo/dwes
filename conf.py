@@ -277,7 +277,7 @@ html_context = {
     "display_github": True,
     "github_user": "ricpelo",
     "github_repo": "dwes",
-    "github_version": "master/",
+    "github_version": "master/source/",
 #    "conf_py_path": "/doc/",
     "source_suffix": source_suffix,
     'copyright': copyright,

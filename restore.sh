@@ -1,7 +1,7 @@
 #!/bin/sh
 
-for p in *.rste; do
+for p in source/*.rste; do
     BASE=$(basename $p .rste)
-    mv -f $p $BASE.rst
+    mv -f $p source/$BASE.rst
 done
 

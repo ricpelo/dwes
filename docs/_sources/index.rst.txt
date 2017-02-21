@@ -42,5 +42,5 @@ Desarrollo web en entorno servidor
 
 .. only:: html
 
-   Descargar :download:`versión en PDF <_build/latex/dwese.pdf>`.
+   Descargar :download:`versión en PDF <../_build/latex/dwese.pdf>`.
 
