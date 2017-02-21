@@ -15,7 +15,9 @@ help:
 .PHONY: help Makefile
 
 latexpdf:
+	sed -ie "/\.\. BEGIN_HTML/,/\.\. END_HTML/d" *.rst
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) -D exclude_patterns='_build','Thumbs.db','.DS_Store','index.rst' -D master_doc=index_latex
+	./restore.sh
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).

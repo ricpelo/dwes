@@ -2,6 +2,7 @@
 Introducción al desarrollo web
 ******************************
 
+.. BEGIN_HTML
 .. eqt:: TOPIC-SUBTOPIC-eqt_1
 
    **Pregunta 1** A digital circuit needs to manipulate a set with 65536
@@ -15,6 +16,7 @@ Introducción al desarrollo web
    #) :eqt:`I` 65536
 
    #) :eqt:`I` It cannot be decided with the given information
+.. END_HTML
 
 sdfsdfklsdjflkdsf.
 
