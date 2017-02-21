@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.1.15)  12 FEB 2017 22:19
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.1.26)  21 FEB 2017 16:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1837,13 +1837,13 @@ xt;mapping=tex-text;+tnum;" at 24.88pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
 .otf
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/bx/n' will be
-(Font)              scaled to size 14.4pt on input line 72.
+(Font)              scaled to size 14.4pt on input line 74.
 Requested font "[LinBiolinum_RB.otf]/OT:script=latn;language=DFLT;mapping=tex-t
 ext;mapping=tex-text;+tnum;" at 14.4pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
 B.otf
 LaTeX Font Info:    Font shape `EU1/LinBiolinum(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 75.
+(Font)              scaled to size 12.0pt on input line 77.
 Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=DFLT;mapping=tex-te
 xt;mapping=tex-text;+tnum;" at 12.0pt
  -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R
@@ -1884,12 +1884,12 @@ t 11.02844pt
  -> ../../fonts/Inconsolata-Bold.ttf
  [14]
 LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/m/n' will be
-(Font)              scaled to size 9.38736pt on input line 422.
+(Font)              scaled to size 9.38736pt on input line 424.
 Requested font "[../../fonts/Inconsolata-Regular]/OT:script=latn;language=DFLT;
 " at 9.38736pt
  -> ../../fonts/Inconsolata-Regular.ttf
 LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/m/n' will be
-(Font)              scaled to size 5.63242pt on input line 422.
+(Font)              scaled to size 5.63242pt on input line 424.
 Requested font "[../../fonts/Inconsolata-Regular]/OT:script=latn;language=DFLT;
 " at 5.63242pt
  -> ../../fonts/Inconsolata-Regular.ttf
@@ -1920,7 +1920,7 @@ Requested font "msbm5" at 5.0pt
 Requested font "cmr6" at 6.0pt
  -> /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 LaTeX Font Info:    Font shape `EU1/Inconsolata-Regular.ttf(0)/bx/n' will be
-(Font)              scaled to size 9.19037pt on input line 423.
+(Font)              scaled to size 9.19037pt on input line 425.
 Requested font "[../../fonts/Inconsolata-Bold]/OT:script=latn;language=DFLT;" a
 t 9.19037pt
  -> ../../fonts/Inconsolata-Bold.ttf
@@ -1995,17 +1995,17 @@ Capítulo 19.
 [47] [48
 
 ] [49] [50] (./dwese.ind)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 534.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 536.
  [51]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 534.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 536.
  (./dwese.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 534.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 534.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 536.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 536.
  ) 
 Here is how much of TeX's memory you used:
  34925 strings out of 493638
  660412 string characters out of 6146796
- 592291 words of memory out of 5000000
+ 592290 words of memory out of 5000000
  37953 multiletter control sequences out of 15000+600000
  10954 words of font info for 94 fonts, out of 8000000 for 9000
  1329 hyphenation exceptions out of 8191

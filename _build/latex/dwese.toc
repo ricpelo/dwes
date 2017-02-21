@@ -15,7 +15,7 @@
 \contentsline {subsection}{\numberline {1.1.3}Tecnologías de desarrollo de aplicaciones web}{3}{subsection.1.1.3}
 \contentsline {subsubsection}{.NET}{3}{subsubsection*.11}
 \contentsline {subsubsection}{Java}{3}{subsubsection*.12}
-\contentsline {subsubsection}{Ruby/Rails}{3}{subsubsection*.13}
+\contentsline {subsubsection}{Ruby/Rails}{4}{subsubsection*.13}
 \contentsline {subsubsection}{Python/Django}{4}{subsubsection*.14}
 \contentsline {subsubsection}{PHP}{4}{subsubsection*.15}
 \contentsline {subsubsection}{El Kung-Fu de la programación}{4}{subsubsection*.16}
@@ -38,8 +38,8 @@
 \contentsline {subparagraph}{sync-settings}{4}{subparagraph*.29}
 \contentsline {subsubsection}{Alternativa: PhpStorm}{4}{subsubsection*.30}
 \contentsline {subsubsection}{Vim}{4}{subsubsection*.31}
-\contentsline {subsubsection}{Cloud9}{4}{subsubsection*.32}
-\contentsline {subsection}{\numberline {1.2.4}DokuWiki}{4}{subsection.1.2.4}
+\contentsline {subsubsection}{Cloud9}{5}{subsubsection*.32}
+\contentsline {subsection}{\numberline {1.2.4}DokuWiki}{5}{subsection.1.2.4}
 \contentsline {subsubsection}{Elaboración de documentación}{5}{subsubsection*.33}
 \contentsline {subsubsection}{La wiki como sistema de control de versiones}{5}{subsubsection*.34}
 \contentsline {subsubsection}{La wiki como herramienta colaborativa}{5}{subsubsection*.35}
