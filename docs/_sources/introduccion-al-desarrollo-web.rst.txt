@@ -2,6 +2,22 @@
 Introducción al desarrollo web
 ******************************
 
+.. eqt:: TOPIC-SUBTOPIC-eqt_1
+
+   **Pregunta 1** A digital circuit needs to manipulate a set with 65536
+   elements. How many bits do you need to encode these elements with binary
+   logic?
+
+   A) :eqt:`I` 15
+
+   #) :eqt:`C` 16
+
+   #) :eqt:`I` 65536
+
+   #) :eqt:`I` It cannot be decided with the given information
+
+sdfsdfklsdjflkdsf.
+
 Introducción a la tecnología web
 ================================
 

@@ -16,11 +16,19 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import sys, os, datetime, pytz
+
+sys.path.insert(0, os.path.abspath('.'))
 
 # -- General configuration ------------------------------------------------
+
+global_data_context = '' # @@NAME YOUR CONTEXT@@
+global_data_entry_url = '' # @@URL TO COLLECT DATA@@
+global_data_entry_method = 'POST'
+global_data_subject_field_name = 'leco_subject_field'
+global_data_verb_field_name =    'leco_verb_field'
+global_data_object_field_name =  'leco_object_field'
+global_data_context_field_name = 'leco_context_field'
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
@@ -32,7 +40,30 @@
 extensions = [
     'sphinx.ext.githubpages',
     'sphinxcontrib.phpdomain',
+    'sphinx.ext.ifconfig',
+    'sphinx.ext.mathjax',
+    'Sphinx_ext.activity_duration',
+    'Sphinx_ext.html_form',
+    'Sphinx_ext.instructor_feedback',
+    'Sphinx_ext.eqt',
+    'Sphinx_ext.instructor_guide',
+    'Sphinx_ext.embedded_video',
+    'Sphinx_ext.xy_click',
+    'Sphinx_ext.questions',
+    'Sphinx_ext.iframe'
 ]
+
+#
+# E_QUESTION EXTENSION CONF
+#
+eqt_action = global_data_entry_url
+eqt_id_field_name = global_data_verb_field_name
+eqt_data_field_name = 'equestion_name'
+
+#
+# INSTRUCTOR-FEEDBACK EXTENSION CONF
+#
+instructor_feedback_columns = '60'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -83,7 +114,15 @@ today_fmt = '%B de %Y'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'index_latex.rst', 'introduccion.rst', 'php.rst', 'yii2.rst']
+exclude_patterns = [
+    '_build',
+    'Thumbs.db',
+    '.DS_Store',
+    'index_latex.rst',
+    'introduccion.rst',
+    'php.rst',
+    'yii2.rst'
+]
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -240,7 +279,21 @@ html_context = {
     "github_version": "master/",
 #    "conf_py_path": "/doc/",
     "source_suffix": source_suffix,
+    'copyright': copyright,
+    'data_capture_context': global_data_context,
+    'data_capture_url': global_data_entry_url,
+    'data_capture_method': global_data_entry_method,
+    'data_capture_subject_name': global_data_subject_field_name,
+    'data_capture_verb_name': global_data_verb_field_name,
+    'data_capture_object_name': global_data_object_field_name,
+    'data_capture_context_name': global_data_context_field_name
 }
+
+# If we are processing the iguide, then propagate the value to config and HTML context
+iguide = False
+if tags.has('iguide'):
+    html_context['iguide'] = 'iguide'
+    iguide = True
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -359,6 +412,16 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #
 # texinfo_no_detailmenu = False
+
+################################################################################
+#
+# Additional configuration in the setup
+#
+################################################################################
+def setup(app):
+    app.add_config_value('iguide', iguide, True)
+    # app.add_javascript("custom.js")
+    # app.add_stylesheet("custom.css")
 
 from sphinx.highlighting import lexers
 from pygments.lexers.web import PhpLexer

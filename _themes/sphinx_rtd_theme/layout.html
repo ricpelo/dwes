@@ -140,6 +140,9 @@
         {% block mobile_nav %}
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="{{ pathto(master_doc) }}">{{ project }}</a>
+          {% if iguide %}
+            <div class="instructor-guide">Instructor Guide</div>
+          {% endif %}
         {% endblock %}
       </nav>
 
@@ -174,9 +177,17 @@
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'{{ '' if no_search_suffix else file_suffix }}',
             HAS_SOURCE:  {{ has_source|lower }},
-            SOURCELINK_SUFFIX: '{{ sourcelink_suffix }}'
+            SOURCELINK_SUFFIX: '{{ sourcelink_suffix }}',
+            CONTEXT:     '{{ data_capture_context  }}',
+            DATA_CAPTURE_URL: '{{ data_capture_url  }}',
+            DATA_CAPTURE_METHOD: '{{ data_capture_method  }}',
+            DATA_CAPTURE_SUBJECT_NAME: '{{ data_capture_subject_name }}',
+            DATA_CAPTURE_VERB_NAME: '{{ data_capture_verb_name }}',
+            DATA_CAPTURE_OBJECT_NAME: '{{ data_capture_object_name }}',
+            DATA_CAPTURE_CONTEXT_NAME: '{{ data_capture_context_name }}'
         };
     </script>
+    {% set script_files = script_files + ["_static/embedded_video.js" ] %}
     {%- for scriptfile in script_files %}
       <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
     {%- endfor %}
@@ -186,6 +197,7 @@
   {# RTD hosts this file, so just load on non RTD builds #}
   {% if not READTHEDOCS %}
     <script type="text/javascript" src="{{ pathto('_static/js/theme.js', 1) }}"></script>
+    <script type="text/javascript" src="{{ pathto('_static/dynsite.js', 1) }}"></script>
   {% endif %}
 
   {# STICKY NAVIGATION #}
