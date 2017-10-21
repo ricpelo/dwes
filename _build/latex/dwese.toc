@@ -7,8 +7,8 @@
 \contentsline {subsubsection}{Web estática vs. dinámica}{3}{subsubsection*.4}
 \contentsline {subsubsection}{Estructura vs. contenido}{3}{subsubsection*.5}
 \contentsline {subsection}{\numberline {1.1.2}Ejemplos de aplicaciones web}{3}{subsection.1.1.2}
-\contentsline {subsubsection}{Redes sociales: Facebook, Twitter...}{3}{subsubsection*.6}
-\contentsline {subsubsection}{Comercio electrónico: Amazon, eBay...}{3}{subsubsection*.7}
+\contentsline {subsubsection}{Redes sociales: Facebook, Twitter…}{3}{subsubsection*.6}
+\contentsline {subsubsection}{Comercio electrónico: Amazon, eBay…}{3}{subsubsection*.7}
 \contentsline {subsubsection}{Administración electrónica…}{3}{subsubsection*.8}
 \contentsline {subsubsection}{Portales}{3}{subsubsection*.9}
 \contentsline {subsubsection}{ERP, CRM}{3}{subsubsection*.10}

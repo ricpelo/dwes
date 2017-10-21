@@ -3,9 +3,8 @@
 \documentclass[a4paper,11pt,spanish]{sphinxmanual}
 \ifdefined\pdfpxdimen
    \let\sphinxpxdimen\pdfpxdimen\else\newdimen\sphinxpxdimen
-\fi \sphinxpxdimen=49336sp\relax
+\fi \sphinxpxdimen=.75bp\relax
 
-\usepackage[margin=1in,marginparwidth=0.5in]{geometry}
 
 \catcode`^^^^00a0\active\protected\def^^^^00a0{\leavevmode\nobreak\ }
 \usepackage{cmap}
@@ -22,11 +21,9 @@
                      Scale=MatchLowercase
                   ]{Inconsolata-Regular.ttf}
 \usepackage[Sonny]{fncychap}
-\usepackage{longtable}
-\usepackage{sphinx}
+\usepackage[dontkeepoldnames]{sphinx}
 \sphinxsetup{verbatimwithframe=false}
-\usepackage{multirow}
-\usepackage{eqparbox}
+\usepackage{geometry}
 
 % Include hyperref last.
 \usepackage{hyperref}
@@ -39,6 +36,9 @@
 \addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
 \addto\captionsspanish{\renewcommand{\literalblockname}{Lista}}
 
+\addto\captionsspanish{\renewcommand{\literalblockcontinuedname}{continued from previous page}}
+\addto\captionsspanish{\renewcommand{\literalblockcontinuesname}{continues on next page}}
+
 \def\pageautorefname{página}
 
 \setcounter{tocdepth}{0}
@@ -48,10 +48,10 @@
                     \titlelabel{\thetitle.\quad}
 
 \title{Desarrollo web en entorno servidor}
-\date{marzo de 2017}
+\date{octubre de 2017}
 \release{1.0}
 \author{Ricardo Pérez López}
-\newcommand{\sphinxlogo}{}
+\newcommand{\sphinxlogo}{\vbox{}}
 \renewcommand{\releasename}{Versión}
 \makeindex
 
@@ -87,10 +87,10 @@
 \subsection{Ejemplos de aplicaciones web}
 \label{\detokenize{introduccion:ejemplos-de-aplicaciones-web}}
 
-\subsubsection{Redes sociales: Facebook, Twitter...}
+\subsubsection{Redes sociales: Facebook, Twitter…}
 \label{\detokenize{introduccion:redes-sociales-facebook-twitter}}
 
-\subsubsection{Comercio electrónico: Amazon, eBay...}
+\subsubsection{Comercio electrónico: Amazon, eBay…}
 \label{\detokenize{introduccion:comercio-electronico-amazon-ebay}}
 
 \subsubsection{Administración electrónica…}
@@ -213,7 +213,7 @@ status, log, diff
 Alias lg
 
 \item {} 
-checkout, reset, revert, --amend
+checkout, reset, revert, \textendash{}amend
 
 \item {} 
 show
