@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. Protocolo HTTP y lenguaje HTML &mdash; Desarrollo web en entorno servidor</title>
+  <title>3. Protocolo HTTP y lenguaje HTML &mdash; Desarrollo web en entorno servidor</title>
   
 
   
@@ -36,8 +36,8 @@
               href="genindex.html"/>
         <link rel="search" title="Búsqueda" href="search.html"/>
     <link rel="top" title="Desarrollo web en entorno servidor" href="index.html"/>
-        <link rel="next" title="3. Sistemas de control de versiones" href="sistemas-de-control-de-versiones.html"/>
-        <link rel="prev" title="1. Introducción al desarrollo web" href="introduccion-al-desarrollo-web.html"/> 
+        <link rel="next" title="4. Sistemas de control de versiones" href="sistemas-de-control-de-versiones.html"/>
+        <link rel="prev" title="2. Introducción al desarrollo web" href="introduccion-al-desarrollo-web.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -91,25 +91,67 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="introduccion-al-desarrollo-web.html">1. Introducción al desarrollo web</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Protocolo HTTP y lenguaje HTML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sistemas-de-control-de-versiones.html">3. Sistemas de control de versiones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="conceptos-basicos-de-php.html">4. Conceptos básicos de PHP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="persistencia-de-datos-con-php.html">5. Persistencia de datos con PHP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="programacion-avanzada-en-php.html">6. Programación avanzada en PHP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interoperabilidad.html">7. Interoperabilidad</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduccion-a-yii2.html">8. Introducción a Yii2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="conceptos-fundamentales-de-yii2.html">9. Conceptos fundamentales de Yii2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="estructura-de-una-aplicacion-yii2.html">10. Estructura de una aplicación Yii2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gestion-de-peticiones-en-yii2.html">11. Gestión de peticiones en Yii2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="acceso-a-bases-de-datos-en-yii2.html">12. Acceso a bases de datos en Yii2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recogida-de-datos-y-validacion-de-formularios-en-yii2.html">13. Recogida de datos y validación de formularios</a></li>
-<li class="toctree-l1"><a class="reference internal" href="visualizacion-de-datos-en-yii2.html">14. Visualización de datos en Yii2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="caracteristicas-adicionales-de-yii2.html">15. Características adicionales de Yii2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="seguridad-y-cacheado-en-yii2.html">16. Seguridad y cacheado en Yii2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pruebas-documentacion-y-mantenimiento.html">17. Pruebas, documentación y mantenimiento</a></li>
-<li class="toctree-l1"><a class="reference internal" href="computacion-en-la-nube.html">18. Computación en la nube</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contenedores.html">19. Contenedores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preparacion-del-entorno-de-desarrollo.html">1. Preparación del entorno de desarrollo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduccion-al-desarrollo-web.html">2. Introducción al desarrollo web</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Protocolo HTTP y lenguaje HTML</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#arquitectura-cliente-servidor">3.1. Arquitectura cliente/servidor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#html-5-basico">3.2. HTML 5 básico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#protocolo-http">3.3. Protocolo HTTP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#uris">3.3.1. URIs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#url-encoding">3.3.1.1. URL encoding</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#peticiones-y-respuestas">3.3.2. Peticiones y respuestas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#metodos-get-y-post">3.3.3. Métodos: GET y POST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cabeceras-http">3.3.4. Cabeceras HTTP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#codigos-de-estado">3.3.5. Códigos de estado</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#experimentos">3.3.6. Experimentos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#telnet">3.3.6.1. <code class="docutils literal"><span class="pre">telnet</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netcat">3.3.6.2. <code class="docutils literal"><span class="pre">netcat</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#curl">3.3.6.3. <code class="docutils literal"><span class="pre">curl</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#http">3.3.6.4. <code class="docutils literal"><span class="pre">http</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#google-chrome-developer-tools">3.3.6.5. Google Chrome Developer Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#envio-de-datos-al-servidor">3.3.7. Envío de datos al servidor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mediante-get">3.3.7.1. Mediante GET</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mediante-post">3.3.7.2. Mediante POST</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#formularios-html">3.3.7.3. Formularios HTML</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#cookies">3.3.8. Cookies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#apache-basico">3.4. Apache básico</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#instalacion">3.4.1. Instalación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuracion-basica">3.4.2. Configuración básica</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sitios-virtuales">3.4.3. Sitios virtuales</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#scripts-cgi">3.5. Scripts CGI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configuracion-de-apache">3.5.1. Configuración de Apache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ejemplos-en-ruby">3.5.2. Ejemplos en Ruby</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sistemas-de-control-de-versiones.html">4. Sistemas de control de versiones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conceptos-basicos-de-php.html">5. Conceptos básicos de PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="persistencia-de-datos-con-php.html">6. Persistencia de datos con PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="programacion-avanzada-en-php.html">7. Programación avanzada en PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interoperabilidad.html">8. Interoperabilidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduccion-a-yii2.html">9. Introducción a Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conceptos-fundamentales-de-yii2.html">10. Conceptos fundamentales de Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="estructura-de-una-aplicacion-yii2.html">11. Estructura de una aplicación Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gestion-de-peticiones-en-yii2.html">12. Gestión de peticiones en Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acceso-a-bases-de-datos-en-yii2.html">13. Acceso a bases de datos en Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recogida-de-datos-y-validacion-de-formularios-en-yii2.html">14. Recogida de datos y validación de formularios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualizacion-de-datos-en-yii2.html">15. Visualización de datos en Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="caracteristicas-adicionales-de-yii2.html">16. Características adicionales de Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seguridad-y-cacheado-en-yii2.html">17. Seguridad y cacheado en Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pruebas-documentacion-y-mantenimiento.html">18. Pruebas, documentación y mantenimiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="computacion-en-la-nube.html">19. Computación en la nube</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contenedores.html">20. Contenedores</a></li>
 </ul>
 
             
@@ -153,7 +195,7 @@
   <ul class="wy-breadcrumbs">
     
         
-      <li>2. Protocolo HTTP y lenguaje HTML</li>
+      <li>3. Protocolo HTTP y lenguaje HTML</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,7 +217,88 @@
            <div itemprop="articleBody">
             
   <div class="section" id="protocolo-http-y-lenguaje-html">
-<h1>2. Protocolo HTTP y lenguaje HTML<a class="headerlink" href="#protocolo-http-y-lenguaje-html" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1>3. Protocolo HTTP y lenguaje HTML<a class="headerlink" href="#protocolo-http-y-lenguaje-html" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="arquitectura-cliente-servidor">
+<h2>3.1. Arquitectura cliente/servidor<a class="headerlink" href="#arquitectura-cliente-servidor" title="Enlazar permanentemente con este título">¶</a></h2>
+</div>
+<div class="section" id="html-5-basico">
+<h2>3.2. HTML 5 básico<a class="headerlink" href="#html-5-basico" title="Enlazar permanentemente con este título">¶</a></h2>
+</div>
+<div class="section" id="protocolo-http">
+<h2>3.3. Protocolo HTTP<a class="headerlink" href="#protocolo-http" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="uris">
+<h3>3.3.1. URIs<a class="headerlink" href="#uris" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="url-encoding">
+<h4>3.3.1.1. URL encoding<a class="headerlink" href="#url-encoding" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+</div>
+<div class="section" id="peticiones-y-respuestas">
+<h3>3.3.2. Peticiones y respuestas<a class="headerlink" href="#peticiones-y-respuestas" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
+<div class="section" id="metodos-get-y-post">
+<h3>3.3.3. Métodos: GET y POST<a class="headerlink" href="#metodos-get-y-post" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
+<div class="section" id="cabeceras-http">
+<h3>3.3.4. Cabeceras HTTP<a class="headerlink" href="#cabeceras-http" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
+<div class="section" id="codigos-de-estado">
+<h3>3.3.5. Códigos de estado<a class="headerlink" href="#codigos-de-estado" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
+<div class="section" id="experimentos">
+<h3>3.3.6. Experimentos<a class="headerlink" href="#experimentos" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="telnet">
+<h4>3.3.6.1. <code class="docutils literal"><span class="pre">telnet</span></code><a class="headerlink" href="#telnet" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+<div class="section" id="netcat">
+<h4>3.3.6.2. <code class="docutils literal"><span class="pre">netcat</span></code><a class="headerlink" href="#netcat" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+<div class="section" id="curl">
+<h4>3.3.6.3. <code class="docutils literal"><span class="pre">curl</span></code><a class="headerlink" href="#curl" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+<div class="section" id="http">
+<h4>3.3.6.4. <code class="docutils literal"><span class="pre">http</span></code><a class="headerlink" href="#http" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+<div class="section" id="google-chrome-developer-tools">
+<h4>3.3.6.5. Google Chrome Developer Tools<a class="headerlink" href="#google-chrome-developer-tools" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+</div>
+<div class="section" id="envio-de-datos-al-servidor">
+<h3>3.3.7. Envío de datos al servidor<a class="headerlink" href="#envio-de-datos-al-servidor" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="mediante-get">
+<h4>3.3.7.1. Mediante GET<a class="headerlink" href="#mediante-get" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+<div class="section" id="mediante-post">
+<h4>3.3.7.2. Mediante POST<a class="headerlink" href="#mediante-post" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+<div class="section" id="formularios-html">
+<h4>3.3.7.3. Formularios HTML<a class="headerlink" href="#formularios-html" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+</div>
+<div class="section" id="cookies">
+<h3>3.3.8. Cookies<a class="headerlink" href="#cookies" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
+</div>
+<div class="section" id="apache-basico">
+<h2>3.4. Apache básico<a class="headerlink" href="#apache-basico" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="instalacion">
+<h3>3.4.1. Instalación<a class="headerlink" href="#instalacion" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
+<div class="section" id="configuracion-basica">
+<h3>3.4.2. Configuración básica<a class="headerlink" href="#configuracion-basica" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
+<div class="section" id="sitios-virtuales">
+<h3>3.4.3. Sitios virtuales<a class="headerlink" href="#sitios-virtuales" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
+</div>
+<div class="section" id="scripts-cgi">
+<h2>3.5. Scripts CGI<a class="headerlink" href="#scripts-cgi" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="configuracion-de-apache">
+<h3>3.5.1. Configuración de Apache<a class="headerlink" href="#configuracion-de-apache" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
+<div class="section" id="ejemplos-en-ruby">
+<h3>3.5.2. Ejemplos en Ruby<a class="headerlink" href="#ejemplos-en-ruby" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
+</div>
 </div>
 
 
@@ -188,10 +311,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="sistemas-de-control-de-versiones.html" class="btn btn-neutral float-right" title="3. Sistemas de control de versiones" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="sistemas-de-control-de-versiones.html" class="btn btn-neutral float-right" title="4. Sistemas de control de versiones" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="introduccion-al-desarrollo-web.html" class="btn btn-neutral" title="1. Introducción al desarrollo web" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Anterior</a>
+        <a href="introduccion-al-desarrollo-web.html" class="btn btn-neutral" title="2. Introducción al desarrollo web" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Anterior</a>
       
     </div>
   
@@ -201,7 +324,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Ricardo Pérez López.
-      Actualizado por última vez en 22-10-2017.
+      Actualizado por última vez en 23-10-2017.
 
     </p>
   </div>

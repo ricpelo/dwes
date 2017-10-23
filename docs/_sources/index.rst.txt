@@ -14,6 +14,7 @@ Desarrollo web en entorno servidor
    :maxdepth: 2
    :numbered:
 
+   preparacion-del-entorno-de-desarrollo
    introduccion-al-desarrollo-web
    protocolo-http-y-lenguaje-html
    sistemas-de-control-de-versiones
@@ -43,4 +44,3 @@ Desarrollo web en entorno servidor
 .. only:: html
 
    Descargar :download:`versión en PDF <../_build/latex/dwese.pdf>`.
-

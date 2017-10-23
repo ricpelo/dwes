@@ -1,9 +1,10 @@
 # Fdb version 3
-["makeindex dwese.idx"] 1508619991 "dwese.idx" "dwese.ind" "dwese" 1508619997
-  "dwese.idx" 1508619997 0 d41d8cd98f00b204e9800998ecf8427e ""
+["makeindex dwese.idx"] 1508619991 "dwese.idx" "dwese.ind" "dwese" 1508753828
+  "dwese.idx" 1508753704 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
   "dwese.ind"
-["pdflatex"] 1508619996 "dwese.tex" "dwese.pdf" "dwese" 1508619997
+  "dwese.ilg"
+["pdflatex"] 1508753703 "dwese.tex" "dwese.pdf" "dwese" 1508753828
   "/etc/texmf/web2c/texmf.cnf" 1484493756 1101 af7716885e081ab43982cab7b4672c1a ""
   "/home/ricardo/texmf/tex/latex/titlesec/titlesec.sty" 1458858524 37387 afa86533e532701faf233f3f592c61e0 ""
   "/home/ricardo/texmf/tex/latex/titlesec/titletoc.sty" 1458858524 18361 6f2961ec45ee4ad03439efe5de257c61 ""
@@ -121,21 +122,21 @@
   "/usr/share/texmf/tex/latex/tipa/t3enc.def" 1414244106 26483 c461a68c34040cb0d96c43e86c012a6d ""
   "/usr/share/texmf/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1503421917 3472252 2f57cfc4efb0433f7b0c1658b3a9909c ""
-  "dwese.aux" 1508619997 31154 3f08a4efbd00b83e4e4889e2addf0d0b ""
+  "dwese.aux" 1508753705 37385 c4ca8e5ce06a076ccfa6aced76c0e10e ""
   "dwese.ind" 1508619992 0 d41d8cd98f00b204e9800998ecf8427e "makeindex dwese.idx"
-  "dwese.out" 1508619997 4315 ccba3ffa89a884f04ea16cbe76c08849 ""
-  "dwese.tex" 1508619989 16202 ad1607091471f233dd63286bb928137a ""
-  "dwese.toc" 1508619997 12125 80c5eae1338790ad5eea3ceb2bfd25e7 ""
-  "footnotehyper-sphinx.sty" 1508619710 8841 e18cbb7bca599a223414f9b8a156abee ""
+  "dwese.out" 1508753705 4566 64095c8c994d12e19ef835f076543d9d ""
+  "dwese.tex" 1508753828 18559 206566dddd9d5863ca4dc3acd33622be ""
+  "dwese.toc" 1508753705 14957 0ad3ffc5b76620a45050b02c80e6ef67 ""
+  "footnotehyper-sphinx.sty" 1508620455 8841 e18cbb7bca599a223414f9b8a156abee ""
   "needspace.sty" 1489147717 852 0e34dbb72efc69fa07602405ad95585e ""
-  "sphinx.sty" 1508619710 62670 74cadfc8799b8ec9c0014b7f476b628d ""
-  "sphinxhighlight.sty" 1508619989 8137 b8d4ef963833564f6e4eadc09cd757c4 ""
-  "sphinxmanual.cls" 1508619710 3589 0b0aac49c6f36925cf5f9d524a75a978 ""
-  "sphinxmulticell.sty" 1508619710 14618 0defbdc8536ad2e67f1eac6a1431bc55 ""
+  "sphinx.sty" 1508620455 62670 74cadfc8799b8ec9c0014b7f476b628d ""
+  "sphinxhighlight.sty" 1508753828 8137 b8d4ef963833564f6e4eadc09cd757c4 ""
+  "sphinxmanual.cls" 1508620455 3589 0b0aac49c6f36925cf5f9d524a75a978 ""
+  "sphinxmulticell.sty" 1508620455 14618 0defbdc8536ad2e67f1eac6a1431bc55 ""
   (generated)
-  "dwese.pdf"
   "dwese.log"
-  "dwese.aux"
   "dwese.idx"
-  "dwese.out"
   "dwese.toc"
+  "dwese.pdf"
+  "dwese.out"
+  "dwese.aux"

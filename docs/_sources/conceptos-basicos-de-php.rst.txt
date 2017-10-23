@@ -2,68 +2,95 @@
 Conceptos básicos de PHP
 ************************
 
-PHP como lenguaje embebido
-==========================
-
 Introducción a PHP
-------------------
-
-Instalación de PHP
-~~~~~~~~~~~~~~~~~~
+==================
 
 Página web de PHP
-~~~~~~~~~~~~~~~~~
+-----------------
+
+Instalación de PHP
+------------------
 
 Documentación y búsqueda de información
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Funcionamiento del intérprete
------------------------------
-
-Modo dual de operación
-~~~~~~~~~~~~~~~~~~~~~~
-
-Etiquetas ``<?php`` y ``?>``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------
 
 Sintaxis básica
----------------
+===============
 
-SAPIs
+Comando ``echo``
+----------------
+
+Funcionamiento del intérprete
+=============================
+
+Modo dual de operación
+----------------------
+
+Etiquetas ``<?php`` y ``?>``
+----------------------------
+
+Intérprete interactivo
+======================
+
+``php -a``
+----------
+
+PsySH
 -----
 
-CLI: Uso en línea de comandos
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Variables
+=========
 
-Apache
-~~~~~~
+Conceptos básicos
+-----------------
 
-Integración de PHP con Apache
-"""""""""""""""""""""""""""""
+Operadores de asignación por valor y por referencia
+---------------------------------------------------
 
-Configuración básica con ``php.ini``
-""""""""""""""""""""""""""""""""""""
-
-Etiqueta ``<?=``
-""""""""""""""""
-
-CGI: PHP-FPM (FastCGI Process Manager)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Módulos de extensión
-~~~~~~~~~~~~~~~~~~~~
+Variables predefinidas
+----------------------
 
 Tipos de datos básicos
 ======================
 
-Enteros (``int``, sinónimo de ``integer``)
-------------------------------------------
+Lógicos (``bool``)
+------------------
 
-Números en coma flotante (``float``, sinónimo de ``double``)
-------------------------------------------------------------
+Operadores lógicos
+~~~~~~~~~~~~~~~~~~
+
+Numéricos
+---------
+
+Enteros (``int``)
+~~~~~~~~~~~~~~~~~
+
+Números en coma flotante (``float``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Operadores
+~~~~~~~~~~
+
+Operadores aritméticos
+......................
+
+Operadores de incremento/decremento
+...................................
 
 Cadenas (``string``)
 --------------------
+
+Operadores de cadenas
+~~~~~~~~~~~~~~~~~~~~~
+
+Concatenación
+.............
+
+Acceso y modificación por caracteres
+....................................
+
+Operadores de incremento/decremento
+...................................
 
 Funciones de manejo de cadenas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -71,14 +98,11 @@ Funciones de manejo de cadenas
 Extensión mbstring
 ~~~~~~~~~~~~~~~~~~
 
-Lógicos (``bool``, sinónimo de ``boolean``)
--------------------------------------------
+Nulo
+----
 
-``NULL``
---------
-
-``is_null()`` vs. ``=== null``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Operadores de asignación compuesta
+----------------------------------
 
 Comparaciones
 -------------
@@ -101,17 +125,23 @@ Reglas de comparación de tipos
 Comprobaciones
 --------------
 
+De tipos
+~~~~~~~~
+
 ``gettype()``
-~~~~~~~~~~~~~
+.............
 
 ``is_*()`` (poco útiles en formularios, ya que sólo se reciben strings)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.......................................................................
+
+De valores
+~~~~~~~~~~
 
 ``is_numeric()``
-~~~~~~~~~~~~~~~~
+................
 
 ``ctype_*()``
-~~~~~~~~~~~~~
+.............
 
 Conversiones
 ------------
@@ -119,35 +149,32 @@ Conversiones
 Coerción, moldeado, forzado o casting
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Funciones de obtención de valores
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 intval(), floatval(), strval(), boolval()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.........................................
+
+Funciones de formateado numérico
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 number_format(), money_format(), setlocale()
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Variables
-=========
-
-Conceptos básicos
------------------
-
-Asignación por valor y por referencia
--------------------------------------
-
-Ámbito: globales, superglobales
--------------------------------
-
-Variables predefinidas
-----------------------
+............................................
 
 Constantes
 ==========
 
+Constantes predefinidas
+-----------------------
+
 Estructuras de control
 ======================
 
-``require``, ``require_once``, ``include``, ``include_once``
-------------------------------------------------------------
+``include``, ``require``
+------------------------
+
+``include_once``, ``require_once``
+----------------------------------
 
 Funciones predefinidas
 ======================
@@ -168,8 +195,14 @@ Para evitar el problema de ``empty("0") === true``:
        return empty($value) && !is_numeric($value);
    }
 
+``var_dump()``
+--------------
+
 Arrays
 ======
+
+Operadores para arrays
+----------------------
 
 Funciones de manejo de arrays
 -----------------------------
@@ -183,17 +216,29 @@ Funciones de manejo de arrays
 Funciones
 =========
 
+Ámbito de variables
+-------------------
+
+Ámbito simple al archivo
+~~~~~~~~~~~~~~~~~~~~~~~~
+
 Variables locales
------------------
+~~~~~~~~~~~~~~~~~
 
 Uso de global
--------------
+~~~~~~~~~~~~~
+
+Variables superglobales
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Argumentos
+----------
 
 Argumentos por defecto
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 Paso de argumentos por valor y por referencia
----------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Declaraciones de tipos
 ----------------------
@@ -204,9 +249,5 @@ Declaraciones de tipo de argumento
 Declaraciones de tipo de devolución
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Tipificación estricta: ``declare(strict_types=1);``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Manejo de datos de entrada: ``$_GET`` y ``$_POST``
-==================================================
-
+Tipificación estricta
+~~~~~~~~~~~~~~~~~~~~~

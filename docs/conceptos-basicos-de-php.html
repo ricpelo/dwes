@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4. Conceptos básicos de PHP &mdash; Desarrollo web en entorno servidor</title>
+  <title>5. Conceptos básicos de PHP &mdash; Desarrollo web en entorno servidor</title>
   
 
   
@@ -36,8 +36,8 @@
               href="genindex.html"/>
         <link rel="search" title="Búsqueda" href="search.html"/>
     <link rel="top" title="Desarrollo web en entorno servidor" href="index.html"/>
-        <link rel="next" title="5. Persistencia de datos con PHP" href="persistencia-de-datos-con-php.html"/>
-        <link rel="prev" title="3. Sistemas de control de versiones" href="sistemas-de-control-de-versiones.html"/> 
+        <link rel="next" title="6. Persistencia de datos con PHP" href="persistencia-de-datos-con-php.html"/>
+        <link rel="prev" title="4. Sistemas de control de versiones" href="sistemas-de-control-de-versiones.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -91,125 +91,140 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="introduccion-al-desarrollo-web.html">1. Introducción al desarrollo web</a></li>
-<li class="toctree-l1"><a class="reference internal" href="protocolo-http-y-lenguaje-html.html">2. Protocolo HTTP y lenguaje HTML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sistemas-de-control-de-versiones.html">3. Sistemas de control de versiones</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Conceptos básicos de PHP</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#php-como-lenguaje-embebido">4.1. PHP como lenguaje embebido</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#introduccion-a-php">4.1.1. Introducción a PHP</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#instalacion-de-php">4.1.1.1. Instalación de PHP</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pagina-web-de-php">4.1.1.2. Página web de PHP</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#documentacion-y-busqueda-de-informacion">4.1.1.3. Documentación y búsqueda de información</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preparacion-del-entorno-de-desarrollo.html">1. Preparación del entorno de desarrollo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduccion-al-desarrollo-web.html">2. Introducción al desarrollo web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocolo-http-y-lenguaje-html.html">3. Protocolo HTTP y lenguaje HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sistemas-de-control-de-versiones.html">4. Sistemas de control de versiones</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Conceptos básicos de PHP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduccion-a-php">5.1. Introducción a PHP</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pagina-web-de-php">5.1.1. Página web de PHP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#instalacion-de-php">5.1.2. Instalación de PHP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documentacion-y-busqueda-de-informacion">5.1.3. Documentación y búsqueda de información</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#funcionamiento-del-interprete">4.1.2. Funcionamiento del intérprete</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#modo-dual-de-operacion">4.1.2.1. Modo dual de operación</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#etiquetas-php-y">4.1.2.2. Etiquetas <code class="docutils literal"><span class="pre">&lt;?php</span></code> y <code class="docutils literal"><span class="pre">?&gt;</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sintaxis-basica">5.2. Sintaxis básica</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#comando-echo">5.2.1. Comando <code class="docutils literal"><span class="pre">echo</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#sintaxis-basica">4.1.3. Sintaxis básica</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sapis">4.1.4. SAPIs</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#cli-uso-en-linea-de-comandos">4.1.4.1. CLI: Uso en línea de comandos</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#apache">4.1.4.2. Apache</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#cgi-php-fpm-fastcgi-process-manager">4.1.4.3. CGI: PHP-FPM (FastCGI Process Manager)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#modulos-de-extension">4.1.4.4. Módulos de extensión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funcionamiento-del-interprete">5.3. Funcionamiento del intérprete</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#modo-dual-de-operacion">5.3.1. Modo dual de operación</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etiquetas-php-y">5.3.2. Etiquetas <code class="docutils literal"><span class="pre">&lt;?php</span></code> y <code class="docutils literal"><span class="pre">?&gt;</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#interprete-interactivo">5.4. Intérprete interactivo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#php-a">5.4.1. <code class="docutils literal"><span class="pre">php</span> <span class="pre">-a</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#psysh">5.4.2. PsySH</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#tipos-de-datos-basicos">4.2. Tipos de datos básicos</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#enteros-int-sinonimo-de-integer">4.2.1. Enteros (<code class="docutils literal"><span class="pre">int</span></code>, sinónimo de <code class="docutils literal"><span class="pre">integer</span></code>)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#numeros-en-coma-flotante-float-sinonimo-de-double">4.2.2. Números en coma flotante (<code class="docutils literal"><span class="pre">float</span></code>, sinónimo de <code class="docutils literal"><span class="pre">double</span></code>)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#cadenas-string">4.2.3. Cadenas (<code class="docutils literal"><span class="pre">string</span></code>)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#funciones-de-manejo-de-cadenas">4.2.3.1. Funciones de manejo de cadenas</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#extension-mbstring">4.2.3.2. Extensión mbstring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#variables">5.5. Variables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#conceptos-basicos">5.5.1. Conceptos básicos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operadores-de-asignacion-por-valor-y-por-referencia">5.5.2. Operadores de asignación por valor y por referencia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#variables-predefinidas">5.5.3. Variables predefinidas</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#logicos-bool-sinonimo-de-boolean">4.2.4. Lógicos (<code class="docutils literal"><span class="pre">bool</span></code>, sinónimo de <code class="docutils literal"><span class="pre">boolean</span></code>)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#null">4.2.5. <code class="docutils literal"><span class="pre">NULL</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#is-null-vs-null">4.2.5.1. <code class="docutils literal"><span class="pre">is_null()</span></code> vs. <code class="docutils literal"><span class="pre">===</span> <span class="pre">null</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tipos-de-datos-basicos">5.6. Tipos de datos básicos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#logicos-bool">5.6.1. Lógicos (<code class="docutils literal"><span class="pre">bool</span></code>)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#operadores-logicos">5.6.1.1. Operadores lógicos</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#comparaciones">4.2.6. Comparaciones</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#operadores-de-comparacion">4.2.6.1. Operadores de comparación</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#vs">4.2.6.2. <code class="docutils literal"><span class="pre">==</span></code> vs. <code class="docutils literal"><span class="pre">===</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ternario">4.2.6.3. Ternario (<code class="docutils literal"><span class="pre">?:</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#fusion-de-null">4.2.6.4. Fusión de null (<code class="docutils literal"><span class="pre">??</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#reglas-de-comparacion-de-tipos">4.2.6.5. Reglas de comparación de tipos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#numericos">5.6.2. Numéricos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#enteros-int">5.6.2.1. Enteros (<code class="docutils literal"><span class="pre">int</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeros-en-coma-flotante-float">5.6.2.2. Números en coma flotante (<code class="docutils literal"><span class="pre">float</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operadores">5.6.2.3. Operadores</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#comprobaciones">4.2.7. Comprobaciones</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#gettype">4.2.7.1. <code class="docutils literal"><span class="pre">gettype()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#is-poco-utiles-en-formularios-ya-que-solo-se-reciben-strings">4.2.7.2. <code class="docutils literal"><span class="pre">is_*()</span></code> (poco útiles en formularios, ya que sólo se reciben strings)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#is-numeric">4.2.7.3. <code class="docutils literal"><span class="pre">is_numeric()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ctype">4.2.7.4. <code class="docutils literal"><span class="pre">ctype_*()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cadenas-string">5.6.3. Cadenas (<code class="docutils literal"><span class="pre">string</span></code>)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#operadores-de-cadenas">5.6.3.1. Operadores de cadenas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#funciones-de-manejo-de-cadenas">5.6.3.2. Funciones de manejo de cadenas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extension-mbstring">5.6.3.3. Extensión mbstring</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#conversiones">4.2.8. Conversiones</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#coercion-moldeado-forzado-o-casting">4.2.8.1. Coerción, moldeado, forzado o casting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#intval-floatval-strval-boolval">4.2.8.2. intval(), floatval(), strval(), boolval()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#number-format-money-format-setlocale">4.2.8.3. number_format(), money_format(), setlocale()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nulo">5.6.4. Nulo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operadores-de-asignacion-compuesta">5.6.5. Operadores de asignación compuesta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comparaciones">5.6.6. Comparaciones</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#operadores-de-comparacion">5.6.6.1. Operadores de comparación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vs">5.6.6.2. <code class="docutils literal"><span class="pre">==</span></code> vs. <code class="docutils literal"><span class="pre">===</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ternario">5.6.6.3. Ternario (<code class="docutils literal"><span class="pre">?:</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fusion-de-null">5.6.6.4. Fusión de null (<code class="docutils literal"><span class="pre">??</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reglas-de-comparacion-de-tipos">5.6.6.5. Reglas de comparación de tipos</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#comprobaciones">5.6.7. Comprobaciones</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#de-tipos">5.6.7.1. De tipos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#de-valores">5.6.7.2. De valores</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#variables">4.3. Variables</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#conceptos-basicos">4.3.1. Conceptos básicos</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#asignacion-por-valor-y-por-referencia">4.3.2. Asignación por valor y por referencia</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ambito-globales-superglobales">4.3.3. Ámbito: globales, superglobales</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#variables-predefinidas">4.3.4. Variables predefinidas</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#constantes">4.4. Constantes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#estructuras-de-control">4.5. Estructuras de control</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#require-require-once-include-include-once">4.5.1. <code class="docutils literal"><span class="pre">require</span></code>, <code class="docutils literal"><span class="pre">require_once</span></code>, <code class="docutils literal"><span class="pre">include</span></code>, <code class="docutils literal"><span class="pre">include_once</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#funciones-predefinidas">4.6. Funciones predefinidas</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#isset">4.6.1. <code class="docutils literal"><span class="pre">isset()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#empty">4.6.2. <code class="docutils literal"><span class="pre">empty()</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#para-evitar-el-problema-de-empty-0-true">4.6.2.1. Para evitar el problema de <code class="docutils literal"><span class="pre">empty(&quot;0&quot;)</span> <span class="pre">===</span> <span class="pre">true</span></code>:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conversiones">5.6.8. Conversiones</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#coercion-moldeado-forzado-o-casting">5.6.8.1. Coerción, moldeado, forzado o casting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#funciones-de-obtencion-de-valores">5.6.8.2. Funciones de obtención de valores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#funciones-de-formateado-numerico">5.6.8.3. Funciones de formateado numérico</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#arrays">4.7. Arrays</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#funciones-de-manejo-de-arrays">4.7.1. Funciones de manejo de arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#foreach">4.7.2. <code class="docutils literal"><span class="pre">foreach</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#isset-vs-array-key-exists">4.7.3. <code class="docutils literal"><span class="pre">isset()</span></code> vs. <code class="docutils literal"><span class="pre">array_key_exists()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#constantes">5.7. Constantes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#constantes-predefinidas">5.7.1. Constantes predefinidas</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#funciones">4.8. Funciones</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#variables-locales">4.8.1. Variables locales</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#uso-de-global">4.8.2. Uso de global</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#argumentos-por-defecto">4.8.3. Argumentos por defecto</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#paso-de-argumentos-por-valor-y-por-referencia">4.8.4. Paso de argumentos por valor y por referencia</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#declaraciones-de-tipos">4.8.5. Declaraciones de tipos</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#declaraciones-de-tipo-de-argumento">4.8.5.1. Declaraciones de tipo de argumento</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#declaraciones-de-tipo-de-devolucion">4.8.5.2. Declaraciones de tipo de devolución</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#tipificacion-estricta-declare-strict-types-1">4.8.5.3. Tipificación estricta: <code class="docutils literal"><span class="pre">declare(strict_types=1);</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#estructuras-de-control">5.8. Estructuras de control</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#include-require">5.8.1. <code class="docutils literal"><span class="pre">include</span></code>, <code class="docutils literal"><span class="pre">require</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#include-once-require-once">5.8.2. <code class="docutils literal"><span class="pre">include_once</span></code>, <code class="docutils literal"><span class="pre">require_once</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#funciones-predefinidas">5.9. Funciones predefinidas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#isset">5.9.1. <code class="docutils literal"><span class="pre">isset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#empty">5.9.2. <code class="docutils literal"><span class="pre">empty()</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#para-evitar-el-problema-de-empty-0-true">5.9.2.1. Para evitar el problema de <code class="docutils literal"><span class="pre">empty(&quot;0&quot;)</span> <span class="pre">===</span> <span class="pre">true</span></code>:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#var-dump">5.9.3. <code class="docutils literal"><span class="pre">var_dump()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#arrays">5.10. Arrays</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#operadores-para-arrays">5.10.1. Operadores para arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funciones-de-manejo-de-arrays">5.10.2. Funciones de manejo de arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#foreach">5.10.3. <code class="docutils literal"><span class="pre">foreach</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#isset-vs-array-key-exists">5.10.4. <code class="docutils literal"><span class="pre">isset()</span></code> vs. <code class="docutils literal"><span class="pre">array_key_exists()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#funciones">5.11. Funciones</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ambito-de-variables">5.11.1. Ámbito de variables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ambito-simple-al-archivo">5.11.1.1. Ámbito simple al archivo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#variables-locales">5.11.1.2. Variables locales</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#uso-de-global">5.11.1.3. Uso de global</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#variables-superglobales">5.11.1.4. Variables superglobales</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#argumentos">5.11.2. Argumentos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#argumentos-por-defecto">5.11.2.1. Argumentos por defecto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#paso-de-argumentos-por-valor-y-por-referencia">5.11.2.2. Paso de argumentos por valor y por referencia</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#declaraciones-de-tipos">5.11.3. Declaraciones de tipos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#declaraciones-de-tipo-de-argumento">5.11.3.1. Declaraciones de tipo de argumento</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#declaraciones-de-tipo-de-devolucion">5.11.3.2. Declaraciones de tipo de devolución</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tipificacion-estricta">5.11.3.3. Tipificación estricta</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#manejo-de-datos-de-entrada-get-y-post">4.9. Manejo de datos de entrada: <code class="docutils literal"><span class="pre">$_GET</span></code> y <code class="docutils literal"><span class="pre">$_POST</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="persistencia-de-datos-con-php.html">5. Persistencia de datos con PHP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="programacion-avanzada-en-php.html">6. Programación avanzada en PHP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interoperabilidad.html">7. Interoperabilidad</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduccion-a-yii2.html">8. Introducción a Yii2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="conceptos-fundamentales-de-yii2.html">9. Conceptos fundamentales de Yii2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="estructura-de-una-aplicacion-yii2.html">10. Estructura de una aplicación Yii2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gestion-de-peticiones-en-yii2.html">11. Gestión de peticiones en Yii2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="acceso-a-bases-de-datos-en-yii2.html">12. Acceso a bases de datos en Yii2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recogida-de-datos-y-validacion-de-formularios-en-yii2.html">13. Recogida de datos y validación de formularios</a></li>
-<li class="toctree-l1"><a class="reference internal" href="visualizacion-de-datos-en-yii2.html">14. Visualización de datos en Yii2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="caracteristicas-adicionales-de-yii2.html">15. Características adicionales de Yii2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="seguridad-y-cacheado-en-yii2.html">16. Seguridad y cacheado en Yii2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pruebas-documentacion-y-mantenimiento.html">17. Pruebas, documentación y mantenimiento</a></li>
-<li class="toctree-l1"><a class="reference internal" href="computacion-en-la-nube.html">18. Computación en la nube</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contenedores.html">19. Contenedores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="persistencia-de-datos-con-php.html">6. Persistencia de datos con PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="programacion-avanzada-en-php.html">7. Programación avanzada en PHP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interoperabilidad.html">8. Interoperabilidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduccion-a-yii2.html">9. Introducción a Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conceptos-fundamentales-de-yii2.html">10. Conceptos fundamentales de Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="estructura-de-una-aplicacion-yii2.html">11. Estructura de una aplicación Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gestion-de-peticiones-en-yii2.html">12. Gestión de peticiones en Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acceso-a-bases-de-datos-en-yii2.html">13. Acceso a bases de datos en Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recogida-de-datos-y-validacion-de-formularios-en-yii2.html">14. Recogida de datos y validación de formularios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualizacion-de-datos-en-yii2.html">15. Visualización de datos en Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="caracteristicas-adicionales-de-yii2.html">16. Características adicionales de Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="seguridad-y-cacheado-en-yii2.html">17. Seguridad y cacheado en Yii2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pruebas-documentacion-y-mantenimiento.html">18. Pruebas, documentación y mantenimiento</a></li>
+<li class="toctree-l1"><a class="reference internal" href="computacion-en-la-nube.html">19. Computación en la nube</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contenedores.html">20. Contenedores</a></li>
 </ul>
 
             
@@ -253,7 +268,7 @@
   <ul class="wy-breadcrumbs">
     
         
-      <li>4. Conceptos básicos de PHP</li>
+      <li>5. Conceptos básicos de PHP</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -275,163 +290,190 @@
            <div itemprop="articleBody">
             
   <div class="section" id="conceptos-basicos-de-php">
-<h1>4. Conceptos básicos de PHP<a class="headerlink" href="#conceptos-basicos-de-php" title="Enlazar permanentemente con este título">¶</a></h1>
-<div class="section" id="php-como-lenguaje-embebido">
-<h2>4.1. PHP como lenguaje embebido<a class="headerlink" href="#php-como-lenguaje-embebido" title="Enlazar permanentemente con este título">¶</a></h2>
+<h1>5. Conceptos básicos de PHP<a class="headerlink" href="#conceptos-basicos-de-php" title="Enlazar permanentemente con este título">¶</a></h1>
 <div class="section" id="introduccion-a-php">
-<h3>4.1.1. Introducción a PHP<a class="headerlink" href="#introduccion-a-php" title="Enlazar permanentemente con este título">¶</a></h3>
-<div class="section" id="instalacion-de-php">
-<h4>4.1.1.1. Instalación de PHP<a class="headerlink" href="#instalacion-de-php" title="Enlazar permanentemente con este título">¶</a></h4>
-</div>
+<h2>5.1. Introducción a PHP<a class="headerlink" href="#introduccion-a-php" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="pagina-web-de-php">
-<h4>4.1.1.2. Página web de PHP<a class="headerlink" href="#pagina-web-de-php" title="Enlazar permanentemente con este título">¶</a></h4>
+<h3>5.1.1. Página web de PHP<a class="headerlink" href="#pagina-web-de-php" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
+<div class="section" id="instalacion-de-php">
+<h3>5.1.2. Instalación de PHP<a class="headerlink" href="#instalacion-de-php" title="Enlazar permanentemente con este título">¶</a></h3>
 </div>
 <div class="section" id="documentacion-y-busqueda-de-informacion">
-<h4>4.1.1.3. Documentación y búsqueda de información<a class="headerlink" href="#documentacion-y-busqueda-de-informacion" title="Enlazar permanentemente con este título">¶</a></h4>
-</div>
-</div>
-<div class="section" id="funcionamiento-del-interprete">
-<h3>4.1.2. Funcionamiento del intérprete<a class="headerlink" href="#funcionamiento-del-interprete" title="Enlazar permanentemente con este título">¶</a></h3>
-<div class="section" id="modo-dual-de-operacion">
-<h4>4.1.2.1. Modo dual de operación<a class="headerlink" href="#modo-dual-de-operacion" title="Enlazar permanentemente con este título">¶</a></h4>
-</div>
-<div class="section" id="etiquetas-php-y">
-<h4>4.1.2.2. Etiquetas <code class="docutils literal"><span class="pre">&lt;?php</span></code> y <code class="docutils literal"><span class="pre">?&gt;</span></code><a class="headerlink" href="#etiquetas-php-y" title="Enlazar permanentemente con este título">¶</a></h4>
+<h3>5.1.3. Documentación y búsqueda de información<a class="headerlink" href="#documentacion-y-busqueda-de-informacion" title="Enlazar permanentemente con este título">¶</a></h3>
 </div>
 </div>
 <div class="section" id="sintaxis-basica">
-<h3>4.1.3. Sintaxis básica<a class="headerlink" href="#sintaxis-basica" title="Enlazar permanentemente con este título">¶</a></h3>
-</div>
-<div class="section" id="sapis">
-<h3>4.1.4. SAPIs<a class="headerlink" href="#sapis" title="Enlazar permanentemente con este título">¶</a></h3>
-<div class="section" id="cli-uso-en-linea-de-comandos">
-<h4>4.1.4.1. CLI: Uso en línea de comandos<a class="headerlink" href="#cli-uso-en-linea-de-comandos" title="Enlazar permanentemente con este título">¶</a></h4>
-</div>
-<div class="section" id="apache">
-<h4>4.1.4.2. Apache<a class="headerlink" href="#apache" title="Enlazar permanentemente con este título">¶</a></h4>
-<div class="section" id="integracion-de-php-con-apache">
-<h5>4.1.4.2.1. Integración de PHP con Apache<a class="headerlink" href="#integracion-de-php-con-apache" title="Enlazar permanentemente con este título">¶</a></h5>
-</div>
-<div class="section" id="configuracion-basica-con-php-ini">
-<h5>4.1.4.2.2. Configuración básica con <code class="docutils literal"><span class="pre">php.ini</span></code><a class="headerlink" href="#configuracion-basica-con-php-ini" title="Enlazar permanentemente con este título">¶</a></h5>
-</div>
-<div class="section" id="etiqueta">
-<h5>4.1.4.2.3. Etiqueta <code class="docutils literal"><span class="pre">&lt;?=</span></code><a class="headerlink" href="#etiqueta" title="Enlazar permanentemente con este título">¶</a></h5>
+<h2>5.2. Sintaxis básica<a class="headerlink" href="#sintaxis-basica" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="comando-echo">
+<h3>5.2.1. Comando <code class="docutils literal"><span class="pre">echo</span></code><a class="headerlink" href="#comando-echo" title="Enlazar permanentemente con este título">¶</a></h3>
 </div>
 </div>
-<div class="section" id="cgi-php-fpm-fastcgi-process-manager">
-<h4>4.1.4.3. CGI: PHP-FPM (FastCGI Process Manager)<a class="headerlink" href="#cgi-php-fpm-fastcgi-process-manager" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="section" id="funcionamiento-del-interprete">
+<h2>5.3. Funcionamiento del intérprete<a class="headerlink" href="#funcionamiento-del-interprete" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="modo-dual-de-operacion">
+<h3>5.3.1. Modo dual de operación<a class="headerlink" href="#modo-dual-de-operacion" title="Enlazar permanentemente con este título">¶</a></h3>
 </div>
-<div class="section" id="modulos-de-extension">
-<h4>4.1.4.4. Módulos de extensión<a class="headerlink" href="#modulos-de-extension" title="Enlazar permanentemente con este título">¶</a></h4>
-</div>
-</div>
-</div>
-<div class="section" id="tipos-de-datos-basicos">
-<h2>4.2. Tipos de datos básicos<a class="headerlink" href="#tipos-de-datos-basicos" title="Enlazar permanentemente con este título">¶</a></h2>
-<div class="section" id="enteros-int-sinonimo-de-integer">
-<h3>4.2.1. Enteros (<code class="docutils literal"><span class="pre">int</span></code>, sinónimo de <code class="docutils literal"><span class="pre">integer</span></code>)<a class="headerlink" href="#enteros-int-sinonimo-de-integer" title="Enlazar permanentemente con este título">¶</a></h3>
-</div>
-<div class="section" id="numeros-en-coma-flotante-float-sinonimo-de-double">
-<h3>4.2.2. Números en coma flotante (<code class="docutils literal"><span class="pre">float</span></code>, sinónimo de <code class="docutils literal"><span class="pre">double</span></code>)<a class="headerlink" href="#numeros-en-coma-flotante-float-sinonimo-de-double" title="Enlazar permanentemente con este título">¶</a></h3>
-</div>
-<div class="section" id="cadenas-string">
-<h3>4.2.3. Cadenas (<code class="docutils literal"><span class="pre">string</span></code>)<a class="headerlink" href="#cadenas-string" title="Enlazar permanentemente con este título">¶</a></h3>
-<div class="section" id="funciones-de-manejo-de-cadenas">
-<h4>4.2.3.1. Funciones de manejo de cadenas<a class="headerlink" href="#funciones-de-manejo-de-cadenas" title="Enlazar permanentemente con este título">¶</a></h4>
-</div>
-<div class="section" id="extension-mbstring">
-<h4>4.2.3.2. Extensión mbstring<a class="headerlink" href="#extension-mbstring" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="section" id="etiquetas-php-y">
+<h3>5.3.2. Etiquetas <code class="docutils literal"><span class="pre">&lt;?php</span></code> y <code class="docutils literal"><span class="pre">?&gt;</span></code><a class="headerlink" href="#etiquetas-php-y" title="Enlazar permanentemente con este título">¶</a></h3>
 </div>
 </div>
-<div class="section" id="logicos-bool-sinonimo-de-boolean">
-<h3>4.2.4. Lógicos (<code class="docutils literal"><span class="pre">bool</span></code>, sinónimo de <code class="docutils literal"><span class="pre">boolean</span></code>)<a class="headerlink" href="#logicos-bool-sinonimo-de-boolean" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="interprete-interactivo">
+<h2>5.4. Intérprete interactivo<a class="headerlink" href="#interprete-interactivo" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="php-a">
+<h3>5.4.1. <code class="docutils literal"><span class="pre">php</span> <span class="pre">-a</span></code><a class="headerlink" href="#php-a" title="Enlazar permanentemente con este título">¶</a></h3>
 </div>
-<div class="section" id="null">
-<h3>4.2.5. <code class="docutils literal"><span class="pre">NULL</span></code><a class="headerlink" href="#null" title="Enlazar permanentemente con este título">¶</a></h3>
-<div class="section" id="is-null-vs-null">
-<h4>4.2.5.1. <code class="docutils literal"><span class="pre">is_null()</span></code> vs. <code class="docutils literal"><span class="pre">===</span> <span class="pre">null</span></code><a class="headerlink" href="#is-null-vs-null" title="Enlazar permanentemente con este título">¶</a></h4>
-</div>
-</div>
-<div class="section" id="comparaciones">
-<h3>4.2.6. Comparaciones<a class="headerlink" href="#comparaciones" title="Enlazar permanentemente con este título">¶</a></h3>
-<div class="section" id="operadores-de-comparacion">
-<h4>4.2.6.1. Operadores de comparación<a class="headerlink" href="#operadores-de-comparacion" title="Enlazar permanentemente con este título">¶</a></h4>
-</div>
-<div class="section" id="vs">
-<h4>4.2.6.2. <code class="docutils literal"><span class="pre">==</span></code> vs. <code class="docutils literal"><span class="pre">===</span></code><a class="headerlink" href="#vs" title="Enlazar permanentemente con este título">¶</a></h4>
-</div>
-<div class="section" id="ternario">
-<h4>4.2.6.3. Ternario (<code class="docutils literal"><span class="pre">?:</span></code>)<a class="headerlink" href="#ternario" title="Enlazar permanentemente con este título">¶</a></h4>
-</div>
-<div class="section" id="fusion-de-null">
-<h4>4.2.6.4. Fusión de null (<code class="docutils literal"><span class="pre">??</span></code>)<a class="headerlink" href="#fusion-de-null" title="Enlazar permanentemente con este título">¶</a></h4>
-</div>
-<div class="section" id="reglas-de-comparacion-de-tipos">
-<h4>4.2.6.5. Reglas de comparación de tipos<a class="headerlink" href="#reglas-de-comparacion-de-tipos" title="Enlazar permanentemente con este título">¶</a></h4>
-</div>
-</div>
-<div class="section" id="comprobaciones">
-<h3>4.2.7. Comprobaciones<a class="headerlink" href="#comprobaciones" title="Enlazar permanentemente con este título">¶</a></h3>
-<div class="section" id="gettype">
-<h4>4.2.7.1. <code class="docutils literal"><span class="pre">gettype()</span></code><a class="headerlink" href="#gettype" title="Enlazar permanentemente con este título">¶</a></h4>
-</div>
-<div class="section" id="is-poco-utiles-en-formularios-ya-que-solo-se-reciben-strings">
-<h4>4.2.7.2. <code class="docutils literal"><span class="pre">is_*()</span></code> (poco útiles en formularios, ya que sólo se reciben strings)<a class="headerlink" href="#is-poco-utiles-en-formularios-ya-que-solo-se-reciben-strings" title="Enlazar permanentemente con este título">¶</a></h4>
-</div>
-<div class="section" id="is-numeric">
-<h4>4.2.7.3. <code class="docutils literal"><span class="pre">is_numeric()</span></code><a class="headerlink" href="#is-numeric" title="Enlazar permanentemente con este título">¶</a></h4>
-</div>
-<div class="section" id="ctype">
-<h4>4.2.7.4. <code class="docutils literal"><span class="pre">ctype_*()</span></code><a class="headerlink" href="#ctype" title="Enlazar permanentemente con este título">¶</a></h4>
-</div>
-</div>
-<div class="section" id="conversiones">
-<h3>4.2.8. Conversiones<a class="headerlink" href="#conversiones" title="Enlazar permanentemente con este título">¶</a></h3>
-<div class="section" id="coercion-moldeado-forzado-o-casting">
-<h4>4.2.8.1. Coerción, moldeado, forzado o casting<a class="headerlink" href="#coercion-moldeado-forzado-o-casting" title="Enlazar permanentemente con este título">¶</a></h4>
-</div>
-<div class="section" id="intval-floatval-strval-boolval">
-<h4>4.2.8.2. intval(), floatval(), strval(), boolval()<a class="headerlink" href="#intval-floatval-strval-boolval" title="Enlazar permanentemente con este título">¶</a></h4>
-</div>
-<div class="section" id="number-format-money-format-setlocale">
-<h4>4.2.8.3. number_format(), money_format(), setlocale()<a class="headerlink" href="#number-format-money-format-setlocale" title="Enlazar permanentemente con este título">¶</a></h4>
-</div>
+<div class="section" id="psysh">
+<h3>5.4.2. PsySH<a class="headerlink" href="#psysh" title="Enlazar permanentemente con este título">¶</a></h3>
 </div>
 </div>
 <div class="section" id="variables">
-<h2>4.3. Variables<a class="headerlink" href="#variables" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>5.5. Variables<a class="headerlink" href="#variables" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="conceptos-basicos">
-<h3>4.3.1. Conceptos básicos<a class="headerlink" href="#conceptos-basicos" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>5.5.1. Conceptos básicos<a class="headerlink" href="#conceptos-basicos" title="Enlazar permanentemente con este título">¶</a></h3>
 </div>
-<div class="section" id="asignacion-por-valor-y-por-referencia">
-<h3>4.3.2. Asignación por valor y por referencia<a class="headerlink" href="#asignacion-por-valor-y-por-referencia" title="Enlazar permanentemente con este título">¶</a></h3>
-</div>
-<div class="section" id="ambito-globales-superglobales">
-<h3>4.3.3. Ámbito: globales, superglobales<a class="headerlink" href="#ambito-globales-superglobales" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="operadores-de-asignacion-por-valor-y-por-referencia">
+<h3>5.5.2. Operadores de asignación por valor y por referencia<a class="headerlink" href="#operadores-de-asignacion-por-valor-y-por-referencia" title="Enlazar permanentemente con este título">¶</a></h3>
 </div>
 <div class="section" id="variables-predefinidas">
-<h3>4.3.4. Variables predefinidas<a class="headerlink" href="#variables-predefinidas" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>5.5.3. Variables predefinidas<a class="headerlink" href="#variables-predefinidas" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
+</div>
+<div class="section" id="tipos-de-datos-basicos">
+<h2>5.6. Tipos de datos básicos<a class="headerlink" href="#tipos-de-datos-basicos" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="logicos-bool">
+<h3>5.6.1. Lógicos (<code class="docutils literal"><span class="pre">bool</span></code>)<a class="headerlink" href="#logicos-bool" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="operadores-logicos">
+<h4>5.6.1.1. Operadores lógicos<a class="headerlink" href="#operadores-logicos" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+</div>
+<div class="section" id="numericos">
+<h3>5.6.2. Numéricos<a class="headerlink" href="#numericos" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="enteros-int">
+<h4>5.6.2.1. Enteros (<code class="docutils literal"><span class="pre">int</span></code>)<a class="headerlink" href="#enteros-int" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+<div class="section" id="numeros-en-coma-flotante-float">
+<h4>5.6.2.2. Números en coma flotante (<code class="docutils literal"><span class="pre">float</span></code>)<a class="headerlink" href="#numeros-en-coma-flotante-float" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+<div class="section" id="operadores">
+<h4>5.6.2.3. Operadores<a class="headerlink" href="#operadores" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="section" id="operadores-aritmeticos">
+<h5>5.6.2.3.1. Operadores aritméticos<a class="headerlink" href="#operadores-aritmeticos" title="Enlazar permanentemente con este título">¶</a></h5>
+</div>
+<div class="section" id="operadores-de-incremento-decremento">
+<h5>5.6.2.3.2. Operadores de incremento/decremento<a class="headerlink" href="#operadores-de-incremento-decremento" title="Enlazar permanentemente con este título">¶</a></h5>
+</div>
+</div>
+</div>
+<div class="section" id="cadenas-string">
+<h3>5.6.3. Cadenas (<code class="docutils literal"><span class="pre">string</span></code>)<a class="headerlink" href="#cadenas-string" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="operadores-de-cadenas">
+<h4>5.6.3.1. Operadores de cadenas<a class="headerlink" href="#operadores-de-cadenas" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="section" id="concatenacion">
+<h5>5.6.3.1.1. Concatenación<a class="headerlink" href="#concatenacion" title="Enlazar permanentemente con este título">¶</a></h5>
+</div>
+<div class="section" id="acceso-y-modificacion-por-caracteres">
+<h5>5.6.3.1.2. Acceso y modificación por caracteres<a class="headerlink" href="#acceso-y-modificacion-por-caracteres" title="Enlazar permanentemente con este título">¶</a></h5>
+</div>
+<div class="section" id="id1">
+<h5>5.6.3.1.3. Operadores de incremento/decremento<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h5>
+</div>
+</div>
+<div class="section" id="funciones-de-manejo-de-cadenas">
+<h4>5.6.3.2. Funciones de manejo de cadenas<a class="headerlink" href="#funciones-de-manejo-de-cadenas" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+<div class="section" id="extension-mbstring">
+<h4>5.6.3.3. Extensión mbstring<a class="headerlink" href="#extension-mbstring" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+</div>
+<div class="section" id="nulo">
+<h3>5.6.4. Nulo<a class="headerlink" href="#nulo" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
+<div class="section" id="operadores-de-asignacion-compuesta">
+<h3>5.6.5. Operadores de asignación compuesta<a class="headerlink" href="#operadores-de-asignacion-compuesta" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
+<div class="section" id="comparaciones">
+<h3>5.6.6. Comparaciones<a class="headerlink" href="#comparaciones" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="operadores-de-comparacion">
+<h4>5.6.6.1. Operadores de comparación<a class="headerlink" href="#operadores-de-comparacion" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+<div class="section" id="vs">
+<h4>5.6.6.2. <code class="docutils literal"><span class="pre">==</span></code> vs. <code class="docutils literal"><span class="pre">===</span></code><a class="headerlink" href="#vs" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+<div class="section" id="ternario">
+<h4>5.6.6.3. Ternario (<code class="docutils literal"><span class="pre">?:</span></code>)<a class="headerlink" href="#ternario" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+<div class="section" id="fusion-de-null">
+<h4>5.6.6.4. Fusión de null (<code class="docutils literal"><span class="pre">??</span></code>)<a class="headerlink" href="#fusion-de-null" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+<div class="section" id="reglas-de-comparacion-de-tipos">
+<h4>5.6.6.5. Reglas de comparación de tipos<a class="headerlink" href="#reglas-de-comparacion-de-tipos" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+</div>
+<div class="section" id="comprobaciones">
+<h3>5.6.7. Comprobaciones<a class="headerlink" href="#comprobaciones" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="de-tipos">
+<h4>5.6.7.1. De tipos<a class="headerlink" href="#de-tipos" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="section" id="gettype">
+<h5>5.6.7.1.1. <code class="docutils literal"><span class="pre">gettype()</span></code><a class="headerlink" href="#gettype" title="Enlazar permanentemente con este título">¶</a></h5>
+</div>
+<div class="section" id="is-poco-utiles-en-formularios-ya-que-solo-se-reciben-strings">
+<h5>5.6.7.1.2. <code class="docutils literal"><span class="pre">is_*()</span></code> (poco útiles en formularios, ya que sólo se reciben strings)<a class="headerlink" href="#is-poco-utiles-en-formularios-ya-que-solo-se-reciben-strings" title="Enlazar permanentemente con este título">¶</a></h5>
+</div>
+</div>
+<div class="section" id="de-valores">
+<h4>5.6.7.2. De valores<a class="headerlink" href="#de-valores" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="section" id="is-numeric">
+<h5>5.6.7.2.1. <code class="docutils literal"><span class="pre">is_numeric()</span></code><a class="headerlink" href="#is-numeric" title="Enlazar permanentemente con este título">¶</a></h5>
+</div>
+<div class="section" id="ctype">
+<h5>5.6.7.2.2. <code class="docutils literal"><span class="pre">ctype_*()</span></code><a class="headerlink" href="#ctype" title="Enlazar permanentemente con este título">¶</a></h5>
+</div>
+</div>
+</div>
+<div class="section" id="conversiones">
+<h3>5.6.8. Conversiones<a class="headerlink" href="#conversiones" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="coercion-moldeado-forzado-o-casting">
+<h4>5.6.8.1. Coerción, moldeado, forzado o casting<a class="headerlink" href="#coercion-moldeado-forzado-o-casting" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+<div class="section" id="funciones-de-obtencion-de-valores">
+<h4>5.6.8.2. Funciones de obtención de valores<a class="headerlink" href="#funciones-de-obtencion-de-valores" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="section" id="intval-floatval-strval-boolval">
+<h5>5.6.8.2.1. intval(), floatval(), strval(), boolval()<a class="headerlink" href="#intval-floatval-strval-boolval" title="Enlazar permanentemente con este título">¶</a></h5>
+</div>
+</div>
+<div class="section" id="funciones-de-formateado-numerico">
+<h4>5.6.8.3. Funciones de formateado numérico<a class="headerlink" href="#funciones-de-formateado-numerico" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="section" id="number-format-money-format-setlocale">
+<h5>5.6.8.3.1. number_format(), money_format(), setlocale()<a class="headerlink" href="#number-format-money-format-setlocale" title="Enlazar permanentemente con este título">¶</a></h5>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="constantes">
-<h2>4.4. Constantes<a class="headerlink" href="#constantes" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>5.7. Constantes<a class="headerlink" href="#constantes" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="constantes-predefinidas">
+<h3>5.7.1. Constantes predefinidas<a class="headerlink" href="#constantes-predefinidas" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
 </div>
 <div class="section" id="estructuras-de-control">
-<h2>4.5. Estructuras de control<a class="headerlink" href="#estructuras-de-control" title="Enlazar permanentemente con este título">¶</a></h2>
-<div class="section" id="require-require-once-include-include-once">
-<h3>4.5.1. <code class="docutils literal"><span class="pre">require</span></code>, <code class="docutils literal"><span class="pre">require_once</span></code>, <code class="docutils literal"><span class="pre">include</span></code>, <code class="docutils literal"><span class="pre">include_once</span></code><a class="headerlink" href="#require-require-once-include-include-once" title="Enlazar permanentemente con este título">¶</a></h3>
+<h2>5.8. Estructuras de control<a class="headerlink" href="#estructuras-de-control" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="include-require">
+<h3>5.8.1. <code class="docutils literal"><span class="pre">include</span></code>, <code class="docutils literal"><span class="pre">require</span></code><a class="headerlink" href="#include-require" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
+<div class="section" id="include-once-require-once">
+<h3>5.8.2. <code class="docutils literal"><span class="pre">include_once</span></code>, <code class="docutils literal"><span class="pre">require_once</span></code><a class="headerlink" href="#include-once-require-once" title="Enlazar permanentemente con este título">¶</a></h3>
 </div>
 </div>
 <div class="section" id="funciones-predefinidas">
-<h2>4.6. Funciones predefinidas<a class="headerlink" href="#funciones-predefinidas" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>5.9. Funciones predefinidas<a class="headerlink" href="#funciones-predefinidas" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="isset">
-<h3>4.6.1. <code class="docutils literal"><span class="pre">isset()</span></code><a class="headerlink" href="#isset" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>5.9.1. <code class="docutils literal"><span class="pre">isset()</span></code><a class="headerlink" href="#isset" title="Enlazar permanentemente con este título">¶</a></h3>
 </div>
 <div class="section" id="empty">
-<h3>4.6.2. <code class="docutils literal"><span class="pre">empty()</span></code><a class="headerlink" href="#empty" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>5.9.2. <code class="docutils literal"><span class="pre">empty()</span></code><a class="headerlink" href="#empty" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="section" id="para-evitar-el-problema-de-empty-0-true">
-<h4>4.6.2.1. Para evitar el problema de <code class="docutils literal"><span class="pre">empty(&quot;0&quot;)</span> <span class="pre">===</span> <span class="pre">true</span></code>:<a class="headerlink" href="#para-evitar-el-problema-de-empty-0-true" title="Enlazar permanentemente con este título">¶</a></h4>
+<h4>5.9.2.1. Para evitar el problema de <code class="docutils literal"><span class="pre">empty(&quot;0&quot;)</span> <span class="pre">===</span> <span class="pre">true</span></code>:<a class="headerlink" href="#para-evitar-el-problema-de-empty-0-true" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="nf">is_blank</span><span class="p">(</span><span class="nv">$value</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">return</span> <span class="k">empty</span><span class="p">(</span><span class="nv">$value</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nb">is_numeric</span><span class="p">(</span><span class="nv">$value</span><span class="p">);</span>
@@ -440,48 +482,63 @@
 </div>
 </div>
 </div>
+<div class="section" id="var-dump">
+<h3>5.9.3. <code class="docutils literal"><span class="pre">var_dump()</span></code><a class="headerlink" href="#var-dump" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
 </div>
 <div class="section" id="arrays">
-<h2>4.7. Arrays<a class="headerlink" href="#arrays" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>5.10. Arrays<a class="headerlink" href="#arrays" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="operadores-para-arrays">
+<h3>5.10.1. Operadores para arrays<a class="headerlink" href="#operadores-para-arrays" title="Enlazar permanentemente con este título">¶</a></h3>
+</div>
 <div class="section" id="funciones-de-manejo-de-arrays">
-<h3>4.7.1. Funciones de manejo de arrays<a class="headerlink" href="#funciones-de-manejo-de-arrays" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>5.10.2. Funciones de manejo de arrays<a class="headerlink" href="#funciones-de-manejo-de-arrays" title="Enlazar permanentemente con este título">¶</a></h3>
 </div>
 <div class="section" id="foreach">
-<h3>4.7.2. <code class="docutils literal"><span class="pre">foreach</span></code><a class="headerlink" href="#foreach" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>5.10.3. <code class="docutils literal"><span class="pre">foreach</span></code><a class="headerlink" href="#foreach" title="Enlazar permanentemente con este título">¶</a></h3>
 </div>
 <div class="section" id="isset-vs-array-key-exists">
-<h3>4.7.3. <code class="docutils literal"><span class="pre">isset()</span></code> vs. <code class="docutils literal"><span class="pre">array_key_exists()</span></code><a class="headerlink" href="#isset-vs-array-key-exists" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>5.10.4. <code class="docutils literal"><span class="pre">isset()</span></code> vs. <code class="docutils literal"><span class="pre">array_key_exists()</span></code><a class="headerlink" href="#isset-vs-array-key-exists" title="Enlazar permanentemente con este título">¶</a></h3>
 </div>
 </div>
 <div class="section" id="funciones">
-<h2>4.8. Funciones<a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2>5.11. Funciones<a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="ambito-de-variables">
+<h3>5.11.1. Ámbito de variables<a class="headerlink" href="#ambito-de-variables" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="ambito-simple-al-archivo">
+<h4>5.11.1.1. Ámbito simple al archivo<a class="headerlink" href="#ambito-simple-al-archivo" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
 <div class="section" id="variables-locales">
-<h3>4.8.1. Variables locales<a class="headerlink" href="#variables-locales" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>5.11.1.2. Variables locales<a class="headerlink" href="#variables-locales" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 <div class="section" id="uso-de-global">
-<h3>4.8.2. Uso de global<a class="headerlink" href="#uso-de-global" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>5.11.1.3. Uso de global<a class="headerlink" href="#uso-de-global" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
+<div class="section" id="variables-superglobales">
+<h4>5.11.1.4. Variables superglobales<a class="headerlink" href="#variables-superglobales" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
+</div>
+<div class="section" id="argumentos">
+<h3>5.11.2. Argumentos<a class="headerlink" href="#argumentos" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="section" id="argumentos-por-defecto">
-<h3>4.8.3. Argumentos por defecto<a class="headerlink" href="#argumentos-por-defecto" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>5.11.2.1. Argumentos por defecto<a class="headerlink" href="#argumentos-por-defecto" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 <div class="section" id="paso-de-argumentos-por-valor-y-por-referencia">
-<h3>4.8.4. Paso de argumentos por valor y por referencia<a class="headerlink" href="#paso-de-argumentos-por-valor-y-por-referencia" title="Enlazar permanentemente con este título">¶</a></h3>
+<h4>5.11.2.2. Paso de argumentos por valor y por referencia<a class="headerlink" href="#paso-de-argumentos-por-valor-y-por-referencia" title="Enlazar permanentemente con este título">¶</a></h4>
+</div>
 </div>
 <div class="section" id="declaraciones-de-tipos">
-<h3>4.8.5. Declaraciones de tipos<a class="headerlink" href="#declaraciones-de-tipos" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3>5.11.3. Declaraciones de tipos<a class="headerlink" href="#declaraciones-de-tipos" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="section" id="declaraciones-de-tipo-de-argumento">
-<h4>4.8.5.1. Declaraciones de tipo de argumento<a class="headerlink" href="#declaraciones-de-tipo-de-argumento" title="Enlazar permanentemente con este título">¶</a></h4>
+<h4>5.11.3.1. Declaraciones de tipo de argumento<a class="headerlink" href="#declaraciones-de-tipo-de-argumento" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 <div class="section" id="declaraciones-de-tipo-de-devolucion">
-<h4>4.8.5.2. Declaraciones de tipo de devolución<a class="headerlink" href="#declaraciones-de-tipo-de-devolucion" title="Enlazar permanentemente con este título">¶</a></h4>
+<h4>5.11.3.2. Declaraciones de tipo de devolución<a class="headerlink" href="#declaraciones-de-tipo-de-devolucion" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
-<div class="section" id="tipificacion-estricta-declare-strict-types-1">
-<h4>4.8.5.3. Tipificación estricta: <code class="docutils literal"><span class="pre">declare(strict_types=1);</span></code><a class="headerlink" href="#tipificacion-estricta-declare-strict-types-1" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="section" id="tipificacion-estricta">
+<h4>5.11.3.3. Tipificación estricta<a class="headerlink" href="#tipificacion-estricta" title="Enlazar permanentemente con este título">¶</a></h4>
 </div>
 </div>
-</div>
-<div class="section" id="manejo-de-datos-de-entrada-get-y-post">
-<h2>4.9. Manejo de datos de entrada: <code class="docutils literal"><span class="pre">$_GET</span></code> y <code class="docutils literal"><span class="pre">$_POST</span></code><a class="headerlink" href="#manejo-de-datos-de-entrada-get-y-post" title="Enlazar permanentemente con este título">¶</a></h2>
 </div>
 </div>
 
@@ -495,10 +552,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="persistencia-de-datos-con-php.html" class="btn btn-neutral float-right" title="5. Persistencia de datos con PHP" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="persistencia-de-datos-con-php.html" class="btn btn-neutral float-right" title="6. Persistencia de datos con PHP" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="sistemas-de-control-de-versiones.html" class="btn btn-neutral" title="3. Sistemas de control de versiones" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Anterior</a>
+        <a href="sistemas-de-control-de-versiones.html" class="btn btn-neutral" title="4. Sistemas de control de versiones" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Anterior</a>
       
     </div>
   
@@ -508,7 +565,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Ricardo Pérez López.
-      Actualizado por última vez en 22-10-2017.
+      Actualizado por última vez en 23-10-2017.
 
     </p>
   </div>
