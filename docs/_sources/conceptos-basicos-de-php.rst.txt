@@ -98,7 +98,7 @@ Operadores de asignación por valor y por referencia
 
 <http://php.net/manual/es/language.operators.assignment.php>
 
-ricpelo's note: En ``$b &= $a;``, ``$b`` **NO** está apuntando a ``$a``
+ricpelo's note: En ``$b =& $a;``, ``$b`` **NO** está apuntando a ``$a``
 o viceversa. Ambos apuntan al mismo
 lugar. <http://php.net/manual/es/language.references.whatdo.php>
 
