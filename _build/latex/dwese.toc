@@ -21,8 +21,8 @@
 \contentsline {subsection}{\numberline {2.1.3}Web estática vs. dinámica}{6}{subsection.2.1.3}
 \contentsline {subsection}{\numberline {2.1.4}Estructura vs. contenido}{6}{subsection.2.1.4}
 \contentsline {section}{\numberline {2.2}Ejemplos de aplicaciones web}{6}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Redes sociales: Facebook, Twitter…}{6}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Comercio electrónico: Amazon, eBay…}{6}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Redes sociales: Facebook, Twitter...}{6}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Comercio electrónico: Amazon, eBay...}{6}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Administración electrónica…}{6}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Portales}{6}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}ERP, CRM}{6}{subsection.2.2.5}
@@ -71,13 +71,21 @@
 \contentsline {section}{\numberline {4.3}Ramas remotas}{11}{section.4.3}
 \contentsline {section}{\numberline {4.4}Repositorios de código (Github.com, GitLab.com, Bitbucket.org…)}{11}{section.4.4}
 \contentsline {part}{II\hspace {1em}PHP}{13}{part.2}
-\contentsline {chapter}{\numberline {5}Conceptos básicos de PHP}{15}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introducción a PHP}{16}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Página web de PHP}{16}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Instalación de PHP}{16}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Documentación y búsqueda de información}{16}{subsection.5.1.3}
-\contentsline {section}{\numberline {5.2}Sintaxis básica}{16}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Comando \sphinxstyleliteralintitle {echo}}{16}{subsection.5.2.1}
+\contentsline {chapter}{\numberline {5}Conceptos básicos de PHP I}{15}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introducción a PHP}{15}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Página web de PHP}{15}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Instalación de PHP}{15}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Documentación y búsqueda de información}{15}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Configuración básica con \sphinxstyleliteralintitle {php.ini}}{15}{subsection.5.1.4}
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {error\_reporting = E\_ALL}}{15}{subsubsection*.19}
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {display\_errors = On}}{15}{subsubsection*.20}
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {display\_startup\_errors = On}}{15}{subsubsection*.21}
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {date.timezone = 'UTC'}}{15}{subsubsection*.22}
+\contentsline {section}{\numberline {5.2}Sintaxis básica}{15}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Datos e instrucciones}{16}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Sentencias y comandos}{16}{subsection.5.2.2}
+\contentsline {subsubsection}{Comando \sphinxstyleliteralintitle {echo}}{16}{subsubsection*.23}
+\contentsline {subsection}{\numberline {5.2.3}Expresiones, operadores y funciones}{16}{subsection.5.2.3}
 \contentsline {section}{\numberline {5.3}Funcionamiento del intérprete}{16}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Modo dual de operación}{16}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Etiquetas \sphinxstyleliteralintitle {\textless {}?php} y \sphinxstyleliteralintitle {?\textgreater {}}}{16}{subsection.5.3.2}
@@ -86,88 +94,108 @@
 \contentsline {subsection}{\numberline {5.4.2}PsySH}{16}{subsection.5.4.2}
 \contentsline {section}{\numberline {5.5}Variables}{16}{section.5.5}
 \contentsline {subsection}{\numberline {5.5.1}Conceptos básicos}{16}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Operadores de asignación por valor y por referencia}{16}{subsection.5.5.2}
-\contentsline {subsection}{\numberline {5.5.3}Variables predefinidas}{16}{subsection.5.5.3}
-\contentsline {section}{\numberline {5.6}Tipos de datos básicos}{16}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}Lógicos (\sphinxstyleliteralintitle {bool})}{16}{subsection.5.6.1}
-\contentsline {subsubsection}{Operadores lógicos}{17}{subsubsection*.19}
-\contentsline {subsection}{\numberline {5.6.2}Numéricos}{17}{subsection.5.6.2}
-\contentsline {subsubsection}{Enteros (\sphinxstyleliteralintitle {int})}{17}{subsubsection*.20}
-\contentsline {subsubsection}{Números en coma flotante (\sphinxstyleliteralintitle {float})}{17}{subsubsection*.21}
-\contentsline {subsubsection}{Operadores}{17}{subsubsection*.22}
-\contentsline {paragraph}{Operadores aritméticos}{17}{paragraph*.23}
-\contentsline {paragraph}{Operadores de incremento/decremento}{17}{paragraph*.24}
-\contentsline {subsection}{\numberline {5.6.3}Cadenas (\sphinxstyleliteralintitle {string})}{17}{subsection.5.6.3}
-\contentsline {subsubsection}{Operadores de cadenas}{17}{subsubsection*.25}
-\contentsline {paragraph}{Concatenación}{17}{paragraph*.26}
-\contentsline {paragraph}{Acceso y modificación por caracteres}{17}{paragraph*.27}
-\contentsline {paragraph}{Operadores de incremento/decremento}{17}{paragraph*.28}
-\contentsline {subsubsection}{Funciones de manejo de cadenas}{17}{subsubsection*.29}
-\contentsline {subsubsection}{Extensión mbstring}{17}{subsubsection*.30}
-\contentsline {subsection}{\numberline {5.6.4}Nulo}{17}{subsection.5.6.4}
-\contentsline {subsection}{\numberline {5.6.5}Operadores de asignación compuesta}{17}{subsection.5.6.5}
-\contentsline {subsection}{\numberline {5.6.6}Comparaciones}{17}{subsection.5.6.6}
-\contentsline {subsubsection}{Operadores de comparación}{17}{subsubsection*.31}
-\contentsline {subsubsection}{\sphinxstyleliteralintitle {==} vs. \sphinxstyleliteralintitle {===}}{17}{subsubsection*.32}
-\contentsline {subsubsection}{Ternario (\sphinxstyleliteralintitle {?:})}{17}{subsubsection*.33}
-\contentsline {subsubsection}{Fusión de null (\sphinxstyleliteralintitle {??})}{17}{subsubsection*.34}
-\contentsline {subsubsection}{Reglas de comparación de tipos}{17}{subsubsection*.35}
-\contentsline {subsection}{\numberline {5.6.7}Comprobaciones}{17}{subsection.5.6.7}
-\contentsline {subsubsection}{De tipos}{17}{subsubsection*.36}
-\contentsline {paragraph}{\sphinxstyleliteralintitle {gettype()}}{18}{paragraph*.37}
-\contentsline {paragraph}{\sphinxstyleliteralintitle {is\_*()} (poco útiles en formularios, ya que sólo se reciben strings)}{18}{paragraph*.38}
-\contentsline {subsubsection}{De valores}{18}{subsubsection*.39}
-\contentsline {paragraph}{\sphinxstyleliteralintitle {is\_numeric()}}{18}{paragraph*.40}
-\contentsline {paragraph}{\sphinxstyleliteralintitle {ctype\_*()}}{18}{paragraph*.41}
-\contentsline {subsection}{\numberline {5.6.8}Conversiones}{18}{subsection.5.6.8}
-\contentsline {subsubsection}{Coerción, moldeado, forzado o casting}{18}{subsubsection*.42}
-\contentsline {subsubsection}{Funciones de obtención de valores}{18}{subsubsection*.43}
-\contentsline {paragraph}{intval(), floatval(), strval(), boolval()}{18}{paragraph*.44}
-\contentsline {subsubsection}{Funciones de formateado numérico}{18}{subsubsection*.45}
-\contentsline {paragraph}{number\_format(), money\_format(), setlocale()}{18}{paragraph*.46}
-\contentsline {section}{\numberline {5.7}Constantes}{18}{section.5.7}
-\contentsline {subsection}{\numberline {5.7.1}Constantes predefinidas}{18}{subsection.5.7.1}
-\contentsline {section}{\numberline {5.8}Estructuras de control}{18}{section.5.8}
-\contentsline {subsection}{\numberline {5.8.1}\sphinxstyleliteralintitle {include}, \sphinxstyleliteralintitle {require}}{18}{subsection.5.8.1}
-\contentsline {subsection}{\numberline {5.8.2}\sphinxstyleliteralintitle {include\_once}, \sphinxstyleliteralintitle {require\_once}}{18}{subsection.5.8.2}
-\contentsline {section}{\numberline {5.9}Funciones predefinidas}{18}{section.5.9}
-\contentsline {subsection}{\numberline {5.9.1}\sphinxstyleliteralintitle {isset()}}{18}{subsection.5.9.1}
-\contentsline {subsection}{\numberline {5.9.2}\sphinxstyleliteralintitle {empty()}}{18}{subsection.5.9.2}
-\contentsline {subsubsection}{Para evitar el problema de \sphinxstyleliteralintitle {empty("0") === true}:}{18}{subsubsection*.47}
-\contentsline {subsection}{\numberline {5.9.3}\sphinxstyleliteralintitle {var\_dump()}}{19}{subsection.5.9.3}
-\contentsline {section}{\numberline {5.10}Arrays}{19}{section.5.10}
-\contentsline {subsection}{\numberline {5.10.1}Operadores para arrays}{19}{subsection.5.10.1}
-\contentsline {subsection}{\numberline {5.10.2}Funciones de manejo de arrays}{19}{subsection.5.10.2}
-\contentsline {subsection}{\numberline {5.10.3}\sphinxstyleliteralintitle {foreach}}{19}{subsection.5.10.3}
-\contentsline {subsection}{\numberline {5.10.4}\sphinxstyleliteralintitle {isset()} vs. \sphinxstyleliteralintitle {array\_key\_exists()}}{19}{subsection.5.10.4}
-\contentsline {section}{\numberline {5.11}Funciones}{19}{section.5.11}
-\contentsline {subsection}{\numberline {5.11.1}Ámbito de variables}{19}{subsection.5.11.1}
-\contentsline {subsubsection}{Ámbito simple al archivo}{19}{subsubsection*.48}
-\contentsline {subsubsection}{Variables locales}{19}{subsubsection*.49}
-\contentsline {subsubsection}{Uso de global}{19}{subsubsection*.50}
-\contentsline {subsubsection}{Variables superglobales}{19}{subsubsection*.51}
-\contentsline {subsection}{\numberline {5.11.2}Argumentos}{19}{subsection.5.11.2}
-\contentsline {subsubsection}{Argumentos por defecto}{19}{subsubsection*.52}
-\contentsline {subsubsection}{Paso de argumentos por valor y por referencia}{19}{subsubsection*.53}
-\contentsline {subsection}{\numberline {5.11.3}Declaraciones de tipos}{19}{subsection.5.11.3}
-\contentsline {subsubsection}{Declaraciones de tipo de argumento}{19}{subsubsection*.54}
-\contentsline {subsubsection}{Declaraciones de tipo de devolución}{19}{subsubsection*.55}
-\contentsline {subsubsection}{Tipificación estricta}{19}{subsubsection*.56}
-\contentsline {chapter}{\numberline {6}Persistencia de datos con PHP}{21}{chapter.6}
-\contentsline {chapter}{\numberline {7}Programación avanzada en PHP}{23}{chapter.7}
-\contentsline {chapter}{\numberline {8}Interoperabilidad}{25}{chapter.8}
+\contentsline {subsection}{\numberline {5.5.2}Destrucción de variables}{16}{subsection.5.5.2}
+\contentsline {subsection}{\numberline {5.5.3}Operadores de asignación por valor y por referencia}{17}{subsection.5.5.3}
+\contentsline {subsection}{\numberline {5.5.4}Variables predefinidas}{17}{subsection.5.5.4}
+\contentsline {section}{\numberline {5.6}Tipos básicos de datos}{17}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Lógicos (\sphinxstyleliteralintitle {bool})}{17}{subsection.5.6.1}
+\contentsline {subsubsection}{Operadores lógicos}{17}{subsubsection*.24}
+\contentsline {subsection}{\numberline {5.6.2}Numéricos}{18}{subsection.5.6.2}
+\contentsline {subsubsection}{Enteros (\sphinxstyleliteralintitle {int})}{18}{subsubsection*.25}
+\contentsline {subsubsection}{Números en coma flotante (\sphinxstyleliteralintitle {float})}{18}{subsubsection*.26}
+\contentsline {subsubsection}{Operadores}{18}{subsubsection*.27}
+\contentsline {paragraph}{Operadores aritméticos}{18}{paragraph*.28}
+\contentsline {paragraph}{Operadores de incremento/decremento}{18}{paragraph*.29}
+\contentsline {subsection}{\numberline {5.6.3}Cadenas (\sphinxstyleliteralintitle {string})}{18}{subsection.5.6.3}
+\contentsline {subsubsection}{Operadores de cadenas}{18}{subsubsection*.30}
+\contentsline {paragraph}{Concatenación}{18}{paragraph*.31}
+\contentsline {paragraph}{Acceso y modificación por caracteres}{18}{paragraph*.32}
+\contentsline {paragraph}{Operadores de incremento/decremento}{19}{paragraph*.33}
+\contentsline {subsubsection}{Funciones de manejo de cadenas}{19}{subsubsection*.34}
+\contentsline {subsubsection}{Extensión \sphinxstyleemphasis {mbstring}}{19}{subsubsection*.35}
+\contentsline {subsection}{\numberline {5.6.4}Nulo}{19}{subsection.5.6.4}
+\contentsline {subsection}{\numberline {5.6.5}Precedencia de operadores}{19}{subsection.5.6.5}
+\contentsline {subsection}{\numberline {5.6.6}Operadores de asignación compuesta}{19}{subsection.5.6.6}
+\contentsline {subsection}{\numberline {5.6.7}Comprobaciones}{19}{subsection.5.6.7}
+\contentsline {subsubsection}{De tipos}{19}{subsubsection*.36}
+\contentsline {paragraph}{\sphinxstyleliteralintitle {gettype()}}{19}{paragraph*.37}
+\contentsline {paragraph}{\sphinxstyleliteralintitle {is\_*()}}{20}{paragraph*.38}
+\contentsline {subsubsection}{De valores}{20}{subsubsection*.39}
+\contentsline {paragraph}{\sphinxstyleliteralintitle {is\_numeric()}}{20}{paragraph*.40}
+\contentsline {paragraph}{\sphinxstyleliteralintitle {ctype\_*()}}{20}{paragraph*.41}
+\contentsline {subsection}{\numberline {5.6.8}Conversiones}{20}{subsection.5.6.8}
+\contentsline {subsubsection}{Coerción, moldeado, forzado o \sphinxstyleemphasis {casting}}{20}{subsubsection*.42}
+\contentsline {paragraph}{Conversión a \sphinxstyleliteralintitle {bool}}{20}{paragraph*.43}
+\contentsline {paragraph}{Conversión a \sphinxstyleliteralintitle {int}}{20}{paragraph*.44}
+\contentsline {paragraph}{Conversión a \sphinxstyleliteralintitle {float}}{20}{paragraph*.45}
+\contentsline {paragraph}{Conversión de \sphinxstyleliteralintitle {string} a número}{20}{paragraph*.46}
+\contentsline {paragraph}{Conversión a \sphinxstyleliteralintitle {string}}{21}{paragraph*.47}
+\contentsline {subsubsection}{Funciones de obtención de valores}{21}{subsubsection*.48}
+\contentsline {paragraph}{\sphinxstyleliteralintitle {intval()}}{21}{paragraph*.49}
+\contentsline {paragraph}{\sphinxstyleliteralintitle {floatval()}}{21}{paragraph*.50}
+\contentsline {paragraph}{\sphinxstyleliteralintitle {strval()}}{21}{paragraph*.51}
+\contentsline {paragraph}{\sphinxstyleliteralintitle {boolval()}}{21}{paragraph*.52}
+\contentsline {subsubsection}{Funciones de formateado numérico}{21}{subsubsection*.53}
+\contentsline {paragraph}{\sphinxstyleliteralintitle {number\_format()}}{21}{paragraph*.54}
+\contentsline {paragraph}{\sphinxstyleliteralintitle {money\_format()}}{21}{paragraph*.55}
+\contentsline {subparagraph}{\sphinxstyleliteralintitle {setlocale()}}{21}{subparagraph*.56}
+\contentsline {subsection}{\numberline {5.6.9}Comparaciones}{22}{subsection.5.6.9}
+\contentsline {subsubsection}{Operadores de comparación}{22}{subsubsection*.57}
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {==} vs. \sphinxstyleliteralintitle {===}}{22}{subsubsection*.58}
+\contentsline {subsubsection}{Ternario (\sphinxstyleliteralintitle {?:})}{22}{subsubsection*.59}
+\contentsline {subsubsection}{Fusión de null (\sphinxstyleliteralintitle {??})}{22}{subsubsection*.60}
+\contentsline {subsubsection}{Reglas de comparación de tipos}{22}{subsubsection*.61}
+\contentsline {section}{\numberline {5.7}Constantes}{22}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}\sphinxstyleliteralintitle {define()} y \sphinxstyleliteralintitle {const}}{23}{subsection.5.7.1}
+\contentsline {subsection}{\numberline {5.7.2}Constantes predefinidas}{23}{subsection.5.7.2}
+\contentsline {subsection}{\numberline {5.7.3}\sphinxstyleliteralintitle {defined()}}{23}{subsection.5.7.3}
+\contentsline {section}{\numberline {5.8}Flujo de control}{23}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}Estructuras de control}{23}{subsection.5.8.1}
+\contentsline {subsubsection}{Sintaxis alternativa}{23}{subsubsection*.62}
+\contentsline {subsection}{\numberline {5.8.2}Inclusión de archivos}{23}{subsection.5.8.2}
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {include}, \sphinxstyleliteralintitle {require}}{23}{subsubsection*.63}
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {include\_once}, \sphinxstyleliteralintitle {require\_once}}{23}{subsubsection*.64}
+\contentsline {section}{\numberline {5.9}Funciones predefinidas destacadas}{23}{section.5.9}
+\contentsline {subsection}{\numberline {5.9.1}\sphinxstyleliteralintitle {isset()}}{23}{subsection.5.9.1}
+\contentsline {subsection}{\numberline {5.9.2}\sphinxstyleliteralintitle {empty()}}{24}{subsection.5.9.2}
+\contentsline {subsection}{\numberline {5.9.3}\sphinxstyleliteralintitle {var\_dump()}}{24}{subsection.5.9.3}
+\contentsline {section}{\numberline {5.10}Arrays}{24}{section.5.10}
+\contentsline {subsection}{\numberline {5.10.1}Operadores para arrays}{24}{subsection.5.10.1}
+\contentsline {subsubsection}{Acceso, modificación y agregación}{24}{subsubsection*.65}
+\contentsline {subsection}{\numberline {5.10.2}Funciones de manejo de arrays{]}}{24}{subsection.5.10.2}
+\contentsline {subsubsection}{Ordenación de arrays}{24}{subsubsection*.66}
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {print\_r()}}{25}{subsubsection*.67}
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {'+'} vs. \sphinxstyleliteralintitle {array\_merge()}}{25}{subsubsection*.68}
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {isset()} vs. \sphinxstyleliteralintitle {array\_key\_exists()}}{25}{subsubsection*.69}
+\contentsline {subsection}{\numberline {5.10.3}\sphinxstyleliteralintitle {foreach}}{25}{subsection.5.10.3}
+\contentsline {subsection}{\numberline {5.10.4}Conversión a \sphinxstyleliteralintitle {array}}{25}{subsection.5.10.4}
+\contentsline {subsection}{\numberline {5.10.5}\sphinxstyleemphasis {Ejemplo}: \sphinxstyleliteralintitle {\$argv} en CLI}{25}{subsection.5.10.5}
+\contentsline {section}{\numberline {5.11}Funciones definidas por el usuario}{25}{section.5.11}
+\contentsline {subsection}{\numberline {5.11.1}Argumentos}{25}{subsection.5.11.1}
+\contentsline {subsubsection}{Paso de argumentos por valor y por referencia}{25}{subsubsection*.70}
+\contentsline {subsubsection}{Argumentos por defecto}{25}{subsubsection*.71}
+\contentsline {subsection}{\numberline {5.11.2}Ámbito de variables}{25}{subsection.5.11.2}
+\contentsline {subsubsection}{Ámbito simple al archivo}{26}{subsubsection*.72}
+\contentsline {subsubsection}{Variables locales}{26}{subsubsection*.73}
+\contentsline {subsubsection}{Uso de \sphinxstyleliteralintitle {global}}{26}{subsubsection*.74}
+\contentsline {subsubsection}{Variables superglobales}{26}{subsubsection*.75}
+\contentsline {subsection}{\numberline {5.11.3}Declaraciones de tipos}{26}{subsection.5.11.3}
+\contentsline {subsubsection}{Declaraciones de tipo de argumento}{26}{subsubsection*.76}
+\contentsline {subsubsection}{Declaraciones de tipo de devolución}{26}{subsubsection*.77}
+\contentsline {subsubsection}{Tipos \sphinxstyleemphasis {nullable} (\sphinxstyleliteralintitle {?}) y \sphinxstyleliteralintitle {void}}{26}{subsubsection*.78}
+\contentsline {subsubsection}{Tipificación estricta}{26}{subsubsection*.79}
 \contentsline {part}{III\hspace {1em}Yii2}{27}{part.3}
-\contentsline {chapter}{\numberline {9}Introducción a Yii2}{29}{chapter.9}
-\contentsline {chapter}{\numberline {10}Conceptos fundamentales de Yii2}{31}{chapter.10}
-\contentsline {chapter}{\numberline {11}Estructura de una aplicación Yii2}{33}{chapter.11}
-\contentsline {chapter}{\numberline {12}Gestión de peticiones en Yii2}{35}{chapter.12}
-\contentsline {chapter}{\numberline {13}Acceso a bases de datos en Yii2}{37}{chapter.13}
-\contentsline {chapter}{\numberline {14}Recogida de datos y validación de formularios}{39}{chapter.14}
-\contentsline {chapter}{\numberline {15}Visualización de datos en Yii2}{41}{chapter.15}
-\contentsline {chapter}{\numberline {16}Características adicionales de Yii2}{43}{chapter.16}
-\contentsline {chapter}{\numberline {17}Seguridad y cacheado en Yii2}{45}{chapter.17}
-\contentsline {chapter}{\numberline {18}Pruebas, documentación y mantenimiento}{47}{chapter.18}
-\contentsline {chapter}{\numberline {19}Computación en la nube}{49}{chapter.19}
-\contentsline {chapter}{\numberline {20}Contenedores}{51}{chapter.20}
+\contentsline {chapter}{\numberline {6}Introducción a Yii2}{29}{chapter.6}
+\contentsline {chapter}{\numberline {7}Conceptos fundamentales de Yii2}{31}{chapter.7}
+\contentsline {chapter}{\numberline {8}Estructura de una aplicación Yii2}{33}{chapter.8}
+\contentsline {chapter}{\numberline {9}Gestión de peticiones en Yii2}{35}{chapter.9}
+\contentsline {chapter}{\numberline {10}Acceso a bases de datos en Yii2}{37}{chapter.10}
+\contentsline {chapter}{\numberline {11}Recogida de datos y validación de formularios}{39}{chapter.11}
+\contentsline {chapter}{\numberline {12}Visualización de datos en Yii2}{41}{chapter.12}
+\contentsline {chapter}{\numberline {13}Características adicionales de Yii2}{43}{chapter.13}
+\contentsline {chapter}{\numberline {14}Seguridad y cacheado en Yii2}{45}{chapter.14}
+\contentsline {chapter}{\numberline {15}Pruebas, documentación y mantenimiento}{47}{chapter.15}
+\contentsline {chapter}{\numberline {16}Computación en la nube}{49}{chapter.16}
+\contentsline {chapter}{\numberline {17}Contenedores}{51}{chapter.17}
 \contentsline {part}{IV\hspace {1em}Índices y tablas}{53}{part.4}
 \contentsfinish 
