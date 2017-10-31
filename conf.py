@@ -116,6 +116,7 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = False
 
+highlight_language = 'php'
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -301,7 +302,7 @@ latex_toplevel_sectioning = 'part'
 
 # If true, show URL addresses after external links.
 #
-# latex_show_urls = False
+latex_show_urls = 'footnote'
 
 # Documents to append as an appendix to all manuals.
 #

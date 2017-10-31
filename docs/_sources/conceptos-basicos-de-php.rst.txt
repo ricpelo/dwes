@@ -485,9 +485,7 @@ Funciones predefinidas destacadas
 
 <http://php.net/manual/es/function.empty.php>
 
-ricpelo's note: Para evitar el problema de ``empty("0") === true``:
-
-.. code-block:: php
+ricpelo's note: Para evitar el problema de ``empty("0") === true``::
 
     function is_blank($value) {
         return empty($value) && !is_numeric($value);
