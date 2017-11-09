@@ -41,6 +41,51 @@ Sintaxis básica
 Datos e instrucciones
 ~~~~~~~~~~~~~~~~~~~~~
 
+En todo lenguaje de programación existen dos elementos básicos: los **datos** y
+las **instrucciones**. Los datos son las porciones de información con las que
+trabajan los programas, y las instrucciones son las acciones que manipulan esos
+datos para llevar a cabo la tarea para la que fue concebido el programa. Ambos
+elementos, datos e instrucciones, constituyen los pilares del lenguaje y de los
+programas que se escriben con él.
+
+Desde un punto de vista sintáctico, en el código fuente del programa, los datos
+se codifican en forma de **expresiones**, y las instrucciones toman la forma de
+**sentencias**.
+
+La diferencia fundamental entre una expresión y una sentencia es la siguiente:
+
+- Una expresión tiene un valor (se dice que *denota* o *representa* un valor), y
+  por eso decimos que una expresión *se puede evaluar*, y al evaluarse, se
+  obtiene el valor de la expresión, que no es más que un dato.
+
+- En cambio, una sentencia no denota ningún valor, por lo que no puede
+  evaluarse. El intérprete *ejecuta* la sentencia y se llevan a cabo las
+  acciones que provoca dicha ejecución.
+
+Las expresiones se evalúan. Las sentencias se ejecutan.
+
+.. admonition:: Ejemplos de expresiones
+
+   ::
+
+     5 * (3 + 6)
+
+   Es una expresión aritmética que involucra números enteros y cuyo valor es
+   ``45``.
+
+   ::
+
+     1.6 + 2.3
+
+   Es una expresión aritmética que involucra números reales y cuyo valor es
+   ``3.9``.
+
+   ::
+
+     74
+
+   Es una constante literal numérica cuyo valor es, precisamente, ``74``.
+
 Sentencias y comandos
 ~~~~~~~~~~~~~~~~~~~~~
 

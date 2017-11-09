@@ -48,7 +48,7 @@
                     \titlelabel{\thetitle.\quad}
 
 \title{Desarrollo web en entorno servidor}
-\date{octubre de 2017}
+\date{noviembre de 2017}
 \release{1.0}
 \author{Ricardo Pérez López}
 \newcommand{\sphinxlogo}{}
@@ -362,6 +362,56 @@ ricpelo's note: Programada inicialmente para empezar el 23-10-2017.
 
 \subsection{Datos e instrucciones}
 \label{\detokenize{php:datos-e-instrucciones}}
+En todo lenguaje de programación existen dos elementos básicos: los \sphinxstylestrong{datos} y
+las \sphinxstylestrong{instrucciones}. Los datos son las porciones de información con las que
+trabajan los programas, y las instrucciones son las acciones que manipulan esos
+datos para llevar a cabo la tarea para la que fue concebido el programa. Ambos
+elementos, datos e instrucciones, constituyen los pilares del lenguaje y de los
+programas que se escriben con él.
+
+Desde un punto de vista sintáctico, en el código fuente del programa, los datos
+se codifican en forma de \sphinxstylestrong{expresiones}, y las instrucciones toman la forma de
+\sphinxstylestrong{sentencias}.
+
+La diferencia fundamental entre una expresión y una sentencia es la siguiente:
+\begin{itemize}
+\item {} 
+Una expresión tiene un valor (se dice que \sphinxstyleemphasis{denota} o \sphinxstyleemphasis{representa} un valor), y
+por eso decimos que una expresión \sphinxstyleemphasis{se puede evaluar}, y al evaluarse, se
+obtiene el valor de la expresión, que no es más que un dato.
+
+\item {} 
+En cambio, una sentencia no denota ningún valor, por lo que no puede
+evaluarse. El intérprete \sphinxstyleemphasis{ejecuta} la sentencia y se llevan a cabo las
+acciones que provoca dicha ejecución.
+
+\end{itemize}
+
+Las expresiones se evalúan. Las sentencias se ejecutan.
+
+\begin{sphinxadmonition}{note}{Ejemplos de expresiones}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{l+m+mi}{5} \PYG{o}{*} \PYG{p}{(}\PYG{l+m+mi}{3} \PYG{o}{+} \PYG{l+m+mi}{6}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+Es una expresión aritmética que involucra números enteros y cuyo valor es
+\sphinxcode{45}.
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{l+m+mf}{1.6} \PYG{o}{+} \PYG{l+m+mf}{2.3}
+\end{sphinxVerbatim}
+
+Es una expresión aritmética que involucra números reales y cuyo valor es
+\sphinxcode{3.9}.
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{l+m+mi}{74}
+\end{sphinxVerbatim}
+
+Es una constante literal numérica cuyo valor es, precisamente, \sphinxcode{74}.
+\end{sphinxadmonition}
+
 
 \subsection{Sentencias y comandos}
 \label{\detokenize{php:sentencias-y-comandos}}

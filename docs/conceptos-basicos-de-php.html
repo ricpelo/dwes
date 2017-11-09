@@ -356,6 +356,42 @@
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.basic-syntax.php">http://php.net/manual/es/language.basic-syntax.php</a>&gt;</p>
 <div class="section" id="datos-e-instrucciones">
 <h3>5.2.1. Datos e instrucciones<a class="headerlink" href="#datos-e-instrucciones" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>En todo lenguaje de programación existen dos elementos básicos: los <strong>datos</strong> y
+las <strong>instrucciones</strong>. Los datos son las porciones de información con las que
+trabajan los programas, y las instrucciones son las acciones que manipulan esos
+datos para llevar a cabo la tarea para la que fue concebido el programa. Ambos
+elementos, datos e instrucciones, constituyen los pilares del lenguaje y de los
+programas que se escriben con él.</p>
+<p>Desde un punto de vista sintáctico, en el código fuente del programa, los datos
+se codifican en forma de <strong>expresiones</strong>, y las instrucciones toman la forma de
+<strong>sentencias</strong>.</p>
+<p>La diferencia fundamental entre una expresión y una sentencia es la siguiente:</p>
+<ul class="simple">
+<li>Una expresión tiene un valor (se dice que <em>denota</em> o <em>representa</em> un valor), y
+por eso decimos que una expresión <em>se puede evaluar</em>, y al evaluarse, se
+obtiene el valor de la expresión, que no es más que un dato.</li>
+<li>En cambio, una sentencia no denota ningún valor, por lo que no puede
+evaluarse. El intérprete <em>ejecuta</em> la sentencia y se llevan a cabo las
+acciones que provoca dicha ejecución.</li>
+</ul>
+<p>Las expresiones se evalúan. Las sentencias se ejecutan.</p>
+<div class="admonition-ejemplos-de-expresiones admonition">
+<p class="first admonition-title">Ejemplos de expresiones</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Es una expresión aritmética que involucra números enteros y cuyo valor es
+<code class="docutils literal"><span class="pre">45</span></code>.</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="mf">1.6</span> <span class="o">+</span> <span class="mf">2.3</span>
+</pre></div>
+</div>
+<p>Es una expresión aritmética que involucra números reales y cuyo valor es
+<code class="docutils literal"><span class="pre">3.9</span></code>.</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="mi">74</span>
+</pre></div>
+</div>
+<p class="last">Es una constante literal numérica cuyo valor es, precisamente, <code class="docutils literal"><span class="pre">74</span></code>.</p>
+</div>
 </div>
 <div class="section" id="sentencias-y-comandos">
 <h3>5.2.2. Sentencias y comandos<a class="headerlink" href="#sentencias-y-comandos" title="Enlazar permanentemente con este título">¶</a></h3>
@@ -882,7 +918,7 @@ que hace la llamada, no en el que define la función.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Ricardo Pérez López.
-      Actualizado por última vez en 31-10-2017.
+      Actualizado por última vez en 09-11-2017.
 
     </p>
   </div>
