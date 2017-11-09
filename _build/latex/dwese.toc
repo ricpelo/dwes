@@ -21,8 +21,8 @@
 \contentsline {subsection}{\numberline {2.1.3}Web estática vs. dinámica}{6}{subsection.2.1.3}
 \contentsline {subsection}{\numberline {2.1.4}Estructura vs. contenido}{6}{subsection.2.1.4}
 \contentsline {section}{\numberline {2.2}Ejemplos de aplicaciones web}{6}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Redes sociales: Facebook, Twitter...}{6}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Comercio electrónico: Amazon, eBay...}{6}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Redes sociales: Facebook, Twitter…}{6}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Comercio electrónico: Amazon, eBay…}{6}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Administración electrónica…}{6}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Portales}{6}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}ERP, CRM}{6}{subsection.2.2.5}
@@ -80,13 +80,13 @@
 \contentsline {subsubsection}{\sphinxstyleliteralintitle {error\_reporting = E\_ALL}}{15}{subsubsection*.19}
 \contentsline {subsubsection}{\sphinxstyleliteralintitle {display\_errors = On}}{15}{subsubsection*.20}
 \contentsline {subsubsection}{\sphinxstyleliteralintitle {display\_startup\_errors = On}}{15}{subsubsection*.21}
-\contentsline {subsubsection}{\sphinxstyleliteralintitle {date.timezone = 'UTC'}}{15}{subsubsection*.22}
-\contentsline {section}{\numberline {5.2}Sintaxis básica}{15}{section.5.2}
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {date.timezone = 'UTC'}}{16}{subsubsection*.22}
+\contentsline {section}{\numberline {5.2}Sintaxis básica}{16}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Datos e instrucciones}{16}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Sentencias y comandos}{16}{subsection.5.2.2}
 \contentsline {subsubsection}{Comando \sphinxstyleliteralintitle {echo}}{16}{subsubsection*.23}
 \contentsline {subsection}{\numberline {5.2.3}Expresiones, operadores y funciones}{16}{subsection.5.2.3}
-\contentsline {section}{\numberline {5.3}Funcionamiento del intérprete}{16}{section.5.3}
+\contentsline {section}{\numberline {5.3}Funcionamiento del intérprete}{17}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Modo dual de operación}{17}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Etiquetas \sphinxstyleliteralintitle {\textless {}?php} y \sphinxstyleliteralintitle {?\textgreater {}}}{17}{subsection.5.3.2}
 \contentsline {section}{\numberline {5.4}Intérprete interactivo}{17}{section.5.4}
@@ -97,13 +97,13 @@
 \contentsline {subsection}{\numberline {5.5.2}Destrucción de variables}{17}{subsection.5.5.2}
 \contentsline {subsection}{\numberline {5.5.3}Operadores de asignación por valor y por referencia}{17}{subsection.5.5.3}
 \contentsline {subsection}{\numberline {5.5.4}Variables predefinidas}{17}{subsection.5.5.4}
-\contentsline {section}{\numberline {5.6}Tipos básicos de datos}{17}{section.5.6}
+\contentsline {section}{\numberline {5.6}Tipos básicos de datos}{18}{section.5.6}
 \contentsline {subsection}{\numberline {5.6.1}Lógicos (\sphinxstyleliteralintitle {bool})}{18}{subsection.5.6.1}
 \contentsline {subsubsection}{Operadores lógicos}{18}{subsubsection*.24}
 \contentsline {subsection}{\numberline {5.6.2}Numéricos}{18}{subsection.5.6.2}
 \contentsline {subsubsection}{Enteros (\sphinxstyleliteralintitle {int})}{18}{subsubsection*.25}
 \contentsline {subsubsection}{Números en coma flotante (\sphinxstyleliteralintitle {float})}{18}{subsubsection*.26}
-\contentsline {subsubsection}{Operadores}{18}{subsubsection*.27}
+\contentsline {subsubsection}{Operadores}{19}{subsubsection*.27}
 \contentsline {paragraph}{Operadores aritméticos}{19}{paragraph*.28}
 \contentsline {paragraph}{Operadores de incremento/decremento}{19}{paragraph*.29}
 \contentsline {subsection}{\numberline {5.6.3}Cadenas (\sphinxstyleliteralintitle {string})}{19}{subsection.5.6.3}
@@ -123,7 +123,7 @@
 \contentsline {subsubsection}{De valores}{20}{subsubsection*.39}
 \contentsline {paragraph}{\sphinxstyleliteralintitle {is\_numeric()}}{20}{paragraph*.40}
 \contentsline {paragraph}{\sphinxstyleliteralintitle {ctype\_*()}}{20}{paragraph*.41}
-\contentsline {subsection}{\numberline {5.6.8}Conversiones}{20}{subsection.5.6.8}
+\contentsline {subsection}{\numberline {5.6.8}Conversiones}{21}{subsection.5.6.8}
 \contentsline {subsubsection}{Coerción, moldeado, forzado o \sphinxstyleemphasis {casting}}{21}{subsubsection*.42}
 \contentsline {paragraph}{Conversión a \sphinxstyleliteralintitle {bool}}{21}{paragraph*.43}
 \contentsline {paragraph}{Conversión a \sphinxstyleliteralintitle {int}}{21}{paragraph*.44}
@@ -133,7 +133,7 @@
 \contentsline {subsubsection}{Funciones de obtención de valores}{21}{subsubsection*.48}
 \contentsline {paragraph}{\sphinxstyleliteralintitle {intval()}}{21}{paragraph*.49}
 \contentsline {paragraph}{\sphinxstyleliteralintitle {floatval()}}{21}{paragraph*.50}
-\contentsline {paragraph}{\sphinxstyleliteralintitle {strval()}}{21}{paragraph*.51}
+\contentsline {paragraph}{\sphinxstyleliteralintitle {strval()}}{22}{paragraph*.51}
 \contentsline {paragraph}{\sphinxstyleliteralintitle {boolval()}}{22}{paragraph*.52}
 \contentsline {subsubsection}{Funciones de formateado numérico}{22}{subsubsection*.53}
 \contentsline {paragraph}{\sphinxstyleliteralintitle {number\_format()}}{22}{paragraph*.54}
@@ -144,7 +144,7 @@
 \contentsline {subsubsection}{\sphinxstyleliteralintitle {==} vs. \sphinxstyleliteralintitle {===}}{22}{subsubsection*.58}
 \contentsline {subsubsection}{Ternario (\sphinxstyleliteralintitle {?:})}{22}{subsubsection*.59}
 \contentsline {subsubsection}{Fusión de null (\sphinxstyleliteralintitle {??})}{22}{subsubsection*.60}
-\contentsline {subsubsection}{Reglas de comparación de tipos}{22}{subsubsection*.61}
+\contentsline {subsubsection}{Reglas de comparación de tipos}{23}{subsubsection*.61}
 \contentsline {section}{\numberline {5.7}Constantes}{23}{section.5.7}
 \contentsline {subsection}{\numberline {5.7.1}\sphinxstyleliteralintitle {define()} y \sphinxstyleliteralintitle {const}}{23}{subsection.5.7.1}
 \contentsline {subsection}{\numberline {5.7.2}Constantes predefinidas}{23}{subsection.5.7.2}
@@ -152,15 +152,15 @@
 \contentsline {section}{\numberline {5.8}Flujo de control}{23}{section.5.8}
 \contentsline {subsection}{\numberline {5.8.1}Estructuras de control}{23}{subsection.5.8.1}
 \contentsline {subsubsection}{Sintaxis alternativa}{23}{subsubsection*.62}
-\contentsline {subsection}{\numberline {5.8.2}Inclusión de archivos}{23}{subsection.5.8.2}
-\contentsline {subsubsection}{\sphinxstyleliteralintitle {include}, \sphinxstyleliteralintitle {require}}{23}{subsubsection*.63}
+\contentsline {subsection}{\numberline {5.8.2}Inclusión de archivos}{24}{subsection.5.8.2}
+\contentsline {subsubsection}{\sphinxstyleliteralintitle {include}, \sphinxstyleliteralintitle {require}}{24}{subsubsection*.63}
 \contentsline {subsubsection}{\sphinxstyleliteralintitle {include\_once}, \sphinxstyleliteralintitle {require\_once}}{24}{subsubsection*.64}
 \contentsline {section}{\numberline {5.9}Funciones predefinidas destacadas}{24}{section.5.9}
 \contentsline {subsection}{\numberline {5.9.1}\sphinxstyleliteralintitle {isset()}}{24}{subsection.5.9.1}
 \contentsline {subsection}{\numberline {5.9.2}\sphinxstyleliteralintitle {empty()}}{24}{subsection.5.9.2}
 \contentsline {subsection}{\numberline {5.9.3}\sphinxstyleliteralintitle {var\_dump()}}{24}{subsection.5.9.3}
 \contentsline {section}{\numberline {5.10}Arrays}{24}{section.5.10}
-\contentsline {subsection}{\numberline {5.10.1}Operadores para arrays}{24}{subsection.5.10.1}
+\contentsline {subsection}{\numberline {5.10.1}Operadores para arrays}{25}{subsection.5.10.1}
 \contentsline {subsubsection}{Acceso, modificación y agregación}{25}{subsubsection*.65}
 \contentsline {subsection}{\numberline {5.10.2}Funciones de manejo de arrays{]}}{25}{subsection.5.10.2}
 \contentsline {subsubsection}{Ordenación de arrays}{25}{subsubsection*.66}
@@ -171,7 +171,7 @@
 \contentsline {subsection}{\numberline {5.10.4}Conversión a \sphinxstyleliteralintitle {array}}{25}{subsection.5.10.4}
 \contentsline {subsection}{\numberline {5.10.5}\sphinxstyleemphasis {Ejemplo}: \sphinxstyleliteralintitle {\$argv} en CLI}{25}{subsection.5.10.5}
 \contentsline {section}{\numberline {5.11}Funciones definidas por el usuario}{25}{section.5.11}
-\contentsline {subsection}{\numberline {5.11.1}Argumentos}{25}{subsection.5.11.1}
+\contentsline {subsection}{\numberline {5.11.1}Argumentos}{26}{subsection.5.11.1}
 \contentsline {subsubsection}{Paso de argumentos por valor y por referencia}{26}{subsubsection*.70}
 \contentsline {subsubsection}{Argumentos por defecto}{26}{subsubsection*.71}
 \contentsline {subsection}{\numberline {5.11.2}Ámbito de variables}{26}{subsection.5.11.2}

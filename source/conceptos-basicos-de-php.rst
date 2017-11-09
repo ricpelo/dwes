@@ -4,6 +4,10 @@ Conceptos básicos de PHP I
 
 ricpelo's note: Programada inicialmente para empezar el 23-10-2017.
 
+.. program-output:: php ../../p.php
+
+.. command-output:: php ../../p.php
+
 Introducción a PHP
 ------------------
 

@@ -322,7 +322,14 @@
             
   <div class="section" id="conceptos-basicos-de-php-i">
 <h1>5. Conceptos básicos de PHP I<a class="headerlink" href="#conceptos-basicos-de-php-i" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>ricpelo&#8217;s note: Programada inicialmente para empezar el 23-10-2017.</p>
+<p>ricpelo’s note: Programada inicialmente para empezar el 23-10-2017.</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>Hola desde PHP.
+</pre></div>
+</div>
+<div class="highlight-text"><div class="highlight"><pre><span></span>$ php ../../p.php
+Hola desde PHP.
+</pre></div>
+</div>
 <div class="section" id="introduccion-a-php">
 <h2>5.1. Introducción a PHP<a class="headerlink" href="#introduccion-a-php" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="pagina-web-de-php">
@@ -402,7 +409,7 @@ acciones que provoca dicha ejecución.</li>
 </div>
 <div class="section" id="expresiones-operadores-y-funciones">
 <h3>5.2.3. Expresiones, operadores y funciones<a class="headerlink" href="#expresiones-operadores-y-funciones" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>ricpelo&#8217;s note: <em>Ejemplos</em>: aritmética, <code class="docutils literal"><span class="pre">cos()</span></code>, <code class="docutils literal"><span class="pre">max()</span></code></p>
+<p>ricpelo’s note: <em>Ejemplos</em>: aritmética, <code class="docutils literal"><span class="pre">cos()</span></code>, <code class="docutils literal"><span class="pre">max()</span></code></p>
 </div>
 </div>
 <div class="section" id="funcionamiento-del-interprete">
@@ -410,7 +417,7 @@ acciones que provoca dicha ejecución.</li>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.basic-syntax.phpmode.php">http://php.net/manual/es/language.basic-syntax.phpmode.php</a>&gt;</p>
 <div class="section" id="modo-dual-de-operacion">
 <h3>5.3.1. Modo dual de operación<a class="headerlink" href="#modo-dual-de-operacion" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>ricpelo&#8217;s note: Se llaman <em>modo HTML</em> y <em>modo PHP</em>.</p>
+<p>ricpelo’s note: Se llaman <em>modo HTML</em> y <em>modo PHP</em>.</p>
 </div>
 <div class="section" id="etiquetas-php-y">
 <h3>5.3.2. Etiquetas <code class="docutils literal"><span class="pre">&lt;?php</span></code> y <code class="docutils literal"><span class="pre">?&gt;</span></code><a class="headerlink" href="#etiquetas-php-y" title="Enlazar permanentemente con este título">¶</a></h3>
@@ -440,14 +447,14 @@ acciones que provoca dicha ejecución.</li>
 <div class="section" id="operadores-de-asignacion-por-valor-y-por-referencia">
 <h3>5.5.3. Operadores de asignación por valor y por referencia<a class="headerlink" href="#operadores-de-asignacion-por-valor-y-por-referencia" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.operators.assignment.php">http://php.net/manual/es/language.operators.assignment.php</a>&gt;</p>
-<p>ricpelo&#8217;s note: En <code class="docutils literal"><span class="pre">$b</span> <span class="pre">=&amp;</span> <span class="pre">$a;</span></code>, <code class="docutils literal"><span class="pre">$b</span></code> <strong>NO</strong> está apuntando a <code class="docutils literal"><span class="pre">$a</span></code>
+<p>ricpelo’s note: En <code class="docutils literal"><span class="pre">$b</span> <span class="pre">=&amp;</span> <span class="pre">$a;</span></code>, <code class="docutils literal"><span class="pre">$b</span></code> <strong>NO</strong> está apuntando a <code class="docutils literal"><span class="pre">$a</span></code>
 o viceversa. Ambos apuntan al mismo
 lugar. &lt;<a class="reference external" href="http://php.net/manual/es/language.references.whatdo.php">http://php.net/manual/es/language.references.whatdo.php</a>&gt;</p>
 </div>
 <div class="section" id="variables-predefinidas">
 <h3>5.5.4. Variables predefinidas<a class="headerlink" href="#variables-predefinidas" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/reserved.variables.php">http://php.net/manual/es/reserved.variables.php</a>&gt;</p>
-<p>ricpelo&#8217;s note: <code class="docutils literal"><span class="pre">$_ENV</span></code> no funciona en la instalación actual (ver
+<p>ricpelo’s note: <code class="docutils literal"><span class="pre">$_ENV</span></code> no funciona en la instalación actual (ver
 <code class="docutils literal"><span class="pre">variables_order</span></code> en <code class="docutils literal"><span class="pre">php.ini</span></code>. Habría que usar <code class="docutils literal"><span class="pre">get_env()</span></code>.</p>
 </div>
 </div>
@@ -458,16 +465,16 @@ lugar. &lt;<a class="reference external" href="http://php.net/manual/es/language
 <h3>5.6.1. Lógicos (<code class="docutils literal"><span class="pre">bool</span></code>)<a class="headerlink" href="#logicos-bool" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.types.boolean.php">http://php.net/manual/es/language.types.boolean.php</a>&gt;</p>
 <div class="line-block">
-<div class="line">ricpelo&#8217;s note: Se escriben en minúscula: <code class="docutils literal"><span class="pre">false</span></code> y
+<div class="line">ricpelo’s note: Se escriben en minúscula: <code class="docutils literal"><span class="pre">false</span></code> y
 <code class="docutils literal"><span class="pre">true</span></code>. &lt;<a class="reference external" href="https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md#51-types">https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md#51-types</a>&gt;</div>
-<div class="line">ricpelo&#8217;s note: <code class="docutils literal"><span class="pre">boolean</span></code> es sinónimo de <code class="docutils literal"><span class="pre">bool</span></code>, pero debería
+<div class="line">ricpelo’s note: <code class="docutils literal"><span class="pre">boolean</span></code> es sinónimo de <code class="docutils literal"><span class="pre">bool</span></code>, pero debería
 usarse <code class="docutils literal"><span class="pre">bool</span></code>.</div>
 </div>
 <div class="section" id="operadores-logicos">
 <h4>5.6.1.1. Operadores lógicos<a class="headerlink" href="#operadores-logicos" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.operators.logical.php">http://php.net/manual/es/language.operators.logical.php</a>&gt;</p>
 <div class="line-block">
-<div class="line">ricpelo&#8217;s note: <em>Cuidado</em>:</div>
+<div class="line">ricpelo’s note: <em>Cuidado</em>:</div>
 <div class="line">- <code class="docutils literal"><span class="pre">false</span> <span class="pre">and</span> <span class="pre">(true</span> <span class="pre">&amp;&amp;</span> <span class="pre">print('hola'))</span></code> no imprime nada y devuelve
 <code class="docutils literal"><span class="pre">false</span></code>, por lo que <strong>el código va en cortocircuito y se evalúa de
 izquierda a derecha</strong> incluso aunque el <code class="docutils literal"><span class="pre">&amp;&amp;</span></code> y los paréntesis tengan
@@ -479,12 +486,12 @@ hace de izquierda a derecha aunque el <code class="docutils literal"><span class
 encima vaya entre paréntesis).</div>
 <div class="line">- En el <a class="reference external" href="http://php.net/manual/es/language.operators.precedence.php">manual de
 PHP</a> se
-dice que: <em>&#8220;La precedencia y asociatividad de los operadores solamente
+dice que: <em>«La precedencia y asociatividad de los operadores solamente
 determinan cómo se agrupan las expresiones, no especifican un orden de
 evaluación. PHP no especifica (en general) el orden en que se evalúa
 una expresión y se debería evitar el código que se asume un orden
 específico de evaluación, ya que el comportamiento puede cambiar entre
-versiones de PHP o dependiendo de código circundante.&#8221;</em></div>
+versiones de PHP o dependiendo de código circundante.»</em></div>
 <div class="line">- <a class="reference external" href="https://stackoverflow.com/questions/46861563/false-and-true-printhi">Pregunta que hice al respecto en
 StackOverflow</a>.</div>
 </div>
@@ -495,13 +502,13 @@ StackOverflow</a>.</div>
 <div class="section" id="enteros-int">
 <h4>5.6.2.1. Enteros (<code class="docutils literal"><span class="pre">int</span></code>)<a class="headerlink" href="#enteros-int" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.types.integer.php">http://php.net/manual/es/language.types.integer.php</a>&gt;</p>
-<p>ricpelo&#8217;s note: <code class="docutils literal"><span class="pre">integer</span></code> es sinónimo de <code class="docutils literal"><span class="pre">int</span></code>, pero debería usarse
+<p>ricpelo’s note: <code class="docutils literal"><span class="pre">integer</span></code> es sinónimo de <code class="docutils literal"><span class="pre">int</span></code>, pero debería usarse
 <code class="docutils literal"><span class="pre">int</span></code>.</p>
 </div>
 <div class="section" id="numeros-en-coma-flotante-float">
 <h4>5.6.2.2. Números en coma flotante (<code class="docutils literal"><span class="pre">float</span></code>)<a class="headerlink" href="#numeros-en-coma-flotante-float" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.types.float.php">http://php.net/manual/es/language.types.float.php</a>&gt;</p>
-<p>ricpelo&#8217;s note: <code class="docutils literal"><span class="pre">double</span></code> es sinónimo de <code class="docutils literal"><span class="pre">float</span></code>, pero debería usarse
+<p>ricpelo’s note: <code class="docutils literal"><span class="pre">double</span></code> es sinónimo de <code class="docutils literal"><span class="pre">float</span></code>, pero debería usarse
 <code class="docutils literal"><span class="pre">float</span></code>.</p>
 </div>
 <div class="section" id="operadores">
@@ -519,7 +526,7 @@ StackOverflow</a>.</div>
 <div class="section" id="cadenas-string">
 <h3>5.6.3. Cadenas (<code class="docutils literal"><span class="pre">string</span></code>)<a class="headerlink" href="#cadenas-string" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.types.string.php">http://php.net/manual/es/language.types.string.php</a>&gt;</p>
-<p>ricpelo&#8217;s note: Se usa <code class="docutils literal"><span class="pre">{$var}</span></code> y no
+<p>ricpelo’s note: Se usa <code class="docutils literal"><span class="pre">{$var}</span></code> y no
 <code class="docutils literal"><span class="pre">${var}</span></code> &lt;<a class="reference external" href="https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md#variable-substitution">https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md#variable-substitution</a>&gt;</p>
 <div class="section" id="operadores-de-cadenas">
 <h4>5.6.3.1. Operadores de cadenas<a class="headerlink" href="#operadores-de-cadenas" title="Enlazar permanentemente con este título">¶</a></h4>
@@ -531,7 +538,7 @@ StackOverflow</a>.</div>
 <h5>5.6.3.1.2. Acceso y modificación por caracteres<a class="headerlink" href="#acceso-y-modificacion-por-caracteres" title="Enlazar permanentemente con este título">¶</a></h5>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.types.string.php#language.types.string.substr">http://php.net/manual/es/language.types.string.php#language.types.string.substr</a>&gt;</p>
 <div class="line-block">
-<div class="line">ricpelo&#8217;s note: - <code class="docutils literal"><span class="pre">echo</span> <span class="pre">$a[3]</span></code></div>
+<div class="line">ricpelo’s note: - <code class="docutils literal"><span class="pre">echo</span> <span class="pre">$a[3]</span></code></div>
 <div class="line">- <code class="docutils literal"><span class="pre">$a[3]</span> <span class="pre">=</span> <span class="pre">'x';</span></code></div>
 </div>
 </div>
@@ -548,7 +555,7 @@ StackOverflow</a>.</div>
 <h4>5.6.3.3. Extensión <em>mbstring</em><a class="headerlink" href="#extension-mbstring" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>&lt;<a class="reference external" href="http://php.net/manual/en/book.mbstring.php">http://php.net/manual/en/book.mbstring.php</a>&gt;</p>
 <div class="line-block">
-<div class="line">ricpelo&#8217;s note: - <code class="docutils literal"><span class="pre">$a[3]</span></code> equivale a <code class="docutils literal"><span class="pre">mb_substr($a,</span> <span class="pre">3,</span> <span class="pre">1)</span></code></div>
+<div class="line">ricpelo’s note: - <code class="docutils literal"><span class="pre">$a[3]</span></code> equivale a <code class="docutils literal"><span class="pre">mb_substr($a,</span> <span class="pre">3,</span> <span class="pre">1)</span></code></div>
 <div class="line">- <code class="docutils literal"><span class="pre">$a[3]</span> <span class="pre">=</span> <span class="pre">'x';</span></code> no tiene equivalencia directa. Se podría hacer:</div>
 <div class="line"><code class="docutils literal"><span class="pre">$a</span> <span class="pre">=</span> <span class="pre">mb_substr($a,</span> <span class="pre">2,</span> <span class="pre">1)</span> <span class="pre">.</span> <span class="pre">'x'</span> <span class="pre">.</span> <span class="pre">mb_substr($a,</span> <span class="pre">4);</span></code></div>
 </div>
@@ -558,9 +565,9 @@ StackOverflow</a>.</div>
 <h3>5.6.4. Nulo<a class="headerlink" href="#nulo" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.types.null.php">http://php.net/manual/es/language.types.null.php</a>&gt;</p>
 <div class="line-block">
-<div class="line">ricpelo&#8217;s note: <code class="docutils literal"><span class="pre">`is_null()</span></code> vs.
+<div class="line">ricpelo’s note: <code class="docutils literal"><span class="pre">`is_null()</span></code> vs.
 <code class="docutils literal"><span class="pre">===</span> <span class="pre">null</span></code> &lt;<a class="reference external" href="https://phpbestpractices.org/#checking-for-null">https://phpbestpractices.org/#checking-for-null</a>&gt;</div>
-<div class="line">ricpelo&#8217;s note: El tipo <code class="docutils literal"><span class="pre">null</span></code> y el valor <code class="docutils literal"><span class="pre">null</span></code> se escriben en
+<div class="line">ricpelo’s note: El tipo <code class="docutils literal"><span class="pre">null</span></code> y el valor <code class="docutils literal"><span class="pre">null</span></code> se escriben en
 minúscula. &lt;<a class="reference external" href="https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md#51-types">https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md#51-types</a>&gt;</div>
 </div>
 </div>
@@ -570,7 +577,7 @@ minúscula. &lt;<a class="reference external" href="https://github.com/yiisoft/y
 </div>
 <div class="section" id="operadores-de-asignacion-compuesta">
 <h3>5.6.6. Operadores de asignación compuesta<a class="headerlink" href="#operadores-de-asignacion-compuesta" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>ricpelo&#8217;s note: <code class="docutils literal"><span class="pre">$x``&nbsp;*&lt;op&gt;*\</span> <span class="pre">``=</span> <span class="pre">$y</span></code></p>
+<p>ricpelo’s note: <code class="docutils literal"><span class="pre">$x</span></code>&nbsp;<em>&lt;op&gt;</em><code class="docutils literal"><span class="pre">=</span> <span class="pre">$y</span></code></p>
 </div>
 <div class="section" id="comprobaciones">
 <h3>5.6.7. Comprobaciones<a class="headerlink" href="#comprobaciones" title="Enlazar permanentemente con este título">¶</a></h3>
@@ -583,7 +590,7 @@ minúscula. &lt;<a class="reference external" href="https://github.com/yiisoft/y
 <div class="section" id="is">
 <h5>5.6.7.1.2. <code class="docutils literal"><span class="pre">is_*()</span></code><a class="headerlink" href="#is" title="Enlazar permanentemente con este título">¶</a></h5>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/ref.var.php">http://php.net/manual/es/ref.var.php</a>&gt;</p>
-<p>ricpelo&#8217;s note: Poco útiles en formularios, ya que sólo se reciben
+<p>ricpelo’s note: Poco útiles en formularios, ya que sólo se reciben
 <code class="docutils literal"><span class="pre">string</span></code>s.</p>
 </div>
 </div>
@@ -605,7 +612,7 @@ minúscula. &lt;<a class="reference external" href="https://github.com/yiisoft/y
 <div class="section" id="coercion-moldeado-forzado-o-casting">
 <h4>5.6.8.1. Coerción, moldeado, forzado o <em>casting</em><a class="headerlink" href="#coercion-moldeado-forzado-o-casting" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.types.type-juggling.php#language.types.typecasting">http://php.net/manual/es/language.types.type-juggling.php#language.types.typecasting</a>&gt;</p>
-<p>ricpelo&#8217;s note: Conversión de cadena a número</p>
+<p>ricpelo’s note: Conversión de cadena a número</p>
 <div class="section" id="conversion-a-bool">
 <h5>5.6.8.1.1. Conversión a <code class="docutils literal"><span class="pre">bool</span></code><a class="headerlink" href="#conversion-a-bool" title="Enlazar permanentemente con este título">¶</a></h5>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.types.boolean.php#language.types.boolean.casting">http://php.net/manual/es/language.types.boolean.php#language.types.boolean.casting</a>&gt;</p>
@@ -621,7 +628,7 @@ minúscula. &lt;<a class="reference external" href="https://github.com/yiisoft/y
 <div class="section" id="conversion-de-string-a-numero">
 <h5>5.6.8.1.4. Conversión de <code class="docutils literal"><span class="pre">string</span></code> a número<a class="headerlink" href="#conversion-de-string-a-numero" title="Enlazar permanentemente con este título">¶</a></h5>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.types.string.php#language.types.string.conversion">http://php.net/manual/es/language.types.string.php#language.types.string.conversion</a>&gt;</p>
-<p>ricpelo&#8217;s note: <strong>¡Cuidado!</strong>: La documentación dice que <code class="docutils literal"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">&quot;pepe&quot;</span></code>
+<p>ricpelo’s note: <strong>¡Cuidado!</strong>: La documentación dice que <code class="docutils literal"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">&quot;pepe&quot;</span></code>
 o <code class="docutils literal"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">&quot;10</span> <span class="pre">pepe&quot;</span></code> funciona, pero en PHP7.1 da un <strong>PHP Warning: A
 non-numeric value encountered</strong>.</p>
 </div>
@@ -632,7 +639,7 @@ non-numeric value encountered</strong>.</p>
 </div>
 <div class="section" id="funciones-de-obtencion-de-valores">
 <h4>5.6.8.2. Funciones de obtención de valores<a class="headerlink" href="#funciones-de-obtencion-de-valores" title="Enlazar permanentemente con este título">¶</a></h4>
-<p>ricpelo&#8217;s note: Hacen más o menos lo mismo que los <em>casting</em> pero con
+<p>ricpelo’s note: Hacen más o menos lo mismo que los <em>casting</em> pero con
 funciones en lugar de con operadores. Puede ser interesante porque las
 funciones se pueden guardar, usar con <em>map</em>, <em>reduce</em>, etc.</p>
 <div class="section" id="intval">
@@ -664,7 +671,7 @@ funciones se pueden guardar, usar con <em>map</em>, <em>reduce</em>, etc.</p>
 <div class="section" id="setlocale">
 <h6>5.6.8.3.2.1. <code class="docutils literal"><span class="pre">setlocale()</span></code><a class="headerlink" href="#setlocale" title="Enlazar permanentemente con este título">¶</a></h6>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/function.setlocale.php">http://php.net/manual/es/function.setlocale.php</a>&gt;</p>
-<p>ricpelo&#8217;s note:
+<p>ricpelo’s note:
 <code class="docutils literal"><span class="pre">setlocale(LC_ALL,</span> <span class="pre">'es_ES.UTF-8');</span> <span class="pre">//</span> <span class="pre">Hay</span> <span class="pre">que</span> <span class="pre">poner</span> <span class="pre">el</span> <span class="pre">*locale*</span> <span class="pre">completo,</span> <span class="pre">con</span> <span class="pre">la</span> <span class="pre">codificación</span> <span class="pre">y</span> <span class="pre">todo</span> <span class="pre">(.UTF-8)</span></code></p>
 </div>
 </div>
@@ -686,12 +693,12 @@ funciones se pueden guardar, usar con <em>map</em>, <em>reduce</em>, etc.</p>
 <div class="section" id="fusion-de-null">
 <h4>5.6.9.4. Fusión de null (<code class="docutils literal"><span class="pre">??</span></code>)<a class="headerlink" href="#fusion-de-null" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>&lt;<a class="reference external" href="https://wiki.php.net/rfc/isset_ternary">https://wiki.php.net/rfc/isset_ternary</a>&gt;</p>
-<p>ricpelo&#8217;s note: Equivalente al <code class="docutils literal"><span class="pre">COALESCE()</span></code> de SQL.</p>
+<p>ricpelo’s note: Equivalente al <code class="docutils literal"><span class="pre">COALESCE()</span></code> de SQL.</p>
 </div>
 <div class="section" id="reglas-de-comparacion-de-tipos">
 <h4>5.6.9.5. Reglas de comparación de tipos<a class="headerlink" href="#reglas-de-comparacion-de-tipos" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/types.comparisons.php">http://php.net/manual/es/types.comparisons.php</a>&gt;</p>
-<p>ricpelo&#8217;s note: <code class="docutils literal"><span class="pre">&quot;250&quot;</span> <span class="pre">&lt;</span> <span class="pre">&quot;27&quot;</span></code> devuelve <code class="docutils literal"><span class="pre">false</span></code></p>
+<p>ricpelo’s note: <code class="docutils literal"><span class="pre">&quot;250&quot;</span> <span class="pre">&lt;</span> <span class="pre">&quot;27&quot;</span></code> devuelve <code class="docutils literal"><span class="pre">false</span></code></p>
 </div>
 </div>
 </div>
@@ -699,7 +706,7 @@ funciones se pueden guardar, usar con <em>map</em>, <em>reduce</em>, etc.</p>
 <h2>5.7. Constantes<a class="headerlink" href="#constantes" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.constants.syntax.php">http://php.net/manual/es/language.constants.syntax.php</a>&gt;</p>
 <div class="line-block">
-<div class="line">ricpelo&#8217;s note: Diferencias entre constantes y variables:</div>
+<div class="line">ricpelo’s note: Diferencias entre constantes y variables:</div>
 <div class="line">- Las constantes no llevan el signo dólar (<code class="docutils literal"><span class="pre">$</span></code>) como prefijo.</div>
 <div class="line">- Antes de PHP 5.3, las constantes solo podían ser definidas usando la
 función <code class="docutils literal"><span class="pre">define()</span></code> y no por simple asignación.</div>
@@ -735,7 +742,7 @@ un valor de un tipo permitido.</div>
 <div class="section" id="sintaxis-alternativa">
 <h4>5.8.1.1. Sintaxis alternativa<a class="headerlink" href="#sintaxis-alternativa" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/control-structures.alternative-syntax.php">http://php.net/manual/es/control-structures.alternative-syntax.php</a>&gt;</p>
-<p>ricpelo&#8217;s note: El <code class="docutils literal"><span class="pre">do</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span> <span class="pre">while</span> <span class="pre">(...);</span></code> <strong>no</strong> tiene sintaxis
+<p>ricpelo’s note: El <code class="docutils literal"><span class="pre">do</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span> <span class="pre">while</span> <span class="pre">(...);</span></code> <strong>no</strong> tiene sintaxis
 alternativa.</p>
 </div>
 </div>
@@ -745,12 +752,12 @@ alternativa.</p>
 <h4>5.8.2.1. <code class="docutils literal"><span class="pre">include</span></code>, <code class="docutils literal"><span class="pre">require</span></code><a class="headerlink" href="#include-require" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/function.include.php">http://php.net/manual/es/function.include.php</a>&gt;</p>
 <div class="line-block">
-<div class="line">ricpelo&#8217;s note: El nombre del archivo debe aparecer con su extensión.
+<div class="line">ricpelo’s note: El nombre del archivo debe aparecer con su extensión.
 No vale hacer <code class="docutils literal"><span class="pre">require</span> <span class="pre">'pepe';</span></code>.</div>
-<div class="line">ricpelo&#8217;s note: Cuando un archivo es incluido, el intérprete abandona
+<div class="line">ricpelo’s note: Cuando un archivo es incluido, el intérprete abandona
 el modo PHP e ingresa al modo HTML al comienzo del archivo objetivo y
 se reanuda de nuevo al final.</div>
-<div class="line">ricpelo&#8217;s note: Si el archivo incluido tiene un <code class="docutils literal"><span class="pre">return</span> <span class="pre">...;</span></code>, el
+<div class="line">ricpelo’s note: Si el archivo incluido tiene un <code class="docutils literal"><span class="pre">return</span> <span class="pre">...;</span></code>, el
 <code class="docutils literal"><span class="pre">include</span></code> o el <code class="docutils literal"><span class="pre">require</span></code> que lo incluya devolverá el valor
 devuelto por el <code class="docutils literal"><span class="pre">return</span></code>.</div>
 </div>
@@ -767,20 +774,20 @@ devuelto por el <code class="docutils literal"><span class="pre">return</span></
 <h3>5.9.1. <code class="docutils literal"><span class="pre">isset()</span></code><a class="headerlink" href="#isset" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/function.isset.php">http://php.net/manual/es/function.isset.php</a>&gt;</p>
 <div class="line-block">
-<div class="line">ricpelo&#8217;s note: Cuidado si la variable contiene <code class="docutils literal"><span class="pre">null</span></code>.</div>
-<div class="line">ricpelo&#8217;s note: No da error ni advertencia si la variable no existe.</div>
+<div class="line">ricpelo’s note: Cuidado si la variable contiene <code class="docutils literal"><span class="pre">null</span></code>.</div>
+<div class="line">ricpelo’s note: No da error ni advertencia si la variable no existe.</div>
 </div>
 </div>
 <div class="section" id="empty">
 <h3>5.9.2. <code class="docutils literal"><span class="pre">empty()</span></code><a class="headerlink" href="#empty" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/function.empty.php">http://php.net/manual/es/function.empty.php</a>&gt;</p>
-<p>ricpelo&#8217;s note: Para evitar el problema de <code class="docutils literal"><span class="pre">empty(&quot;0&quot;)</span> <span class="pre">===</span> <span class="pre">true</span></code>:</p>
+<p>ricpelo’s note: Para evitar el problema de <code class="docutils literal"><span class="pre">empty(&quot;0&quot;)</span> <span class="pre">===</span> <span class="pre">true</span></code>:</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="nf">is_blank</span><span class="p">(</span><span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="k">empty</span><span class="p">(</span><span class="nv">$value</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nb">is_numeric</span><span class="p">(</span><span class="nv">$value</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>ricpelo&#8217;s note: No da error ni advertencia si la variable no existe.</p>
+<p>ricpelo’s note: No da error ni advertencia si la variable no existe.</p>
 </div>
 <div class="section" id="var-dump">
 <h3>5.9.3. <code class="docutils literal"><span class="pre">var_dump()</span></code><a class="headerlink" href="#var-dump" title="Enlazar permanentemente con este título">¶</a></h3>
@@ -790,11 +797,11 @@ devuelto por el <code class="docutils literal"><span class="pre">return</span></
 <div class="section" id="arrays">
 <h2>5.10. Arrays<a class="headerlink" href="#arrays" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.types.array.php">http://php.net/manual/es/language.types.array.php</a>&gt;</p>
-<p>ricpelo&#8217;s note: Las claves pueden ser enteros o cadenas.</p>
+<p>ricpelo’s note: Las claves pueden ser enteros o cadenas.</p>
 <div class="section" id="operadores-para-arrays">
 <h3>5.10.1. Operadores para arrays<a class="headerlink" href="#operadores-para-arrays" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.operators.array.php">http://php.net/manual/es/language.operators.array.php</a>&gt;</p>
-<p>ricpelo&#8217;s note: <strong>Comparaciones</strong>: Un <code class="docutils literal"><span class="pre">array</span></code> con menos elementos es
+<p>ricpelo’s note: <strong>Comparaciones</strong>: Un <code class="docutils literal"><span class="pre">array</span></code> con menos elementos es
 menor. De otra forma, compara valor por valor.</p>
 <div class="section" id="acceso-modificacion-y-agregacion">
 <h4>5.10.1.1. Acceso, modificación y agregación<a class="headerlink" href="#acceso-modificacion-y-agregacion" title="Enlazar permanentemente con este título">¶</a></h4>
@@ -846,7 +853,7 @@ menor. De otra forma, compara valor por valor.</p>
 <div class="section" id="argumentos-por-defecto">
 <h4>5.11.1.2. Argumentos por defecto<a class="headerlink" href="#argumentos-por-defecto" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/functions.arguments.php#functions.arguments.default">http://php.net/manual/es/functions.arguments.php#functions.arguments.default</a>&gt;</p>
-<p>ricpelo&#8217;s note:
+<p>ricpelo’s note:
 <code class="docutils literal"><span class="pre">php</span>&#160;&#160; <span class="pre">function</span> <span class="pre">prueba($opciones</span> <span class="pre">=</span> <span class="pre">[])</span> <span class="pre">{</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">extract($opciones);</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">//</span> <span class="pre">...</span>&#160;&#160; <span class="pre">}</span></code></p>
 </div>
 </div>
@@ -861,7 +868,7 @@ menor. De otra forma, compara valor por valor.</p>
 </div>
 <div class="section" id="uso-de-global">
 <h4>5.11.2.3. Uso de <code class="docutils literal"><span class="pre">global</span></code><a class="headerlink" href="#uso-de-global" title="Enlazar permanentemente con este título">¶</a></h4>
-<p>ricpelo&#8217;s note: Usar <code class="docutils literal"><span class="pre">global</span> <span class="pre">$x;</span></code> cuando <code class="docutils literal"><span class="pre">$x</span></code> no existe hace que
+<p>ricpelo’s note: Usar <code class="docutils literal"><span class="pre">global</span> <span class="pre">$x;</span></code> cuando <code class="docutils literal"><span class="pre">$x</span></code> no existe hace que
 <code class="docutils literal"><span class="pre">$x</span></code> empiece a existir y valga <code class="docutils literal"><span class="pre">null</span></code>.</p>
 </div>
 <div class="section" id="variables-superglobales">
@@ -871,7 +878,7 @@ menor. De otra forma, compara valor por valor.</p>
 </div>
 <div class="section" id="declaraciones-de-tipos">
 <h3>5.11.3. Declaraciones de tipos<a class="headerlink" href="#declaraciones-de-tipos" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>ricpelo&#8217;s note: <strong>NO</strong> se hacen conversiones implícitas a <code class="docutils literal"><span class="pre">array</span></code>, ni
+<p>ricpelo’s note: <strong>NO</strong> se hacen conversiones implícitas a <code class="docutils literal"><span class="pre">array</span></code>, ni
 en argumentos ni en devolución.</p>
 <div class="section" id="declaraciones-de-tipo-de-argumento">
 <h4>5.11.3.1. Declaraciones de tipo de argumento<a class="headerlink" href="#declaraciones-de-tipo-de-argumento" title="Enlazar permanentemente con este título">¶</a></h4>
@@ -888,7 +895,7 @@ en argumentos ni en devolución.</p>
 <div class="section" id="tipificacion-estricta">
 <h4>5.11.3.4. Tipificación estricta<a class="headerlink" href="#tipificacion-estricta" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/functions.arguments.php#functions.arguments.type-declaration.strict">http://php.net/manual/es/functions.arguments.php#functions.arguments.type-declaration.strict</a>&gt;</p>
-<p>ricpelo&#8217;s note: El <code class="docutils literal"><span class="pre">declare(strict_types=1);</span></code> se pone en el archivo
+<p>ricpelo’s note: El <code class="docutils literal"><span class="pre">declare(strict_types=1);</span></code> se pone en el archivo
 que hace la llamada, no en el que define la función.</p>
 </div>
 </div>

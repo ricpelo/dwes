@@ -3,9 +3,8 @@
 \documentclass[a4paper,11pt,spanish]{sphinxmanual}
 \ifdefined\pdfpxdimen
    \let\sphinxpxdimen\pdfpxdimen\else\newdimen\sphinxpxdimen
-\fi \sphinxpxdimen=49336sp\relax
+\fi \sphinxpxdimen=.75bp\relax
 
-\usepackage[margin=1in,marginparwidth=0.5in]{geometry}
 
 \catcode`^^^^00a0\active\protected\def^^^^00a0{\leavevmode\nobreak\ }
 \usepackage{cmap}
@@ -22,11 +21,9 @@
                      Scale=MatchLowercase
                   ]{Inconsolata-Regular.ttf}
 \usepackage[Sonny]{fncychap}
-\usepackage{longtable}
-\usepackage{sphinx}
+\usepackage[dontkeepoldnames]{sphinx}
 \sphinxsetup{verbatimwithframe=false}
-\usepackage{multirow}
-\usepackage{eqparbox}
+\usepackage{geometry}
 
 % Include hyperref last.
 \usepackage{hyperref}
@@ -38,6 +35,9 @@
 \addto\captionsspanish{\renewcommand{\figurename}{Figura}}
 \addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
 \addto\captionsspanish{\renewcommand{\literalblockname}{Lista}}
+
+\addto\captionsspanish{\renewcommand{\literalblockcontinuedname}{continued from previous page}}
+\addto\captionsspanish{\renewcommand{\literalblockcontinuesname}{continues on next page}}
 
 \def\pageautorefname{página}
 
@@ -51,7 +51,7 @@
 \date{noviembre de 2017}
 \release{1.0}
 \author{Ricardo Pérez López}
-\newcommand{\sphinxlogo}{}
+\newcommand{\sphinxlogo}{\vbox{}}
 \renewcommand{\releasename}{Versión}
 \makeindex
 
@@ -129,10 +129,10 @@
 \section{Ejemplos de aplicaciones web}
 \label{\detokenize{introduccion:ejemplos-de-aplicaciones-web}}
 
-\subsection{Redes sociales: Facebook, Twitter...}
+\subsection{Redes sociales: Facebook, Twitter…}
 \label{\detokenize{introduccion:redes-sociales-facebook-twitter}}
 
-\subsection{Comercio electrónico: Amazon, eBay...}
+\subsection{Comercio electrónico: Amazon, eBay…}
 \label{\detokenize{introduccion:comercio-electronico-amazon-ebay}}
 
 \subsection{Administración electrónica…}
@@ -276,7 +276,7 @@ status, log, diff
 Alias lg
 
 \item {} 
-checkout, reset, revert, --amend
+checkout, reset, revert, \textendash{}amend
 
 \item {} 
 show
@@ -323,7 +323,16 @@ Ramas de seguimiento (tracking branch)
 
 \chapter{Conceptos básicos de PHP I}
 \label{\detokenize{php:conceptos-basicos-de-php-i}}
-ricpelo's note: Programada inicialmente para empezar el 23-10-2017.
+ricpelo’s note: Programada inicialmente para empezar el 23-10-2017.
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+Hola desde PHP.
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZdl{} php ../../p.php
+Hola desde PHP.
+\end{sphinxVerbatim}
 
 
 \section{Introducción a PHP}
@@ -331,7 +340,7 @@ ricpelo's note: Programada inicialmente para empezar el 23-10-2017.
 
 \subsection{Página web de PHP}
 \label{\detokenize{php:pagina-web-de-php}}
-\textless{}\url{http://php.net}\textgreater{}
+\textless{}\sphinxurl{http://php.net}\textgreater{}
 
 
 \subsection{Instalación de PHP}
@@ -357,7 +366,7 @@ ricpelo's note: Programada inicialmente para empezar el 23-10-2017.
 
 \section{Sintaxis básica}
 \label{\detokenize{php:sintaxis-basica}}
-\textless{}\url{http://php.net/manual/es/language.basic-syntax.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.basic-syntax.php}\textgreater{}
 
 
 \subsection{Datos e instrucciones}
@@ -418,22 +427,22 @@ Es una constante literal numérica cuyo valor es, precisamente, \sphinxcode{74}.
 
 \subsubsection{Comando \sphinxstyleliteralintitle{echo}}
 \label{\detokenize{php:comando-echo}}
-\textless{}\url{http://php.net/manual/es/function.echo.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/function.echo.php}\textgreater{}
 
 
 \subsection{Expresiones, operadores y funciones}
 \label{\detokenize{php:expresiones-operadores-y-funciones}}
-ricpelo's note: \sphinxstyleemphasis{Ejemplos}: aritmética, \sphinxcode{cos()}, \sphinxcode{max()}
+ricpelo’s note: \sphinxstyleemphasis{Ejemplos}: aritmética, \sphinxcode{cos()}, \sphinxcode{max()}
 
 
 \section{Funcionamiento del intérprete}
 \label{\detokenize{php:funcionamiento-del-interprete}}
-\textless{}\url{http://php.net/manual/es/language.basic-syntax.phpmode.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.basic-syntax.phpmode.php}\textgreater{}
 
 
 \subsection{Modo dual de operación}
 \label{\detokenize{php:modo-dual-de-operacion}}
-ricpelo's note: Se llaman \sphinxstyleemphasis{modo HTML} y \sphinxstyleemphasis{modo PHP}.
+ricpelo’s note: Se llaman \sphinxstyleemphasis{modo HTML} y \sphinxstyleemphasis{modo PHP}.
 
 
 \subsection{Etiquetas \sphinxstyleliteralintitle{\textless{}?php} y \sphinxstyleliteralintitle{?\textgreater{}}}
@@ -447,64 +456,64 @@ ricpelo's note: Se llaman \sphinxstyleemphasis{modo HTML} y \sphinxstyleemphasis
 
 \subsection{PsySH}
 \label{\detokenize{php:psysh}}
-\textless{}\url{http://psysh.org/}\textgreater{}
+\textless{}\sphinxurl{http://psysh.org/}\textgreater{}
 
 
 \section{Variables}
 \label{\detokenize{php:variables}}
-\textless{}\url{http://php.net/manual/es/language.variables.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.variables.php}\textgreater{}
 
 
 \subsection{Conceptos básicos}
 \label{\detokenize{php:conceptos-basicos}}
-\textless{}\url{http://php.net/manual/es/language.variables.basics.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.variables.basics.php}\textgreater{}
 
 
 \subsection{Destrucción de variables}
 \label{\detokenize{php:destruccion-de-variables}}
-\textless{}\url{http://php.net/manual/es/function.unset.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/function.unset.php}\textgreater{}
 
 
 \subsection{Operadores de asignación por valor y por referencia}
 \label{\detokenize{php:operadores-de-asignacion-por-valor-y-por-referencia}}
-\textless{}\url{http://php.net/manual/es/language.operators.assignment.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.operators.assignment.php}\textgreater{}
 
-ricpelo's note: En \sphinxcode{\$b =\& \$a;}, \sphinxcode{\$b} \sphinxstylestrong{NO} está apuntando a \sphinxcode{\$a}
+ricpelo’s note: En \sphinxcode{\$b =\& \$a;}, \sphinxcode{\$b} \sphinxstylestrong{NO} está apuntando a \sphinxcode{\$a}
 o viceversa. Ambos apuntan al mismo
-lugar. \textless{}\url{http://php.net/manual/es/language.references.whatdo.php}\textgreater{}
+lugar. \textless{}\sphinxurl{http://php.net/manual/es/language.references.whatdo.php}\textgreater{}
 
 
 \subsection{Variables predefinidas}
 \label{\detokenize{php:variables-predefinidas}}
-\textless{}\url{http://php.net/manual/es/reserved.variables.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/reserved.variables.php}\textgreater{}
 
-ricpelo's note: \sphinxcode{\$\_ENV} no funciona en la instalación actual (ver
+ricpelo’s note: \sphinxcode{\$\_ENV} no funciona en la instalación actual (ver
 \sphinxcode{variables\_order} en \sphinxcode{php.ini}. Habría que usar \sphinxcode{get\_env()}.
 
 
 \section{Tipos básicos de datos}
 \label{\detokenize{php:tipos-basicos-de-datos}}
-\textless{}\url{http://php.net/manual/es/language.types.intro.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.types.intro.php}\textgreater{}
 
 
 \subsection{Lógicos (\sphinxstyleliteralintitle{bool})}
 \label{\detokenize{php:logicos-bool}}
-\textless{}\url{http://php.net/manual/es/language.types.boolean.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.types.boolean.php}\textgreater{}
 
 \begin{DUlineblock}{0em}
-\item[] ricpelo's note: Se escriben en minúscula: \sphinxcode{false} y
-\sphinxcode{true}. \textless{}\url{https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md\#51-types}\textgreater{}
-\item[] ricpelo's note: \sphinxcode{boolean} es sinónimo de \sphinxcode{bool}, pero debería
+\item[] ricpelo’s note: Se escriben en minúscula: \sphinxcode{false} y
+\sphinxcode{true}. \textless{}\sphinxurl{https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md\#51-types}\textgreater{}
+\item[] ricpelo’s note: \sphinxcode{boolean} es sinónimo de \sphinxcode{bool}, pero debería
 usarse \sphinxcode{bool}.
 \end{DUlineblock}
 
 
 \subsubsection{Operadores lógicos}
 \label{\detokenize{php:operadores-logicos}}
-\textless{}\url{http://php.net/manual/es/language.operators.logical.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.operators.logical.php}\textgreater{}
 
 \begin{DUlineblock}{0em}
-\item[] ricpelo's note: \sphinxstyleemphasis{Cuidado}:
+\item[] ricpelo’s note: \sphinxstyleemphasis{Cuidado}:
 \item[] - \sphinxcode{false and (true \&\& print('hola'))} no imprime nada y devuelve
 \sphinxcode{false}, por lo que \sphinxstylestrong{el código va en cortocircuito y se evalúa de
 izquierda a derecha} incluso aunque el \sphinxcode{\&\&} y los paréntesis tengan
@@ -514,22 +523,22 @@ más prioridad que el \sphinxcode{and}.
 \sphinxcode{true}), por lo que la evaluación de los operandos del \sphinxcode{and} se
 hace de izquierda a derecha aunque el \sphinxcode{+} tenga más prioridad (y
 encima vaya entre paréntesis).
-\item[] - En el \href{http://php.net/manual/es/language.operators.precedence.php}{manual de
+\item[] - En el \sphinxhref{http://php.net/manual/es/language.operators.precedence.php}{manual de
 PHP}%
 \begin{footnote}[1]\sphinxAtStartFootnote
-\nolinkurl{http://php.net/manual/es/language.operators.precedence.php}
+\sphinxnolinkurl{http://php.net/manual/es/language.operators.precedence.php}
 %
 \end{footnote} se
-dice que: \sphinxstyleemphasis{``La precedencia y asociatividad de los operadores solamente
+dice que: \sphinxstyleemphasis{«La precedencia y asociatividad de los operadores solamente
 determinan cómo se agrupan las expresiones, no especifican un orden de
 evaluación. PHP no especifica (en general) el orden en que se evalúa
 una expresión y se debería evitar el código que se asume un orden
 específico de evaluación, ya que el comportamiento puede cambiar entre
-versiones de PHP o dependiendo de código circundante.''}
-\item[] - \href{https://stackoverflow.com/questions/46861563/false-and-true-printhi}{Pregunta que hice al respecto en
+versiones de PHP o dependiendo de código circundante.»}
+\item[] - \sphinxhref{https://stackoverflow.com/questions/46861563/false-and-true-printhi}{Pregunta que hice al respecto en
 StackOverflow}%
 \begin{footnote}[2]\sphinxAtStartFootnote
-\nolinkurl{https://stackoverflow.com/questions/46861563/false-and-true-printhi}
+\sphinxnolinkurl{https://stackoverflow.com/questions/46861563/false-and-true-printhi}
 %
 \end{footnote}.
 \end{DUlineblock}
@@ -540,17 +549,17 @@ StackOverflow}%
 
 \subsubsection{Enteros (\sphinxstyleliteralintitle{int})}
 \label{\detokenize{php:enteros-int}}
-\textless{}\url{http://php.net/manual/es/language.types.integer.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.types.integer.php}\textgreater{}
 
-ricpelo's note: \sphinxcode{integer} es sinónimo de \sphinxcode{int}, pero debería usarse
+ricpelo’s note: \sphinxcode{integer} es sinónimo de \sphinxcode{int}, pero debería usarse
 \sphinxcode{int}.
 
 
 \subsubsection{Números en coma flotante (\sphinxstyleliteralintitle{float})}
 \label{\detokenize{php:numeros-en-coma-flotante-float}}
-\textless{}\url{http://php.net/manual/es/language.types.float.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.types.float.php}\textgreater{}
 
-ricpelo's note: \sphinxcode{double} es sinónimo de \sphinxcode{float}, pero debería usarse
+ricpelo’s note: \sphinxcode{double} es sinónimo de \sphinxcode{float}, pero debería usarse
 \sphinxcode{float}.
 
 
@@ -559,25 +568,25 @@ ricpelo's note: \sphinxcode{double} es sinónimo de \sphinxcode{float}, pero deb
 
 \paragraph{Operadores aritméticos}
 \label{\detokenize{php:operadores-aritmeticos}}
-\textless{}\url{http://php.net/manual/es/language.operators.arithmetic.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.operators.arithmetic.php}\textgreater{}
 
 
 \paragraph{Operadores de incremento/decremento}
 \label{\detokenize{php:operadores-de-incremento-decremento}}
-\textless{}\url{http://php.net/manual/es/language.operators.increment.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.operators.increment.php}\textgreater{}
 
 
 \subsection{Cadenas (\sphinxstyleliteralintitle{string})}
 \label{\detokenize{php:cadenas-string}}
-\textless{}\url{http://php.net/manual/es/language.types.string.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.types.string.php}\textgreater{}
 
-ricpelo's note: Se usa \sphinxcode{\{\$var\}} y no
-\sphinxcode{\$\{var\}} \textless{}\url{https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md\#variable-substitution}\textgreater{}
+ricpelo’s note: Se usa \sphinxcode{\{\$var\}} y no
+\sphinxcode{\$\{var\}} \textless{}\sphinxurl{https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md\#variable-substitution}\textgreater{}
 
 
 \subsubsection{Operadores de cadenas}
 \label{\detokenize{php:operadores-de-cadenas}}
-\textless{}\url{http://php.net/manual/es/language.operators.string.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.operators.string.php}\textgreater{}
 
 
 \paragraph{Concatenación}
@@ -585,30 +594,30 @@ ricpelo's note: Se usa \sphinxcode{\{\$var\}} y no
 
 \paragraph{Acceso y modificación por caracteres}
 \label{\detokenize{php:acceso-y-modificacion-por-caracteres}}
-\textless{}\url{http://php.net/manual/es/language.types.string.php\#language.types.string.substr}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.types.string.php\#language.types.string.substr}\textgreater{}
 
 \begin{DUlineblock}{0em}
-\item[] ricpelo's note: - \sphinxcode{echo \$a{[}3{]}}
+\item[] ricpelo’s note: - \sphinxcode{echo \$a{[}3{]}}
 \item[] - \sphinxcode{\$a{[}3{]} = 'x';}
 \end{DUlineblock}
 
 
 \paragraph{Operadores de incremento/decremento}
 \label{\detokenize{php:id1}}
-\textless{}\url{http://php.net/manual/es/language.operators.increment.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.operators.increment.php}\textgreater{}
 
 
 \subsubsection{Funciones de manejo de cadenas}
 \label{\detokenize{php:funciones-de-manejo-de-cadenas}}
-\textless{}\url{http://php.net/ref.strings}\textgreater{}
+\textless{}\sphinxurl{http://php.net/ref.strings}\textgreater{}
 
 
 \subsubsection{Extensión \sphinxstyleemphasis{mbstring}}
 \label{\detokenize{php:extension-mbstring}}
-\textless{}\url{http://php.net/manual/en/book.mbstring.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/en/book.mbstring.php}\textgreater{}
 
 \begin{DUlineblock}{0em}
-\item[] ricpelo's note: - \sphinxcode{\$a{[}3{]}} equivale a \sphinxcode{mb\_substr(\$a, 3, 1)}
+\item[] ricpelo’s note: - \sphinxcode{\$a{[}3{]}} equivale a \sphinxcode{mb\_substr(\$a, 3, 1)}
 \item[] - \sphinxcode{\$a{[}3{]} = 'x';} no tiene equivalencia directa. Se podría hacer:
 \item[] \sphinxcode{\$a = mb\_substr(\$a, 2, 1) . 'x' . mb\_substr(\$a, 4);}
 \end{DUlineblock}
@@ -616,24 +625,24 @@ ricpelo's note: Se usa \sphinxcode{\{\$var\}} y no
 
 \subsection{Nulo}
 \label{\detokenize{php:nulo}}
-\textless{}\url{http://php.net/manual/es/language.types.null.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.types.null.php}\textgreater{}
 
 \begin{DUlineblock}{0em}
-\item[] ricpelo's note: \sphinxcode{{}`is\_null()} vs.
-\sphinxcode{=== null} \textless{}\url{https://phpbestpractices.org/\#checking-for-null}\textgreater{}
-\item[] ricpelo's note: El tipo \sphinxcode{null} y el valor \sphinxcode{null} se escriben en
-minúscula. \textless{}\url{https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md\#51-types}\textgreater{}
+\item[] ricpelo’s note: \sphinxcode{{}`is\_null()} vs.
+\sphinxcode{=== null} \textless{}\sphinxurl{https://phpbestpractices.org/\#checking-for-null}\textgreater{}
+\item[] ricpelo’s note: El tipo \sphinxcode{null} y el valor \sphinxcode{null} se escriben en
+minúscula. \textless{}\sphinxurl{https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md\#51-types}\textgreater{}
 \end{DUlineblock}
 
 
 \subsection{Precedencia de operadores}
 \label{\detokenize{php:precedencia-de-operadores}}
-\textless{}\url{http://php.net/manual/es/language.operators.precedence.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.operators.precedence.php}\textgreater{}
 
 
 \subsection{Operadores de asignación compuesta}
 \label{\detokenize{php:operadores-de-asignacion-compuesta}}
-ricpelo's note: \sphinxcode{\$x{}`{}` *\textless{}op\textgreater{}*\textbackslash{} {}`{}`= \$y}
+ricpelo’s note: \sphinxcode{\$x} \sphinxstyleemphasis{\textless{}op\textgreater{}}\sphinxcode{= \$y}
 
 
 \subsection{Comprobaciones}
@@ -644,14 +653,14 @@ ricpelo's note: \sphinxcode{\$x{}`{}` *\textless{}op\textgreater{}*\textbacksla
 
 \paragraph{\sphinxstyleliteralintitle{gettype()}}
 \label{\detokenize{php:gettype}}
-\textless{}\url{http://php.net/manual/en/function.gettype.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/en/function.gettype.php}\textgreater{}
 
 
 \paragraph{\sphinxstyleliteralintitle{is\_*()}}
 \label{\detokenize{php:is}}
-\textless{}\url{http://php.net/manual/es/ref.var.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/ref.var.php}\textgreater{}
 
-ricpelo's note: Poco útiles en formularios, ya que sólo se reciben
+ricpelo’s note: Poco útiles en formularios, ya que sólo se reciben
 \sphinxcode{string}s.
 
 
@@ -660,80 +669,80 @@ ricpelo's note: Poco útiles en formularios, ya que sólo se reciben
 
 \paragraph{\sphinxstyleliteralintitle{is\_numeric()}}
 \label{\detokenize{php:is-numeric}}
-\textless{}\url{http://php.net/manual/es/function.is-numeric.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/function.is-numeric.php}\textgreater{}
 
 
 \paragraph{\sphinxstyleliteralintitle{ctype\_*()}}
 \label{\detokenize{php:ctype}}
-\textless{}\url{http://php.net/manual/es/book.ctype.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/book.ctype.php}\textgreater{}
 
 
 \subsection{Conversiones}
 \label{\detokenize{php:conversiones}}
-\textless{}\url{http://php.net/manual/es/language.types.type-juggling.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.types.type-juggling.php}\textgreater{}
 
 
 \subsubsection{Coerción, moldeado, forzado o \sphinxstyleemphasis{casting}}
 \label{\detokenize{php:coercion-moldeado-forzado-o-casting}}
-\textless{}\url{http://php.net/manual/es/language.types.type-juggling.php\#language.types.typecasting}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.types.type-juggling.php\#language.types.typecasting}\textgreater{}
 
-ricpelo's note: Conversión de cadena a número
+ricpelo’s note: Conversión de cadena a número
 
 
 \paragraph{Conversión a \sphinxstyleliteralintitle{bool}}
 \label{\detokenize{php:conversion-a-bool}}
-\textless{}\url{http://php.net/manual/es/language.types.boolean.php\#language.types.boolean.casting}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.types.boolean.php\#language.types.boolean.casting}\textgreater{}
 
 
 \paragraph{Conversión a \sphinxstyleliteralintitle{int}}
 \label{\detokenize{php:conversion-a-int}}
-\textless{}\url{http://php.net/manual/es/language.types.integer.php\#language.types.integer.casting}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.types.integer.php\#language.types.integer.casting}\textgreater{}
 
 
 \paragraph{Conversión a \sphinxstyleliteralintitle{float}}
 \label{\detokenize{php:conversion-a-float}}
-\textless{}\url{http://php.net/manual/es/language.types.float.php\#language.types.float.casting}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.types.float.php\#language.types.float.casting}\textgreater{}
 
 
 \paragraph{Conversión de \sphinxstyleliteralintitle{string} a número}
 \label{\detokenize{php:conversion-de-string-a-numero}}
-\textless{}\url{http://php.net/manual/es/language.types.string.php\#language.types.string.conversion}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.types.string.php\#language.types.string.conversion}\textgreater{}
 
-ricpelo's note: \sphinxstylestrong{¡Cuidado!}: La documentación dice que \sphinxcode{1 + "pepe"}
+ricpelo’s note: \sphinxstylestrong{¡Cuidado!}: La documentación dice que \sphinxcode{1 + "pepe"}
 o \sphinxcode{1 + "10 pepe"} funciona, pero en PHP7.1 da un \sphinxstylestrong{PHP Warning: A
 non-numeric value encountered}.
 
 
 \paragraph{Conversión a \sphinxstyleliteralintitle{string}}
 \label{\detokenize{php:conversion-a-string}}
-\textless{}\url{http://php.net/manual/es/language.types.string.php\#language.types.string.casting}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.types.string.php\#language.types.string.casting}\textgreater{}
 
 
 \subsubsection{Funciones de obtención de valores}
 \label{\detokenize{php:funciones-de-obtencion-de-valores}}
-ricpelo's note: Hacen más o menos lo mismo que los \sphinxstyleemphasis{casting} pero con
+ricpelo’s note: Hacen más o menos lo mismo que los \sphinxstyleemphasis{casting} pero con
 funciones en lugar de con operadores. Puede ser interesante porque las
 funciones se pueden guardar, usar con \sphinxstyleemphasis{map}, \sphinxstyleemphasis{reduce}, etc.
 
 
 \paragraph{\sphinxstyleliteralintitle{intval()}}
 \label{\detokenize{php:intval}}
-\textless{}\url{http://php.net/manual/es/function.intval.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/function.intval.php}\textgreater{}
 
 
 \paragraph{\sphinxstyleliteralintitle{floatval()}}
 \label{\detokenize{php:floatval}}
-\textless{}\url{http://php.net/manual/es/function.floatval.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/function.floatval.php}\textgreater{}
 
 
 \paragraph{\sphinxstyleliteralintitle{strval()}}
 \label{\detokenize{php:strval}}
-\textless{}\url{http://php.net/manual/es/function.strval.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/function.strval.php}\textgreater{}
 
 
 \paragraph{\sphinxstyleliteralintitle{boolval()}}
 \label{\detokenize{php:boolval}}
-\textless{}\url{http://php.net/manual/es/function.boolval.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/function.boolval.php}\textgreater{}
 
 
 \subsubsection{Funciones de formateado numérico}
@@ -741,19 +750,19 @@ funciones se pueden guardar, usar con \sphinxstyleemphasis{map}, \sphinxstyleemp
 
 \paragraph{\sphinxstyleliteralintitle{number\_format()}}
 \label{\detokenize{php:number-format}}
-\textless{}\url{http://php.net/manual/es/function.number-format.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/function.number-format.php}\textgreater{}
 
 
 \paragraph{\sphinxstyleliteralintitle{money\_format()}}
 \label{\detokenize{php:money-format}}
-\textless{}\url{http://php.net/manual/es/function.money-format.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/function.money-format.php}\textgreater{}
 
 
 \subparagraph{\sphinxstyleliteralintitle{setlocale()}}
 \label{\detokenize{php:setlocale}}
-\textless{}\url{http://php.net/manual/es/function.setlocale.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/function.setlocale.php}\textgreater{}
 
-ricpelo's note:
+ricpelo’s note:
 \sphinxcode{setlocale(LC\_ALL, 'es\_ES.UTF-8'); // Hay que poner el *locale* completo, con la codificación y todo (.UTF-8)}
 
 
@@ -762,7 +771,7 @@ ricpelo's note:
 
 \subsubsection{Operadores de comparación}
 \label{\detokenize{php:operadores-de-comparacion}}
-\textless{}\url{http://php.net/manual/es/language.operators.comparison.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.operators.comparison.php}\textgreater{}
 
 
 \subsubsection{\sphinxstyleliteralintitle{==} vs. \sphinxstyleliteralintitle{===}}
@@ -770,29 +779,29 @@ ricpelo's note:
 
 \subsubsection{Ternario (\sphinxstyleliteralintitle{?:})}
 \label{\detokenize{php:ternario}}
-\textless{}\url{http://php.net/manual/es/language.operators.comparison.php\#language.operators.comparison.ternary}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.operators.comparison.php\#language.operators.comparison.ternary}\textgreater{}
 
 
 \subsubsection{Fusión de null (\sphinxstyleliteralintitle{??})}
 \label{\detokenize{php:fusion-de-null}}
-\textless{}\url{https://wiki.php.net/rfc/isset\_ternary}\textgreater{}
+\textless{}\sphinxurl{https://wiki.php.net/rfc/isset\_ternary}\textgreater{}
 
-ricpelo's note: Equivalente al \sphinxcode{COALESCE()} de SQL.
+ricpelo’s note: Equivalente al \sphinxcode{COALESCE()} de SQL.
 
 
 \subsubsection{Reglas de comparación de tipos}
 \label{\detokenize{php:reglas-de-comparacion-de-tipos}}
-\textless{}\url{http://php.net/manual/es/types.comparisons.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/types.comparisons.php}\textgreater{}
 
-ricpelo's note: \sphinxcode{"250" \textless{} "27"} devuelve \sphinxcode{false}
+ricpelo’s note: \sphinxcode{"250" \textless{} "27"} devuelve \sphinxcode{false}
 
 
 \section{Constantes}
 \label{\detokenize{php:constantes}}
-\textless{}\url{http://php.net/manual/es/language.constants.syntax.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.constants.syntax.php}\textgreater{}
 
 \begin{DUlineblock}{0em}
-\item[] ricpelo's note: Diferencias entre constantes y variables:
+\item[] ricpelo’s note: Diferencias entre constantes y variables:
 \item[] - Las constantes no llevan el signo dólar (\sphinxcode{\$}) como prefijo.
 \item[] - Antes de PHP 5.3, las constantes solo podían ser definidas usando la
 función \sphinxcode{define()} y no por simple asignación.
@@ -815,12 +824,12 @@ un valor de un tipo permitido.
 
 \subsection{Constantes predefinidas}
 \label{\detokenize{php:constantes-predefinidas}}
-\textless{}\url{http://php.net/manual/es/language.constants.predefined.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.constants.predefined.php}\textgreater{}
 
 
 \subsection{\sphinxstyleliteralintitle{defined()}}
 \label{\detokenize{php:defined}}
-\textless{}\url{http://php.net/manual/es/function.defined.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/function.defined.php}\textgreater{}
 
 
 \section{Flujo de control}
@@ -828,14 +837,14 @@ un valor de un tipo permitido.
 
 \subsection{Estructuras de control}
 \label{\detokenize{php:estructuras-de-control}}
-\textless{}\url{http://php.net/manual/es/language.control-structures.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.control-structures.php}\textgreater{}
 
 
 \subsubsection{Sintaxis alternativa}
 \label{\detokenize{php:sintaxis-alternativa}}
-\textless{}\url{http://php.net/manual/es/control-structures.alternative-syntax.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/control-structures.alternative-syntax.php}\textgreater{}
 
-ricpelo's note: El \sphinxcode{do \{ ... \} while (...);} \sphinxstylestrong{no} tiene sintaxis
+ricpelo’s note: El \sphinxcode{do \{ ... \} while (...);} \sphinxstylestrong{no} tiene sintaxis
 alternativa.
 
 
@@ -844,15 +853,15 @@ alternativa.
 
 \subsubsection{\sphinxstyleliteralintitle{include}, \sphinxstyleliteralintitle{require}}
 \label{\detokenize{php:include-require}}
-\textless{}\url{http://php.net/manual/es/function.include.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/function.include.php}\textgreater{}
 
 \begin{DUlineblock}{0em}
-\item[] ricpelo's note: El nombre del archivo debe aparecer con su extensión.
+\item[] ricpelo’s note: El nombre del archivo debe aparecer con su extensión.
 No vale hacer \sphinxcode{require 'pepe';}.
-\item[] ricpelo's note: Cuando un archivo es incluido, el intérprete abandona
+\item[] ricpelo’s note: Cuando un archivo es incluido, el intérprete abandona
 el modo PHP e ingresa al modo HTML al comienzo del archivo objetivo y
 se reanuda de nuevo al final.
-\item[] ricpelo's note: Si el archivo incluido tiene un \sphinxcode{return ...;}, el
+\item[] ricpelo’s note: Si el archivo incluido tiene un \sphinxcode{return ...;}, el
 \sphinxcode{include} o el \sphinxcode{require} que lo incluya devolverá el valor
 devuelto por el \sphinxcode{return}.
 \end{DUlineblock}
@@ -860,7 +869,7 @@ devuelto por el \sphinxcode{return}.
 
 \subsubsection{\sphinxstyleliteralintitle{include\_once}, \sphinxstyleliteralintitle{require\_once}}
 \label{\detokenize{php:include-once-require-once}}
-\textless{}\url{http://php.net/manual/es/function.include-once.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/function.include-once.php}\textgreater{}
 
 
 \section{Funciones predefinidas destacadas}
@@ -868,19 +877,19 @@ devuelto por el \sphinxcode{return}.
 
 \subsection{\sphinxstyleliteralintitle{isset()}}
 \label{\detokenize{php:isset}}
-\textless{}\url{http://php.net/manual/es/function.isset.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/function.isset.php}\textgreater{}
 
 \begin{DUlineblock}{0em}
-\item[] ricpelo's note: Cuidado si la variable contiene \sphinxcode{null}.
-\item[] ricpelo's note: No da error ni advertencia si la variable no existe.
+\item[] ricpelo’s note: Cuidado si la variable contiene \sphinxcode{null}.
+\item[] ricpelo’s note: No da error ni advertencia si la variable no existe.
 \end{DUlineblock}
 
 
 \subsection{\sphinxstyleliteralintitle{empty()}}
 \label{\detokenize{php:empty}}
-\textless{}\url{http://php.net/manual/es/function.empty.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/function.empty.php}\textgreater{}
 
-ricpelo's note: Para evitar el problema de \sphinxcode{empty("0") === true}:
+ricpelo’s note: Para evitar el problema de \sphinxcode{empty("0") === true}:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k}{function} \PYG{n+nf}{is\PYGZus{}blank}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}value}\PYG{p}{)} \PYG{p}{\PYGZob{}}
@@ -888,43 +897,43 @@ ricpelo's note: Para evitar el problema de \sphinxcode{empty("0") === true}:
 \PYG{p}{\PYGZcb{}}
 \end{sphinxVerbatim}
 
-ricpelo's note: No da error ni advertencia si la variable no existe.
+ricpelo’s note: No da error ni advertencia si la variable no existe.
 
 
 \subsection{\sphinxstyleliteralintitle{var\_dump()}}
 \label{\detokenize{php:var-dump}}
-\textless{}\url{http://php.net/manual/es/function.var-dump.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/function.var-dump.php}\textgreater{}
 
 
 \section{Arrays}
 \label{\detokenize{php:arrays}}
-\textless{}\url{http://php.net/manual/es/language.types.array.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.types.array.php}\textgreater{}
 
-ricpelo's note: Las claves pueden ser enteros o cadenas.
+ricpelo’s note: Las claves pueden ser enteros o cadenas.
 
 
 \subsection{Operadores para arrays}
 \label{\detokenize{php:operadores-para-arrays}}
-\textless{}\url{http://php.net/manual/es/language.operators.array.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.operators.array.php}\textgreater{}
 
-ricpelo's note: \sphinxstylestrong{Comparaciones}: Un \sphinxcode{array} con menos elementos es
+ricpelo’s note: \sphinxstylestrong{Comparaciones}: Un \sphinxcode{array} con menos elementos es
 menor. De otra forma, compara valor por valor.
 
 
 \subsubsection{Acceso, modificación y agregación}
 \label{\detokenize{php:acceso-modificacion-y-agregacion}}
-\textless{}\url{http://php.net/manual/es/language.types.array.php\#language.types.array.syntax.modifying}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.types.array.php\#language.types.array.syntax.modifying}\textgreater{}
 
 
 \subsection{Funciones de manejo de arrays{]}}
 \label{\detokenize{php:funciones-de-manejo-de-arrays}}
-\textless{}\url{http://php.net/manual/es/book.array.php}\textgreater{}
-\textless{}\url{http://php.net/manual/es/ref.array.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/book.array.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/ref.array.php}\textgreater{}
 
 
 \subsubsection{Ordenación de arrays}
 \label{\detokenize{php:ordenacion-de-arrays}}
-\textless{}\url{http://php.net/manual/es/array.sorting.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/array.sorting.php}\textgreater{}
 
 
 \subsubsection{\sphinxstyleliteralintitle{print\_r()}}
@@ -935,50 +944,50 @@ menor. De otra forma, compara valor por valor.
 
 \subsubsection{\sphinxstyleliteralintitle{isset()} vs. \sphinxstyleliteralintitle{array\_key\_exists()}}
 \label{\detokenize{php:isset-vs-array-key-exists}}
-\textless{}\url{http://php.net/manual/es/function.array-key-exists.php\#107786}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/function.array-key-exists.php\#107786}\textgreater{}
 
 
 \subsection{\sphinxstyleliteralintitle{foreach}}
 \label{\detokenize{php:foreach}}
-\textless{}\url{http://php.net/manual/es/control-structures.foreach.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/control-structures.foreach.php}\textgreater{}
 
 
 \subsection{Conversión a \sphinxstyleliteralintitle{array}}
 \label{\detokenize{php:conversion-a-array}}
-\textless{}\url{http://php.net/manual/es/language.types.array.php\#language.types.array.casting}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.types.array.php\#language.types.array.casting}\textgreater{}
 
 
 \subsection{\sphinxstyleemphasis{Ejemplo}: \sphinxstyleliteralintitle{\$argv} en CLI}
 \label{\detokenize{php:ejemplo-argv-en-cli}}
-\textless{}\url{http://php.net/manual/es/reserved.variables.argv.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/reserved.variables.argv.php}\textgreater{}
 
 
 \section{Funciones definidas por el usuario}
 \label{\detokenize{php:funciones-definidas-por-el-usuario}}
-\textless{}\url{http://php.net/manual/es/language.functions.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.functions.php}\textgreater{}
 
 
 \subsection{Argumentos}
 \label{\detokenize{php:argumentos}}
-\textless{}\url{http://php.net/manual/es/functions.arguments.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/functions.arguments.php}\textgreater{}
 
 
 \subsubsection{Paso de argumentos por valor y por referencia}
 \label{\detokenize{php:paso-de-argumentos-por-valor-y-por-referencia}}
-\textless{}\url{http://php.net/manual/es/functions.arguments.php\#functions.arguments.by-reference}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/functions.arguments.php\#functions.arguments.by-reference}\textgreater{}
 
 
 \subsubsection{Argumentos por defecto}
 \label{\detokenize{php:argumentos-por-defecto}}
-\textless{}\url{http://php.net/manual/es/functions.arguments.php\#functions.arguments.default}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/functions.arguments.php\#functions.arguments.default}\textgreater{}
 
-ricpelo's note:
+ricpelo’s note:
 \sphinxcode{php   function prueba(\$opciones = {[}{]}) \{       extract(\$opciones);       // ...   \}}
 
 
 \subsection{Ámbito de variables}
 \label{\detokenize{php:ambito-de-variables}}
-\textless{}\url{http://php.net/language.variables.scope}\textgreater{}
+\textless{}\sphinxurl{http://php.net/language.variables.scope}\textgreater{}
 
 
 \subsubsection{Ámbito simple al archivo}
@@ -989,41 +998,41 @@ ricpelo's note:
 
 \subsubsection{Uso de \sphinxstyleliteralintitle{global}}
 \label{\detokenize{php:uso-de-global}}
-ricpelo's note: Usar \sphinxcode{global \$x;} cuando \sphinxcode{\$x} no existe hace que
+ricpelo’s note: Usar \sphinxcode{global \$x;} cuando \sphinxcode{\$x} no existe hace que
 \sphinxcode{\$x} empiece a existir y valga \sphinxcode{null}.
 
 
 \subsubsection{Variables superglobales}
 \label{\detokenize{php:variables-superglobales}}
-\textless{}\url{http://php.net/manual/es/language.variables.superglobals.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/language.variables.superglobals.php}\textgreater{}
 
 
 \subsection{Declaraciones de tipos}
 \label{\detokenize{php:declaraciones-de-tipos}}
-ricpelo's note: \sphinxstylestrong{NO} se hacen conversiones implícitas a \sphinxcode{array}, ni
+ricpelo’s note: \sphinxstylestrong{NO} se hacen conversiones implícitas a \sphinxcode{array}, ni
 en argumentos ni en devolución.
 
 
 \subsubsection{Declaraciones de tipo de argumento}
 \label{\detokenize{php:declaraciones-de-tipo-de-argumento}}
-\textless{}\url{http://php.net/manual/es/functions.arguments.php\#functions.arguments.type-declaration}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/functions.arguments.php\#functions.arguments.type-declaration}\textgreater{}
 
 
 \subsubsection{Declaraciones de tipo de devolución}
 \label{\detokenize{php:declaraciones-de-tipo-de-devolucion}}
-\textless{}\url{http://php.net/manual/es/functions.returning-values.php\#functions.returning-values.type-declaration}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/functions.returning-values.php\#functions.returning-values.type-declaration}\textgreater{}
 
 
 \subsubsection{Tipos \sphinxstyleemphasis{nullable} (\sphinxstyleliteralintitle{?}) y \sphinxstyleliteralintitle{void}}
 \label{\detokenize{php:tipos-nullable-y-void}}
-\textless{}\url{http://php.net/manual/es/migration71.new-features.php}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/migration71.new-features.php}\textgreater{}
 
 
 \subsubsection{Tipificación estricta}
 \label{\detokenize{php:tipificacion-estricta}}
-\textless{}\url{http://php.net/manual/es/functions.arguments.php\#functions.arguments.type-declaration.strict}\textgreater{}
+\textless{}\sphinxurl{http://php.net/manual/es/functions.arguments.php\#functions.arguments.type-declaration.strict}\textgreater{}
 
-ricpelo's note: El \sphinxcode{declare(strict\_types=1);} se pone en el archivo
+ricpelo’s note: El \sphinxcode{declare(strict\_types=1);} se pone en el archivo
 que hace la llamada, no en el que define la función.
 
 
