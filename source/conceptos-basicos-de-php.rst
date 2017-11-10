@@ -120,8 +120,8 @@ instrucciones sencillas. Cada comando consta de una **palabra clave**, que
 identifica al comando, y de una serie de *parámetros* que completan la
 sentencia.
 
-Comando ``echo``
-^^^^^^^^^^^^^^^^
+El :index:`comando <single: echo>` ``echo``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 El ejemplo clásico de comando en PHP es ``echo`` (ver `definición
 <http://php.net/manual/es/function.echo.php>`_ en el manual de PHP). El comando
@@ -259,8 +259,6 @@ Devuelve ``8``.
 
 En PHP, a diferencia de lo que ocurre en Matemáticas, existen funciones que no
 devuelven ningún valor, ya que su objetivo es llevar a cabo un *efecto lateral*.
-
-ricpelo's note: *Ejemplos*: aritmética, ``cos()``, ``max()``
 
 Funcionamiento del intérprete
 -----------------------------

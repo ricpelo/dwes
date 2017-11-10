@@ -1,0 +1,7 @@
+\begin{sphinxtheindex}
+\def\bigletter#1{{\Large\sffamily#1}\nopagebreak\vspace{1mm}}
+
+  \bigletter E
+  \item echo, \hyperpage{17}
+
+\end{sphinxtheindex}

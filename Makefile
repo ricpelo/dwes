@@ -7,6 +7,7 @@ SPHINXBUILD   = sphinx-build
 SPHINXPROJ    = Desarrollowebenentornoservidor
 SOURCEDIR     = source
 BUILDDIR      = _build
+LATEXMKOPTS   = -xelatex
 
 # Put it first so that "make" without argument is like "make help".
 help:

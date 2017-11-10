@@ -17,6 +17,3 @@ Desarrollo web en entorno servidor
 Índices y tablas
 ================
 
-* :ref:`genindex`
-* :ref:`search`
-
