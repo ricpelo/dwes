@@ -1,7 +1,37 @@
 \begin{sphinxtheindex}
 \def\bigletter#1{{\Large\sffamily#1}\nopagebreak\vspace{1mm}}
 
+  \bigletter C
+  \item comandos, \hyperpage{16, 17}
+
+  \indexspace
+  \bigletter D
+  \item datos, \hyperpage{16}
+
+  \indexspace
   \bigletter E
   \item echo, \hyperpage{17}
+  \item Expresiones, \hyperpage{17}
+
+  \indexspace
+  \bigletter F
+  \item Funciones, \hyperpage{19}
+
+  \indexspace
+  \bigletter I
+  \item instrucciones, \hyperpage{16}
+
+  \indexspace
+  \bigletter O
+  \item Operadores, \hyperpage{18}
+
+  \indexspace
+  \bigletter P
+  \item palabras clave, \hyperpage{17}
+
+  \indexspace
+  \bigletter S
+  \item Sentencias, \hyperpage{16}
+  \item sentencias, \hyperpage{16}
 
 \end{sphinxtheindex}

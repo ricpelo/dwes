@@ -42,19 +42,26 @@ Sintaxis básica
 
 <http://php.net/manual/es/language.basic-syntax.php>
 
+.. index::
+   single: datos
+   single: instrucciones
+
 Datos e instrucciones
 ~~~~~~~~~~~~~~~~~~~~~
 
 En todo lenguaje de programación existen dos elementos básicos: los **datos** y
-las **instrucciones**. Los datos son las porciones de información con las que
-trabajan los programas, y las instrucciones son las acciones que manipulan esos
-datos para llevar a cabo la tarea para la que fue concebido el programa. Ambos
-elementos, datos e instrucciones, constituyen los pilares del lenguaje y de los
-programas que se escriben con él.
+las <single: instrucciones> **instrucciones**. Los datos son las porciones de
+información con las que trabajan los programas, y las instrucciones son las
+acciones que manipulan esos datos para llevar a cabo la tarea para la que fue
+concebido el programa. Ambos elementos, datos e instrucciones, constituyen los
+pilares del lenguaje y de los programas que se escriben con él.
+
+.. index::
+   single: sentencias
 
 Desde un punto de vista sintáctico, en el código fuente del programa, los datos
-se codifican en forma de **expresiones**, y las instrucciones toman la forma de
-**sentencias**.
+se codifican en forma de **expresiones**, y las instrucciones toman la forma
+de **sentencias**.
 
 La diferencia fundamental entre una expresión y una sentencia es la siguiente:
 
@@ -90,8 +97,8 @@ Las expresiones se evalúan. Las sentencias se ejecutan.
 
    Es una constante literal numérica cuyo valor es, precisamente, ``74``.
 
-Sentencias y comandos
-~~~~~~~~~~~~~~~~~~~~~
+:index:`Sentencias` y :index:`comandos`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Las sentencias en PHP pueden ser *simples* o *compuestas*.
 
@@ -114,14 +121,21 @@ producen resultados que se vuelcan hacia la *salida* (siendo esta cualquier
 dispositivo de salida, como por ejemplo la pantalla, un archivo del disco o una
 fila de una tabla de una base de datos relacional).
 
+.. index::
+   single: comandos
+   single: palabras clave
+
 Otra forma de construir una sentencia simple es usar **comandos**. PHP dispone
 de varios comandos con los que se pueden escribir sentencias para llevar a cabo
 instrucciones sencillas. Cada comando consta de una **palabra clave**, que
 identifica al comando, y de una serie de *parámetros* que completan la
 sentencia.
 
-El :index:`comando <single: echo>` ``echo``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. index::
+   single: echo
+
+El comando ``echo``
+^^^^^^^^^^^^^^^^^^^
 
 El ejemplo clásico de comando en PHP es ``echo`` (ver `definición
 <http://php.net/manual/es/function.echo.php>`_ en el manual de PHP). El comando
@@ -141,8 +155,8 @@ coma::
 
     echo 'El resultado es: ', 4 * 2;
 
-Expresiones
-~~~~~~~~~~~
+:index:`Expresiones`
+~~~~~~~~~~~~~~~~~~~~
 
 El otro tipo de construcción sintáctica que existe en PHP junto con las
 sentencias son las *expresiones*. Una expresión *denota* o *representa* un
@@ -151,8 +165,8 @@ ejemplo, el número ``25``) o tan compleja que involucre constantes, variables,
 operadores, funciones y métodos, combinados todos ellos entre sí para formar una
 única expresión.
 
-Operadores
-^^^^^^^^^^
+:index:`Operadores`
+^^^^^^^^^^^^^^^^^^^
 
 Un **operador** es un símbolo que representa una operación que se desea realizar
 sobre uno, dos o tres **operandos** (dependiendo de si el operador es *unario*,
@@ -226,8 +240,8 @@ los operadores que vayan entre paréntesis. Por ejemplo, en la expresión::
 la suma se hace antes que el producto, aunque este último sea un operador de
 mayor prioridad. El resultado de dicha expresión es el valor ``35``.
 
-Funciones
-^^^^^^^^^
+:index:`Funciones`
+^^^^^^^^^^^^^^^^^^
 
 Las funciones en las expresiones cumplen el mismo papel que en las Matemáticas
 de toda la vida: realizan un cálculo a partir de unos valores de entrada
@@ -258,7 +272,7 @@ Devuelve ``8``.
    *llamada* a la función.
 
 En PHP, a diferencia de lo que ocurre en Matemáticas, existen funciones que no
-devuelven ningún valor, ya que su objetivo es llevar a cabo un *efecto lateral*.
+devuelven ningún valor, ya que su objetivo es provocar un *efecto lateral*.
 
 Funcionamiento del intérprete
 -----------------------------
