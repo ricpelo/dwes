@@ -326,12 +326,12 @@ Ramas de seguimiento (tracking branch)
 ricpelo’s note: Programada inicialmente para empezar el 23-10-2017.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-Hola desde PHP.
+Hola
 \end{sphinxVerbatim}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYGZdl{} php ../../p.php
-Hola desde PHP.
+Hola
 \end{sphinxVerbatim}
 
 
@@ -600,7 +600,7 @@ mayor prioridad. El resultado de dicha expresión es el valor \sphinxcode{35}.
 \label{\detokenize{php:funciones}}
 Las funciones en las expresiones cumplen el mismo papel que en las Matemáticas
 de toda la vida: realizan un cálculo a partir de unos valores de entrada
-indicados en sus parámetros y devuelven el resultado de dicho cálculo. Por
+indicados en sus parámetros y \sphinxstyleemphasis{devuelven} el resultado de dicho cálculo,. Por
 ejemplo, la función \sphinxstyleemphasis{coseno} (abreviado como \sphinxstyleemphasis{cos}) calcula el coseno de un
 ángulo. En Matemáticas (y en Programación) se representa indicando el nombre de
 la función y, a continuación, la lista de sus parámetros entre paréntesis y
@@ -611,7 +611,28 @@ escribir:
 \PYG{n+nb}{cos}\PYG{p}{(}\PYG{l+m+mf}{2.4}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-Que da como resultado -0.73739371554125.
+Que da como resultado \sphinxcode{-0.73739371554125}, y ese sería el valor de dicha
+expresión.
+
+El coseno es un ejemplo de función con un único parámetro, pero hay funciones
+que admiten o requieren más parámetros. Por ejemplo, la función \sphinxcode{max()}
+devuelve el valor máximo de todos los indicados en su lista de parámetros. Por
+ejemplo:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n+nb}{max}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+Devuelve \sphinxcode{8}.
+
+\begin{sphinxadmonition}{note}{Nota:}
+Cuando usamos una función en una expresión, decimos que estamos \sphinxstyleemphasis{llamando} o
+\sphinxstyleemphasis{invocando} a la función. La aparición de la función en la expresión es una
+\sphinxstyleemphasis{llamada} a la función.
+\end{sphinxadmonition}
+
+En PHP, a diferencia de lo que ocurre en Matemáticas, existen funciones que no
+devuelven ningún valor, ya que su objetivo es llevar a cabo un \sphinxstyleemphasis{efecto lateral}.
 
 ricpelo’s note: \sphinxstyleemphasis{Ejemplos}: aritmética, \sphinxcode{cos()}, \sphinxcode{max()}
 
