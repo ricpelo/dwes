@@ -93,13 +93,172 @@ Las expresiones se evalúan. Las sentencias se ejecutan.
 Sentencias y comandos
 ~~~~~~~~~~~~~~~~~~~~~
 
+Las sentencias en PHP pueden ser *simples* o *compuestas*.
+
+- Las **sentencias simples** son las instrucciones más elementales del lenguaje
+  y se escriben siempre acabadas en punto y coma (``;``).
+- Las **sentencias compuestas** corresponden a las **estructuras de control** y
+  se estudiarán posteriormente en este capítulo.
+
+Se puede construir una sentencia simple usando sencillamente una expresión y
+acabándola en punto y coma, como por ejemplo::
+
+    8 + 3;
+
+Pero una sentencia así no tendría mucha utilidad, ya que el intérprete de PHP se
+limitaría a evaluar la expresión pero no haría nada más con el valor calculado.
+
+Las sentencias realmente útiles son aquellas que provocan **efectos laterales**,
+es decir, acciones que provocan cambios en el estado interno del programa o que
+producen resultados que se vuelcan hacia la *salida* (siendo esta cualquier
+dispositivo de salida, como por ejemplo la pantalla, un archivo del disco o una
+fila de una tabla de una base de datos relacional).
+
+Otra forma de construir una sentencia simple es usar **comandos**. PHP dispone
+de varios comandos con los que se pueden escribir sentencias para llevar a cabo
+instrucciones sencillas. Cada comando consta de una **palabra clave**, que
+identifica al comando, y de una serie de *parámetros* que completan la
+sentencia.
+
 Comando ``echo``
 ^^^^^^^^^^^^^^^^
 
-<http://php.net/manual/es/function.echo.php>
+El ejemplo clásico de comando en PHP es ``echo`` (ver `definición
+<http://php.net/manual/es/function.echo.php>`_ en el manual de PHP). El comando
+``echo`` vuelca a la salida el valor de las expresiones que se indican como
+parámetro en la sentencia. Por ejemplo::
 
-Expresiones, operadores y funciones
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    echo 25 * 3;
+
+Muestra ``75`` por la salida (normalmente la pantalla). O bien::
+
+    echo '¡Hola a todos!';
+
+Muestra la cadena ``¡Hola a todos!``.
+
+Puede mostrar varios valores, separando cada uno de ellos entre sí con una
+coma::
+
+    echo 'El resultado es: ', 4 * 2;
+
+Expresiones
+~~~~~~~~~~~
+
+El otro tipo de construcción sintáctica que existe en PHP junto con las
+sentencias son las *expresiones*. Una expresión *denota* o *representa* un
+valor. Una expresión puede ser tan simple como una constante literal (por
+ejemplo, el número ``25``) o tan compleja que involucre constantes, variables,
+operadores, funciones y métodos, combinados todos ellos entre sí para formar una
+única expresión.
+
+Operadores
+^^^^^^^^^^
+
+Un **operador** es un símbolo que representa una operación que se desea realizar
+sobre uno, dos o tres **operandos** (dependiendo de si el operador es *unario*,
+*binario* o *ternario*). Los operandos son los valores sobre los que actúa el
+operador para llevar a cabo la operación deseada. Por ejemplo::
+
+    4 + 3
+
+Aquí, el operador ``+`` representa la operación *suma* a realizar sobre los números ``4`` y ``3``, que son sus operandos. Como el operador actúa sobre dos operandos, se dice que es un operador *binario*. En cambio::
+
+    -17
+
+Aquí se usa el operador ``-`` (*signo menos*) para convertir en negativo el
+valor ``17``. Como el operador actúa sobre un único operando, se dice que es un
+operador *unario*.
+
+En PHP existe un único operador *ternario* que se estudiará posteriormente.
+
+En una misma expresión pueden actuar varios operadores, como en::
+
+    4 + 3 + 5
+
+Que denota el valor ``12``, o con varios operadores diferentes::
+
+    4 + 3 * 5
+
+Que evalúa a ``19``.
+
+Asociatividad y prioridad
+'''''''''''''''''''''''''
+
+Todas las expresiones anteriores son ejemplos de expresiones *artiméticas*,
+donde se realizan las operaciones matemáticas usuales (suma, resta, producto y
+división) sobre números. La evaluación de una expresión (ya sea aritmética o de
+cualquier otro tipo) depende de las reglas de **asociatividad** y **prioridad**
+de los operadores que participan en dicha expresión, las cuales tenemos que
+conocer para entender cómo evaluará el intérprete las expresiones que formen
+parte de nuestro programa. En el caso de las expresiones aritméticas, las reglas
+son las habituales que aprendimos en el colegio:
+
+- En una expresión en la que un operando está rodeado a izquierda y derecha por
+  *el mismo operador*, se aplica la regla de la *asociatividad*. Por ejemplo,
+  en la expresión::
+
+    4 + 3 + 5
+
+  el operando ``3`` tiene el mismo operador a izquierda y derecha (el ``+``), y
+  como dicho operador es *asociativo por la izquierda*, la expresión se evalúa
+  igual que si se hubiera escrito como::
+
+    (4 + 3) + 5
+
+- En una expresión en la que un operando está rodeado a izquierda y derecha por
+  *distintos operadores*, se aplica la regla de la *prioridad*. Por ejemplo,
+  en la expresión::
+
+    4 + 3 * 5
+
+  el operando ``3`` tiene el operador ``+`` a su izquierda y el ``*`` a su
+  derecha, pero como el producto tiene más prioridad que la suma, la expresión
+  se evalúa igual que si se hubiera escrito como::
+
+    4 + (3 * 5)
+
+Como se aprecia en los ejemplos anteriores, se pueden usar **paréntesis** para
+agrupar sub-expresiones dentro de una expresión y así aumentar la prioridad de
+los operadores que vayan entre paréntesis. Por ejemplo, en la expresión::
+
+    (4 + 3) * 5
+
+la suma se hace antes que el producto, aunque este último sea un operador de
+mayor prioridad. El resultado de dicha expresión es el valor ``35``.
+
+Funciones
+^^^^^^^^^
+
+Las funciones en las expresiones cumplen el mismo papel que en las Matemáticas
+de toda la vida: realizan un cálculo a partir de unos valores de entrada
+indicados en sus parámetros y *devuelven* el resultado de dicho cálculo,. Por
+ejemplo, la función *coseno* (abreviado como *cos*) calcula el coseno de un
+ángulo. En Matemáticas (y en Programación) se representa indicando el nombre de
+la función y, a continuación, la lista de sus parámetros entre paréntesis y
+separados por comas. Así, para calcular el coseno de 2.4 radianes, podemos
+escribir::
+
+    cos(2.4)
+
+Que da como resultado ``-0.73739371554125``, y ese sería el valor de dicha
+expresión.
+
+El coseno es un ejemplo de función con un único parámetro, pero hay funciones
+que admiten o requieren más parámetros. Por ejemplo, la función ``max()``
+devuelve el valor máximo de todos los indicados en su lista de parámetros. Por
+ejemplo::
+
+    max(5, 3, 8, 2)
+
+Devuelve ``8``.
+
+.. note::
+   Cuando usamos una función en una expresión, decimos que estamos *llamando* o
+   *invocando* a la función. La aparición de la función en la expresión es una
+   *llamada* a la función.
+
+En PHP, a diferencia de lo que ocurre en Matemáticas, existen funciones que no
+devuelven ningún valor, ya que su objetivo es llevar a cabo un *efecto lateral*.
 
 ricpelo's note: *Ejemplos*: aritmética, ``cos()``, ``max()``
 
