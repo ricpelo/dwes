@@ -360,6 +360,39 @@ manipular la información. Su estudio detallado se hará posteriormente.
 Funcionamiento del intérprete
 -----------------------------
 
+PHP es un lenguaje *interpretado* y, como tal, requiere de la existencia de un **intérprete**, que es la utilidad encargada de leer el código fuente escrito en el lenguaje y ejecutarlo adecuadamente siguiendo las reglas de dicho lenguaje.
+
+La ejecución de nuestro código se puede llevar a cabo de dos formas:
+
+.. index:: scripts
+
+Por lotes:
+    Nuestro código fuente está almacenado en un archivo de texto llamado
+    **script** (normalmente, con extensión :file:`.php`) y el intérprete lee
+    dicho archivo, lo analiza sintáctica y semánticamente y lo ejecuta
+    instrucción a instrucción. El objetivo final de este curso es desarrollar
+    aplicaciones web escribiendo los *scripts* necesarios para cumplir con la
+    funcionalidad deseada.
+
+    Si, por ejemplo, tenemos nuestro *script* almacenado en el archivo
+    :file:`prueba.php`, provocaremos la ejecución del mismo mediante la
+    siguiente orden del sistema operativo:
+
+    .. code-block:: shell-session
+
+        $ php prueba.php
+
+Interactiva:
+    Un intérprete interactivo solicita al usuario que introduzca (normalmente
+    por teclado) una sentencia o expresión. Una vez analizada, ejecuta dicha
+    sentencia (o evalúa dicha expresión) y vuelve a solicitar al usuario la
+    introducción de una nueva sentencia o expresión. El usuario, por tanto, ve
+    inmediatamente el efecto (o el resultado) que produce la ejecución (o
+    evaluación) de la sentencia (o expresión) que acaba de introducir en el
+    intérprete interactivo.
+
+ssdfsdfsdf.
+
 <http://php.net/manual/es/language.basic-syntax.phpmode.php>
 
 Modo dual de operación

@@ -4,3 +4,7 @@ code {
     border: none !important;
     background: none !important;
 }
+
+dl.docutils dd {
+    line-height: 24px !important;
+}
