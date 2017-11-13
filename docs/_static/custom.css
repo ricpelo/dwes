@@ -1,0 +1,10 @@
+code {
+    color: #0086b3 !important;
+    font-size: 90% !important;
+    border: none !important;
+    background: none !important;
+}
+
+.highlight-php {
+    background: #272822 !important;
+}

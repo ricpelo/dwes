@@ -1,11 +1,17 @@
 \indexentry{datos|hyperpage}{16}
 \indexentry{instrucciones|hyperpage}{16}
 \indexentry{sentencias|hyperpage}{16}
-\indexentry{Sentencias|hyperpage}{16}
+\indexentry{expresiones|hyperpage}{16}
+\indexentry{expresiones, evaluación de|hyperpage}{16}
+\indexentry{evaluación|hyperindexformat{\see{expresiones}}}{16}
+\indexentry{sentencias|hyperpage}{16}
 \indexentry{comandos|hyperpage}{16}
+\indexentry{efectos laterales|hyperpage}{17}
 \indexentry{comandos|hyperpage}{17}
 \indexentry{palabras clave|hyperpage}{17}
 \indexentry{echo|hyperpage}{17}
-\indexentry{Expresiones|hyperpage}{17}
-\indexentry{Operadores|hyperpage}{18}
-\indexentry{Funciones|hyperpage}{19}
+\indexentry{expresiones|hyperpage}{17}
+\indexentry{operadores|hyperpage}{17}
+\indexentry{asociatividad|hyperpage}{18}
+\indexentry{prioridad|hyperpage}{18}
+\indexentry{funciones|hyperpage}{19}

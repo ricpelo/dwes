@@ -1,5 +1,7 @@
 
 
+
+
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
@@ -29,6 +31,10 @@
     <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   
 
+  
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   
 
   
@@ -147,7 +153,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#numericos">5.6.2. Numéricos</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#enteros-int">5.6.2.1. Enteros (<code class="docutils literal"><span class="pre">int</span></code>)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#numeros-en-coma-flotante-float">5.6.2.2. Números en coma flotante (<code class="docutils literal"><span class="pre">float</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">5.6.2.3. Operadores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">5.6.2.3. Operadores</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#cadenas-string">5.6.3. Cadenas (<code class="docutils literal"><span class="pre">string</span></code>)</a><ul>
@@ -368,16 +374,16 @@ Hola
 <div class="section" id="datos-e-instrucciones">
 <span id="index-0"></span><h3>5.2.1. Datos e instrucciones<a class="headerlink" href="#datos-e-instrucciones" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>En todo lenguaje de programación existen dos elementos básicos: los <strong>datos</strong> y
-las &lt;single: instrucciones&gt; <strong>instrucciones</strong>. Los datos son las porciones de
-información con las que trabajan los programas, y las instrucciones son las
-acciones que manipulan esos datos para llevar a cabo la tarea para la que fue
-concebido el programa. Ambos elementos, datos e instrucciones, constituyen los
-pilares del lenguaje y de los programas que se escriben con él.</p>
+las <strong>instrucciones</strong>. Los datos son las porciones de información con las que
+trabajan los programas, y las instrucciones son las acciones que manipulan esos
+datos para llevar a cabo la tarea para la que fue concebido el programa. Ambos
+elementos, datos e instrucciones, constituyen los pilares del lenguaje y de los
+programas que se escriben con él.</p>
 <p id="index-1">Desde un punto de vista sintáctico, en el código fuente del programa, los datos
 se codifican en forma de <strong>expresiones</strong>, y las instrucciones toman la forma
 de <strong>sentencias</strong>.</p>
 <p>La diferencia fundamental entre una expresión y una sentencia es la siguiente:</p>
-<ul class="simple">
+<ul class="simple" id="index-2">
 <li>Una expresión tiene un valor (se dice que <em>denota</em> o <em>representa</em> un valor), y
 por eso decimos que una expresión <em>se puede evaluar</em>, y al evaluarse, se
 obtiene el valor de la expresión, que no es más que un dato.</li>
@@ -405,7 +411,7 @@ acciones que provoca dicha ejecución.</li>
 </div>
 </div>
 <div class="section" id="sentencias-y-comandos">
-<h3>5.2.2. <span class="target" id="index-2"></span>Sentencias y <span class="target" id="index-3"></span>comandos<a class="headerlink" href="#sentencias-y-comandos" title="Enlazar permanentemente con este título">¶</a></h3>
+<span id="index-3"></span><h3>5.2.2. Sentencias y comandos<a class="headerlink" href="#sentencias-y-comandos" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Las sentencias en PHP pueden ser <em>simples</em> o <em>compuestas</em>.</p>
 <ul class="simple">
 <li>Las <strong>sentencias simples</strong> son las instrucciones más elementales del lenguaje
@@ -420,18 +426,18 @@ acabándola en punto y coma, como por ejemplo:</p>
 </div>
 <p>Pero una sentencia así no tendría mucha utilidad, ya que el intérprete de PHP se
 limitaría a evaluar la expresión pero no haría nada más con el valor calculado.</p>
-<p>Las sentencias realmente útiles son aquellas que provocan <strong>efectos laterales</strong>,
+<p id="index-4">Las sentencias realmente útiles son aquellas que provocan <strong>efectos laterales</strong>,
 es decir, acciones que provocan cambios en el estado interno del programa o que
 producen resultados que se vuelcan hacia la <em>salida</em> (siendo esta cualquier
 dispositivo de salida, como por ejemplo la pantalla, un archivo del disco o una
 fila de una tabla de una base de datos relacional).</p>
-<p id="index-4">Otra forma de construir una sentencia simple es usar <strong>comandos</strong>. PHP dispone
+<p id="index-5">Otra forma de construir una sentencia simple es usar <strong>comandos</strong>. PHP dispone
 de varios comandos con los que se pueden escribir sentencias para llevar a cabo
 instrucciones sencillas. Cada comando consta de una <strong>palabra clave</strong>, que
-identifica al comando, y de una serie de <em>parámetros</em> que completan la
+identifica al comando, y de una serie de <em>argumentos</em> que completan la
 sentencia.</p>
 <div class="section" id="el-comando-echo">
-<span id="index-5"></span><h4>5.2.2.1. El comando <code class="docutils literal"><span class="pre">echo</span></code><a class="headerlink" href="#el-comando-echo" title="Enlazar permanentemente con este título">¶</a></h4>
+<span id="index-6"></span><h4>5.2.2.1. El comando <code class="docutils literal"><span class="pre">echo</span></code><a class="headerlink" href="#el-comando-echo" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>El ejemplo clásico de comando en PHP es <code class="docutils literal"><span class="pre">echo</span></code> (ver <a class="reference external" href="http://php.net/manual/es/function.echo.php">definición</a> en el manual de PHP). El comando
 <code class="docutils literal"><span class="pre">echo</span></code> vuelca a la salida el valor de las expresiones que se indican como
 parámetro en la sentencia. Por ejemplo:</p>
@@ -451,7 +457,7 @@ coma:</p>
 </div>
 </div>
 <div class="section" id="expresiones">
-<h3>5.2.3. <span class="target" id="index-6"></span>Expresiones<a class="headerlink" href="#expresiones" title="Enlazar permanentemente con este título">¶</a></h3>
+<span id="index-7"></span><h3>5.2.3. Expresiones<a class="headerlink" href="#expresiones" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>El otro tipo de construcción sintáctica que existe en PHP junto con las
 sentencias son las <em>expresiones</em>. Una expresión <em>denota</em> o <em>representa</em> un
 valor. Una expresión puede ser tan simple como una constante literal (por
@@ -459,15 +465,17 @@ ejemplo, el número <code class="docutils literal"><span class="pre">25</span></
 operadores, funciones y métodos, combinados todos ellos entre sí para formar una
 única expresión.</p>
 <div class="section" id="operadores">
-<h4>5.2.3.1. <span class="target" id="index-7"></span>Operadores<a class="headerlink" href="#operadores" title="Enlazar permanentemente con este título">¶</a></h4>
+<span id="index-8"></span><h4>5.2.3.1. Operadores<a class="headerlink" href="#operadores" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Un <strong>operador</strong> es un símbolo que representa una operación que se desea realizar
 sobre uno, dos o tres <strong>operandos</strong> (dependiendo de si el operador es <em>unario</em>,
-<em>binario</em> o <em>ternario</em>). Los operandos son los valores sobre los que actúa el
-operador para llevar a cabo la operación deseada. Por ejemplo:</p>
+<em>binario</em> o <em>ternario</em> <a class="footnote-reference" href="#aridad" id="id1">[1]</a>). Los operandos son los valores sobre los que
+actúa el operador para llevar a cabo la operación deseada. Por ejemplo:</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="o">+</span> <span class="mi">3</span>
 </pre></div>
 </div>
-<p>Aquí, el operador <code class="docutils literal"><span class="pre">+</span></code> representa la operación <em>suma</em> a realizar sobre los números <code class="docutils literal"><span class="pre">4</span></code> y <code class="docutils literal"><span class="pre">3</span></code>, que son sus operandos. Como el operador actúa sobre dos operandos, se dice que es un operador <em>binario</em>. En cambio:</p>
+<p>Aquí, el operador <code class="docutils literal"><span class="pre">+</span></code> representa la operación <em>suma</em> a realizar sobre los
+números <code class="docutils literal"><span class="pre">4</span></code> y <code class="docutils literal"><span class="pre">3</span></code>, que son sus operandos. Como el operador actúa sobre dos
+operandos, se dice que es un operador <em>binario</em>. En cambio:</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">17</span>
 </pre></div>
 </div>
@@ -475,6 +483,14 @@ operador para llevar a cabo la operación deseada. Por ejemplo:</p>
 valor <code class="docutils literal"><span class="pre">17</span></code>. Como el operador actúa sobre un único operando, se dice que es un
 operador <em>unario</em>.</p>
 <p>En PHP existe un único operador <em>ternario</em> que se estudiará posteriormente.</p>
+<table class="docutils footnote" frame="void" id="aridad" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>El número de operandos de un operador se denomina <strong>aridad</strong>. La aridad
+puede ser 1, 2 ó 3, según el operador sea <em>unario</em>, <em>binario</em> o
+<em>ternario</em>, respectivamente.</td></tr>
+</tbody>
+</table>
 <p>En una misma expresión pueden actuar varios operadores, como en:</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span>
 </pre></div>
@@ -485,7 +501,7 @@ operador <em>unario</em>.</p>
 </div>
 <p>Que evalúa a <code class="docutils literal"><span class="pre">19</span></code>.</p>
 <div class="section" id="asociatividad-y-prioridad">
-<h5>5.2.3.1.1. Asociatividad y prioridad<a class="headerlink" href="#asociatividad-y-prioridad" title="Enlazar permanentemente con este título">¶</a></h5>
+<span id="index-9"></span><h5>5.2.3.1.1. Asociatividad y prioridad<a class="headerlink" href="#asociatividad-y-prioridad" title="Enlazar permanentemente con este título">¶</a></h5>
 <p>Todas las expresiones anteriores son ejemplos de expresiones <em>artiméticas</em>,
 donde se realizan las operaciones matemáticas usuales (suma, resta, producto y
 división) sobre números. La evaluación de una expresión (ya sea aritmética o de
@@ -533,7 +549,7 @@ mayor prioridad. El resultado de dicha expresión es el valor <code class="docut
 </div>
 </div>
 <div class="section" id="funciones">
-<h4>5.2.3.2. <span class="target" id="index-8"></span>Funciones<a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">¶</a></h4>
+<span id="index-10"></span><h4>5.2.3.2. Funciones<a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Las funciones en las expresiones cumplen el mismo papel que en las Matemáticas
 de toda la vida: realizan un cálculo a partir de unos valores de entrada
 indicados en sus parámetros y <em>devuelven</em> el resultado de dicho cálculo,. Por
@@ -665,8 +681,8 @@ StackOverflow</a>.</div>
 <p>ricpelo’s note: <code class="docutils literal"><span class="pre">double</span></code> es sinónimo de <code class="docutils literal"><span class="pre">float</span></code>, pero debería usarse
 <code class="docutils literal"><span class="pre">float</span></code>.</p>
 </div>
-<div class="section" id="id1">
-<h4>5.6.2.3. Operadores<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="section" id="id2">
+<h4>5.6.2.3. Operadores<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="operadores-aritmeticos">
 <h5>5.6.2.3.1. Operadores aritméticos<a class="headerlink" href="#operadores-aritmeticos" title="Enlazar permanentemente con este título">¶</a></h5>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.operators.arithmetic.php">http://php.net/manual/es/language.operators.arithmetic.php</a>&gt;</p>
@@ -696,8 +712,8 @@ StackOverflow</a>.</div>
 <div class="line">- <code class="docutils literal"><span class="pre">$a[3]</span> <span class="pre">=</span> <span class="pre">'x';</span></code></div>
 </div>
 </div>
-<div class="section" id="id2">
-<h5>5.6.3.1.3. Operadores de incremento/decremento<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h5>
+<div class="section" id="id3">
+<h5>5.6.3.1.3. Operadores de incremento/decremento<a class="headerlink" href="#id3" title="Enlazar permanentemente con este título">¶</a></h5>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.operators.increment.php">http://php.net/manual/es/language.operators.increment.php</a>&gt;</p>
 </div>
 </div>
@@ -1079,7 +1095,7 @@ que hace la llamada, no en el que define la función.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Ricardo Pérez López.
-      Actualizado por última vez en 10-11-2017.
+      Actualizado por última vez en 13-11-2017.
 
     </p>
   </div>

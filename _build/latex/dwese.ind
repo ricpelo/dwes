@@ -1,6 +1,10 @@
 \begin{sphinxtheindex}
 \def\bigletter#1{{\Large\sffamily#1}\nopagebreak\vspace{1mm}}
 
+  \bigletter A
+  \item asociatividad, \hyperpage{18}
+
+  \indexspace
   \bigletter C
   \item comandos, \hyperpage{16, 17}
 
@@ -11,11 +15,14 @@
   \indexspace
   \bigletter E
   \item echo, \hyperpage{17}
-  \item Expresiones, \hyperpage{17}
+  \item efectos laterales, \hyperpage{17}
+  \item evaluación, \hyperindexformat{\see{expresiones}}{16}
+  \item expresiones, \hyperpage{16, 17}
+  \item expresiones, evaluación de, \hyperpage{16}
 
   \indexspace
   \bigletter F
-  \item Funciones, \hyperpage{19}
+  \item funciones, \hyperpage{19}
 
   \indexspace
   \bigletter I
@@ -23,15 +30,15 @@
 
   \indexspace
   \bigletter O
-  \item Operadores, \hyperpage{18}
+  \item operadores, \hyperpage{17}
 
   \indexspace
   \bigletter P
   \item palabras clave, \hyperpage{17}
+  \item prioridad, \hyperpage{18}
 
   \indexspace
   \bigletter S
-  \item Sentencias, \hyperpage{16}
   \item sentencias, \hyperpage{16}
 
 \end{sphinxtheindex}

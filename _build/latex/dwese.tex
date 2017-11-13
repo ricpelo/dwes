@@ -373,19 +373,20 @@ Hola
 \subsection{Datos e instrucciones}
 \label{\detokenize{php:datos-e-instrucciones}}\label{\detokenize{php:index-0}}
 En todo lenguaje de programación existen dos elementos básicos: los \sphinxstylestrong{datos} y
-las \textless{}single: instrucciones\textgreater{} \sphinxstylestrong{instrucciones}. Los datos son las porciones de
-información con las que trabajan los programas, y las instrucciones son las
-acciones que manipulan esos datos para llevar a cabo la tarea para la que fue
-concebido el programa. Ambos elementos, datos e instrucciones, constituyen los
-pilares del lenguaje y de los programas que se escriben con él.
+las \sphinxstylestrong{instrucciones}. Los datos son las porciones de información con las que
+trabajan los programas, y las instrucciones son las acciones que manipulan esos
+datos para llevar a cabo la tarea para la que fue concebido el programa. Ambos
+elementos, datos e instrucciones, constituyen los pilares del lenguaje y de los
+programas que se escriben con él.
 
-\index{sentencias}\ignorespaces 
+\index{sentencias}\index{expresiones}\ignorespaces 
 Desde un punto de vista sintáctico, en el código fuente del programa, los datos
 se codifican en forma de \sphinxstylestrong{expresiones}, y las instrucciones toman la forma
 de \sphinxstylestrong{sentencias}.
 
 La diferencia fundamental entre una expresión y una sentencia es la siguiente:
-\begin{itemize}
+
+\index{expresiones, evaluación de}\index{evaluación|see{expresiones}}\ignorespaces \begin{itemize}
 \item {} 
 Una expresión tiene un valor (se dice que \sphinxstyleemphasis{denota} o \sphinxstyleemphasis{representa} un valor), y
 por eso decimos que una expresión \sphinxstyleemphasis{se puede evaluar}, y al evaluarse, se
@@ -423,9 +424,10 @@ Es una expresión aritmética que involucra números reales y cuyo valor es
 Es una constante literal numérica cuyo valor es, precisamente, \sphinxcode{74}.
 \end{sphinxadmonition}
 
+\index{sentencias}\index{comandos}\ignorespaces 
 
-\subsection{\index{Sentencias}Sentencias y \index{comandos}comandos}
-\label{\detokenize{php:sentencias-y-comandos}}
+\subsection{Sentencias y comandos}
+\label{\detokenize{php:sentencias-y-comandos}}\label{\detokenize{php:index-3}}
 Las sentencias en PHP pueden ser \sphinxstyleemphasis{simples} o \sphinxstyleemphasis{compuestas}.
 \begin{itemize}
 \item {} 
@@ -448,6 +450,7 @@ acabándola en punto y coma, como por ejemplo:
 Pero una sentencia así no tendría mucha utilidad, ya que el intérprete de PHP se
 limitaría a evaluar la expresión pero no haría nada más con el valor calculado.
 
+\index{efectos laterales}\ignorespaces 
 Las sentencias realmente útiles son aquellas que provocan \sphinxstylestrong{efectos laterales},
 es decir, acciones que provocan cambios en el estado interno del programa o que
 producen resultados que se vuelcan hacia la \sphinxstyleemphasis{salida} (siendo esta cualquier
@@ -458,13 +461,13 @@ fila de una tabla de una base de datos relacional).
 Otra forma de construir una sentencia simple es usar \sphinxstylestrong{comandos}. PHP dispone
 de varios comandos con los que se pueden escribir sentencias para llevar a cabo
 instrucciones sencillas. Cada comando consta de una \sphinxstylestrong{palabra clave}, que
-identifica al comando, y de una serie de \sphinxstyleemphasis{parámetros} que completan la
+identifica al comando, y de una serie de \sphinxstyleemphasis{argumentos} que completan la
 sentencia.
 
 \index{echo}\ignorespaces 
 
 \subsubsection{El comando \sphinxstyleliteralintitle{echo}}
-\label{\detokenize{php:index-5}}\label{\detokenize{php:el-comando-echo}}
+\label{\detokenize{php:index-6}}\label{\detokenize{php:el-comando-echo}}
 El ejemplo clásico de comando en PHP es \sphinxcode{echo} (ver \sphinxhref{http://php.net/manual/es/function.echo.php}{definición}%
 \begin{footnote}[1]\sphinxAtStartFootnote
 \sphinxnolinkurl{http://php.net/manual/es/function.echo.php}
@@ -492,9 +495,10 @@ coma:
 \PYG{k}{echo} \PYG{l+s+s1}{\PYGZsq{}El resultado es: \PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{4} \PYG{o}{*} \PYG{l+m+mi}{2}\PYG{p}{;}
 \end{sphinxVerbatim}
 
+\index{expresiones}\ignorespaces 
 
-\subsection{\index{Expresiones}Expresiones}
-\label{\detokenize{php:expresiones}}
+\subsection{Expresiones}
+\label{\detokenize{php:expresiones}}\label{\detokenize{php:index-7}}
 El otro tipo de construcción sintáctica que existe en PHP junto con las
 sentencias son las \sphinxstyleemphasis{expresiones}. Una expresión \sphinxstyleemphasis{denota} o \sphinxstyleemphasis{representa} un
 valor. Una expresión puede ser tan simple como una constante literal (por
@@ -502,19 +506,28 @@ ejemplo, el número \sphinxcode{25}) o tan compleja que involucre constantes, va
 operadores, funciones y métodos, combinados todos ellos entre sí para formar una
 única expresión.
 
+\index{operadores}\ignorespaces 
 
-\subsubsection{\index{Operadores}Operadores}
-\label{\detokenize{php:operadores}}
+\subsubsection{Operadores}
+\label{\detokenize{php:index-8}}\label{\detokenize{php:operadores}}
 Un \sphinxstylestrong{operador} es un símbolo que representa una operación que se desea realizar
 sobre uno, dos o tres \sphinxstylestrong{operandos} (dependiendo de si el operador es \sphinxstyleemphasis{unario},
-\sphinxstyleemphasis{binario} o \sphinxstyleemphasis{ternario}). Los operandos son los valores sobre los que actúa el
-operador para llevar a cabo la operación deseada. Por ejemplo:
+\sphinxstyleemphasis{binario} o \sphinxstyleemphasis{ternario} %
+\begin{footnote}[2]\sphinxAtStartFootnote
+El número de operandos de un operador se denomina \sphinxstylestrong{aridad}. La aridad
+puede ser 1, 2 ó 3, según el operador sea \sphinxstyleemphasis{unario}, \sphinxstyleemphasis{binario} o
+\sphinxstyleemphasis{ternario}, respectivamente.
+%
+\end{footnote}). Los operandos son los valores sobre los que
+actúa el operador para llevar a cabo la operación deseada. Por ejemplo:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{4} \PYG{o}{+} \PYG{l+m+mi}{3}
 \end{sphinxVerbatim}
 
-Aquí, el operador \sphinxcode{+} representa la operación \sphinxstyleemphasis{suma} a realizar sobre los números \sphinxcode{4} y \sphinxcode{3}, que son sus operandos. Como el operador actúa sobre dos operandos, se dice que es un operador \sphinxstyleemphasis{binario}. En cambio:
+Aquí, el operador \sphinxcode{+} representa la operación \sphinxstyleemphasis{suma} a realizar sobre los
+números \sphinxcode{4} y \sphinxcode{3}, que son sus operandos. Como el operador actúa sobre dos
+operandos, se dice que es un operador \sphinxstyleemphasis{binario}. En cambio:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{17}
@@ -540,9 +553,10 @@ Que denota el valor \sphinxcode{12}, o con varios operadores diferentes:
 
 Que evalúa a \sphinxcode{19}.
 
+\index{asociatividad}\index{prioridad}\ignorespaces 
 
 \paragraph{Asociatividad y prioridad}
-\label{\detokenize{php:asociatividad-y-prioridad}}
+\label{\detokenize{php:asociatividad-y-prioridad}}\label{\detokenize{php:index-9}}
 Todas las expresiones anteriores son ejemplos de expresiones \sphinxstyleemphasis{artiméticas},
 donde se realizan las operaciones matemáticas usuales (suma, resta, producto y
 división) sobre números. La evaluación de una expresión (ya sea aritmética o de
@@ -599,9 +613,10 @@ los operadores que vayan entre paréntesis. Por ejemplo, en la expresión:
 la suma se hace antes que el producto, aunque este último sea un operador de
 mayor prioridad. El resultado de dicha expresión es el valor \sphinxcode{35}.
 
+\index{funciones}\ignorespaces 
 
-\subsubsection{\index{Funciones}Funciones}
-\label{\detokenize{php:funciones}}
+\subsubsection{Funciones}
+\label{\detokenize{php:funciones}}\label{\detokenize{php:index-10}}
 Las funciones en las expresiones cumplen el mismo papel que en las Matemáticas
 de toda la vida: realizan un cálculo a partir de unos valores de entrada
 indicados en sus parámetros y \sphinxstyleemphasis{devuelven} el resultado de dicho cálculo,. Por
@@ -729,7 +744,7 @@ hace de izquierda a derecha aunque el \sphinxcode{+} tenga más prioridad (y
 encima vaya entre paréntesis).
 \item[] - En el \sphinxhref{http://php.net/manual/es/language.operators.precedence.php}{manual de
 PHP}%
-\begin{footnote}[2]\sphinxAtStartFootnote
+\begin{footnote}[3]\sphinxAtStartFootnote
 \sphinxnolinkurl{http://php.net/manual/es/language.operators.precedence.php}
 %
 \end{footnote} se
@@ -741,7 +756,7 @@ específico de evaluación, ya que el comportamiento puede cambiar entre
 versiones de PHP o dependiendo de código circundante.»}
 \item[] - \sphinxhref{https://stackoverflow.com/questions/46861563/false-and-true-printhi}{Pregunta que hice al respecto en
 StackOverflow}%
-\begin{footnote}[3]\sphinxAtStartFootnote
+\begin{footnote}[4]\sphinxAtStartFootnote
 \sphinxnolinkurl{https://stackoverflow.com/questions/46861563/false-and-true-printhi}
 %
 \end{footnote}.
@@ -768,7 +783,7 @@ ricpelo’s note: \sphinxcode{double} es sinónimo de \sphinxcode{float}, pero d
 
 
 \subsubsection{Operadores}
-\label{\detokenize{php:id1}}
+\label{\detokenize{php:id2}}
 
 \paragraph{Operadores aritméticos}
 \label{\detokenize{php:operadores-aritmeticos}}
@@ -807,7 +822,7 @@ ricpelo’s note: Se usa \sphinxcode{\{\$var\}} y no
 
 
 \paragraph{Operadores de incremento/decremento}
-\label{\detokenize{php:id2}}
+\label{\detokenize{php:id3}}
 \textless{}\sphinxurl{http://php.net/manual/es/language.operators.increment.php}\textgreater{}
 
 

@@ -42,28 +42,29 @@ Sintaxis básica
 
 <http://php.net/manual/es/language.basic-syntax.php>
 
-.. index::
-   single: datos
-   single: instrucciones
+.. index:: datos, instrucciones
 
 Datos e instrucciones
 ~~~~~~~~~~~~~~~~~~~~~
 
 En todo lenguaje de programación existen dos elementos básicos: los **datos** y
-las <single: instrucciones> **instrucciones**. Los datos son las porciones de
-información con las que trabajan los programas, y las instrucciones son las
-acciones que manipulan esos datos para llevar a cabo la tarea para la que fue
-concebido el programa. Ambos elementos, datos e instrucciones, constituyen los
-pilares del lenguaje y de los programas que se escriben con él.
+las **instrucciones**. Los datos son las porciones de información con las que
+trabajan los programas, y las instrucciones son las acciones que manipulan esos
+datos para llevar a cabo la tarea para la que fue concebido el programa. Ambos
+elementos, datos e instrucciones, constituyen los pilares del lenguaje y de los
+programas que se escriben con él.
 
-.. index::
-   single: sentencias
+.. index:: sentencias, expresiones
 
 Desde un punto de vista sintáctico, en el código fuente del programa, los datos
 se codifican en forma de **expresiones**, y las instrucciones toman la forma
 de **sentencias**.
 
 La diferencia fundamental entre una expresión y una sentencia es la siguiente:
+
+.. index::
+   single: expresiones, evaluación de
+   see: evaluación; expresiones
 
 - Una expresión tiene un valor (se dice que *denota* o *representa* un valor), y
   por eso decimos que una expresión *se puede evaluar*, y al evaluarse, se
@@ -97,8 +98,10 @@ Las expresiones se evalúan. Las sentencias se ejecutan.
 
    Es una constante literal numérica cuyo valor es, precisamente, ``74``.
 
-:index:`Sentencias` y :index:`comandos`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. index:: sentencias, comandos
+
+Sentencias y comandos
+~~~~~~~~~~~~~~~~~~~~~
 
 Las sentencias en PHP pueden ser *simples* o *compuestas*.
 
@@ -115,24 +118,23 @@ acabándola en punto y coma, como por ejemplo::
 Pero una sentencia así no tendría mucha utilidad, ya que el intérprete de PHP se
 limitaría a evaluar la expresión pero no haría nada más con el valor calculado.
 
+.. index:: efectos laterales
+
 Las sentencias realmente útiles son aquellas que provocan **efectos laterales**,
 es decir, acciones que provocan cambios en el estado interno del programa o que
 producen resultados que se vuelcan hacia la *salida* (siendo esta cualquier
 dispositivo de salida, como por ejemplo la pantalla, un archivo del disco o una
 fila de una tabla de una base de datos relacional).
 
-.. index::
-   single: comandos
-   single: palabras clave
+.. index:: comandos, palabras clave
 
 Otra forma de construir una sentencia simple es usar **comandos**. PHP dispone
 de varios comandos con los que se pueden escribir sentencias para llevar a cabo
 instrucciones sencillas. Cada comando consta de una **palabra clave**, que
-identifica al comando, y de una serie de *parámetros* que completan la
+identifica al comando, y de una serie de *argumentos* que completan la
 sentencia.
 
-.. index::
-   single: echo
+.. index:: echo
 
 El comando ``echo``
 ^^^^^^^^^^^^^^^^^^^
@@ -155,8 +157,10 @@ coma::
 
     echo 'El resultado es: ', 4 * 2;
 
-:index:`Expresiones`
-~~~~~~~~~~~~~~~~~~~~
+.. index:: expresiones
+
+Expresiones
+~~~~~~~~~~~
 
 El otro tipo de construcción sintáctica que existe en PHP junto con las
 sentencias son las *expresiones*. Una expresión *denota* o *representa* un
@@ -165,17 +169,21 @@ ejemplo, el número ``25``) o tan compleja que involucre constantes, variables,
 operadores, funciones y métodos, combinados todos ellos entre sí para formar una
 única expresión.
 
-:index:`Operadores`
-^^^^^^^^^^^^^^^^^^^
+.. index:: operadores
+
+Operadores
+^^^^^^^^^^
 
 Un **operador** es un símbolo que representa una operación que se desea realizar
 sobre uno, dos o tres **operandos** (dependiendo de si el operador es *unario*,
-*binario* o *ternario*). Los operandos son los valores sobre los que actúa el
-operador para llevar a cabo la operación deseada. Por ejemplo::
+*binario* o *ternario* [#aridad]_). Los operandos son los valores sobre los que
+actúa el operador para llevar a cabo la operación deseada. Por ejemplo::
 
     4 + 3
 
-Aquí, el operador ``+`` representa la operación *suma* a realizar sobre los números ``4`` y ``3``, que son sus operandos. Como el operador actúa sobre dos operandos, se dice que es un operador *binario*. En cambio::
+Aquí, el operador ``+`` representa la operación *suma* a realizar sobre los
+números ``4`` y ``3``, que son sus operandos. Como el operador actúa sobre dos
+operandos, se dice que es un operador *binario*. En cambio::
 
     -17
 
@@ -184,6 +192,12 @@ valor ``17``. Como el operador actúa sobre un único operando, se dice que es u
 operador *unario*.
 
 En PHP existe un único operador *ternario* que se estudiará posteriormente.
+
+.. [#aridad]
+
+   El número de operandos de un operador se denomina **aridad**. La aridad
+   puede ser 1, 2 ó 3, según el operador sea *unario*, *binario* o
+   *ternario*, respectivamente.
 
 En una misma expresión pueden actuar varios operadores, como en::
 
@@ -194,6 +208,8 @@ Que denota el valor ``12``, o con varios operadores diferentes::
     4 + 3 * 5
 
 Que evalúa a ``19``.
+
+.. index:: asociatividad, prioridad
 
 Asociatividad y prioridad
 '''''''''''''''''''''''''
@@ -240,8 +256,10 @@ los operadores que vayan entre paréntesis. Por ejemplo, en la expresión::
 la suma se hace antes que el producto, aunque este último sea un operador de
 mayor prioridad. El resultado de dicha expresión es el valor ``35``.
 
-:index:`Funciones`
-^^^^^^^^^^^^^^^^^^
+.. index:: funciones
+
+Funciones
+^^^^^^^^^
 
 Las funciones en las expresiones cumplen el mismo papel que en las Matemáticas
 de toda la vida: realizan un cálculo a partir de unos valores de entrada
