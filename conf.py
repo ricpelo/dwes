@@ -257,20 +257,25 @@ latex_elements = {
 
      # Additional stuff for the LaTeX preamble.
      #
-    'fontpkg': """\usepackage{libertine}
-                  \setmonofont[
-                     Path=../../fonts/,
-                     BoldFont=Inconsolata-Bold.ttf,
-                     AutoFakeSlant,
-                     BoldItalicFeatures={FakeSlant},
-                     Scale=MatchLowercase
-                  ]{Inconsolata-Regular.ttf}""",
+    'fontpkg': r"""
+        \usepackage{libertine}
+        \setmonofont[
+            Path=../../fonts/,
+            BoldFont=Inconsolata-Bold.ttf,
+            AutoFakeSlant,
+            BoldItalicFeatures={FakeSlant},
+            Scale=MatchLowercase
+        ]{Inconsolata-Regular.ttf}""",
 
-    'sphinxsetup': 'verbatimwithframe=false',
+    'sphinxsetup': """
+        verbatimwithframe=false,
+        noteBorderColor={rgb}{0.208,0.374,0.486},
+        noteborder=1pt""",
 
-    'preamble': r"""\usepackage[dotinlabels]{titletoc}
-                    \usepackage{titlesec}
-                    \titlelabel{\thetitle.\quad}""",
+    'preamble': r"""
+        \usepackage[dotinlabels]{titletoc}
+        \usepackage{titlesec}
+        \titlelabel{\thetitle.\quad}""",
 
      # Latex figure (float) alignment
      #

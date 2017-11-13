@@ -438,7 +438,7 @@ identifica al comando, y de una serie de <em>argumentos</em> que completan la
 sentencia.</p>
 <div class="section" id="el-comando-echo">
 <span id="index-6"></span><h4>5.2.2.1. El comando <code class="docutils literal"><span class="pre">echo</span></code><a class="headerlink" href="#el-comando-echo" title="Enlazar permanentemente con este título">¶</a></h4>
-<p>El ejemplo clásico de comando en PHP es <a class="reference external" href="http://php.net/manual/es/function.echo.php"><code class="docutils literal"><span class="pre">echo</span></code></a>. El comando <code class="docutils literal"><span class="pre">echo</span></code> vuelca a
+<p>El ejemplo clásico de comando en PHP es <a class="reference external" href="http://php.net/manual/es/function.echo.php"><code class="xref php php-func docutils literal"><span class="pre">echo</span></code></a>. El comando <code class="xref php php-func docutils literal"><span class="pre">echo</span></code> vuelca a
 la salida el valor de las expresiones que se indican como parámetro en la
 sentencia. Por ejemplo:</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="mi">25</span> <span class="o">*</span> <span class="mi">3</span><span class="p">;</span>
@@ -462,14 +462,15 @@ coma:</p>
 sentencias son las <em>expresiones</em>. Una expresión <em>denota</em> o <em>representa</em> un
 valor. Una expresión puede ser tan simple como una constante literal (por
 ejemplo, el número <code class="docutils literal"><span class="pre">25</span></code>) o tan compleja que involucre constantes, variables,
-operadores, funciones y métodos, combinados todos ellos entre sí para formar una
-única expresión.</p>
+operadores, funciones y métodos, combinados todos ellos entre sí para formar
+una única expresión.</p>
 <div class="section" id="operadores">
 <span id="index-8"></span><h4>5.2.3.1. Operadores<a class="headerlink" href="#operadores" title="Enlazar permanentemente con este título">¶</a></h4>
-<p>Un <strong>operador</strong> es un símbolo que representa una operación que se desea realizar
-sobre uno, dos o tres <strong>operandos</strong> (dependiendo de si el operador es <em>unario</em>,
-<em>binario</em> o <em>ternario</em> <a class="footnote-reference" href="#aridad" id="id1">[1]</a>). Los operandos son los valores sobre los que
-actúa el operador para llevar a cabo la operación deseada. Por ejemplo:</p>
+<p>Un <strong>operador</strong> es un símbolo que representa una operación que se desea
+realizar sobre uno, dos o tres <strong>operandos</strong> (dependiendo de si el operador es
+<em>unario</em>, <em>binario</em> o <em>ternario</em> <a class="footnote-reference" href="#aridad" id="id1">[1]</a>). Los operandos son los valores
+sobre los que actúa el operador para llevar a cabo la operación deseada. Por
+ejemplo:</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="o">+</span> <span class="mi">3</span>
 </pre></div>
 </div>
@@ -576,9 +577,46 @@ devuelve el valor máximo de todos los indicados en su lista de parámetros:</p>
 <em>invocando</em> a la función. La aparición de la función en la expresión es una
 <em>llamada</em> a la función.</p>
 </div>
-<p id="index-11">En PHP, a diferencia de lo que ocurre en Matemáticas, existen funciones que no
+<span class="target" id="index-11"></span><p>En PHP, a diferencia de lo que ocurre en Matemáticas, existen funciones que no
 devuelven ningún valor, ya que su objetivo es provocar un <em>efecto lateral</em>. La
-más conocida podría ser, sin temor a equivocarnos, la función <a class="reference external" href="http://php.net/manual/es/function.var-dump.php"><code class="xref php php-func docutils literal"><span class="pre">var_dump()</span></code></a>.</p>
+más conocida podría ser, sin temor a equivocarnos, la función <a class="reference external" href="http://php.net/manual/es/function.var-dump.php"><code class="xref php php-func docutils literal"><span class="pre">var_dump()</span></code></a>. Esta
+función muestra en la salida información estructurada sobre las expresiones que
+se le pasan como argumento, incluyendo su valor y su tipo.</p>
+<p>Es importante destacar que esa información se vuelca <em>en la salida</em>
+(normalmente la pantalla). No estamos diciendo que la función <em>devuelva</em> dicha
+información o que esa información sea el valor resultante de <em>evaluar</em> la
+llamada a la función. De hecho, hablamos de llamar a la función como si fuera
+una sentencia (una sentencia formada únicamente por la llamada a la función y
+el punto y coma <code class="docutils literal"><span class="pre">;</span></code> final):</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="nb">var_dump</span><span class="p">(</span><span class="mi">14</span> <span class="o">+</span> <span class="mi">3</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>La sentencia anterior (sí: <em>sentencia</em>, porque es una instrucción en sí misma,
+terminada en punto y coma), como cualquier otra sentencia, no devuelve ningún
+valor, sino que produce un efecto lateral). En este caso, mostrar a la salida
+(la pantalla) lo siguiente:</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="nx">int</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Observamos que <code class="xref php php-func docutils literal"><span class="pre">var_dump()</span></code> nos informa del valor de la expresión (<code class="docutils literal"><span class="pre">17</span></code>) y de
+su tipo (<code class="docutils literal"><span class="pre">int</span></code>, que significa <strong>número entero</strong>). La importancia de conocer
+el valor y el tipo de toda expresión que aparezca en nuestros programas se
+apreciará en breve. Por ahora, veamos dos ejemplos más de utilización de <code class="xref php php-func docutils literal"><span class="pre">var_dump()</span></code>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="nb">var_dump</span><span class="p">(</span><span class="mf">12.3</span> <span class="o">-</span> <span class="mi">4</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Muestra a la salida:</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="nx">float</span><span class="p">(</span><span class="mf">8.3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Y:</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="nb">var_dump</span><span class="p">(</span><span class="s1">&#39;Saludos&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Muestra:</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="nx">string</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="s2">&quot;Saludos&quot;</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>

@@ -299,12 +299,49 @@ Devuelve ``8``.
 
 .. index:: efectos laterales, var_dump()
 
-En PHP, a diferencia de lo que ocurre en Matemáticas, existen funciones que no
-devuelven ningún valor, ya que su objetivo es provocar un *efecto lateral*. La
-más conocida podría ser, sin temor a equivocarnos, la función |var_dump|_.
-
 .. |var_dump| replace:: :php:func:`var_dump()`
 .. _var_dump: http://php.net/manual/es/function.var-dump.php
+
+En PHP, a diferencia de lo que ocurre en Matemáticas, existen funciones que no
+devuelven ningún valor, ya que su objetivo es provocar un *efecto lateral*. La
+más conocida podría ser, sin temor a equivocarnos, la función |var_dump|_. Esta
+función muestra en la salida información estructurada sobre las expresiones que
+se le pasan como argumento, incluyendo su valor y su tipo.
+
+Es importante destacar que esa información se vuelca *en la salida*
+(normalmente la pantalla). No estamos diciendo que la función *devuelva* dicha
+información o que esa información sea el valor resultante de *evaluar* la
+llamada a la función. De hecho, hablamos de llamar a la función como si fuera
+una sentencia (una sentencia formada únicamente por la llamada a la función y
+el punto y coma ``;`` final)::
+
+    var_dump(14 + 3);
+
+La sentencia anterior (sí: *sentencia*, porque es una instrucción en sí misma,
+terminada en punto y coma), como cualquier otra sentencia, no devuelve ningún
+valor, sino que produce un efecto lateral). En este caso, mostrar a la salida
+(la pantalla) lo siguiente::
+
+    int(17)
+
+Observamos que |var_dump| nos informa del valor de la expresión (``17``) y de
+su tipo (``int``, que significa **número entero**). La importancia de conocer
+el valor y el tipo de toda expresión que aparezca en nuestros programas se
+apreciará en breve. Por ahora, veamos dos ejemplos más de utilización de |var_dump|::
+
+    var_dump(12.3 - 4);
+
+Muestra a la salida::
+
+    float(8.3)
+
+Y::
+
+    var_dump('Saludos');
+
+Muestra::
+
+    string(7) "Saludos"
 
 Funcionamiento del intérprete
 -----------------------------
