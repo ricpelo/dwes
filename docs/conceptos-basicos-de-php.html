@@ -207,7 +207,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#funciones-predefinidas-destacadas">5.9. Funciones predefinidas destacadas</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#isset">5.9.1. <code class="docutils literal"><span class="pre">isset()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#empty">5.9.2. <code class="docutils literal"><span class="pre">empty()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#var-dump">5.9.3. <code class="docutils literal"><span class="pre">var_dump()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">5.9.3. <code class="docutils literal"><span class="pre">var_dump()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#arrays">5.10. Arrays</a><ul>
@@ -438,9 +438,9 @@ identifica al comando, y de una serie de <em>argumentos</em> que completan la
 sentencia.</p>
 <div class="section" id="el-comando-echo">
 <span id="index-6"></span><h4>5.2.2.1. El comando <code class="docutils literal"><span class="pre">echo</span></code><a class="headerlink" href="#el-comando-echo" title="Enlazar permanentemente con este título">¶</a></h4>
-<p>El ejemplo clásico de comando en PHP es <code class="docutils literal"><span class="pre">echo</span></code> (ver <a class="reference external" href="http://php.net/manual/es/function.echo.php">definición</a> en el manual de PHP). El comando
-<code class="docutils literal"><span class="pre">echo</span></code> vuelca a la salida el valor de las expresiones que se indican como
-parámetro en la sentencia. Por ejemplo:</p>
+<p>El ejemplo clásico de comando en PHP es <a class="reference external" href="http://php.net/manual/es/function.echo.php"><code class="docutils literal"><span class="pre">echo</span></code></a>. El comando <code class="docutils literal"><span class="pre">echo</span></code> vuelca a
+la salida el valor de las expresiones que se indican como parámetro en la
+sentencia. Por ejemplo:</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="mi">25</span> <span class="o">*</span> <span class="mi">3</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -553,7 +553,7 @@ mayor prioridad. El resultado de dicha expresión es el valor <code class="docut
 <p>Las funciones en las expresiones cumplen el mismo papel que en las Matemáticas
 de toda la vida: realizan un cálculo a partir de unos valores de entrada
 indicados en sus parámetros y <em>devuelven</em> el resultado de dicho cálculo,. Por
-ejemplo, la función <em>coseno</em> (abreviado como <em>cos</em>) calcula el coseno de un
+ejemplo, la función <em>coseno</em> (abreviado como <a class="reference external" href="http://php.net/manual/es/function.cos.php"><code class="xref php php-func docutils literal"><span class="pre">cos()</span></code></a>) calcula el coseno de un
 ángulo. En Matemáticas (y en Programación) se representa indicando el nombre de
 la función y, a continuación, la lista de sus parámetros entre paréntesis y
 separados por comas. Así, para calcular el coseno de 2.4 radianes, podemos
@@ -564,9 +564,8 @@ escribir:</p>
 <p>Que da como resultado <code class="docutils literal"><span class="pre">-0.73739371554125</span></code>, y ese sería el valor de dicha
 expresión.</p>
 <p>El coseno es un ejemplo de función con un único parámetro, pero hay funciones
-que admiten o requieren más parámetros. Por ejemplo, la función <code class="docutils literal"><span class="pre">max()</span></code>
-devuelve el valor máximo de todos los indicados en su lista de parámetros. Por
-ejemplo:</p>
+que admiten o requieren más parámetros. Es el caso de la función <a class="reference external" href="http://php.net/manual/es/function.max.php"><code class="xref php php-func docutils literal"><span class="pre">max()</span></code></a>, que
+devuelve el valor máximo de todos los indicados en su lista de parámetros:</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -577,8 +576,9 @@ ejemplo:</p>
 <em>invocando</em> a la función. La aparición de la función en la expresión es una
 <em>llamada</em> a la función.</p>
 </div>
-<p>En PHP, a diferencia de lo que ocurre en Matemáticas, existen funciones que no
-devuelven ningún valor, ya que su objetivo es provocar un <em>efecto lateral</em>.</p>
+<p id="index-11">En PHP, a diferencia de lo que ocurre en Matemáticas, existen funciones que no
+devuelven ningún valor, ya que su objetivo es provocar un <em>efecto lateral</em>. La
+más conocida podría ser, sin temor a equivocarnos, la función <a class="reference external" href="http://php.net/manual/es/function.var-dump.php"><code class="xref php php-func docutils literal"><span class="pre">var_dump()</span></code></a>.</p>
 </div>
 </div>
 </div>
@@ -959,8 +959,8 @@ devuelto por el <code class="docutils literal"><span class="pre">return</span></
 </div>
 <p>ricpelo’s note: No da error ni advertencia si la variable no existe.</p>
 </div>
-<div class="section" id="var-dump">
-<h3>5.9.3. <code class="docutils literal"><span class="pre">var_dump()</span></code><a class="headerlink" href="#var-dump" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="id4">
+<h3>5.9.3. <code class="docutils literal"><span class="pre">var_dump()</span></code><a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/function.var-dump.php">http://php.net/manual/es/function.var-dump.php</a>&gt;</p>
 </div>
 </div>

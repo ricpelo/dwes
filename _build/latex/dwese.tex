@@ -468,13 +468,13 @@ sentencia.
 
 \subsubsection{El comando \sphinxstyleliteralintitle{echo}}
 \label{\detokenize{php:index-6}}\label{\detokenize{php:el-comando-echo}}
-El ejemplo clásico de comando en PHP es \sphinxcode{echo} (ver \sphinxhref{http://php.net/manual/es/function.echo.php}{definición}%
+El ejemplo clásico de comando en PHP es \sphinxhref{http://php.net/manual/es/function.echo.php}{\sphinxcode{echo}}%
 \begin{footnote}[1]\sphinxAtStartFootnote
 \sphinxnolinkurl{http://php.net/manual/es/function.echo.php}
 %
-\end{footnote} en el manual de PHP). El comando
-\sphinxcode{echo} vuelca a la salida el valor de las expresiones que se indican como
-parámetro en la sentencia. Por ejemplo:
+\end{footnote}. El comando \sphinxcode{echo} \sphinxcode{echo} vuelca a
+la salida el valor de las expresiones que se indican como parámetro en la
+sentencia. Por ejemplo:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k}{echo} \PYG{l+m+mi}{25} \PYG{o}{*} \PYG{l+m+mi}{3}\PYG{p}{;}
@@ -613,14 +613,18 @@ los operadores que vayan entre paréntesis. Por ejemplo, en la expresión:
 la suma se hace antes que el producto, aunque este último sea un operador de
 mayor prioridad. El resultado de dicha expresión es el valor \sphinxcode{35}.
 
-\index{funciones}\ignorespaces 
+\index{funciones}\index{cos}\ignorespaces 
 
 \subsubsection{Funciones}
 \label{\detokenize{php:funciones}}\label{\detokenize{php:index-10}}
 Las funciones en las expresiones cumplen el mismo papel que en las Matemáticas
 de toda la vida: realizan un cálculo a partir de unos valores de entrada
 indicados en sus parámetros y \sphinxstyleemphasis{devuelven} el resultado de dicho cálculo,. Por
-ejemplo, la función \sphinxstyleemphasis{coseno} (abreviado como \sphinxstyleemphasis{cos}) calcula el coseno de un
+ejemplo, la función \sphinxstyleemphasis{coseno} (abreviado como \sphinxhref{http://php.net/manual/es/function.cos.php}{\sphinxcode{cos()}}%
+\begin{footnote}[3]\sphinxAtStartFootnote
+\sphinxnolinkurl{http://php.net/manual/es/function.cos.php}
+%
+\end{footnote}) calcula el coseno de un
 ángulo. En Matemáticas (y en Programación) se representa indicando el nombre de
 la función y, a continuación, la lista de sus parámetros entre paréntesis y
 separados por comas. Así, para calcular el coseno de 2.4 radianes, podemos
@@ -634,9 +638,12 @@ Que da como resultado \sphinxcode{-0.73739371554125}, y ese sería el valor de d
 expresión.
 
 El coseno es un ejemplo de función con un único parámetro, pero hay funciones
-que admiten o requieren más parámetros. Por ejemplo, la función \sphinxcode{max()}
-devuelve el valor máximo de todos los indicados en su lista de parámetros. Por
-ejemplo:
+que admiten o requieren más parámetros. Es el caso de la función \sphinxhref{http://php.net/manual/es/function.max.php}{\sphinxcode{max()}}%
+\begin{footnote}[4]\sphinxAtStartFootnote
+\sphinxnolinkurl{http://php.net/manual/es/function.max.php}
+%
+\end{footnote}, que
+devuelve el valor máximo de todos los indicados en su lista de parámetros:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nb}{max}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}
@@ -650,12 +657,18 @@ Cuando usamos una función en una expresión, decimos que estamos \sphinxstyleem
 \sphinxstyleemphasis{llamada} a la función.
 \end{sphinxadmonition}
 
+\index{efectos laterales}\index{var\_dump()}\ignorespaces 
 En PHP, a diferencia de lo que ocurre en Matemáticas, existen funciones que no
-devuelven ningún valor, ya que su objetivo es provocar un \sphinxstyleemphasis{efecto lateral}.
+devuelven ningún valor, ya que su objetivo es provocar un \sphinxstyleemphasis{efecto lateral}. La
+más conocida podría ser, sin temor a equivocarnos, la función \sphinxhref{http://php.net/manual/es/function.var-dump.php}{\sphinxcode{var\_dump()}}%
+\begin{footnote}[5]\sphinxAtStartFootnote
+\sphinxnolinkurl{http://php.net/manual/es/function.var-dump.php}
+%
+\end{footnote}.
 
 
 \section{Funcionamiento del intérprete}
-\label{\detokenize{php:funcionamiento-del-interprete}}
+\label{\detokenize{php:var-dump}}\label{\detokenize{php:funcionamiento-del-interprete}}
 \textless{}\sphinxurl{http://php.net/manual/es/language.basic-syntax.phpmode.php}\textgreater{}
 
 
@@ -744,7 +757,7 @@ hace de izquierda a derecha aunque el \sphinxcode{+} tenga más prioridad (y
 encima vaya entre paréntesis).
 \item[] - En el \sphinxhref{http://php.net/manual/es/language.operators.precedence.php}{manual de
 PHP}%
-\begin{footnote}[3]\sphinxAtStartFootnote
+\begin{footnote}[6]\sphinxAtStartFootnote
 \sphinxnolinkurl{http://php.net/manual/es/language.operators.precedence.php}
 %
 \end{footnote} se
@@ -756,7 +769,7 @@ específico de evaluación, ya que el comportamiento puede cambiar entre
 versiones de PHP o dependiendo de código circundante.»}
 \item[] - \sphinxhref{https://stackoverflow.com/questions/46861563/false-and-true-printhi}{Pregunta que hice al respecto en
 StackOverflow}%
-\begin{footnote}[4]\sphinxAtStartFootnote
+\begin{footnote}[7]\sphinxAtStartFootnote
 \sphinxnolinkurl{https://stackoverflow.com/questions/46861563/false-and-true-printhi}
 %
 \end{footnote}.
@@ -1120,7 +1133,7 @@ ricpelo’s note: No da error ni advertencia si la variable no existe.
 
 
 \subsection{\sphinxstyleliteralintitle{var\_dump()}}
-\label{\detokenize{php:var-dump}}
+\label{\detokenize{php:id4}}
 \textless{}\sphinxurl{http://php.net/manual/es/function.var-dump.php}\textgreater{}
 
 

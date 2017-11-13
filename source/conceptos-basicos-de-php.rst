@@ -139,10 +139,12 @@ sentencia.
 El comando ``echo``
 ^^^^^^^^^^^^^^^^^^^
 
-El ejemplo clásico de comando en PHP es ``echo`` (ver `definición
-<http://php.net/manual/es/function.echo.php>`_ en el manual de PHP). El comando
-``echo`` vuelca a la salida el valor de las expresiones que se indican como
-parámetro en la sentencia. Por ejemplo::
+.. |echo| replace:: :php:func:`echo`
+.. _echo: http://php.net/manual/es/function.echo.php
+
+El ejemplo clásico de comando en PHP es |echo|_. El comando |echo| vuelca a
+la salida el valor de las expresiones que se indican como parámetro en la
+sentencia. Por ejemplo::
 
     echo 25 * 3;
 
@@ -166,18 +168,19 @@ El otro tipo de construcción sintáctica que existe en PHP junto con las
 sentencias son las *expresiones*. Una expresión *denota* o *representa* un
 valor. Una expresión puede ser tan simple como una constante literal (por
 ejemplo, el número ``25``) o tan compleja que involucre constantes, variables,
-operadores, funciones y métodos, combinados todos ellos entre sí para formar una
-única expresión.
+operadores, funciones y métodos, combinados todos ellos entre sí para formar
+una única expresión.
 
 .. index:: operadores
 
 Operadores
 ^^^^^^^^^^
 
-Un **operador** es un símbolo que representa una operación que se desea realizar
-sobre uno, dos o tres **operandos** (dependiendo de si el operador es *unario*,
-*binario* o *ternario* [#aridad]_). Los operandos son los valores sobre los que
-actúa el operador para llevar a cabo la operación deseada. Por ejemplo::
+Un **operador** es un símbolo que representa una operación que se desea
+realizar sobre uno, dos o tres **operandos** (dependiendo de si el operador es
+*unario*, *binario* o *ternario* [#aridad]_). Los operandos son los valores
+sobre los que actúa el operador para llevar a cabo la operación deseada. Por
+ejemplo::
 
     4 + 3
 
@@ -256,7 +259,7 @@ los operadores que vayan entre paréntesis. Por ejemplo, en la expresión::
 la suma se hace antes que el producto, aunque este último sea un operador de
 mayor prioridad. El resultado de dicha expresión es el valor ``35``.
 
-.. index:: funciones
+.. index:: funciones, cos
 
 Funciones
 ^^^^^^^^^
@@ -264,7 +267,7 @@ Funciones
 Las funciones en las expresiones cumplen el mismo papel que en las Matemáticas
 de toda la vida: realizan un cálculo a partir de unos valores de entrada
 indicados en sus parámetros y *devuelven* el resultado de dicho cálculo,. Por
-ejemplo, la función *coseno* (abreviado como *cos*) calcula el coseno de un
+ejemplo, la función *coseno* (abreviado como |cos|_) calcula el coseno de un
 ángulo. En Matemáticas (y en Programación) se representa indicando el nombre de
 la función y, a continuación, la lista de sus parámetros entre paréntesis y
 separados por comas. Así, para calcular el coseno de 2.4 radianes, podemos
@@ -275,22 +278,33 @@ escribir::
 Que da como resultado ``-0.73739371554125``, y ese sería el valor de dicha
 expresión.
 
+.. |cos| replace:: :php:func:`cos()`
+.. _cos: http://php.net/manual/es/function.cos.php
+
 El coseno es un ejemplo de función con un único parámetro, pero hay funciones
-que admiten o requieren más parámetros. Por ejemplo, la función ``max()``
-devuelve el valor máximo de todos los indicados en su lista de parámetros. Por
-ejemplo::
+que admiten o requieren más parámetros. Es el caso de la función |max|_, que
+devuelve el valor máximo de todos los indicados en su lista de parámetros::
 
     max(5, 3, 8, 2)
 
 Devuelve ``8``.
+
+.. |max| replace:: :php:func:`max()`
+.. _max: http://php.net/manual/es/function.max.php
 
 .. note::
    Cuando usamos una función en una expresión, decimos que estamos *llamando* o
    *invocando* a la función. La aparición de la función en la expresión es una
    *llamada* a la función.
 
+.. index:: efectos laterales, var_dump()
+
 En PHP, a diferencia de lo que ocurre en Matemáticas, existen funciones que no
-devuelven ningún valor, ya que su objetivo es provocar un *efecto lateral*.
+devuelven ningún valor, ya que su objetivo es provocar un *efecto lateral*. La
+más conocida podría ser, sin temor a equivocarnos, la función |var_dump|_.
+
+.. |var_dump| replace:: :php:func:`var_dump()`
+.. _var_dump: http://php.net/manual/es/function.var-dump.php
 
 Funcionamiento del intérprete
 -----------------------------
