@@ -51,6 +51,10 @@
         \usepackage[dotinlabels]{titletoc}
         \usepackage{titlesec}
         \titlelabel{\thetitle.\quad}
+        \let\sphinxcodeORI\sphinxcode
+        \protected\def\sphinxcode #1%
+            {{\color{OuterLinkColor}\sphinxcodeORI{#1}}}
+        
 
 \title{Desarrollo web en entorno servidor}
 \date{noviembre de 2017}
@@ -619,7 +623,7 @@ los operadores que vayan entre paréntesis. Por ejemplo, en la expresión:
 la suma se hace antes que el producto, aunque este último sea un operador de
 mayor prioridad. El resultado de dicha expresión es el valor \sphinxcode{35}.
 
-\index{funciones}\index{cos}\ignorespaces 
+\index{funciones}\index{cos()}\ignorespaces 
 
 \subsubsection{Funciones}
 \label{\detokenize{php:funciones}}\label{\detokenize{php:index-10}}
@@ -679,7 +683,7 @@ Es importante destacar que esa información se vuelca \sphinxstyleemphasis{en la
 información o que esa información sea el valor resultante de \sphinxstyleemphasis{evaluar} la
 llamada a la función. De hecho, hablamos de llamar a la función como si fuera
 una sentencia (una sentencia formada únicamente por la llamada a la función y
-el punto y coma \sphinxcode{;} final):
+el punto y coma final):
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nb}{var\PYGZus{}dump}\PYG{p}{(}\PYG{l+m+mi}{14} \PYG{o}{+} \PYG{l+m+mi}{3}\PYG{p}{);}
@@ -687,17 +691,19 @@ el punto y coma \sphinxcode{;} final):
 
 La sentencia anterior (sí: \sphinxstyleemphasis{sentencia}, porque es una instrucción en sí misma,
 terminada en punto y coma), como cualquier otra sentencia, no devuelve ningún
-valor, sino que produce un efecto lateral). En este caso, mostrar a la salida
+valor, sino que produce un efecto lateral. En este caso, mostrar a la salida
 (la pantalla) lo siguiente:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nx}{int}\PYG{p}{(}\PYG{l+m+mi}{17}\PYG{p}{)}
 \end{sphinxVerbatim}
 
+\index{enteros}\index{números}\ignorespaces 
 Observamos que \sphinxcode{var\_dump()} nos informa del valor de la expresión (\sphinxcode{17}) y de
 su tipo (\sphinxcode{int}, que significa \sphinxstylestrong{número entero}). La importancia de conocer
 el valor y el tipo de toda expresión que aparezca en nuestros programas se
-apreciará en breve. Por ahora, veamos dos ejemplos más de utilización de \sphinxcode{var\_dump()}:
+apreciará en breve. Por ahora, veamos dos ejemplos más de utilización de
+\sphinxcode{var\_dump()}:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nb}{var\PYGZus{}dump}\PYG{p}{(}\PYG{l+m+mf}{12.3} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{4}\PYG{p}{);}
@@ -709,10 +715,12 @@ Muestra a la salida:
 \PYG{n+nx}{float}\PYG{p}{(}\PYG{l+m+mf}{8.3}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-Y:
+\index{reales}\index{números}\ignorespaces 
+Lo que nos indica que el valor de la expresión \sphinxcode{12.3 - 4} es el \sphinxstylestrong{número
+real} \sphinxcode{8.3}. Finalmente:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n+nb}{var\PYGZus{}dump}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Saludos\PYGZsq{}}\PYG{p}{);}
+\PYG{n+nb}{var\PYGZus{}dump}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Saludos}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{);}
 \end{sphinxVerbatim}
 
 Muestra:
@@ -720,6 +728,13 @@ Muestra:
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nx}{string}\PYG{p}{(}\PYG{l+m+mi}{7}\PYG{p}{)} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Saludos}\PYG{l+s+s2}{\PYGZdq{}}
 \end{sphinxVerbatim}
+
+Que nos informa de que \sphinxcode{"Saludos"} es una cadena de siete caracteres.
+
+\index{tipos de datos}\ignorespaces 
+Los números (enteros y reales), así como las cadenas, son algunos de los
+\sphinxstylestrong{tipos de datos} que el lenguaje PHP nos proporciona para ayudarnos a
+manipular la información. Su estudio detallado se hará posteriormente.
 
 
 \section{Funcionamiento del intérprete}

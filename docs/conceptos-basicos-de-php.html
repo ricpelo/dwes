@@ -587,21 +587,22 @@ se le pasan como argumento, incluyendo su valor y su tipo.</p>
 información o que esa información sea el valor resultante de <em>evaluar</em> la
 llamada a la función. De hecho, hablamos de llamar a la función como si fuera
 una sentencia (una sentencia formada únicamente por la llamada a la función y
-el punto y coma <code class="docutils literal"><span class="pre">;</span></code> final):</p>
+el punto y coma final):</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="nb">var_dump</span><span class="p">(</span><span class="mi">14</span> <span class="o">+</span> <span class="mi">3</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>La sentencia anterior (sí: <em>sentencia</em>, porque es una instrucción en sí misma,
 terminada en punto y coma), como cualquier otra sentencia, no devuelve ningún
-valor, sino que produce un efecto lateral). En este caso, mostrar a la salida
+valor, sino que produce un efecto lateral. En este caso, mostrar a la salida
 (la pantalla) lo siguiente:</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="nx">int</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Observamos que <code class="xref php php-func docutils literal"><span class="pre">var_dump()</span></code> nos informa del valor de la expresión (<code class="docutils literal"><span class="pre">17</span></code>) y de
+<p id="index-12">Observamos que <code class="xref php php-func docutils literal"><span class="pre">var_dump()</span></code> nos informa del valor de la expresión (<code class="docutils literal"><span class="pre">17</span></code>) y de
 su tipo (<code class="docutils literal"><span class="pre">int</span></code>, que significa <strong>número entero</strong>). La importancia de conocer
 el valor y el tipo de toda expresión que aparezca en nuestros programas se
-apreciará en breve. Por ahora, veamos dos ejemplos más de utilización de <code class="xref php php-func docutils literal"><span class="pre">var_dump()</span></code>:</p>
+apreciará en breve. Por ahora, veamos dos ejemplos más de utilización de
+<code class="xref php php-func docutils literal"><span class="pre">var_dump()</span></code>:</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="nb">var_dump</span><span class="p">(</span><span class="mf">12.3</span> <span class="o">-</span> <span class="mi">4</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -609,14 +610,19 @@ apreciará en breve. Por ahora, veamos dos ejemplos más de utilización de <cod
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="nx">float</span><span class="p">(</span><span class="mf">8.3</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Y:</p>
-<div class="highlight-php"><div class="highlight"><pre><span></span><span class="nb">var_dump</span><span class="p">(</span><span class="s1">&#39;Saludos&#39;</span><span class="p">);</span>
+<p id="index-13">Lo que nos indica que el valor de la expresión <code class="docutils literal"><span class="pre">12.3</span> <span class="pre">-</span> <span class="pre">4</span></code> es el <strong>número
+real</strong> <code class="docutils literal"><span class="pre">8.3</span></code>. Finalmente:</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="nb">var_dump</span><span class="p">(</span><span class="s2">&quot;Saludos&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Muestra:</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="nx">string</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="s2">&quot;Saludos&quot;</span>
 </pre></div>
 </div>
+<p>Que nos informa de que <code class="docutils literal"><span class="pre">&quot;Saludos&quot;</span></code> es una cadena de siete caracteres.</p>
+<p id="index-14">Los números (enteros y reales), así como las cadenas, son algunos de los
+<strong>tipos de datos</strong> que el lenguaje PHP nos proporciona para ayudarnos a
+manipular la información. Su estudio detallado se hará posteriormente.</p>
 </div>
 </div>
 </div>

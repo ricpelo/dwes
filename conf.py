@@ -275,7 +275,11 @@ latex_elements = {
     'preamble': r"""
         \usepackage[dotinlabels]{titletoc}
         \usepackage{titlesec}
-        \titlelabel{\thetitle.\quad}""",
+        \titlelabel{\thetitle.\quad}
+        \let\sphinxcodeORI\sphinxcode
+        \protected\def\sphinxcode #1%
+            {{\color{OuterLinkColor}\sphinxcodeORI{#1}}}
+        """,
 
      # Latex figure (float) alignment
      #

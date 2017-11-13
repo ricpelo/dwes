@@ -259,7 +259,7 @@ los operadores que vayan entre paréntesis. Por ejemplo, en la expresión::
 la suma se hace antes que el producto, aunque este último sea un operador de
 mayor prioridad. El resultado de dicha expresión es el valor ``35``.
 
-.. index:: funciones, cos
+.. index:: funciones, cos()
 
 Funciones
 ^^^^^^^^^
@@ -313,21 +313,24 @@ Es importante destacar que esa información se vuelca *en la salida*
 información o que esa información sea el valor resultante de *evaluar* la
 llamada a la función. De hecho, hablamos de llamar a la función como si fuera
 una sentencia (una sentencia formada únicamente por la llamada a la función y
-el punto y coma ``;`` final)::
+el punto y coma final)::
 
     var_dump(14 + 3);
 
 La sentencia anterior (sí: *sentencia*, porque es una instrucción en sí misma,
 terminada en punto y coma), como cualquier otra sentencia, no devuelve ningún
-valor, sino que produce un efecto lateral). En este caso, mostrar a la salida
+valor, sino que produce un efecto lateral. En este caso, mostrar a la salida
 (la pantalla) lo siguiente::
 
     int(17)
 
+.. index:: enteros, números
+
 Observamos que |var_dump| nos informa del valor de la expresión (``17``) y de
 su tipo (``int``, que significa **número entero**). La importancia de conocer
 el valor y el tipo de toda expresión que aparezca en nuestros programas se
-apreciará en breve. Por ahora, veamos dos ejemplos más de utilización de |var_dump|::
+apreciará en breve. Por ahora, veamos dos ejemplos más de utilización de
+|var_dump|::
 
     var_dump(12.3 - 4);
 
@@ -335,13 +338,24 @@ Muestra a la salida::
 
     float(8.3)
 
-Y::
+.. index:: reales, números
 
-    var_dump('Saludos');
+Lo que nos indica que el valor de la expresión ``12.3 - 4`` es el **número
+real** ``8.3``. Finalmente::
+
+    var_dump("Saludos");
 
 Muestra::
 
     string(7) "Saludos"
+
+Que nos informa de que ``"Saludos"`` es una cadena de siete caracteres.
+
+.. index:: tipos de datos
+
+Los números (enteros y reales), así como las cadenas, son algunos de los
+**tipos de datos** que el lenguaje PHP nos proporciona para ayudarnos a
+manipular la información. Su estudio detallado se hará posteriormente.
 
 Funcionamiento del intérprete
 -----------------------------

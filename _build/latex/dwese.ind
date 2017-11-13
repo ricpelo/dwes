@@ -7,7 +7,7 @@
   \indexspace
   \bigletter C
   \item comandos, \hyperpage{16, 17}
-  \item cos, \hyperpage{19}
+  \item cos(), \hyperpage{19}
 
   \indexspace
   \bigletter D
@@ -17,6 +17,7 @@
   \bigletter E
   \item echo, \hyperpage{17}
   \item efectos laterales, \hyperpage{17}, \hyperpage{19}
+  \item enteros, \hyperpage{20}
   \item evaluación, \hyperindexformat{\see{expresiones}}{16}
   \item expresiones, \hyperpage{16, 17}
   \item expresiones, evaluación de, \hyperpage{16}
@@ -30,6 +31,10 @@
   \item instrucciones, \hyperpage{16}
 
   \indexspace
+  \bigletter N
+  \item números, \hyperpage{20}
+
+  \indexspace
   \bigletter O
   \item operadores, \hyperpage{17}
 
@@ -39,8 +44,16 @@
   \item prioridad, \hyperpage{18}
 
   \indexspace
+  \bigletter R
+  \item reales, \hyperpage{20}
+
+  \indexspace
   \bigletter S
   \item sentencias, \hyperpage{16}
+
+  \indexspace
+  \bigletter T
+  \item tipos de datos, \hyperpage{20}
 
   \indexspace
   \bigletter V
