@@ -197,10 +197,9 @@ operador *unario*.
 En PHP existe un único operador *ternario* que se estudiará posteriormente.
 
 .. [#aridad]
-
    El número de operandos de un operador se denomina **aridad**. La aridad
-   puede ser 1, 2 ó 3, según el operador sea *unario*, *binario* o
-   *ternario*, respectivamente.
+   puede ser 1, 2 ó 3, según el operador sea *unario*, *binario* o *ternario*,
+   respectivamente.
 
 En una misma expresión pueden actuar varios operadores, como en::
 
@@ -369,18 +368,24 @@ La ejecución de nuestro código se puede llevar a cabo de dos formas:
 Por lotes:
     Nuestro código fuente está almacenado en un archivo de texto llamado
     **script** (normalmente, con extensión :file:`.php`) y el intérprete lee
-    dicho archivo, lo analiza sintáctica y semánticamente y lo ejecuta
-    instrucción a instrucción. El objetivo final de este curso es desarrollar
+    dicho archivo, lo analiza sintáctica y semánticamente y ejecuta las
+    instrucciones que lo forman. El objetivo final de este curso es desarrollar
     aplicaciones web escribiendo los *scripts* necesarios para cumplir con la
     funcionalidad deseada.
 
-    Si, por ejemplo, tenemos nuestro *script* almacenado en el archivo
-    :file:`prueba.php`, provocaremos la ejecución del mismo mediante la
-    siguiente orden del sistema operativo:
+    Una manera de ejecutar nuestro *script* es pasárselo al intérprete desde la
+    consola del sistema operativo [#cli]_. Por ejemplo, si tenemos nuestro *script*
+    almacenado en el archivo :file:`prueba.php`, podemos provocar la ejecución
+    del mismo mediante la siguiente orden del sistema operativo:
 
     .. code-block:: shell-session
 
         $ php prueba.php
+
+    .. [#cli]
+       La otra forma es ejecutar el *script* en el contexto de un servidor web,
+       *embebiendo* (o incrustando) el código PHP en una página HTML.
+       Hablaremos sobre ello en próximos capítulos.
 
 Interactiva:
     Un intérprete interactivo solicita al usuario que introduzca (normalmente

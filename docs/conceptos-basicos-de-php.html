@@ -153,7 +153,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#numericos">5.6.2. Numéricos</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#enteros-int">5.6.2.1. Enteros (<code class="docutils literal"><span class="pre">int</span></code>)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#numeros-en-coma-flotante-float">5.6.2.2. Números en coma flotante (<code class="docutils literal"><span class="pre">float</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">5.6.2.3. Operadores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">5.6.2.3. Operadores</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#cadenas-string">5.6.3. Cadenas (<code class="docutils literal"><span class="pre">string</span></code>)</a><ul>
@@ -207,7 +207,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#funciones-predefinidas-destacadas">5.9. Funciones predefinidas destacadas</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#isset">5.9.1. <code class="docutils literal"><span class="pre">isset()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#empty">5.9.2. <code class="docutils literal"><span class="pre">empty()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">5.9.3. <code class="docutils literal"><span class="pre">var_dump()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">5.9.3. <code class="docutils literal"><span class="pre">var_dump()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#arrays">5.10. Arrays</a><ul>
@@ -488,8 +488,8 @@ operador <em>unario</em>.</p>
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
 <tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>El número de operandos de un operador se denomina <strong>aridad</strong>. La aridad
-puede ser 1, 2 ó 3, según el operador sea <em>unario</em>, <em>binario</em> o
-<em>ternario</em>, respectivamente.</td></tr>
+puede ser 1, 2 ó 3, según el operador sea <em>unario</em>, <em>binario</em> o <em>ternario</em>,
+respectivamente.</td></tr>
 </tbody>
 </table>
 <p>En una misma expresión pueden actuar varios operadores, como en:</p>
@@ -634,16 +634,25 @@ manipular la información. Su estudio detallado se hará posteriormente.</p>
 <dt>Por lotes:</dt>
 <dd><p class="first">Nuestro código fuente está almacenado en un archivo de texto llamado
 <strong>script</strong> (normalmente, con extensión <code class="file docutils literal"><span class="pre">.php</span></code>) y el intérprete lee
-dicho archivo, lo analiza sintáctica y semánticamente y lo ejecuta
-instrucción a instrucción. El objetivo final de este curso es desarrollar
+dicho archivo, lo analiza sintáctica y semánticamente y ejecuta las
+instrucciones que lo forman. El objetivo final de este curso es desarrollar
 aplicaciones web escribiendo los <em>scripts</em> necesarios para cumplir con la
 funcionalidad deseada.</p>
-<p>Si, por ejemplo, tenemos nuestro <em>script</em> almacenado en el archivo
-<code class="file docutils literal"><span class="pre">prueba.php</span></code>, provocaremos la ejecución del mismo mediante la
-siguiente orden del sistema operativo:</p>
-<div class="last highlight-shell-session"><div class="highlight"><pre><span></span><span class="gp">$</span> php prueba.php
+<p>Una manera de ejecutar nuestro <em>script</em> es pasárselo al intérprete desde la
+consola del sistema operativo <a class="footnote-reference" href="#cli" id="id2">[2]</a>. Por ejemplo, si tenemos nuestro <em>script</em>
+almacenado en el archivo <code class="file docutils literal"><span class="pre">prueba.php</span></code>, podemos provocar la ejecución
+del mismo mediante la siguiente orden del sistema operativo:</p>
+<div class="highlight-shell-session"><div class="highlight"><pre><span></span><span class="gp">$</span> php prueba.php
 </pre></div>
 </div>
+<table class="last docutils footnote" frame="void" id="cli" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>La otra forma es ejecutar el <em>script</em> en el contexto de un servidor web,
+<em>embebiendo</em> (o incrustando) el código PHP en una página HTML.
+Hablaremos sobre ello en próximos capítulos.</td></tr>
+</tbody>
+</table>
 </dd>
 <dt>Interactiva:</dt>
 <dd>Un intérprete interactivo solicita al usuario que introduzca (normalmente
@@ -752,8 +761,8 @@ StackOverflow</a>.</div>
 <p>ricpelo’s note: <code class="docutils literal"><span class="pre">double</span></code> es sinónimo de <code class="docutils literal"><span class="pre">float</span></code>, pero debería usarse
 <code class="docutils literal"><span class="pre">float</span></code>.</p>
 </div>
-<div class="section" id="id2">
-<h4>5.6.2.3. Operadores<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="section" id="id3">
+<h4>5.6.2.3. Operadores<a class="headerlink" href="#id3" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="operadores-aritmeticos">
 <h5>5.6.2.3.1. Operadores aritméticos<a class="headerlink" href="#operadores-aritmeticos" title="Enlazar permanentemente con este título">¶</a></h5>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.operators.arithmetic.php">http://php.net/manual/es/language.operators.arithmetic.php</a>&gt;</p>
@@ -783,8 +792,8 @@ StackOverflow</a>.</div>
 <div class="line">- <code class="docutils literal"><span class="pre">$a[3]</span> <span class="pre">=</span> <span class="pre">'x';</span></code></div>
 </div>
 </div>
-<div class="section" id="id3">
-<h5>5.6.3.1.3. Operadores de incremento/decremento<a class="headerlink" href="#id3" title="Enlazar permanentemente con este título">¶</a></h5>
+<div class="section" id="id4">
+<h5>5.6.3.1.3. Operadores de incremento/decremento<a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h5>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.operators.increment.php">http://php.net/manual/es/language.operators.increment.php</a>&gt;</p>
 </div>
 </div>
@@ -1030,8 +1039,8 @@ devuelto por el <code class="docutils literal"><span class="pre">return</span></
 </div>
 <p>ricpelo’s note: No da error ni advertencia si la variable no existe.</p>
 </div>
-<div class="section" id="id4">
-<h3>5.9.3. <code class="docutils literal"><span class="pre">var_dump()</span></code><a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="id5">
+<h3>5.9.3. <code class="docutils literal"><span class="pre">var_dump()</span></code><a class="headerlink" href="#id5" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/function.var-dump.php">http://php.net/manual/es/function.var-dump.php</a>&gt;</p>
 </div>
 </div>
@@ -1166,7 +1175,7 @@ que hace la llamada, no en el que define la función.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Ricardo Pérez López.
-      Actualizado por última vez en 13-11-2017.
+      Actualizado por última vez en 14-11-2017.
 
     </p>
   </div>
