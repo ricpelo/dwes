@@ -7,7 +7,6 @@ SPHINXBUILD   = sphinx-build
 SPHINXPROJ    = Desarrollowebenentornoservidor
 SOURCEDIR     = source
 BUILDDIR      = _build
-LATEXMKOPTS   = -xelatex -silent
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -16,7 +15,12 @@ help:
 .PHONY: help Makefile
 
 latexpdf:
-	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) -D exclude_patterns='_build','Thumbs.db','.DS_Store','index.rst' -D master_doc=index_latex
+	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) \
+		-D exclude_patterns='_build','Thumbs.db','.DS_Store','index.rst' \
+		-D master_doc=index_latex
+
+pdf:
+	make latexpdf LATEXMKOPTS="-xelatex -silent"
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).

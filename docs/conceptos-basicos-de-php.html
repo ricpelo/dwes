@@ -384,8 +384,8 @@ se codifican en forma de <strong>expresiones</strong>, y las instrucciones toman
 de <strong>sentencias</strong>.</p>
 <p>La diferencia fundamental entre una expresión y una sentencia es la siguiente:</p>
 <ul class="simple" id="index-2">
-<li>Una expresión tiene un valor (se dice que <em>denota</em> o <em>representa</em> un valor), y
-por eso decimos que una expresión <em>se puede evaluar</em>, y al evaluarse, se
+<li>Una expresión tiene un valor (se dice que <em>denota</em> o <em>representa</em> un valor),
+y por eso decimos que una expresión <em>se puede evaluar</em>, y al evaluarse, se
 obtiene el valor de la expresión, que no es más que un dato.</li>
 <li>En cambio, una sentencia no denota ningún valor, por lo que no puede
 evaluarse. El intérprete <em>ejecuta</em> la sentencia y se llevan a cabo las
@@ -424,13 +424,14 @@ acabándola en punto y coma, como por ejemplo:</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="mi">8</span> <span class="o">+</span> <span class="mi">3</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>Pero una sentencia así no tendría mucha utilidad, ya que el intérprete de PHP se
-limitaría a evaluar la expresión pero no haría nada más con el valor calculado.</p>
-<p id="index-4">Las sentencias realmente útiles son aquellas que provocan <strong>efectos laterales</strong>,
-es decir, acciones que provocan cambios en el estado interno del programa o que
-producen resultados que se vuelcan hacia la <em>salida</em> (siendo esta cualquier
-dispositivo de salida, como por ejemplo la pantalla, un archivo del disco o una
-fila de una tabla de una base de datos relacional).</p>
+<p>Pero una sentencia así no tendría mucha utilidad, ya que el intérprete de PHP
+se limitaría a evaluar la expresión pero no haría nada más con el valor
+calculado.</p>
+<p id="index-4">Las sentencias realmente útiles son aquellas que provocan <strong>efectos
+laterales</strong>, es decir, acciones que provocan cambios en el estado interno del
+programa o que producen resultados que se vuelcan hacia la <em>salida</em> (siendo
+esta cualquier dispositivo de salida, como por ejemplo la pantalla, un archivo
+del disco o una fila de una tabla de una base de datos relacional).</p>
 <p id="index-5">Otra forma de construir una sentencia simple es usar <strong>comandos</strong>. PHP dispone
 de varios comandos con los que se pueden escribir sentencias para llevar a cabo
 instrucciones sencillas. Cada comando consta de una <strong>palabra clave</strong>, que
@@ -448,12 +449,13 @@ sentencia. Por ejemplo:</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="s1">&#39;¡Hola a todos!&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>Muestra la cadena <code class="docutils literal"><span class="pre">¡Hola</span> <span class="pre">a</span> <span class="pre">todos!</span></code>.</p>
+<p>Muestra <code class="docutils literal"><span class="pre">¡Hola</span> <span class="pre">a</span> <span class="pre">todos!</span></code>.</p>
 <p>Puede mostrar varios valores, separando cada uno de ellos entre sí con una
 coma:</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="s1">&#39;El resultado es: &#39;</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
 </pre></div>
 </div>
+<p>Mostraría <code class="docutils literal"><span class="pre">El</span> <span class="pre">resultado</span> <span class="pre">es:</span> <span class="pre">8</span></code>.</p>
 </div>
 </div>
 <div class="section" id="expresiones">
@@ -462,13 +464,12 @@ coma:</p>
 sentencias son las <em>expresiones</em>. Una expresión <em>denota</em> o <em>representa</em> un
 valor. Una expresión puede ser tan simple como una constante literal (por
 ejemplo, el número <code class="docutils literal"><span class="pre">25</span></code>) o tan compleja que involucre constantes, variables,
-operadores, funciones y métodos, combinados todos ellos entre sí para formar
+operadores, funciones, métodos… combinados todos ellos entre sí para formar
 una única expresión.</p>
 <div class="section" id="operadores">
 <span id="index-8"></span><h4>5.2.3.1. Operadores<a class="headerlink" href="#operadores" title="Enlazar permanentemente con este título">¶</a></h4>
 <p>Un <strong>operador</strong> es un símbolo que representa una operación que se desea
-realizar sobre uno, dos o tres <strong>operandos</strong> (dependiendo de si el operador es
-<em>unario</em>, <em>binario</em> o <em>ternario</em> <a class="footnote-reference" href="#aridad" id="id1">[1]</a>). Los operandos son los valores
+realizar sobre sus <strong>operandos</strong> <a class="footnote-reference" href="#aridad" id="id1">[1]</a>. Los operandos son los valores
 sobre los que actúa el operador para llevar a cabo la operación deseada. Por
 ejemplo:</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="o">+</span> <span class="mi">3</span>
@@ -509,8 +510,8 @@ división) sobre números. La evaluación de una expresión (ya sea aritmética 
 cualquier otro tipo) depende de las reglas de <strong>asociatividad</strong> y <strong>prioridad</strong>
 de los operadores que participan en dicha expresión, las cuales tenemos que
 conocer para entender cómo evaluará el intérprete las expresiones que formen
-parte de nuestro programa. En el caso de las expresiones aritméticas, las reglas
-son las habituales que aprendimos en el colegio:</p>
+parte de nuestro programa. En el caso de las expresiones aritméticas, las
+reglas son las habituales que aprendimos en el colegio:</p>
 <ul>
 <li><p class="first">En una expresión en la que un operando está rodeado a izquierda y derecha por
 <em>el mismo operador</em>, se aplica la regla de la <em>asociatividad</em>. Por ejemplo,
@@ -551,12 +552,12 @@ mayor prioridad. El resultado de dicha expresión es el valor <code class="docut
 </div>
 <div class="section" id="funciones">
 <span id="index-10"></span><h4>5.2.3.2. Funciones<a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">¶</a></h4>
-<p>Las funciones en las expresiones cumplen el mismo papel que en las Matemáticas
-de toda la vida: realizan un cálculo a partir de unos valores de entrada
-indicados en sus parámetros y <em>devuelven</em> el resultado de dicho cálculo,. Por
-ejemplo, la función <em>coseno</em> (abreviado como <a class="reference external" href="http://php.net/manual/es/function.cos.php"><code class="xref php php-func docutils literal"><span class="pre">cos()</span></code></a>) calcula el coseno de un
-ángulo. En Matemáticas (y en Programación) se representa indicando el nombre de
-la función y, a continuación, la lista de sus parámetros entre paréntesis y
+<p>Las funciones en las expresiones cumplen el mismo papel que en Matemáticas:
+realizan un cálculo a partir de unos valores de entrada indicados en sus
+argumentos y <em>devuelven</em> el resultado de dicho cálculo. Por ejemplo, la
+función <em>coseno</em> (abreviada como <a class="reference external" href="http://php.net/manual/es/function.cos.php"><code class="xref php php-func docutils literal"><span class="pre">cos()</span></code></a>) calcula el coseno de un ángulo. En
+Matemáticas (y en Programación) se representa indicando el nombre de la
+función y, a continuación, la lista de sus argumentos entre paréntesis y
 separados por comas. Así, para calcular el coseno de 2.4 radianes, podemos
 escribir:</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="nb">cos</span><span class="p">(</span><span class="mf">2.4</span><span class="p">)</span>
@@ -564,9 +565,9 @@ escribir:</p>
 </div>
 <p>Que da como resultado <code class="docutils literal"><span class="pre">-0.73739371554125</span></code>, y ese sería el valor de dicha
 expresión.</p>
-<p>El coseno es un ejemplo de función con un único parámetro, pero hay funciones
-que admiten o requieren más parámetros. Es el caso de la función <a class="reference external" href="http://php.net/manual/es/function.max.php"><code class="xref php php-func docutils literal"><span class="pre">max()</span></code></a>, que
-devuelve el valor máximo de todos los indicados en su lista de parámetros:</p>
+<p>El coseno es un ejemplo de función con un único argumento, pero hay funciones
+que admiten o requieren más argumentos. Es el caso de la función <a class="reference external" href="http://php.net/manual/es/function.max.php"><code class="xref php php-func docutils literal"><span class="pre">max()</span></code></a>, que
+devuelve el valor máximo de todos los indicados en su lista de argumentos:</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -581,13 +582,15 @@ devuelve el valor máximo de todos los indicados en su lista de parámetros:</p>
 devuelven ningún valor, ya que su objetivo es provocar un <em>efecto lateral</em>. La
 más conocida podría ser, sin temor a equivocarnos, la función <a class="reference external" href="http://php.net/manual/es/function.var-dump.php"><code class="xref php php-func docutils literal"><span class="pre">var_dump()</span></code></a>. Esta
 función muestra en la salida información estructurada sobre las expresiones que
-se le pasan como argumento, incluyendo su valor y su tipo.</p>
-<p>Es importante destacar que esa información se vuelca <em>en la salida</em>
+se le pasan como argumento, incluyendo su valor y su tipo. En cierto sentido,
+podría considerarse un versión especializada del comando <code class="xref php php-func docutils literal"><span class="pre">echo</span></code>, pero en forma
+de función y más orientada a la <em>depuración</em> de programas.</p>
+<p>Es importante destacar que esa información que muestra se vuelca <em>en la salida</em>
 (normalmente la pantalla). No estamos diciendo que la función <em>devuelva</em> dicha
 información o que esa información sea el valor resultante de <em>evaluar</em> la
-llamada a la función. De hecho, hablamos de llamar a la función como si fuera
-una sentencia (una sentencia formada únicamente por la llamada a la función y
-el punto y coma final):</p>
+llamada a la función. De hecho, estamos hablamos de llamar a la función como si
+fuera una sentencia (una sentencia formada únicamente por la llamada a la
+función y el punto y coma final):</p>
 <div class="highlight-php"><div class="highlight"><pre><span></span><span class="nb">var_dump</span><span class="p">(</span><span class="mi">14</span> <span class="o">+</span> <span class="mi">3</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -628,7 +631,10 @@ manipular la información. Su estudio detallado se hará posteriormente.</p>
 </div>
 <div class="section" id="funcionamiento-del-interprete">
 <h2>5.3. Funcionamiento del intérprete<a class="headerlink" href="#funcionamiento-del-interprete" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>PHP es un lenguaje <em>interpretado</em> y, como tal, requiere de la existencia de un <strong>intérprete</strong>, que es la utilidad encargada de leer el código fuente escrito en el lenguaje y ejecutarlo adecuadamente siguiendo las reglas de dicho lenguaje.</p>
+<p>PHP es un lenguaje <em>interpretado</em> y, como tal, requiere de la existencia de un
+<strong>intérprete</strong>, que es la utilidad encargada de leer el código fuente escrito
+en el lenguaje y ejecutarlo adecuadamente siguiendo las reglas de dicho
+lenguaje.</p>
 <p>La ejecución de nuestro código se puede llevar a cabo de dos formas:</p>
 <dl class="docutils" id="index-15">
 <dt>Por lotes:</dt>
@@ -636,34 +642,37 @@ manipular la información. Su estudio detallado se hará posteriormente.</p>
 <strong>script</strong> (normalmente, con extensión <code class="file docutils literal"><span class="pre">.php</span></code>) y el intérprete lee
 dicho archivo, lo analiza sintáctica y semánticamente y ejecuta las
 instrucciones que lo forman. El objetivo final de este curso es desarrollar
-aplicaciones web escribiendo los <em>scripts</em> necesarios para cumplir con la
+aplicaciones escribiendo los <em>scripts</em> necesarios para cumplir con la
 funcionalidad deseada.</p>
 <p>Una manera de ejecutar nuestro <em>script</em> es pasárselo al intérprete desde la
-consola del sistema operativo <a class="footnote-reference" href="#cli" id="id2">[2]</a>. Por ejemplo, si tenemos nuestro <em>script</em>
-almacenado en el archivo <code class="file docutils literal"><span class="pre">prueba.php</span></code>, podemos provocar la ejecución
-del mismo mediante la siguiente orden del sistema operativo:</p>
+consola del sistema operativo <a class="footnote-reference" href="#cli" id="id2">[2]</a>. Por ejemplo, si tenemos nuestro
+<em>script</em> almacenado en el archivo <code class="file docutils literal"><span class="pre">prueba.php</span></code>, podemos provocar la
+ejecución del mismo mediante la siguiente orden del sistema operativo:</p>
 <div class="highlight-shell-session"><div class="highlight"><pre><span></span><span class="gp">$</span> php prueba.php
 </pre></div>
 </div>
 <table class="last docutils footnote" frame="void" id="cli" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>La otra forma es ejecutar el <em>script</em> en el contexto de un servidor web,
-<em>embebiendo</em> (o incrustando) el código PHP en una página HTML.
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>La otra forma es ejecutar el <em>script</em> en el contexto de un <strong>servidor
+web</strong>, <em>embebiendo</em> (o <em>incrustando</em>) el código PHP en una página HTML.
 Hablaremos sobre ello en próximos capítulos.</td></tr>
 </tbody>
 </table>
 </dd>
 <dt>Interactiva:</dt>
-<dd>Un intérprete interactivo solicita al usuario que introduzca (normalmente
-por teclado) una sentencia o expresión. Una vez analizada, ejecuta dicha
-sentencia (o evalúa dicha expresión) y vuelve a solicitar al usuario la
-introducción de una nueva sentencia o expresión. El usuario, por tanto, ve
-inmediatamente el efecto (o el resultado) que produce la ejecución (o
-evaluación) de la sentencia (o expresión) que acaba de introducir en el
-intérprete interactivo.</dd>
+<dd>El intérprete interactivo solicita al usuario que introduzca una sentencia,
+normalmente por teclado. Una vez analizada, la ejecuta y vuelve a solicitar
+al usuario la introducción de una nueva sentencia. El usuario, por tanto,
+ve inmediatamente el efecto que produce la ejecución de la sentencia que
+acaba de introducir en el intérprete interactivo.</dd>
 </dl>
-<p>ssdfsdfsdf.</p>
+<p>El intérprete interactivo resulta muy útil para hacerse con el manejo básico
+del lenguaje y para realizar pruebas rápidas sin necesidad de tener que
+escribir un programa expresamente para tal fin. Por ello, su utilidad didáctica
+es innegable. Pero más allá de eso, la meta principal de este curso es escribir
+programas y, por tanto, la ejecución por lotes es la más importante y la razón
+de ser del lenguaje.</p>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.basic-syntax.phpmode.php">http://php.net/manual/es/language.basic-syntax.phpmode.php</a>&gt;</p>
 <div class="section" id="modo-dual-de-operacion">
 <h3>5.3.1. Modo dual de operación<a class="headerlink" href="#modo-dual-de-operacion" title="Enlazar permanentemente con este título">¶</a></h3>

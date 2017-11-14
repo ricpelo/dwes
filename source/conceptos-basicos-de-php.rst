@@ -66,8 +66,8 @@ La diferencia fundamental entre una expresión y una sentencia es la siguiente:
    single: expresiones, evaluación de
    see: evaluación; expresiones
 
-- Una expresión tiene un valor (se dice que *denota* o *representa* un valor), y
-  por eso decimos que una expresión *se puede evaluar*, y al evaluarse, se
+- Una expresión tiene un valor (se dice que *denota* o *representa* un valor),
+  y por eso decimos que una expresión *se puede evaluar*, y al evaluarse, se
   obtiene el valor de la expresión, que no es más que un dato.
 
 - En cambio, una sentencia no denota ningún valor, por lo que no puede
@@ -80,21 +80,21 @@ Las expresiones se evalúan. Las sentencias se ejecutan.
 
    ::
 
-     5 * (3 + 6)
+       5 * (3 + 6)
 
    Es una expresión aritmética que involucra números enteros y cuyo valor es
    ``45``.
 
    ::
 
-     1.6 + 2.3
+       1.6 + 2.3
 
    Es una expresión aritmética que involucra números reales y cuyo valor es
    ``3.9``.
 
    ::
 
-     74
+       74
 
    Es una constante literal numérica cuyo valor es, precisamente, ``74``.
 
@@ -107,6 +107,7 @@ Las sentencias en PHP pueden ser *simples* o *compuestas*.
 
 - Las **sentencias simples** son las instrucciones más elementales del lenguaje
   y se escriben siempre acabadas en punto y coma (``;``).
+
 - Las **sentencias compuestas** corresponden a las **estructuras de control** y
   se estudiarán posteriormente en este capítulo.
 
@@ -115,16 +116,17 @@ acabándola en punto y coma, como por ejemplo::
 
     8 + 3;
 
-Pero una sentencia así no tendría mucha utilidad, ya que el intérprete de PHP se
-limitaría a evaluar la expresión pero no haría nada más con el valor calculado.
+Pero una sentencia así no tendría mucha utilidad, ya que el intérprete de PHP
+se limitaría a evaluar la expresión pero no haría nada más con el valor
+calculado.
 
 .. index:: efectos laterales
 
-Las sentencias realmente útiles son aquellas que provocan **efectos laterales**,
-es decir, acciones que provocan cambios en el estado interno del programa o que
-producen resultados que se vuelcan hacia la *salida* (siendo esta cualquier
-dispositivo de salida, como por ejemplo la pantalla, un archivo del disco o una
-fila de una tabla de una base de datos relacional).
+Las sentencias realmente útiles son aquellas que provocan **efectos
+laterales**, es decir, acciones que provocan cambios en el estado interno del
+programa o que producen resultados que se vuelcan hacia la *salida* (siendo
+esta cualquier dispositivo de salida, como por ejemplo la pantalla, un archivo
+del disco o una fila de una tabla de una base de datos relacional).
 
 .. index:: comandos, palabras clave
 
@@ -152,12 +154,14 @@ Muestra ``75`` por la salida (normalmente la pantalla). O bien::
 
     echo '¡Hola a todos!';
 
-Muestra la cadena ``¡Hola a todos!``.
+Muestra ``¡Hola a todos!``.
 
 Puede mostrar varios valores, separando cada uno de ellos entre sí con una
 coma::
 
     echo 'El resultado es: ', 4 * 2;
+
+Mostraría ``El resultado es: 8``.
 
 .. index:: expresiones
 
@@ -168,7 +172,7 @@ El otro tipo de construcción sintáctica que existe en PHP junto con las
 sentencias son las *expresiones*. Una expresión *denota* o *representa* un
 valor. Una expresión puede ser tan simple como una constante literal (por
 ejemplo, el número ``25``) o tan compleja que involucre constantes, variables,
-operadores, funciones y métodos, combinados todos ellos entre sí para formar
+operadores, funciones, métodos... combinados todos ellos entre sí para formar
 una única expresión.
 
 .. index:: operadores
@@ -177,8 +181,7 @@ Operadores
 ^^^^^^^^^^
 
 Un **operador** es un símbolo que representa una operación que se desea
-realizar sobre uno, dos o tres **operandos** (dependiendo de si el operador es
-*unario*, *binario* o *ternario* [#aridad]_). Los operandos son los valores
+realizar sobre sus **operandos** [#aridad]_. Los operandos son los valores
 sobre los que actúa el operador para llevar a cabo la operación deseada. Por
 ejemplo::
 
@@ -222,8 +225,8 @@ división) sobre números. La evaluación de una expresión (ya sea aritmética 
 cualquier otro tipo) depende de las reglas de **asociatividad** y **prioridad**
 de los operadores que participan en dicha expresión, las cuales tenemos que
 conocer para entender cómo evaluará el intérprete las expresiones que formen
-parte de nuestro programa. En el caso de las expresiones aritméticas, las reglas
-son las habituales que aprendimos en el colegio:
+parte de nuestro programa. En el caso de las expresiones aritméticas, las
+reglas son las habituales que aprendimos en el colegio:
 
 - En una expresión en la que un operando está rodeado a izquierda y derecha por
   *el mismo operador*, se aplica la regla de la *asociatividad*. Por ejemplo,
@@ -263,12 +266,12 @@ mayor prioridad. El resultado de dicha expresión es el valor ``35``.
 Funciones
 ^^^^^^^^^
 
-Las funciones en las expresiones cumplen el mismo papel que en las Matemáticas
-de toda la vida: realizan un cálculo a partir de unos valores de entrada
-indicados en sus parámetros y *devuelven* el resultado de dicho cálculo,. Por
-ejemplo, la función *coseno* (abreviado como |cos|_) calcula el coseno de un
-ángulo. En Matemáticas (y en Programación) se representa indicando el nombre de
-la función y, a continuación, la lista de sus parámetros entre paréntesis y
+Las funciones en las expresiones cumplen el mismo papel que en Matemáticas:
+realizan un cálculo a partir de unos valores de entrada indicados en sus
+argumentos y *devuelven* el resultado de dicho cálculo. Por ejemplo, la
+función *coseno* (abreviada como |cos|_) calcula el coseno de un ángulo. En
+Matemáticas (y en Programación) se representa indicando el nombre de la
+función y, a continuación, la lista de sus argumentos entre paréntesis y
 separados por comas. Así, para calcular el coseno de 2.4 radianes, podemos
 escribir::
 
@@ -280,9 +283,9 @@ expresión.
 .. |cos| replace:: :php:func:`cos()`
 .. _cos: http://php.net/manual/es/function.cos.php
 
-El coseno es un ejemplo de función con un único parámetro, pero hay funciones
-que admiten o requieren más parámetros. Es el caso de la función |max|_, que
-devuelve el valor máximo de todos los indicados en su lista de parámetros::
+El coseno es un ejemplo de función con un único argumento, pero hay funciones
+que admiten o requieren más argumentos. Es el caso de la función |max|_, que
+devuelve el valor máximo de todos los indicados en su lista de argumentos::
 
     max(5, 3, 8, 2)
 
@@ -305,14 +308,16 @@ En PHP, a diferencia de lo que ocurre en Matemáticas, existen funciones que no
 devuelven ningún valor, ya que su objetivo es provocar un *efecto lateral*. La
 más conocida podría ser, sin temor a equivocarnos, la función |var_dump|_. Esta
 función muestra en la salida información estructurada sobre las expresiones que
-se le pasan como argumento, incluyendo su valor y su tipo.
+se le pasan como argumento, incluyendo su valor y su tipo. En cierto sentido,
+podría considerarse un versión especializada del comando |echo|, pero en forma
+de función y más orientada a la *depuración* de programas.
 
-Es importante destacar que esa información se vuelca *en la salida*
+Es importante destacar que esa información que muestra se vuelca *en la salida*
 (normalmente la pantalla). No estamos diciendo que la función *devuelva* dicha
 información o que esa información sea el valor resultante de *evaluar* la
-llamada a la función. De hecho, hablamos de llamar a la función como si fuera
-una sentencia (una sentencia formada únicamente por la llamada a la función y
-el punto y coma final)::
+llamada a la función. De hecho, estamos hablamos de llamar a la función como si
+fuera una sentencia (una sentencia formada únicamente por la llamada a la
+función y el punto y coma final)::
 
     var_dump(14 + 3);
 
@@ -359,7 +364,10 @@ manipular la información. Su estudio detallado se hará posteriormente.
 Funcionamiento del intérprete
 -----------------------------
 
-PHP es un lenguaje *interpretado* y, como tal, requiere de la existencia de un **intérprete**, que es la utilidad encargada de leer el código fuente escrito en el lenguaje y ejecutarlo adecuadamente siguiendo las reglas de dicho lenguaje.
+PHP es un lenguaje *interpretado* y, como tal, requiere de la existencia de un
+**intérprete**, que es la utilidad encargada de leer el código fuente escrito
+en el lenguaje y ejecutarlo adecuadamente siguiendo las reglas de dicho
+lenguaje.
 
 La ejecución de nuestro código se puede llevar a cabo de dos formas:
 
@@ -370,33 +378,36 @@ Por lotes:
     **script** (normalmente, con extensión :file:`.php`) y el intérprete lee
     dicho archivo, lo analiza sintáctica y semánticamente y ejecuta las
     instrucciones que lo forman. El objetivo final de este curso es desarrollar
-    aplicaciones web escribiendo los *scripts* necesarios para cumplir con la
+    aplicaciones escribiendo los *scripts* necesarios para cumplir con la
     funcionalidad deseada.
 
     Una manera de ejecutar nuestro *script* es pasárselo al intérprete desde la
-    consola del sistema operativo [#cli]_. Por ejemplo, si tenemos nuestro *script*
-    almacenado en el archivo :file:`prueba.php`, podemos provocar la ejecución
-    del mismo mediante la siguiente orden del sistema operativo:
+    consola del sistema operativo [#cli]_. Por ejemplo, si tenemos nuestro
+    *script* almacenado en el archivo :file:`prueba.php`, podemos provocar la
+    ejecución del mismo mediante la siguiente orden del sistema operativo:
 
     .. code-block:: shell-session
 
         $ php prueba.php
 
     .. [#cli]
-       La otra forma es ejecutar el *script* en el contexto de un servidor web,
-       *embebiendo* (o incrustando) el código PHP en una página HTML.
+       La otra forma es ejecutar el *script* en el contexto de un **servidor
+       web**, *embebiendo* (o *incrustando*) el código PHP en una página HTML.
        Hablaremos sobre ello en próximos capítulos.
 
 Interactiva:
-    Un intérprete interactivo solicita al usuario que introduzca (normalmente
-    por teclado) una sentencia o expresión. Una vez analizada, ejecuta dicha
-    sentencia (o evalúa dicha expresión) y vuelve a solicitar al usuario la
-    introducción de una nueva sentencia o expresión. El usuario, por tanto, ve
-    inmediatamente el efecto (o el resultado) que produce la ejecución (o
-    evaluación) de la sentencia (o expresión) que acaba de introducir en el
-    intérprete interactivo.
+    El intérprete interactivo solicita al usuario que introduzca una sentencia,
+    normalmente por teclado. Una vez analizada, la ejecuta y vuelve a solicitar
+    al usuario la introducción de una nueva sentencia. El usuario, por tanto,
+    ve inmediatamente el efecto que produce la ejecución de la sentencia que
+    acaba de introducir en el intérprete interactivo.
 
-ssdfsdfsdf.
+El intérprete interactivo resulta muy útil para hacerse con el manejo básico
+del lenguaje y para realizar pruebas rápidas sin necesidad de tener que
+escribir un programa expresamente para tal fin. Por ello, su utilidad didáctica
+es innegable. Pero más allá de eso, la meta principal de este curso es escribir
+programas y, por tanto, la ejecución por lotes es la más importante y la razón
+de ser del lenguaje.
 
 <http://php.net/manual/es/language.basic-syntax.phpmode.php>
 
