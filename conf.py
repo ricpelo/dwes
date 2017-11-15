@@ -261,11 +261,11 @@ latex_elements = {
         \usepackage{libertine}
         \setmonofont[
             Path=../../fonts/,
-            BoldFont=Inconsolata-Bold.ttf,
+            BoldFont=FiraMono-Bold.ttf,
             AutoFakeSlant,
             BoldItalicFeatures={FakeSlant},
             Scale=MatchLowercase
-        ]{Inconsolata-Regular.ttf}""",
+        ]{FiraMono-Medium.ttf}""",
 
     'sphinxsetup': """
         verbatimwithframe=false,
