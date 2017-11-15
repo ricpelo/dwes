@@ -377,10 +377,10 @@ Hola
 \label{\detokenize{php:sintaxis-basica}}
 \textless{}\sphinxurl{http://php.net/manual/es/language.basic-syntax.php}\textgreater{}
 
-\index{datos}\index{instrucciones}\ignorespaces 
 
 \subsection{Datos e instrucciones}
-\label{\detokenize{php:datos-e-instrucciones}}\label{\detokenize{php:index-0}}
+\label{\detokenize{php:datos-e-instrucciones}}
+\index{datos}\index{instrucciones}\ignorespaces 
 En todo lenguaje de programación existen dos elementos básicos: los \sphinxstylestrong{datos} y
 las \sphinxstylestrong{instrucciones}. Los datos son las porciones de información con las que
 trabajan los programas, y las instrucciones son las acciones que manipulan esos
@@ -433,10 +433,10 @@ Es una expresión aritmética que involucra números reales y cuyo valor es
 Es una constante literal numérica cuyo valor es, precisamente, \sphinxcode{74}.
 \end{sphinxadmonition}
 
-\index{sentencias}\index{comandos}\ignorespaces 
 
 \subsection{Sentencias y comandos}
-\label{\detokenize{php:sentencias-y-comandos}}\label{\detokenize{php:index-3}}
+\label{\detokenize{php:sentencias-y-comandos}}
+\index{sentencias}\index{comandos}\ignorespaces 
 Las sentencias en PHP pueden ser \sphinxstyleemphasis{simples} o \sphinxstyleemphasis{compuestas}.
 \begin{itemize}
 \item {} 
@@ -474,10 +474,10 @@ instrucciones sencillas. Cada comando consta de una \sphinxstylestrong{palabra c
 identifica al comando, y de una serie de \sphinxstyleemphasis{argumentos} que completan la
 sentencia.
 
-\index{echo}\ignorespaces 
 
 \subsubsection{El comando \sphinxstyleliteralintitle{echo}}
-\label{\detokenize{php:index-6}}\label{\detokenize{php:el-comando-echo}}
+\label{\detokenize{php:el-comando-echo}}
+\index{echo}\ignorespaces 
 El ejemplo clásico de comando en PHP es \sphinxhref{http://php.net/manual/es/function.echo.php}{\sphinxcode{echo}}%
 \begin{footnote}[1]\sphinxAtStartFootnote
 \sphinxnolinkurl{http://php.net/manual/es/function.echo.php}
@@ -511,17 +511,17 @@ Mostraría \sphinxcode{El resultado es: 8}.
 
 \subsection{Expresiones}
 \label{\detokenize{php:expresiones}}\label{\detokenize{php:index-7}}
-El otro tipo de construcción sintáctica que existe en PHP junto con las
+El otro tipo de construcción sintáctica que existe en PHP además de las
 sentencias son las \sphinxstyleemphasis{expresiones}. Una expresión \sphinxstyleemphasis{denota} o \sphinxstyleemphasis{representa} un
 valor. Una expresión puede ser tan simple como una constante literal (por
 ejemplo, el número \sphinxcode{25}) o tan compleja que involucre constantes, variables,
 operadores, funciones, métodos… combinados todos ellos entre sí para formar
 una única expresión.
 
-\index{operadores}\ignorespaces 
 
 \subsubsection{Operadores}
-\label{\detokenize{php:index-8}}\label{\detokenize{php:operadores}}
+\label{\detokenize{php:operadores}}
+\index{operadores}\ignorespaces 
 Un \sphinxstylestrong{operador} es un símbolo que representa una operación que se desea
 realizar sobre sus \sphinxstylestrong{operandos} %
 \begin{footnote}[2]\sphinxAtStartFootnote
@@ -565,10 +565,10 @@ Que denota el valor \sphinxcode{12}, o con varios operadores diferentes:
 
 Que evalúa a \sphinxcode{19}.
 
-\index{asociatividad}\index{prioridad}\ignorespaces 
 
 \paragraph{Asociatividad y prioridad}
-\label{\detokenize{php:asociatividad-y-prioridad}}\label{\detokenize{php:index-9}}
+\label{\detokenize{php:asociatividad-y-prioridad}}
+\index{asociatividad}\index{prioridad}\ignorespaces 
 Todas las expresiones anteriores son ejemplos de expresiones \sphinxstyleemphasis{artiméticas},
 donde se realizan las operaciones matemáticas usuales (suma, resta, producto y
 división) sobre números. La evaluación de una expresión (ya sea aritmética o de
@@ -625,10 +625,10 @@ los operadores que vayan entre paréntesis. Por ejemplo, en la expresión:
 la suma se hace antes que el producto, aunque este último sea un operador de
 mayor prioridad. El resultado de dicha expresión es el valor \sphinxcode{35}.
 
-\index{funciones}\index{cos()}\ignorespaces 
 
 \subsubsection{Funciones}
-\label{\detokenize{php:funciones}}\label{\detokenize{php:index-10}}
+\label{\detokenize{php:funciones}}
+\index{funciones}\index{cos()}\ignorespaces 
 Las funciones en las expresiones cumplen el mismo papel que en Matemáticas:
 realizan un cálculo a partir de unos valores de entrada indicados en sus
 argumentos y \sphinxstyleemphasis{devuelven} el resultado de dicho cálculo. Por ejemplo, la
@@ -752,12 +752,12 @@ La ejecución de nuestro código se puede llevar a cabo de dos formas:
 
 \index{scripts}\ignorespaces \begin{description}
 \item[{Por lotes:}] \leavevmode
-Nuestro código fuente está almacenado en un archivo de texto llamado
-\sphinxstylestrong{script} (normalmente, con extensión \sphinxcode{.php}) y el intérprete lee
-dicho archivo, lo analiza sintáctica y semánticamente y ejecuta las
-instrucciones que lo forman. El objetivo final de este curso es desarrollar
-aplicaciones escribiendo los \sphinxstyleemphasis{scripts} necesarios para cumplir con la
-funcionalidad deseada.
+Nuestro código fuente está almacenado en un archivo de texto (normalmente,
+con extensión \sphinxcode{.php}) y el intérprete lee dicho archivo, lo analiza
+sintáctica y semánticamente y ejecuta las instrucciones que lo forman. Estos
+archivos (que contienen el código fuente en PHP) se denominan \sphinxstylestrong{scripts}, y
+el objetivo final de este curso es desarrollar aplicaciones escribiendo los
+\sphinxstyleemphasis{scripts} necesarios para cumplir con la funcionalidad deseada.
 
 Una manera de ejecutar nuestro \sphinxstyleemphasis{script} es pasárselo al intérprete desde la
 consola del sistema operativo %
@@ -776,21 +776,60 @@ ejecución del mismo mediante la siguiente orden del sistema operativo:
 
 \item[{Interactiva:}] \leavevmode
 El intérprete interactivo solicita al usuario que introduzca una sentencia,
-normalmente por teclado. Una vez analizada, la ejecuta y vuelve a solicitar
-al usuario la introducción de una nueva sentencia. El usuario, por tanto,
-ve inmediatamente el efecto que produce la ejecución de la sentencia que
-acaba de introducir en el intérprete interactivo.
+normalmente por teclado. Una vez introducida, el intérprete la analiza, la
+ejecuta y vuelve a solicitar al usuario la introducción de una nueva
+sentencia. El usuario, por tanto, ve inmediatamente el efecto que produce la
+ejecución de la sentencia que acaba de introducir en el intérprete
+interactivo.
 
 \end{description}
 
-El intérprete interactivo resulta muy útil para hacerse con el manejo básico
-del lenguaje y para realizar pruebas rápidas sin necesidad de tener que
-escribir un programa expresamente para tal fin. Por ello, su utilidad didáctica
-es innegable. Pero más allá de eso, la meta principal de este curso es escribir
-programas y, por tanto, la ejecución por lotes es la más importante y la razón
-de ser del lenguaje.
-
 \textless{}\sphinxurl{http://php.net/manual/es/language.basic-syntax.phpmode.php}\textgreater{}
+
+
+\subsection{Intérprete interactivo}
+\label{\detokenize{php:interprete-interactivo}}
+La meta principal de este curso es escribir programas y, por tanto, la ejecución
+por lotes es la más importante y la razón de ser del lenguaje. Pero el
+intérprete interactivo resulta muy útil para hacerse con el manejo básico del
+lenguaje y para realizar pruebas rápidas sin necesidad de tener que escribir un
+programa expresamente para tal fin. Por ello, su utilidad didáctica es
+innegable, así que empezaremos con él.
+
+
+\subsubsection{Intérprete interactivo integrado (\sphinxstyleliteralintitle{php -a})}
+\label{\detokenize{php:interprete-interactivo-integrado-php-a}}
+PHP dispone de un intérprete interactivo integrado que, si bien es algo
+espartano y no dispone de características adicionales que sí podemos encontrar
+en otros intérpretes más avanzados, tiene lo justo y necesario para cumplir su
+función.
+
+Para empezar a trabajar con dicho intérprete de forma interactiva, indicaremos
+la opción \sphinxcode{-a} al intérprete desde la consola del sistema operativo:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{\PYGZdl{}} php \PYGZhy{}a
+\PYG{g+go}{Interactive mode enabled}
+
+\PYG{g+go}{php \PYGZgt{}}
+\end{sphinxVerbatim}
+
+El intérprete nos muestra el \sphinxstyleemphasis{prompt} \sphinxcode{php \textgreater{}}, indicándonos que está listo para recibir nuestras sentencias PHP. Probamos:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+go}{php \PYGZgt{} echo 75;}
+\PYG{g+go}{75}
+\PYG{g+go}{php \PYGZgt{} echo 23 * 5;}
+\PYG{g+go}{115}
+\PYG{g+go}{php \PYGZgt{} echo \PYGZdq{}Hola a todos\PYGZdq{};}
+\PYG{g+go}{Hola a todos}
+\PYG{g+go}{php \PYGZgt{}}
+\end{sphinxVerbatim}
+
+
+\subsubsection{PsySH}
+\label{\detokenize{php:psysh}}
+\textless{}\sphinxurl{http://psysh.org/}\textgreater{}
 
 
 \subsection{Modo dual de operación}
@@ -800,17 +839,6 @@ ricpelo’s note: Se llaman \sphinxstyleemphasis{modo HTML} y \sphinxstyleemphas
 
 \subsection{Etiquetas \sphinxstyleliteralintitle{\textless{}?php} y \sphinxstyleliteralintitle{?\textgreater{}}}
 \label{\detokenize{php:etiquetas-php-y}}
-
-\section{Intérprete interactivo}
-\label{\detokenize{php:interprete-interactivo}}
-
-\subsection{\sphinxstyleliteralintitle{php -a}}
-\label{\detokenize{php:php-a}}
-
-\subsection{PsySH}
-\label{\detokenize{php:psysh}}
-\textless{}\sphinxurl{http://psysh.org/}\textgreater{}
-
 
 \section{Variables}
 \label{\detokenize{php:variables}}
@@ -1388,15 +1416,6 @@ en argumentos ni en devolución.
 ricpelo’s note: El \sphinxcode{declare(strict\_types=1);} se pone en el archivo
 que hace la llamada, no en el que define la función.
 
-
-\chapter{Persistencia de datos con PHP}
-\label{\detokenize{php:persistencia-de-datos-con-php}}
-
-\chapter{Programación avanzada en PHP}
-\label{\detokenize{php:programacion-avanzada-en-php}}
-
-\chapter{Interoperabilidad}
-\label{\detokenize{php:interoperabilidad}}
 
 \part{Yii2}
 \label{\detokenize{yii2:yii2}}\label{\detokenize{yii2::doc}}

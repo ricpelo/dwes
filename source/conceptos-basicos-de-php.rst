@@ -1,6 +1,5 @@
-==========================
 Conceptos básicos de PHP I
-==========================
+===========================
 
 ricpelo's note: Programada inicialmente para empezar el 23-10-2017.
 
@@ -9,43 +8,51 @@ ricpelo's note: Programada inicialmente para empezar el 23-10-2017.
 .. command-output:: php ../../p.php
 
 Introducción a PHP
-------------------
+-------------------
+
 
 Página web de PHP
-~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 <http://php.net>
 
 Instalación de PHP
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
+
 
 Documentación y búsqueda de información
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 Configuración básica con ``php.ini``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 ``error_reporting = E_ALL``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 ``display_errors = On``
-^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~
+
 
 ``display_startup_errors = On``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 ``date.timezone = 'UTC'``
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 Sintaxis básica
----------------
+----------------
 
 <http://php.net/manual/es/language.basic-syntax.php>
 
-.. index:: datos, instrucciones
-
 Datos e instrucciones
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
+
+.. index:: datos, instrucciones
 
 En todo lenguaje de programación existen dos elementos básicos: los **datos** y
 las **instrucciones**. Los datos son las porciones de información con las que
@@ -98,10 +105,10 @@ Las expresiones se evalúan. Las sentencias se ejecutan.
 
    Es una constante literal numérica cuyo valor es, precisamente, ``74``.
 
-.. index:: sentencias, comandos
-
 Sentencias y comandos
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
+
+.. index:: sentencias, comandos
 
 Las sentencias en PHP pueden ser *simples* o *compuestas*.
 
@@ -136,10 +143,10 @@ instrucciones sencillas. Cada comando consta de una **palabra clave**, que
 identifica al comando, y de una serie de *argumentos* que completan la
 sentencia.
 
-.. index:: echo
-
 El comando ``echo``
-^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~
+
+.. index:: echo
 
 .. |echo| replace:: :php:func:`echo`
 .. _echo: http://php.net/manual/es/function.echo.php
@@ -166,19 +173,19 @@ Mostraría ``El resultado es: 8``.
 .. index:: expresiones
 
 Expresiones
-~~~~~~~~~~~
+^^^^^^^^^^^
 
-El otro tipo de construcción sintáctica que existe en PHP junto con las
+El otro tipo de construcción sintáctica que existe en PHP además de las
 sentencias son las *expresiones*. Una expresión *denota* o *representa* un
 valor. Una expresión puede ser tan simple como una constante literal (por
 ejemplo, el número ``25``) o tan compleja que involucre constantes, variables,
 operadores, funciones, métodos... combinados todos ellos entre sí para formar
 una única expresión.
 
-.. index:: operadores
-
 Operadores
-^^^^^^^^^^
+~~~~~~~~~~
+
+.. index:: operadores
 
 Un **operador** es un símbolo que representa una operación que se desea
 realizar sobre sus **operandos** [#aridad]_. Los operandos son los valores
@@ -214,10 +221,10 @@ Que denota el valor ``12``, o con varios operadores diferentes::
 
 Que evalúa a ``19``.
 
-.. index:: asociatividad, prioridad
-
 Asociatividad y prioridad
-'''''''''''''''''''''''''
+"""""""""""""""""""""""""
+
+.. index:: asociatividad, prioridad
 
 Todas las expresiones anteriores son ejemplos de expresiones *artiméticas*,
 donde se realizan las operaciones matemáticas usuales (suma, resta, producto y
@@ -232,39 +239,39 @@ reglas son las habituales que aprendimos en el colegio:
   *el mismo operador*, se aplica la regla de la *asociatividad*. Por ejemplo,
   en la expresión::
 
-    4 + 3 + 5
+      4 + 3 + 5
 
   el operando ``3`` tiene el mismo operador a izquierda y derecha (el ``+``), y
   como dicho operador es *asociativo por la izquierda*, la expresión se evalúa
   igual que si se hubiera escrito como::
 
-    (4 + 3) + 5
+      (4 + 3) + 5
 
 - En una expresión en la que un operando está rodeado a izquierda y derecha por
   *distintos operadores*, se aplica la regla de la *prioridad*. Por ejemplo,
   en la expresión::
 
-    4 + 3 * 5
+      4 + 3 * 5
 
   el operando ``3`` tiene el operador ``+`` a su izquierda y el ``*`` a su
   derecha, pero como el producto tiene más prioridad que la suma, la expresión
   se evalúa igual que si se hubiera escrito como::
 
-    4 + (3 * 5)
+      4 + (3 * 5)
 
 Como se aprecia en los ejemplos anteriores, se pueden usar **paréntesis** para
 agrupar sub-expresiones dentro de una expresión y así aumentar la prioridad de
 los operadores que vayan entre paréntesis. Por ejemplo, en la expresión::
 
-    (4 + 3) * 5
+      (4 + 3) * 5
 
 la suma se hace antes que el producto, aunque este último sea un operador de
 mayor prioridad. El resultado de dicha expresión es el valor ``35``.
 
-.. index:: funciones, cos()
-
 Funciones
-^^^^^^^^^
+~~~~~~~~~
+
+.. index:: funciones, cos()
 
 Las funciones en las expresiones cumplen el mismo papel que en Matemáticas:
 realizan un cálculo a partir de unos valores de entrada indicados en sus
@@ -362,7 +369,7 @@ Los números (enteros y reales), así como las cadenas, son algunos de los
 manipular la información. Su estudio detallado se hará posteriormente.
 
 Funcionamiento del intérprete
------------------------------
+------------------------------
 
 PHP es un lenguaje *interpretado* y, como tal, requiere de la existencia de un
 **intérprete**, que es la utilidad encargada de leer el código fuente escrito
@@ -374,12 +381,12 @@ La ejecución de nuestro código se puede llevar a cabo de dos formas:
 .. index:: scripts
 
 Por lotes:
-    Nuestro código fuente está almacenado en un archivo de texto llamado
-    **script** (normalmente, con extensión :file:`.php`) y el intérprete lee
-    dicho archivo, lo analiza sintáctica y semánticamente y ejecuta las
-    instrucciones que lo forman. El objetivo final de este curso es desarrollar
-    aplicaciones escribiendo los *scripts* necesarios para cumplir con la
-    funcionalidad deseada.
+    Nuestro código fuente está almacenado en un archivo de texto (normalmente,
+    con extensión :file:`.php`) y el intérprete lee dicho archivo, lo analiza
+    sintáctica y semánticamente y ejecuta las instrucciones que lo forman. Estos
+    archivos (que contienen el código fuente en PHP) se denominan **scripts**, y
+    el objetivo final de este curso es desarrollar aplicaciones escribiendo los
+    *scripts* necesarios para cumplir con la funcionalidad deseada.
 
     Una manera de ejecutar nuestro *script* es pasárselo al intérprete desde la
     consola del sistema operativo [#cli]_. Por ejemplo, si tenemos nuestro
@@ -397,38 +404,67 @@ Por lotes:
 
 Interactiva:
     El intérprete interactivo solicita al usuario que introduzca una sentencia,
-    normalmente por teclado. Una vez analizada, la ejecuta y vuelve a solicitar
-    al usuario la introducción de una nueva sentencia. El usuario, por tanto,
-    ve inmediatamente el efecto que produce la ejecución de la sentencia que
-    acaba de introducir en el intérprete interactivo.
-
-El intérprete interactivo resulta muy útil para hacerse con el manejo básico
-del lenguaje y para realizar pruebas rápidas sin necesidad de tener que
-escribir un programa expresamente para tal fin. Por ello, su utilidad didáctica
-es innegable. Pero más allá de eso, la meta principal de este curso es escribir
-programas y, por tanto, la ejecución por lotes es la más importante y la razón
-de ser del lenguaje.
+    normalmente por teclado. Una vez introducida, el intérprete la analiza, la
+    ejecuta y vuelve a solicitar al usuario la introducción de una nueva
+    sentencia. El usuario, por tanto, ve inmediatamente el efecto que produce la
+    ejecución de la sentencia que acaba de introducir en el intérprete
+    interactivo.
 
 <http://php.net/manual/es/language.basic-syntax.phpmode.php>
 
-Modo dual de operación
-~~~~~~~~~~~~~~~~~~~~~~
-
-ricpelo's note: Se llaman *modo HTML* y *modo PHP*.
-
-Etiquetas ``<?php`` y ``?>``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 Intérprete interactivo
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
-``php -a``
-~~~~~~~~~~
+La meta principal de este curso es escribir programas y, por tanto, la ejecución
+por lotes es la más importante y la razón de ser del lenguaje. Pero el
+intérprete interactivo resulta muy útil para hacerse con el manejo básico del
+lenguaje y para realizar pruebas rápidas sin necesidad de tener que escribir un
+programa expresamente para tal fin. Por ello, su utilidad didáctica es
+innegable, así que empezaremos con él.
+
+Intérprete interactivo integrado (``php -a``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PHP dispone de un intérprete interactivo integrado que, si bien es algo
+espartano y no dispone de características adicionales que sí podemos encontrar
+en otros intérpretes más avanzados, tiene lo justo y necesario para cumplir su
+función.
+
+.. highlight:: shell-session
+
+Para empezar a trabajar con dicho intérprete de forma interactiva, indicaremos
+la opción ``-a`` al intérprete desde la consola del sistema operativo::
+
+    $ php -a
+    Interactive mode enabled
+
+    php >
+
+El intérprete nos muestra el *prompt* ``php >``, indicándonos que está listo para recibir nuestras sentencias PHP. Probamos::
+
+    php > echo 75;
+    75
+    php > echo 23 * 5;
+    115
+    php > echo "Hola a todos";
+    Hola a todos
+    php >
+
+.. highlight:: php
 
 PsySH
 ~~~~~
 
 <http://psysh.org/>
+
+Modo dual de operación
+^^^^^^^^^^^^^^^^^^^^^^^
+
+ricpelo's note: Se llaman *modo HTML* y *modo PHP*.
+
+Etiquetas ``<?php`` y ``?>``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 Variables
 ---------
@@ -436,17 +472,17 @@ Variables
 <http://php.net/manual/es/language.variables.php>
 
 Conceptos básicos
-~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 <http://php.net/manual/es/language.variables.basics.php>
 
 Destrucción de variables
-~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 <http://php.net/manual/es/function.unset.php>
 
 Operadores de asignación por valor y por referencia
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 <http://php.net/manual/es/language.operators.assignment.php>
 
@@ -455,7 +491,7 @@ o viceversa. Ambos apuntan al mismo
 lugar. <http://php.net/manual/es/language.references.whatdo.php>
 
 Variables predefinidas
-~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^
 
 <http://php.net/manual/es/reserved.variables.php>
 
@@ -463,12 +499,12 @@ ricpelo's note: ``$_ENV`` no funciona en la instalación actual (ver
 ``variables_order`` en ``php.ini``. Habría que usar ``get_env()``.
 
 Tipos básicos de datos
-----------------------
+-----------------------
 
 <http://php.net/manual/es/language.types.intro.php>
 
 Lógicos (``bool``)
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 
 <http://php.net/manual/es/language.types.boolean.php>
 
@@ -478,7 +514,7 @@ Lógicos (``bool``)
   usarse ``bool``.
 
 Operadores lógicos
-^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/language.operators.logical.php>
 
@@ -504,10 +540,11 @@ Operadores lógicos
   StackOverflow <https://stackoverflow.com/questions/46861563/false-and-true-printhi>`__.
 
 Numéricos
-~~~~~~~~~
+^^^^^^^^^^
+
 
 Enteros (``int``)
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/language.types.integer.php>
 
@@ -515,7 +552,7 @@ ricpelo's note: ``integer`` es sinónimo de ``int``, pero debería usarse
 ``int``.
 
 Números en coma flotante (``float``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/language.types.float.php>
 
@@ -523,20 +560,21 @@ ricpelo's note: ``double`` es sinónimo de ``float``, pero debería usarse
 ``float``.
 
 Operadores
-^^^^^^^^^^
+~~~~~~~~~~
+
 
 Operadores aritméticos
-''''''''''''''''''''''
+"""""""""""""""""""""""
 
 <http://php.net/manual/es/language.operators.arithmetic.php>
 
 Operadores de incremento/decremento
-'''''''''''''''''''''''''''''''''''
+"""""""""""""""""""""""""""""""""""
 
 <http://php.net/manual/es/language.operators.increment.php>
 
 Cadenas (``string``)
-~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 
 <http://php.net/manual/es/language.types.string.php>
 
@@ -544,15 +582,16 @@ ricpelo's note: Se usa ``{$var}`` y no
 ``${var}`` <https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md#variable-substitution>
 
 Operadores de cadenas
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/language.operators.string.php>
 
 Concatenación
-'''''''''''''
+""""""""""""""
+
 
 Acceso y modificación por caracteres
-''''''''''''''''''''''''''''''''''''
+"""""""""""""""""""""""""""""""""""""
 
 <http://php.net/manual/es/language.types.string.php#language.types.string.substr>
 
@@ -560,17 +599,17 @@ Acceso y modificación por caracteres
 | - ``$a[3] = 'x';``
 
 Operadores de incremento/decremento
-'''''''''''''''''''''''''''''''''''
+"""""""""""""""""""""""""""""""""""
 
 <http://php.net/manual/es/language.operators.increment.php>
 
 Funciones de manejo de cadenas
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/ref.strings>
 
 Extensión *mbstring*
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/en/book.mbstring.php>
 
@@ -579,7 +618,7 @@ Extensión *mbstring*
 | ``$a = mb_substr($a, 2, 1) . 'x' . mb_substr($a, 4);``
 
 Nulo
-~~~~
+^^^^
 
 <http://php.net/manual/es/language.types.null.php>
 
@@ -589,28 +628,30 @@ Nulo
   minúscula. <https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md#51-types>
 
 Precedencia de operadores
-~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 <http://php.net/manual/es/language.operators.precedence.php>
 
 Operadores de asignación compuesta
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ricpelo's note: ``$x`` *<op>*\ ``= $y``
 
 Comprobaciones
-~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^
+
 
 De tipos
-^^^^^^^^
+~~~~~~~~
+
 
 ``gettype()``
-'''''''''''''
+"""""""""""""
 
 <http://php.net/manual/en/function.gettype.php>
 
 ``is_*()``
-''''''''''
+""""""""""
 
 <http://php.net/manual/es/ref.var.php>
 
@@ -618,47 +659,48 @@ ricpelo's note: Poco útiles en formularios, ya que sólo se reciben
 ``string``\ s.
 
 De valores
-^^^^^^^^^^
+~~~~~~~~~~
+
 
 ``is_numeric()``
-''''''''''''''''
+""""""""""""""""
 
 <http://php.net/manual/es/function.is-numeric.php>
 
 ``ctype_*()``
-'''''''''''''
+"""""""""""""
 
 <http://php.net/manual/es/book.ctype.php>
 
 Conversiones
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 <http://php.net/manual/es/language.types.type-juggling.php>
 
 Coerción, moldeado, forzado o *casting*
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/language.types.type-juggling.php#language.types.typecasting>
 
 ricpelo's note: Conversión de cadena a número
 
 Conversión a ``bool``
-'''''''''''''''''''''
+""""""""""""""""""""""
 
 <http://php.net/manual/es/language.types.boolean.php#language.types.boolean.casting>
 
 Conversión a ``int``
-''''''''''''''''''''
+"""""""""""""""""""""
 
 <http://php.net/manual/es/language.types.integer.php#language.types.integer.casting>
 
 Conversión a ``float``
-''''''''''''''''''''''
+"""""""""""""""""""""""
 
 <http://php.net/manual/es/language.types.float.php#language.types.float.casting>
 
 Conversión de ``string`` a número
-'''''''''''''''''''''''''''''''''
+"""""""""""""""""""""""""""""""""""
 
 <http://php.net/manual/es/language.types.string.php#language.types.string.conversion>
 
@@ -667,52 +709,53 @@ o ``1 + "10 pepe"`` funciona, pero en PHP7.1 da un **PHP Warning: A
 non-numeric value encountered**.
 
 Conversión a ``string``
-'''''''''''''''''''''''
+""""""""""""""""""""""""
 
 <http://php.net/manual/es/language.types.string.php#language.types.string.casting>
 
 Funciones de obtención de valores
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ricpelo's note: Hacen más o menos lo mismo que los *casting* pero con
 funciones en lugar de con operadores. Puede ser interesante porque las
 funciones se pueden guardar, usar con *map*, *reduce*, etc.
 
 ``intval()``
-''''''''''''
+""""""""""""
 
 <http://php.net/manual/es/function.intval.php>
 
 ``floatval()``
-''''''''''''''
+""""""""""""""
 
 <http://php.net/manual/es/function.floatval.php>
 
 ``strval()``
-''''''''''''
+""""""""""""
 
 <http://php.net/manual/es/function.strval.php>
 
 ``boolval()``
-'''''''''''''
+"""""""""""""
 
 <http://php.net/manual/es/function.boolval.php>
 
 Funciones de formateado numérico
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 ``number_format()``
-'''''''''''''''''''
+"""""""""""""""""""
 
 <http://php.net/manual/es/function.number-format.php>
 
 ``money_format()``
-''''''''''''''''''
+""""""""""""""""""
 
 <http://php.net/manual/es/function.money-format.php>
 
 ``setlocale()``
-...............
+'''''''''''''''
 
 <http://php.net/manual/es/function.setlocale.php>
 
@@ -720,30 +763,32 @@ ricpelo's note:
 ``setlocale(LC_ALL, 'es_ES.UTF-8'); // Hay que poner el *locale* completo, con la codificación y todo (.UTF-8)``
 
 Comparaciones
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^
+
 
 Operadores de comparación
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/language.operators.comparison.php>
 
 ``==`` vs. ``===``
-^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
+
 
 Ternario (``?:``)
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/language.operators.comparison.php#language.operators.comparison.ternary>
 
 Fusión de null (``??``)
-^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 <https://wiki.php.net/rfc/isset_ternary>
 
 ricpelo's note: Equivalente al ``COALESCE()`` de SQL.
 
 Reglas de comparación de tipos
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/types.comparisons.php>
 
@@ -771,28 +816,30 @@ Constantes
   un valor de un tipo permitido.
 
 ``define()`` y ``const``
-~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 Constantes predefinidas
-~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^
 
 <http://php.net/manual/es/language.constants.predefined.php>
 
 ``defined()``
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^
 
 <http://php.net/manual/es/function.defined.php>
 
 Flujo de control
 ----------------
 
+
 Estructuras de control
-~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^
 
 <http://php.net/manual/es/language.control-structures.php>
 
 Sintaxis alternativa
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/control-structures.alternative-syntax.php>
 
@@ -800,10 +847,11 @@ ricpelo's note: El ``do { ... } while (...);`` **no** tiene sintaxis
 alternativa.
 
 Inclusión de archivos
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^
+
 
 ``include``, ``require``
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/function.include.php>
 
@@ -817,15 +865,16 @@ Inclusión de archivos
   devuelto por el ``return``.
 
 ``include_once``, ``require_once``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/function.include-once.php>
 
 Funciones predefinidas destacadas
 ---------------------------------
 
+
 ``isset()``
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 <http://php.net/manual/es/function.isset.php>
 
@@ -833,7 +882,7 @@ Funciones predefinidas destacadas
 | ricpelo's note: No da error ni advertencia si la variable no existe.
 
 ``empty()``
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 <http://php.net/manual/es/function.empty.php>
 
@@ -846,7 +895,7 @@ ricpelo's note: Para evitar el problema de ``empty("0") === true``::
 ricpelo's note: No da error ni advertencia si la variable no existe.
 
 ``var_dump()``
-~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^
 
 <http://php.net/manual/es/function.var-dump.php>
 
@@ -858,7 +907,7 @@ Arrays
 ricpelo's note: Las claves pueden ser enteros o cadenas.
 
 Operadores para arrays
-~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^
 
 <http://php.net/manual/es/language.operators.array.php>
 
@@ -866,44 +915,46 @@ ricpelo's note: **Comparaciones**: Un ``array`` con menos elementos es
 menor. De otra forma, compara valor por valor.
 
 Acceso, modificación y agregación
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/language.types.array.php#language.types.array.syntax.modifying>
 
 Funciones de manejo de arrays]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 <http://php.net/manual/es/book.array.php>
 <http://php.net/manual/es/ref.array.php>
 
 Ordenación de arrays
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/array.sorting.php>
 
 ``print_r()``
-^^^^^^^^^^^^^
+~~~~~~~~~~~~~
+
 
 ``'+'`` vs. ``array_merge()``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 ``isset()`` vs. ``array_key_exists()``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/function.array-key-exists.php#107786>
 
 ``foreach``
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 <http://php.net/manual/es/control-structures.foreach.php>
 
 Conversión a ``array``
-~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^
 
 <http://php.net/manual/es/language.types.array.php#language.types.array.casting>
 
 *Ejemplo*: ``$argv`` en CLI
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 <http://php.net/manual/es/reserved.variables.argv.php>
 
@@ -913,17 +964,17 @@ Funciones definidas por el usuario
 <http://php.net/manual/es/language.functions.php>
 
 Argumentos
-~~~~~~~~~~
+^^^^^^^^^^
 
 <http://php.net/manual/es/functions.arguments.php>
 
 Paso de argumentos por valor y por referencia
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/functions.arguments.php#functions.arguments.by-reference>
 
 Argumentos por defecto
-^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/functions.arguments.php#functions.arguments.default>
 
@@ -931,52 +982,55 @@ ricpelo's note:
 ``php   function prueba($opciones = []) {       extract($opciones);       // ...   }``
 
 Ámbito de variables
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 
 <http://php.net/language.variables.scope>
 
 Ámbito simple al archivo
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 Variables locales
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~
+
 
 Uso de ``global``
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~
 
 ricpelo's note: Usar ``global $x;`` cuando ``$x`` no existe hace que
 ``$x`` empiece a existir y valga ``null``.
 
 Variables superglobales
-^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/language.variables.superglobals.php>
 
 Declaraciones de tipos
-~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^
 
 ricpelo's note: **NO** se hacen conversiones implícitas a ``array``, ni
 en argumentos ni en devolución.
 
 Declaraciones de tipo de argumento
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/functions.arguments.php#functions.arguments.type-declaration>
 
 Declaraciones de tipo de devolución
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/functions.returning-values.php#functions.returning-values.type-declaration>
 
 Tipos *nullable* (``?``) y ``void``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/migration71.new-features.php>
 
 Tipificación estricta
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~
 
 <http://php.net/manual/es/functions.arguments.php#functions.arguments.type-declaration.strict>
 
 ricpelo's note: El ``declare(strict_types=1);`` se pone en el archivo
 que hace la llamada, no en el que define la función.
+
