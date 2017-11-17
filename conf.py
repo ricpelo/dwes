@@ -378,5 +378,5 @@ lexers['php-annotations'] = PhpLexer(startinline=True, linenos=1)
 primary_domain = 'php'
 
 def setup(app):
-    app.add_stylesheet('custom.css')
     app.add_stylesheet('pygments.css')
+    app.add_stylesheet('custom.css')

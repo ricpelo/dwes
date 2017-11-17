@@ -1,7 +1,5 @@
 
 
-
-
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="es" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
@@ -32,9 +30,9 @@
   
 
   
-    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
 
   
@@ -332,7 +330,7 @@
             
   <div class="section" id="conceptos-basicos-de-php-i">
 <h1>5. Conceptos básicos de PHP I<a class="headerlink" href="#conceptos-basicos-de-php-i" title="Enlazar permanentemente con este título">¶</a></h1>
-<p>ricpelo’s note: Programada inicialmente para empezar el 23-10-2017.</p>
+<p>ricpelo’s note: Programada inicialmente para empezar el 23-10-2017. <code class="docutils literal"><span class="pre">______</span></code></p>
 <div class="highlight-text"><div class="highlight"><pre><span></span>Hola
 </pre></div>
 </div>
@@ -683,24 +681,62 @@ innegable, así que empezaremos con él.</p>
 espartano y no dispone de características adicionales que sí podemos encontrar
 en otros intérpretes más avanzados, tiene lo justo y necesario para cumplir su
 función.</p>
-<p>Para empezar a trabajar con dicho intérprete de forma interactiva, indicaremos
-la opción <code class="docutils literal"><span class="pre">-a</span></code> al intérprete desde la consola del sistema operativo:</p>
+<p>Para empezar a trabajar con dicho intérprete de forma interactiva, usaremos el
+comando <code class="docutils literal"><span class="pre">php</span></code> con la opción <code class="docutils literal"><span class="pre">-a</span></code> desde la consola del sistema operativo:</p>
 <div class="highlight-shell-session"><div class="highlight"><pre><span></span><span class="gp">$</span> php -a
 <span class="go">Interactive mode enabled</span>
 
 <span class="go">php &gt;</span>
 </pre></div>
 </div>
-<p>El intérprete nos muestra el <em>prompt</em> <code class="docutils literal"><span class="pre">php</span> <span class="pre">&gt;</span></code>, indicándonos que está listo para recibir nuestras sentencias PHP. Probamos:</p>
+<p>El intérprete nos muestra el <em>prompt</em> <code class="docutils literal"><span class="pre">php</span> <span class="pre">&gt;</span></code>, indicándonos que está listo
+para recibir nuestras sentencias PHP. Probamos:</p>
 <div class="highlight-shell-session"><div class="highlight"><pre><span></span><span class="go">php &gt; echo 75;</span>
 <span class="go">75</span>
 <span class="go">php &gt; echo 23 * 5;</span>
 <span class="go">115</span>
 <span class="go">php &gt; echo &quot;Hola a todos&quot;;</span>
 <span class="go">Hola a todos</span>
+<span class="go">php &gt; var_dump(3 + 5);</span>
+<span class="go">int(8)</span>
 <span class="go">php &gt;</span>
 </pre></div>
 </div>
+<p>Como se ve, el intérprete ejecuta inmediatamente el comando introducido,
+llevando a cabo las operaciones indicadas en la instrucción (en este caso,
+evaluar la expresión y mostrar el resultado en pantalla) y, a continuación,
+solicita un nuevo comando al usuario.</p>
+<p>La sentencia introducida debe ser sintácticamente correcta. Si, por ejemplo, nos
+olvidamos de escribir el punto y coma (<code class="docutils literal"><span class="pre">;</span></code>), no obtendremos el resultado
+esperado:</p>
+<div class="highlight-shell-session"><div class="highlight"><pre><span></span><span class="go">php &gt; echo 73</span>
+<span class="go">php &gt; echo 25;</span>
+<span class="go">PHP Parse error: syntax error, unexpected &#39;echo&#39; (T_ECHO), expecting &#39;,&#39; or</span>
+<span class="go">&#39;;&#39; in php shell code on line 2</span>
+
+<span class="go">Parse error: syntax error, unexpected &#39;echo&#39; (T_ECHO), expecting &#39;,&#39; or &#39;;&#39;</span>
+<span class="go">in php shell code on line 2</span>
+
+<span class="go">php &gt;</span>
+</pre></div>
+</div>
+<p>El mensaje de error se debe a que el intérprete ha considerado los dos comandos
+<code class="xref php php-func docutils literal"><span class="pre">echo</span></code> como si fueran una única sentencia:</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="mi">73</span> <span class="k">echo</span> <span class="mi">25</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>puesto que sólo ha encontrado un <code class="docutils literal"><span class="pre">;</span></code> al final del todo. Por tanto, se queja de
+que se ha encontrado la palabra <code class="docutils literal"><span class="pre">echo</span></code> detrás del <code class="docutils literal"><span class="pre">73</span></code> cuando se esperaba
+una <code class="docutils literal"><span class="pre">,</span></code> o un <code class="docutils literal"><span class="pre">;</span></code>.</p>
+<p>Por otra parte, si introducimos como sentencia a una expresión acabada en <code class="docutils literal"><span class="pre">;</span></code>,
+no obtendremos ningún resultado en pantalla, ya que la expresión se evaluará sin
+más pero no se hará nada con dicho valor:</p>
+<div class="highlight-shell-session"><div class="highlight"><pre><span></span><span class="go">php &gt; 3 + 5;</span>
+<span class="go">php &gt; 6 * 9;</span>
+<span class="go">php &gt;</span>
+</pre></div>
+</div>
+<p>Lo que demuestra su nula utilidad práctica.</p>
 </div>
 <div class="section" id="psysh">
 <h4>5.3.1.2. PsySH<a class="headerlink" href="#psysh" title="Enlazar permanentemente con este título">¶</a></h4>
@@ -1207,7 +1243,7 @@ que hace la llamada, no en el que define la función.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017, Ricardo Pérez López.
-      Actualizado por última vez en 15-11-2017.
+      Actualizado por última vez en 17-11-2017.
 
     </p>
   </div>

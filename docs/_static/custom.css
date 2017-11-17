@@ -1,10 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,500,500i,700,700i&amp;subset=latin-ext);
+
 code {
     color: #0086b3 !important;
+    font-family: 'Roboto Mono' !important;
     font-size: 85% !important;
     border: none !important;
     background: none !important;
 }
 
+code.docutils.literal span.keyword {
+    font-weight: bold !important;
+}
+
+code.docutils.literal span.name {
+    color: #900;
+    font-weight: bold !important;
+}
+
+code.docutils.literal span.operator {
+    font-weight: bold !important;
+}
+
 dl.docutils dd {
     line-height: 24px !important;
+}
+
+pre {
+    font-family: 'Roboto Mono' !important;
 }

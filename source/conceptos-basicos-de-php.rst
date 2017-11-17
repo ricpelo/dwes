@@ -1,7 +1,7 @@
 Conceptos básicos de PHP I
 ===========================
 
-ricpelo's note: Programada inicialmente para empezar el 23-10-2017.
+ricpelo's note: Programada inicialmente para empezar el 23-10-2017. ``______``
 
 .. program-output:: php ../../p.php
 
@@ -432,15 +432,16 @@ función.
 
 .. highlight:: shell-session
 
-Para empezar a trabajar con dicho intérprete de forma interactiva, indicaremos
-la opción ``-a`` al intérprete desde la consola del sistema operativo::
+Para empezar a trabajar con dicho intérprete de forma interactiva, usaremos el
+comando ``php`` con la opción ``-a`` desde la consola del sistema operativo::
 
     $ php -a
     Interactive mode enabled
 
     php >
 
-El intérprete nos muestra el *prompt* ``php >``, indicándonos que está listo para recibir nuestras sentencias PHP. Probamos::
+El intérprete nos muestra el *prompt* ``php >``, indicándonos que está listo
+para recibir nuestras sentencias PHP. Probamos::
 
     php > echo 75;
     75
@@ -448,7 +449,51 @@ El intérprete nos muestra el *prompt* ``php >``, indicándonos que está listo 
     115
     php > echo "Hola a todos";
     Hola a todos
+    php > var_dump(3 + 5);
+    int(8)
     php >
+
+Como se ve, el intérprete ejecuta inmediatamente el comando introducido,
+llevando a cabo las operaciones indicadas en la instrucción (en este caso,
+evaluar la expresión y mostrar el resultado en pantalla) y, a continuación,
+solicita un nuevo comando al usuario.
+
+La sentencia introducida debe ser sintácticamente correcta. Si, por ejemplo, nos
+olvidamos de escribir el punto y coma (``;``), no obtendremos el resultado
+esperado::
+
+    php > echo 73
+    php > echo 25;
+    PHP Parse error: syntax error, unexpected 'echo' (T_ECHO), expecting ',' or
+    ';' in php shell code on line 2
+
+    Parse error: syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';'
+    in php shell code on line 2
+
+    php >
+
+.. highlight:: php
+
+El mensaje de error se debe a que el intérprete ha considerado los dos comandos
+|echo| como si fueran una única sentencia::
+
+    echo 73 echo 25;
+
+puesto que sólo ha encontrado un ``;`` al final del todo. Por tanto, se queja de
+que se ha encontrado la palabra ``echo`` detrás del ``73`` cuando se esperaba
+una ``,`` o un ``;``.
+
+.. highlight:: shell-session
+
+Por otra parte, si introducimos como sentencia a una expresión acabada en ``;``,
+no obtendremos ningún resultado en pantalla, ya que la expresión se evaluará sin
+más pero no se hará nada con dicho valor::
+
+    php > 3 + 5;
+    php > 6 * 9;
+    php >
+
+Lo que demuestra su nula utilidad práctica.
 
 .. highlight:: php
 

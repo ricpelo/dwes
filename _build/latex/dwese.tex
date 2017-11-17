@@ -332,7 +332,7 @@ Ramas de seguimiento (tracking branch)
 
 \chapter{Conceptos básicos de PHP I}
 \label{\detokenize{php:conceptos-basicos-de-php-i}}
-ricpelo’s note: Programada inicialmente para empezar el 23-10-2017.
+ricpelo’s note: Programada inicialmente para empezar el 23-10-2017. \sphinxcode{\_\_\_\_\_\_}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 Hola
@@ -804,8 +804,8 @@ espartano y no dispone de características adicionales que sí podemos encontrar
 en otros intérpretes más avanzados, tiene lo justo y necesario para cumplir su
 función.
 
-Para empezar a trabajar con dicho intérprete de forma interactiva, indicaremos
-la opción \sphinxcode{-a} al intérprete desde la consola del sistema operativo:
+Para empezar a trabajar con dicho intérprete de forma interactiva, usaremos el
+comando \sphinxcode{php} con la opción \sphinxcode{-a} desde la consola del sistema operativo:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{g+gp}{\PYGZdl{}} php \PYGZhy{}a
@@ -814,7 +814,8 @@ la opción \sphinxcode{-a} al intérprete desde la consola del sistema operativo
 \PYG{g+go}{php \PYGZgt{}}
 \end{sphinxVerbatim}
 
-El intérprete nos muestra el \sphinxstyleemphasis{prompt} \sphinxcode{php \textgreater{}}, indicándonos que está listo para recibir nuestras sentencias PHP. Probamos:
+El intérprete nos muestra el \sphinxstyleemphasis{prompt} \sphinxcode{php \textgreater{}}, indicándonos que está listo
+para recibir nuestras sentencias PHP. Probamos:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{g+go}{php \PYGZgt{} echo 75;}
@@ -823,8 +824,54 @@ El intérprete nos muestra el \sphinxstyleemphasis{prompt} \sphinxcode{php \text
 \PYG{g+go}{115}
 \PYG{g+go}{php \PYGZgt{} echo \PYGZdq{}Hola a todos\PYGZdq{};}
 \PYG{g+go}{Hola a todos}
+\PYG{g+go}{php \PYGZgt{} var\PYGZus{}dump(3 + 5);}
+\PYG{g+go}{int(8)}
 \PYG{g+go}{php \PYGZgt{}}
 \end{sphinxVerbatim}
+
+Como se ve, el intérprete ejecuta inmediatamente el comando introducido,
+llevando a cabo las operaciones indicadas en la instrucción (en este caso,
+evaluar la expresión y mostrar el resultado en pantalla) y, a continuación,
+solicita un nuevo comando al usuario.
+
+La sentencia introducida debe ser sintácticamente correcta. Si, por ejemplo, nos
+olvidamos de escribir el punto y coma (\sphinxcode{;}), no obtendremos el resultado
+esperado:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+go}{php \PYGZgt{} echo 73}
+\PYG{g+go}{php \PYGZgt{} echo 25;}
+\PYG{g+go}{PHP Parse error: syntax error, unexpected \PYGZsq{}echo\PYGZsq{} (T\PYGZus{}ECHO), expecting \PYGZsq{},\PYGZsq{} or}
+\PYG{g+go}{\PYGZsq{};\PYGZsq{} in php shell code on line 2}
+
+\PYG{g+go}{Parse error: syntax error, unexpected \PYGZsq{}echo\PYGZsq{} (T\PYGZus{}ECHO), expecting \PYGZsq{},\PYGZsq{} or \PYGZsq{};\PYGZsq{}}
+\PYG{g+go}{in php shell code on line 2}
+
+\PYG{g+go}{php \PYGZgt{}}
+\end{sphinxVerbatim}
+
+El mensaje de error se debe a que el intérprete ha considerado los dos comandos
+\sphinxcode{echo} como si fueran una única sentencia:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k}{echo} \PYG{l+m+mi}{73} \PYG{k}{echo} \PYG{l+m+mi}{25}\PYG{p}{;}
+\end{sphinxVerbatim}
+
+puesto que sólo ha encontrado un \sphinxcode{;} al final del todo. Por tanto, se queja de
+que se ha encontrado la palabra \sphinxcode{echo} detrás del \sphinxcode{73} cuando se esperaba
+una \sphinxcode{,} o un \sphinxcode{;}.
+
+Por otra parte, si introducimos como sentencia a una expresión acabada en \sphinxcode{;},
+no obtendremos ningún resultado en pantalla, ya que la expresión se evaluará sin
+más pero no se hará nada con dicho valor:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+go}{php \PYGZgt{} 3 + 5;}
+\PYG{g+go}{php \PYGZgt{} 6 * 9;}
+\PYG{g+go}{php \PYGZgt{}}
+\end{sphinxVerbatim}
+
+Lo que demuestra su nula utilidad práctica.
 
 
 \subsubsection{PsySH}
