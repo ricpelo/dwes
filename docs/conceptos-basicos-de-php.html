@@ -151,7 +151,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#numericos">5.5.2. Numéricos</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#enteros-int">5.5.2.1. Enteros (<code class="docutils literal"><span class="pre">int</span></code>)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#numeros-en-coma-flotante-float">5.5.2.2. Números en coma flotante (<code class="docutils literal"><span class="pre">float</span></code>)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">5.5.2.3. Operadores</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">5.5.2.3. Operadores</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#cadenas-string">5.5.3. Cadenas (<code class="docutils literal"><span class="pre">string</span></code>)</a><ul>
@@ -205,7 +205,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#funciones-predefinidas-destacadas">5.8. Funciones predefinidas destacadas</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#isset">5.8.1. <code class="docutils literal"><span class="pre">isset()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#empty">5.8.2. <code class="docutils literal"><span class="pre">empty()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">5.8.3. <code class="docutils literal"><span class="pre">var_dump()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">5.8.3. <code class="docutils literal"><span class="pre">var_dump()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#arrays">5.9. Arrays</a><ul>
@@ -728,7 +728,7 @@ esperado:</p>
 <p>puesto que sólo ha encontrado un <code class="docutils literal"><span class="pre">;</span></code> al final del todo. Por tanto, se queja de
 que se ha encontrado la palabra <code class="docutils literal"><span class="pre">echo</span></code> detrás del <code class="docutils literal"><span class="pre">73</span></code> cuando se esperaba
 una <code class="docutils literal"><span class="pre">,</span></code> o un <code class="docutils literal"><span class="pre">;</span></code>.</p>
-<p>Por otra parte, si introducimos como sentencia a una expresión acabada en <code class="docutils literal"><span class="pre">;</span></code>,
+<p>Por otra parte, si introducimos como sentencia una expresión acabada en <code class="docutils literal"><span class="pre">;</span></code>,
 no obtendremos ningún resultado en pantalla, ya que la expresión se evaluará sin
 más pero no se hará nada con dicho valor:</p>
 <div class="highlight-shell-session"><div class="highlight"><pre><span></span><span class="go">php &gt; 3 + 5;</span>
@@ -737,11 +737,43 @@ más pero no se hará nada con dicho valor:</p>
 </pre></div>
 </div>
 <p>Lo que demuestra su nula utilidad práctica.</p>
+<p>Para salir del intérprete interactivo, pulsamos la combinación de teclas <code class="kbd docutils literal"><span class="pre">Control-D</span></code>:</p>
+<div class="highlight-shell-session"><div class="highlight"><pre><span></span><span class="go">php &gt; ^D</span>
+<span class="gp">$</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="psysh">
 <h4>5.3.1.2. PsySH<a class="headerlink" href="#psysh" title="Enlazar permanentemente con este título">¶</a></h4>
-<p>&lt;<a class="reference external" href="http://psysh.org/">http://psysh.org/</a>&gt;</p>
-</div>
+<p><a class="reference external" href="http://psysh.org/">PsySH</a> es una interesantísima aplicación desarrollada por
+Justin Hileman (y otros) que proporciona un intérprete interactivo para PHP
+bastante más potente y cómodo que el intérprete interactivo integrado que trae
+PHP de serie. Entre sus características, incluye:</p>
+<ul class="simple">
+<li>Un <em>depurador</em> integrado que facilita la introspección de los programas y la
+localización de errores.</li>
+<li>Autocompletado pulsando <code class="kbd docutils literal"><span class="pre">Tab</span></code>.</li>
+<li>Uso adecuado de espacios de nombres.</li>
+<li>Histórico de órdenes introducidas.</li>
+<li>Visualización a todo color.</li>
+<li>Admite sentencias y expresiones.</li>
+</ul>
+<p>La verdad es que, existiendo una herramienta así, no tiene demasiado sentido
+usar el intérprete interactivo integrado de PHP. Tú simplemente haz la prueba,
+comprueba la diferencia y dime si tengo razón o no…</p>
+<p>La instalación de PsySH es muy sencilla:</p>
+<pre class="highlight"><style type="text/css">
+span.prompt1:before {
+  content: "$ ";
+}
+</style><span class="prompt1">wget https://git.io/psysh</span>
+<span class="prompt1">chmod +x psysh</span>
+<span class="prompt1">sudo mv -f psysh /usr/local/bin</span>
+</pre><p>Con esto tenemos la herramienta básica. Si además queremos disponer del manual de PHP en línea (cosa altamente recomendable), hacemos también lo siguiente:</p>
+<pre class="highlight"><span class="prompt1">wget https://psysh.org/manual/es/php_manual.sqlite</span>
+<span class="prompt1">mkdir -p ~/.local/share/psysh</span>
+<span class="prompt1">mv -f php_manual.sqlite ~/.local/share/psysh</span>
+</pre></div>
 </div>
 <div class="section" id="modo-dual-de-operacion">
 <h3>5.3.2. Modo dual de operación<a class="headerlink" href="#modo-dual-de-operacion" title="Enlazar permanentemente con este título">¶</a></h3>
@@ -829,8 +861,8 @@ StackOverflow</a>.</div>
 <p>ricpelo’s note: <code class="docutils literal"><span class="pre">double</span></code> es sinónimo de <code class="docutils literal"><span class="pre">float</span></code>, pero debería usarse
 <code class="docutils literal"><span class="pre">float</span></code>.</p>
 </div>
-<div class="section" id="id3">
-<h4>5.5.2.3. Operadores<a class="headerlink" href="#id3" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="section" id="id4">
+<h4>5.5.2.3. Operadores<a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h4>
 <div class="section" id="operadores-aritmeticos">
 <h5>5.5.2.3.1. Operadores aritméticos<a class="headerlink" href="#operadores-aritmeticos" title="Enlazar permanentemente con este título">¶</a></h5>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.operators.arithmetic.php">http://php.net/manual/es/language.operators.arithmetic.php</a>&gt;</p>
@@ -860,8 +892,8 @@ StackOverflow</a>.</div>
 <div class="line">- <code class="docutils literal"><span class="pre">$a[3]</span> <span class="pre">=</span> <span class="pre">'x';</span></code></div>
 </div>
 </div>
-<div class="section" id="id4">
-<h5>5.5.3.1.3. Operadores de incremento/decremento<a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h5>
+<div class="section" id="id5">
+<h5>5.5.3.1.3. Operadores de incremento/decremento<a class="headerlink" href="#id5" title="Enlazar permanentemente con este título">¶</a></h5>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/language.operators.increment.php">http://php.net/manual/es/language.operators.increment.php</a>&gt;</p>
 </div>
 </div>
@@ -1107,8 +1139,8 @@ devuelto por el <code class="docutils literal"><span class="pre">return</span></
 </div>
 <p>ricpelo’s note: No da error ni advertencia si la variable no existe.</p>
 </div>
-<div class="section" id="id5">
-<h3>5.8.3. <code class="docutils literal"><span class="pre">var_dump()</span></code><a class="headerlink" href="#id5" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="id6">
+<h3>5.8.3. <code class="docutils literal"><span class="pre">var_dump()</span></code><a class="headerlink" href="#id6" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>&lt;<a class="reference external" href="http://php.net/manual/es/function.var-dump.php">http://php.net/manual/es/function.var-dump.php</a>&gt;</p>
 </div>
 </div>

@@ -10,7 +10,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="ricardo.20171115152343.2" a="E"
-expanded="ricardo.20171116113344.2,ricardo.20171116113344.20,ricardo.20171116113344.21,"><vh>@auto-rst ../source/conceptos-basicos-de-php.rst</vh></v>
+expanded="ricardo.20171117104940.2,ricardo.20171117104940.20,ricardo.20171117104940.21,"><vh>@auto-rst ../source/conceptos-basicos-de-php.rst</vh></v>
 </vnodes>
 <tnodes>
 </tnodes>

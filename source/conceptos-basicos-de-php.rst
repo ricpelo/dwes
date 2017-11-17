@@ -485,7 +485,7 @@ una ``,`` o un ``;``.
 
 .. highlight:: shell-session
 
-Por otra parte, si introducimos como sentencia a una expresión acabada en ``;``,
+Por otra parte, si introducimos como sentencia una expresión acabada en ``;``,
 no obtendremos ningún resultado en pantalla, ya que la expresión se evaluará sin
 más pero no se hará nada con dicho valor::
 
@@ -495,12 +495,48 @@ más pero no se hará nada con dicho valor::
 
 Lo que demuestra su nula utilidad práctica.
 
+Para salir del intérprete interactivo, pulsamos la combinación de teclas :kbd:`Control-D`::
+
+    php > ^D
+    $
+
 .. highlight:: php
 
 PsySH
 ~~~~~
 
-<http://psysh.org/>
+`PsySH <http://psysh.org/>`_ es una interesantísima aplicación desarrollada por
+Justin Hileman (y otros) que proporciona un intérprete interactivo para PHP
+bastante más potente y cómodo que el intérprete interactivo integrado que trae
+PHP de serie. Entre sus características, incluye:
+
+- Un *depurador* integrado que facilita la introspección de los programas y la
+  localización de errores.
+- Autocompletado pulsando :kbd:`Tab`.
+- Uso adecuado de espacios de nombres.
+- Histórico de órdenes introducidas.
+- Visualización a todo color.
+- Admite sentencias y expresiones.
+
+La verdad es que, existiendo una herramienta así, no tiene demasiado sentido
+usar el intérprete interactivo integrado de PHP. Tú simplemente haz la prueba,
+comprueba la diferencia y dime si tengo razón o no...
+
+La instalación de PsySH es muy sencilla:
+
+.. prompt:: bash
+
+    wget https://git.io/psysh
+    chmod +x psysh
+    sudo mv -f psysh /usr/local/bin
+
+Con esto tenemos la herramienta básica. Si además queremos disponer del manual de PHP en línea (cosa altamente recomendable), hacemos también lo siguiente:
+
+.. prompt:: bash
+
+    wget https://psysh.org/manual/es/php_manual.sqlite
+    mkdir -p ~/.local/share/psysh
+    mv -f php_manual.sqlite ~/.local/share/psysh
 
 Modo dual de operación
 ^^^^^^^^^^^^^^^^^^^^^^^

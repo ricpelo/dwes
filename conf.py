@@ -32,7 +32,8 @@
 extensions = [
     'sphinx.ext.githubpages',
     'sphinxcontrib.phpdomain',
-    'sphinxcontrib.programoutput'
+    'sphinxcontrib.programoutput',
+    'sphinx-prompt'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

@@ -861,7 +861,7 @@ puesto que sólo ha encontrado un \sphinxcode{;} al final del todo. Por tanto, s
 que se ha encontrado la palabra \sphinxcode{echo} detrás del \sphinxcode{73} cuando se esperaba
 una \sphinxcode{,} o un \sphinxcode{;}.
 
-Por otra parte, si introducimos como sentencia a una expresión acabada en \sphinxcode{;},
+Por otra parte, si introducimos como sentencia una expresión acabada en \sphinxcode{;},
 no obtendremos ningún resultado en pantalla, ya que la expresión se evaluará sin
 más pero no se hará nada con dicho valor:
 
@@ -873,10 +873,69 @@ más pero no se hará nada con dicho valor:
 
 Lo que demuestra su nula utilidad práctica.
 
+Para salir del intérprete interactivo, pulsamos la combinación de teclas \sphinxcode{Control-D}:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+go}{php \PYGZgt{} \PYGZca{}D}
+\PYG{g+gp}{\PYGZdl{}}
+\end{sphinxVerbatim}
+
 
 \subsubsection{PsySH}
 \label{\detokenize{php:psysh}}
-\textless{}\sphinxurl{http://psysh.org/}\textgreater{}
+\sphinxhref{http://psysh.org/}{PsySH}%
+\begin{footnote}[7]\sphinxAtStartFootnote
+\sphinxnolinkurl{http://psysh.org/}
+%
+\end{footnote} es una interesantísima aplicación desarrollada por
+Justin Hileman (y otros) que proporciona un intérprete interactivo para PHP
+bastante más potente y cómodo que el intérprete interactivo integrado que trae
+PHP de serie. Entre sus características, incluye:
+\begin{itemize}
+\item {} 
+Un \sphinxstyleemphasis{depurador} integrado que facilita la introspección de los programas y la
+localización de errores.
+
+\item {} 
+Autocompletado pulsando \sphinxcode{Tab}.
+
+\item {} 
+Uso adecuado de espacios de nombres.
+
+\item {} 
+Histórico de órdenes introducidas.
+
+\item {} 
+Visualización a todo color.
+
+\item {} 
+Admite sentencias y expresiones.
+
+\end{itemize}
+
+La verdad es que, existiendo una herramienta así, no tiene demasiado sentido
+usar el intérprete interactivo integrado de PHP. Tú simplemente haz la prueba,
+comprueba la diferencia y dime si tengo razón o no…
+
+La instalación de PsySH es muy sencilla:
+
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+$ wget https://git.io/psysh
+$ chmod +x psysh
+$ sudo mv -f psysh /usr/local/bin
+\end{Verbatim}
+
+Con esto tenemos la herramienta básica. Si además queremos disponer del manual de PHP en línea (cosa altamente recomendable), hacemos también lo siguiente:
+
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+$ wget https://psysh.org/manual/es/php_manual.sqlite
+$ mkdir -p ~/.local/share/psysh
+$ mv -f php_manual.sqlite ~/.local/share/psysh
+\end{Verbatim}
 
 
 \subsection{Modo dual de operación}
@@ -953,7 +1012,7 @@ hace de izquierda a derecha aunque el \sphinxcode{+} tenga más prioridad (y
 encima vaya entre paréntesis).
 \item[] - En el \sphinxhref{http://php.net/manual/es/language.operators.precedence.php}{manual de
 PHP}%
-\begin{footnote}[7]\sphinxAtStartFootnote
+\begin{footnote}[8]\sphinxAtStartFootnote
 \sphinxnolinkurl{http://php.net/manual/es/language.operators.precedence.php}
 %
 \end{footnote} se
@@ -965,7 +1024,7 @@ específico de evaluación, ya que el comportamiento puede cambiar entre
 versiones de PHP o dependiendo de código circundante.»}
 \item[] - \sphinxhref{https://stackoverflow.com/questions/46861563/false-and-true-printhi}{Pregunta que hice al respecto en
 StackOverflow}%
-\begin{footnote}[8]\sphinxAtStartFootnote
+\begin{footnote}[9]\sphinxAtStartFootnote
 \sphinxnolinkurl{https://stackoverflow.com/questions/46861563/false-and-true-printhi}
 %
 \end{footnote}.
@@ -992,7 +1051,7 @@ ricpelo’s note: \sphinxcode{double} es sinónimo de \sphinxcode{float}, pero d
 
 
 \subsubsection{Operadores}
-\label{\detokenize{php:id3}}
+\label{\detokenize{php:id4}}
 
 \paragraph{Operadores aritméticos}
 \label{\detokenize{php:operadores-aritmeticos}}
@@ -1031,7 +1090,7 @@ ricpelo’s note: Se usa \sphinxcode{\{\$var\}} y no
 
 
 \paragraph{Operadores de incremento/decremento}
-\label{\detokenize{php:id4}}
+\label{\detokenize{php:id5}}
 \textless{}\sphinxurl{http://php.net/manual/es/language.operators.increment.php}\textgreater{}
 
 
@@ -1329,7 +1388,7 @@ ricpelo’s note: No da error ni advertencia si la variable no existe.
 
 
 \subsection{\sphinxstyleliteralintitle{var\_dump()}}
-\label{\detokenize{php:id5}}
+\label{\detokenize{php:id6}}
 \textless{}\sphinxurl{http://php.net/manual/es/function.var-dump.php}\textgreater{}
 
 
