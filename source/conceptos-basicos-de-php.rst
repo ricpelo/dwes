@@ -522,21 +522,21 @@ La verdad es que, existiendo una herramienta así, no tiene demasiado sentido
 usar el intérprete interactivo integrado de PHP. Tú simplemente haz la prueba,
 comprueba la diferencia y dime si tengo razón o no...
 
-La instalación de PsySH es muy sencilla:
+.. highlight:: shell-session
 
-.. prompt:: bash
+La instalación de PsySH es muy sencilla::
 
-    wget https://git.io/psysh
-    chmod +x psysh
-    sudo mv -f psysh /usr/local/bin
+    $ wget https://git.io/psysh
+    $ chmod +x psysh
+    $ sudo mv -f psysh /usr/local/bin
 
-Con esto tenemos la herramienta básica. Si además queremos disponer del manual de PHP en línea (cosa altamente recomendable), hacemos también lo siguiente:
+Con esto tenemos la herramienta básica. Si además queremos disponer del manual de PHP en línea (cosa altamente recomendable), hacemos también lo siguiente::
 
-.. prompt:: bash
+    $ wget https://psysh.org/manual/es/php_manual.sqlite
+    $ mkdir -p ~/.local/share/psysh
+    $ mv -f php_manual.sqlite ~/.local/share/psysh
 
-    wget https://psysh.org/manual/es/php_manual.sqlite
-    mkdir -p ~/.local/share/psysh
-    mv -f php_manual.sqlite ~/.local/share/psysh
+.. highlight:: php
 
 Modo dual de operación
 ^^^^^^^^^^^^^^^^^^^^^^^

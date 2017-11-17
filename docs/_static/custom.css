@@ -28,15 +28,3 @@ dl.docutils dd {
 pre {
     font-family: 'Roboto Mono' !important;
 }
-
-pre.highlight {
-    background: rgba(255, 255, 255, 1.0);
-    font-size: 12px;
-    border: 1px solid rgba(64, 64, 64, 0.2);
-    padding: 12px;
-}
-
-pre.highlight span.prompt1:before {
-    color: #c65d09;
-    font-weight: bold;
-}
