@@ -128,7 +128,9 @@ html_theme_path = ["_themes",]
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    'display_version': False
+}
 
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
