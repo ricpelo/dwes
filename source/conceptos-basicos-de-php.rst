@@ -105,6 +105,26 @@ Las expresiones se evalúan. Las sentencias se ejecutan.
 
    Es una constante literal numérica cuyo valor es, precisamente, ``74``.
 
+   ::
+
+       5 * (3 + 6)
+
+   Es una expresión aritmética que involucra números enteros y cuyo valor es
+   ``45``.
+
+   ::
+
+       1.6 + 2.3
+
+   Es una expresión aritmética que involucra números reales y cuyo valor es
+   ``3.9``.
+
+   ::
+
+       74
+
+   Es una constante literal numérica cuyo valor es, precisamente, ``74``.
+
 Sentencias y comandos
 ^^^^^^^^^^^^^^^^^^^^^
 

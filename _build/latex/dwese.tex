@@ -50,17 +50,23 @@
 
         \usepackage[dotinlabels]{titletoc}
         \usepackage{titlesec}
+        \usepackage{array,tabularx}
+        \usepackage{colortbl}
+        \usepackage{xcolor,graphicx}
+        \usepackage[xparse,skins,breakable]{tcolorbox}
         \titlelabel{\thetitle.\quad}
         \let\sphinxcodeORI\sphinxcode
         \protected\def\sphinxcode #1%
             {{\color{OuterLinkColor}\sphinxcodeORI{#1}}}
-        % Redefine the notice environment so we can add our own code to it
         \renewenvironment{sphinxnote}[1]
-            {\begin{sphinxlightbox}%
-             {\large\sphinxstrong{#1}}
-             \hfill\raisebox{-.5\height}{\includegraphics[width=2cm]{../../iconos/hint.png}}
+            {\begin{tcolorbox}[center,width=1\linewidth,enhanced,fonttitle=\large\bfseries,drop
+            fuzzy shadow,breakable,adjusted title=#1,before skip=0.5cm,after skip=0.5cm]
+             \vskip -2cm\hfill%
+             \includegraphics[width=0.15\textwidth]{../../iconos/hint.png}
+             \vskip -0.1cm\vfill%
+             \small
             }
-            {\end{sphinxlightbox}}
+            {\end{tcolorbox}}
         
 
 \title{Desarrollo web en entorno servidor}
@@ -418,6 +424,26 @@ acciones que provoca dicha ejecución.
 Las expresiones se evalúan. Las sentencias se ejecutan.
 
 \begin{sphinxadmonition}{note}{Ejemplos de expresiones}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{l+m+mi}{5} \PYG{o}{*} \PYG{p}{(}\PYG{l+m+mi}{3} \PYG{o}{+} \PYG{l+m+mi}{6}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+Es una expresión aritmética que involucra números enteros y cuyo valor es
+\sphinxcode{45}.
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{l+m+mf}{1.6} \PYG{o}{+} \PYG{l+m+mf}{2.3}
+\end{sphinxVerbatim}
+
+Es una expresión aritmética que involucra números reales y cuyo valor es
+\sphinxcode{3.9}.
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{l+m+mi}{74}
+\end{sphinxVerbatim}
+
+Es una constante literal numérica cuyo valor es, precisamente, \sphinxcode{74}.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{5} \PYG{o}{*} \PYG{p}{(}\PYG{l+m+mi}{3} \PYG{o}{+} \PYG{l+m+mi}{6}\PYG{p}{)}

@@ -277,17 +277,23 @@ latex_elements = {
     'preamble': r"""
         \usepackage[dotinlabels]{titletoc}
         \usepackage{titlesec}
+        \usepackage{array,tabularx}
+        \usepackage{colortbl}
+        \usepackage{xcolor,graphicx}
+        \usepackage[xparse,skins,breakable]{tcolorbox}
         \titlelabel{\thetitle.\quad}
         \let\sphinxcodeORI\sphinxcode
         \protected\def\sphinxcode #1%
             {{\color{OuterLinkColor}\sphinxcodeORI{#1}}}
-        % Redefine the notice environment so we can add our own code to it
         \renewenvironment{sphinxnote}[1]
-            {\begin{sphinxlightbox}%
-             {\large\sphinxstrong{#1}}
-             \hfill\raisebox{-.5\height}{\includegraphics[width=2cm]{../../iconos/hint.png}}
+            {\begin{tcolorbox}[center,width=1\linewidth,enhanced,fonttitle=\large\bfseries,drop
+            fuzzy shadow,breakable,adjusted title=#1,before skip=0.5cm,after skip=0.5cm]
+             \vskip -2cm\hfill%
+             \includegraphics[width=0.15\textwidth]{../../iconos/hint.png}
+             \vskip -0.1cm\vfill%
+             \small
             }
-            {\end{sphinxlightbox}}
+            {\end{tcolorbox}}
         """,
 
      # Latex figure (float) alignment
