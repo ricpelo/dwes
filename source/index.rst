@@ -8,7 +8,7 @@ Desarrollo web en entorno servidor
 
 .. only:: html
 
-   Contenidos:
+   **Contenidos**:
 
 .. toctree::
    :maxdepth: 2

@@ -281,6 +281,13 @@ latex_elements = {
         \let\sphinxcodeORI\sphinxcode
         \protected\def\sphinxcode #1%
             {{\color{OuterLinkColor}\sphinxcodeORI{#1}}}
+        % Redefine the notice environment so we can add our own code to it
+        \renewenvironment{sphinxnote}[1]
+            {\begin{sphinxlightbox}%
+             {\large\sphinxstrong{#1}}
+             \hfill\raisebox{-.5\height}{\includegraphics[width=2cm]{../../iconos/hint.png}}
+            }
+            {\end{sphinxlightbox}}
         """,
 
      # Latex figure (float) alignment

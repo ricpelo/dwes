@@ -16,7 +16,7 @@
   \indexspace
   \bigletter E
   \item echo, \hyperpage{17}
-  \item efectos laterales, \hyperpage{17}, \hyperpage{19}
+  \item efectos laterales, \hyperpage{17}, \hyperpage{20}
   \item enteros, \hyperpage{20}
   \item evaluación, \hyperindexformat{\see{expresiones}}{16}
   \item expresiones, \hyperpage{16, 17}
@@ -54,10 +54,10 @@
 
   \indexspace
   \bigletter T
-  \item tipos de datos, \hyperpage{20}
+  \item tipos de datos, \hyperpage{21}
 
   \indexspace
   \bigletter V
-  \item var\_dump(), \hyperpage{19}
+  \item var\_dump(), \hyperpage{20}
 
 \end{sphinxtheindex}
