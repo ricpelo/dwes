@@ -274,27 +274,7 @@ latex_elements = {
         noteBorderColor={rgb}{0.208,0.374,0.486},
         noteborder=1pt""",
 
-    'preamble': r"""
-        \usepackage[dotinlabels]{titletoc}
-        \usepackage{titlesec}
-        \usepackage{array,tabularx}
-        \usepackage{colortbl}
-        \usepackage{xcolor,graphicx}
-        \usepackage[xparse,skins,breakable]{tcolorbox}
-        \titlelabel{\thetitle.\quad}
-        \let\sphinxcodeORI\sphinxcode
-        \protected\def\sphinxcode #1%
-            {{\color{OuterLinkColor}\sphinxcodeORI{#1}}}
-        \renewenvironment{sphinxnote}[1]
-            {\begin{tcolorbox}[center,width=1\linewidth,enhanced,fonttitle=\large\bfseries,drop
-            fuzzy shadow,breakable,adjusted title=#1,before skip=0.5cm,after skip=0.5cm]
-             \vskip -2cm\hfill%
-             \includegraphics[width=0.15\textwidth]{../../iconos/hint.png}
-             \vskip -0.1cm\vfill%
-             \small
-            }
-            {\end{tcolorbox}}
-        """,
+    'preamble': open('source/preambulo.tex', 'r').read(),
 
      # Latex figure (float) alignment
      #
