@@ -9,19 +9,23 @@
 \protected\def\sphinxcode #1%
     {{\color{OuterLinkColor}\sphinxcodeORI{#1}}}
 
-\DeclareTColorBox{caja}{ m m }
+\DeclareTColorBox{caja}{ m m O{} }
     { center,width=1\linewidth,enhanced,fonttitle=\large\bfseries,
       drop fuzzy shadow,breakable,adjusted title={#1},
       before skip=0.5cm,after skip=0.5cm,
+      bottom=0.5cm,
+      left=0.5cm,
+      right=0.5cm,
       before upper={ \vskip -2cm\hfill%
                      \includegraphics[width=0.15\textwidth]{../../iconos/#2}%
                      \vskip -0.1cm\vfill%
                      \small%
-                   }
+                   },
+      #3
     }
 
 \renewenvironment{sphinxnote}[1]
-    {\begin{caja}{#1}{hint.png}}
+    {\begin{caja}{#1}{bulb.png}}
     {\end{caja}}
 
 %\renewenvironment{sphinxnote}[1]
