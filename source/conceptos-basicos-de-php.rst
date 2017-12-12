@@ -10,6 +10,8 @@ ricpelo's note: Programada inicialmente para empezar el 23-10-2017. ``______``
 Introducción a PHP
 -------------------
 
+.. danger::
+   ¡Esto es un peligro!
 
 Página web de PHP
 ^^^^^^^^^^^^^^^^^^
