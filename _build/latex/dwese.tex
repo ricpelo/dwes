@@ -59,6 +59,11 @@
     {{\color{OuterLinkColor}\sphinxcodeORI{#1}}}
 
 \usepackage[export]{adjustbox}
+\titleformat{\part}[display]
+  {\sffamily\bfseries\Huge\color{teal}\filcenter}
+  {\partname{} \thepart}
+  {0em}
+  {}
 \titleformat{\chapter}[display]
   {\sffamily\Large\color{teal}\raggedleft}
   {\mbox{}\rlap{\hspace{.5in}\llap{\MakeUppercase{\chaptertitlename}~%
@@ -106,7 +111,7 @@
 \date{abril de 2018}
 \release{1.0}
 \author{Ricardo Pérez López}
-\newcommand{\sphinxlogo}{\vbox{}}
+\newcommand{\sphinxlogo}{\sphinxincludegraphics{php-cover.png}\par}
 \renewcommand{\releasename}{Versión}
 \makeindex
 

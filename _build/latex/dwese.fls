@@ -331,6 +331,8 @@ INPUT dwese.out
 INPUT dwese.out
 INPUT dwese.out
 OUTPUT dwese.out
+INPUT php-cover.png
+INPUT php-cover.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
