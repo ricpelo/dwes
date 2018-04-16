@@ -9,6 +9,16 @@
 \protected\def\sphinxcode #1%
     {{\color{OuterLinkColor}\sphinxcodeORI{#1}}}
 
+\usepackage[export]{adjustbox}
+\titleformat{\chapter}[display]
+  {\normalfont\Large\raggedleft}
+  {\mbox{}\rlap{\hspace{.5in}\llap{\MakeUppercase{\chaptertitlename}~%
+    \resizebox{!}{2.0cm}{\thechapter}} \rule{9cm}{2.0cm}}}
+  {10pt}
+  {\Huge\bfseries}
+  [\vspace{.5cm}\titleline{\color{teal}\titlerule[2.0pt]}\vspace{.5cm}]
+\titlespacing*{\chapter}{0pt}{30pt}{20pt}
+
 \DeclareTColorBox{caja}{ m m O{} }
     { center,width=1\linewidth,enhanced,fonttitle=\large\bfseries,
       drop fuzzy shadow,breakable,adjusted title={#1},

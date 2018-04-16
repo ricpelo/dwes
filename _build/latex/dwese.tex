@@ -4,7 +4,7 @@
 \ifdefined\pdfpxdimen
    \let\sphinxpxdimen\pdfpxdimen\else\newdimen\sphinxpxdimen
 \fi \sphinxpxdimen=.75bp\relax
-
+\PassOptionsToPackage{warn}{textcomp}
 
 \catcode`^^^^00a0\active\protected\def^^^^00a0{\leavevmode\nobreak\ }
 \usepackage{cmap}
@@ -22,7 +22,7 @@
             Scale=MatchLowercase
         ]{FiraMono-Medium.ttf}
 \usepackage[Sonny]{fncychap}
-\usepackage[dontkeepoldnames]{sphinx}
+\usepackage{sphinx}
 \sphinxsetup{
         verbatimwithframe=false,
         noteBorderColor={rgb}{0.208,0.374,0.486},
@@ -40,7 +40,7 @@
 \addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
 \addto\captionsspanish{\renewcommand{\literalblockname}{Lista}}
 
-\addto\captionsspanish{\renewcommand{\literalblockcontinuedname}{continued from previous page}}
+\addto\captionsspanish{\renewcommand{\literalblockcontinuedname}{proviene de la página anterior}}
 \addto\captionsspanish{\renewcommand{\literalblockcontinuesname}{continues on next page}}
 
 \def\pageautorefname{página}
@@ -57,6 +57,16 @@
 \let\sphinxcodeORI\sphinxcode
 \protected\def\sphinxcode #1%
     {{\color{OuterLinkColor}\sphinxcodeORI{#1}}}
+
+\usepackage[export]{adjustbox}
+\titleformat{\chapter}[display]
+  {\normalfont\Large\raggedleft}
+  {\mbox{}\rlap{\hspace{.5in}\llap{\MakeUppercase{\chaptertitlename}~%
+    \resizebox{!}{2.0cm}{\thechapter}} \rule{9cm}{2.0cm}}}
+  {10pt}
+  {\Huge\bfseries}
+  [\vspace{.5cm}\titleline{\color{teal}\titlerule[2.0pt]}\vspace{.5cm}]
+\titlespacing*{\chapter}{0pt}{30pt}{20pt}
 
 \DeclareTColorBox{caja}{ m m O{} }
     { center,width=1\linewidth,enhanced,fonttitle=\large\bfseries,
@@ -93,7 +103,7 @@
 
 
 \title{Desarrollo web en entorno servidor}
-\date{enero de 2018}
+\date{abril de 2018}
 \release{1.0}
 \author{Ricardo Pérez López}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -120,7 +130,7 @@
 \subsection{Acciones previas}
 \label{\detokenize{introduccion:acciones-previas}}
 
-\subsubsection{Instalar \sphinxstyleliteralintitle{git}}
+\subsubsection{Instalar \sphinxstyleliteralintitle{\sphinxupquote{git}}}
 \label{\detokenize{introduccion:instalar-git}}
 
 \subsubsection{Crear cuenta en GitHub}
@@ -255,16 +265,16 @@
 \subsection{Experimentos}
 \label{\detokenize{introduccion:experimentos}}
 
-\subsubsection{\sphinxstyleliteralintitle{telnet}}
+\subsubsection{\sphinxstyleliteralintitle{\sphinxupquote{telnet}}}
 \label{\detokenize{introduccion:telnet}}
 
-\subsubsection{\sphinxstyleliteralintitle{netcat}}
+\subsubsection{\sphinxstyleliteralintitle{\sphinxupquote{netcat}}}
 \label{\detokenize{introduccion:netcat}}
 
-\subsubsection{\sphinxstyleliteralintitle{curl}}
+\subsubsection{\sphinxstyleliteralintitle{\sphinxupquote{curl}}}
 \label{\detokenize{introduccion:curl}}
 
-\subsubsection{\sphinxstyleliteralintitle{http}}
+\subsubsection{\sphinxstyleliteralintitle{\sphinxupquote{http}}}
 \label{\detokenize{introduccion:http}}
 
 \subsubsection{Google Chrome Developer Tools}
@@ -368,15 +378,17 @@ Ramas de seguimiento (tracking branch)
 
 \chapter{Conceptos básicos de PHP I}
 \label{\detokenize{php:conceptos-basicos-de-php-i}}
-ricpelo’s note: Programada inicialmente para empezar el 23-10-2017. \sphinxcode{\_\_\_\_\_\_}
+ricpelo’s note: Programada inicialmente para empezar el 23-10-2017. \sphinxcode{\sphinxupquote{\_\_\_\_\_\_}}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-Hola
+Could not open input file: ../../p.php
 \end{sphinxVerbatim}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYGZdl{} php ../../p.php
-Hola
+Could not open input file: ../../p.php
 \end{sphinxVerbatim}
 
 
@@ -398,19 +410,19 @@ Hola
 \subsection{Documentación y búsqueda de información}
 \label{\detokenize{php:documentacion-y-busqueda-de-informacion}}
 
-\subsection{Configuración básica con \sphinxstyleliteralintitle{php.ini}}
+\subsection{Configuración básica con \sphinxstyleliteralintitle{\sphinxupquote{php.ini}}}
 \label{\detokenize{php:configuracion-basica-con-php-ini}}
 
-\subsubsection{\sphinxstyleliteralintitle{error\_reporting = E\_ALL}}
+\subsubsection{\sphinxstyleliteralintitle{\sphinxupquote{error\_reporting = E\_ALL}}}
 \label{\detokenize{php:error-reporting-e-all}}
 
-\subsubsection{\sphinxstyleliteralintitle{display\_errors = On}}
+\subsubsection{\sphinxstyleliteralintitle{\sphinxupquote{display\_errors = On}}}
 \label{\detokenize{php:display-errors-on}}
 
-\subsubsection{\sphinxstyleliteralintitle{display\_startup\_errors = On}}
+\subsubsection{\sphinxstyleliteralintitle{\sphinxupquote{display\_startup\_errors = On}}}
 \label{\detokenize{php:display-startup-errors-on}}
 
-\subsubsection{\sphinxstyleliteralintitle{date.timezone = 'UTC'}}
+\subsubsection{\sphinxstyleliteralintitle{\sphinxupquote{date.timezone = 'UTC'}}}
 \label{\detokenize{php:date-timezone-utc}}
 
 \section{Sintaxis básica}
@@ -452,25 +464,28 @@ Las expresiones se evalúan. Las sentencias se ejecutan.
 
 \begin{sphinxadmonition}{note}{Ejemplos de expresiones}
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{5} \PYG{o}{*} \PYG{p}{(}\PYG{l+m+mi}{3} \PYG{o}{+} \PYG{l+m+mi}{6}\PYG{p}{)}
 \end{sphinxVerbatim}
 
 Es una expresión aritmética que involucra números enteros y cuyo valor es
-\sphinxcode{45}.
+\sphinxcode{\sphinxupquote{45}}.
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mf}{1.6} \PYG{o}{+} \PYG{l+m+mf}{2.3}
 \end{sphinxVerbatim}
 
 Es una expresión aritmética que involucra números reales y cuyo valor es
-\sphinxcode{3.9}.
+\sphinxcode{\sphinxupquote{3.9}}.
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{74}
 \end{sphinxVerbatim}
 
-Es una constante literal numérica cuyo valor es, precisamente, \sphinxcode{74}.
+Es una constante literal numérica cuyo valor es, precisamente, \sphinxcode{\sphinxupquote{74}}.
 \end{sphinxadmonition}
 
 
@@ -481,7 +496,7 @@ Las sentencias en PHP pueden ser \sphinxstyleemphasis{simples} o \sphinxstyleemp
 \begin{itemize}
 \item {} 
 Las \sphinxstylestrong{sentencias simples} son las instrucciones más elementales del lenguaje
-y se escriben siempre acabadas en punto y coma (\sphinxcode{;}).
+y se escriben siempre acabadas en punto y coma (\sphinxcode{\sphinxupquote{;}}).
 
 \item {} 
 Las \sphinxstylestrong{sentencias compuestas} corresponden a las \sphinxstylestrong{estructuras de control} y
@@ -492,6 +507,7 @@ se estudiarán posteriormente en este capítulo.
 Se puede construir una sentencia simple usando sencillamente una expresión y
 acabándola en punto y coma, como por ejemplo:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{8} \PYG{o}{+} \PYG{l+m+mi}{3}\PYG{p}{;}
 \end{sphinxVerbatim}
@@ -515,37 +531,40 @@ identifica al comando, y de una serie de \sphinxstyleemphasis{argumentos} que co
 sentencia.
 
 
-\subsubsection{El comando \sphinxstyleliteralintitle{echo}}
+\subsubsection{El comando \sphinxstyleliteralintitle{\sphinxupquote{echo}}}
 \label{\detokenize{php:el-comando-echo}}
 \index{echo}\ignorespaces 
-El ejemplo clásico de comando en PHP es \sphinxhref{http://php.net/manual/es/function.echo.php}{\sphinxcode{echo}}%
+El ejemplo clásico de comando en PHP es \sphinxhref{http://php.net/manual/es/function.echo.php}{\sphinxcode{\sphinxupquote{echo}}}%
 \begin{footnote}[1]\sphinxAtStartFootnote
 \sphinxnolinkurl{http://php.net/manual/es/function.echo.php}
 %
-\end{footnote}. El comando \sphinxcode{echo} vuelca a
+\end{footnote}. El comando \sphinxcode{\sphinxupquote{echo}} vuelca a
 la salida el valor de las expresiones que se indican como parámetro en la
 sentencia. Por ejemplo:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k}{echo} \PYG{l+m+mi}{25} \PYG{o}{*} \PYG{l+m+mi}{3}\PYG{p}{;}
 \end{sphinxVerbatim}
 
-Muestra \sphinxcode{75} por la salida (normalmente la pantalla). O bien:
+Muestra \sphinxcode{\sphinxupquote{75}} por la salida (normalmente la pantalla). O bien:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k}{echo} \PYG{l+s+s1}{\PYGZsq{}¡Hola a todos!\PYGZsq{}}\PYG{p}{;}
 \end{sphinxVerbatim}
 
-Muestra \sphinxcode{¡Hola a todos!}.
+Muestra \sphinxcode{\sphinxupquote{¡Hola a todos!}}.
 
 Puede mostrar varios valores, separando cada uno de ellos entre sí con una
 coma:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k}{echo} \PYG{l+s+s1}{\PYGZsq{}El resultado es: \PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{4} \PYG{o}{*} \PYG{l+m+mi}{2}\PYG{p}{;}
 \end{sphinxVerbatim}
 
-Mostraría \sphinxcode{El resultado es: 8}.
+Mostraría \sphinxcode{\sphinxupquote{El resultado es: 8}}.
 
 \index{expresiones}\ignorespaces 
 
@@ -554,7 +573,7 @@ Mostraría \sphinxcode{El resultado es: 8}.
 El otro tipo de construcción sintáctica que existe en PHP además de las
 sentencias son las \sphinxstyleemphasis{expresiones}. Una expresión \sphinxstyleemphasis{denota} o \sphinxstyleemphasis{representa} un
 valor. Una expresión puede ser tan simple como una constante literal (por
-ejemplo, el número \sphinxcode{25}) o tan compleja que involucre constantes, variables,
+ejemplo, el número \sphinxcode{\sphinxupquote{25}}) o tan compleja que involucre constantes, variables,
 operadores, funciones, métodos… combinados todos ellos entre sí para formar
 una única expresión.
 
@@ -573,37 +592,41 @@ respectivamente.
 sobre los que actúa el operador para llevar a cabo la operación deseada. Por
 ejemplo:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{4} \PYG{o}{+} \PYG{l+m+mi}{3}
 \end{sphinxVerbatim}
 
-Aquí, el operador \sphinxcode{+} representa la operación \sphinxstyleemphasis{suma} a realizar sobre los
-números \sphinxcode{4} y \sphinxcode{3}, que son sus operandos. Como el operador actúa sobre dos
+Aquí, el operador \sphinxcode{\sphinxupquote{+}} representa la operación \sphinxstyleemphasis{suma} a realizar sobre los
+números \sphinxcode{\sphinxupquote{4}} y \sphinxcode{\sphinxupquote{3}}, que son sus operandos. Como el operador actúa sobre dos
 operandos, se dice que es un operador \sphinxstyleemphasis{binario}. En cambio:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{17}
 \end{sphinxVerbatim}
 
-Aquí se usa el operador \sphinxcode{-} (\sphinxstyleemphasis{signo menos}) para convertir en negativo el
-valor \sphinxcode{17}. Como el operador actúa sobre un único operando, se dice que es un
+Aquí se usa el operador \sphinxcode{\sphinxupquote{-}} (\sphinxstyleemphasis{signo menos}) para convertir en negativo el
+valor \sphinxcode{\sphinxupquote{17}}. Como el operador actúa sobre un único operando, se dice que es un
 operador \sphinxstyleemphasis{unario}.
 
 En PHP existe un único operador \sphinxstyleemphasis{ternario} que se estudiará posteriormente.
 
 En una misma expresión pueden actuar varios operadores, como en:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{4} \PYG{o}{+} \PYG{l+m+mi}{3} \PYG{o}{+} \PYG{l+m+mi}{5}
 \end{sphinxVerbatim}
 
-Que denota el valor \sphinxcode{12}, o con varios operadores diferentes:
+Que denota el valor \sphinxcode{\sphinxupquote{12}}, o con varios operadores diferentes:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{4} \PYG{o}{+} \PYG{l+m+mi}{3} \PYG{o}{*} \PYG{l+m+mi}{5}
 \end{sphinxVerbatim}
 
-Que evalúa a \sphinxcode{19}.
+Que evalúa a \sphinxcode{\sphinxupquote{19}}.
 
 
 \paragraph{Asociatividad y prioridad}
@@ -623,14 +646,16 @@ En una expresión en la que un operando está rodeado a izquierda y derecha por
 \sphinxstyleemphasis{el mismo operador}, se aplica la regla de la \sphinxstyleemphasis{asociatividad}. Por ejemplo,
 en la expresión:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{4} \PYG{o}{+} \PYG{l+m+mi}{3} \PYG{o}{+} \PYG{l+m+mi}{5}
 \end{sphinxVerbatim}
 
-el operando \sphinxcode{3} tiene el mismo operador a izquierda y derecha (el \sphinxcode{+}), y
+el operando \sphinxcode{\sphinxupquote{3}} tiene el mismo operador a izquierda y derecha (el \sphinxcode{\sphinxupquote{+}}), y
 como dicho operador es \sphinxstyleemphasis{asociativo por la izquierda}, la expresión se evalúa
 igual que si se hubiera escrito como:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{p}{(}\PYG{l+m+mi}{4} \PYG{o}{+} \PYG{l+m+mi}{3}\PYG{p}{)} \PYG{o}{+} \PYG{l+m+mi}{5}
 \end{sphinxVerbatim}
@@ -640,14 +665,16 @@ En una expresión en la que un operando está rodeado a izquierda y derecha por
 \sphinxstyleemphasis{distintos operadores}, se aplica la regla de la \sphinxstyleemphasis{prioridad}. Por ejemplo,
 en la expresión:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{4} \PYG{o}{+} \PYG{l+m+mi}{3} \PYG{o}{*} \PYG{l+m+mi}{5}
 \end{sphinxVerbatim}
 
-el operando \sphinxcode{3} tiene el operador \sphinxcode{+} a su izquierda y el \sphinxcode{*} a su
+el operando \sphinxcode{\sphinxupquote{3}} tiene el operador \sphinxcode{\sphinxupquote{+}} a su izquierda y el \sphinxcode{\sphinxupquote{*}} a su
 derecha, pero como el producto tiene más prioridad que la suma, la expresión
 se evalúa igual que si se hubiera escrito como:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{4} \PYG{o}{+} \PYG{p}{(}\PYG{l+m+mi}{3} \PYG{o}{*} \PYG{l+m+mi}{5}\PYG{p}{)}
 \end{sphinxVerbatim}
@@ -658,12 +685,13 @@ Como se aprecia en los ejemplos anteriores, se pueden usar \sphinxstylestrong{pa
 agrupar sub-expresiones dentro de una expresión y así aumentar la prioridad de
 los operadores que vayan entre paréntesis. Por ejemplo, en la expresión:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{p}{(}\PYG{l+m+mi}{4} \PYG{o}{+} \PYG{l+m+mi}{3}\PYG{p}{)} \PYG{o}{*} \PYG{l+m+mi}{5}
 \end{sphinxVerbatim}
 
 la suma se hace antes que el producto, aunque este último sea un operador de
-mayor prioridad. El resultado de dicha expresión es el valor \sphinxcode{35}.
+mayor prioridad. El resultado de dicha expresión es el valor \sphinxcode{\sphinxupquote{35}}.
 
 
 \subsubsection{Funciones}
@@ -672,7 +700,7 @@ mayor prioridad. El resultado de dicha expresión es el valor \sphinxcode{35}.
 Las funciones en las expresiones cumplen el mismo papel que en Matemáticas:
 realizan un cálculo a partir de unos valores de entrada indicados en sus
 argumentos y \sphinxstyleemphasis{devuelven} el resultado de dicho cálculo. Por ejemplo, la
-función \sphinxstyleemphasis{coseno} (abreviada como \sphinxhref{http://php.net/manual/es/function.cos.php}{\sphinxcode{cos()}}%
+función \sphinxstyleemphasis{coseno} (abreviada como \sphinxhref{http://php.net/manual/es/function.cos.php}{\sphinxcode{\sphinxupquote{cos()}}}%
 \begin{footnote}[3]\sphinxAtStartFootnote
 \sphinxnolinkurl{http://php.net/manual/es/function.cos.php}
 %
@@ -682,26 +710,28 @@ función y, a continuación, la lista de sus argumentos entre paréntesis y
 separados por comas. Así, para calcular el coseno de 2.4 radianes, podemos
 escribir:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nb}{cos}\PYG{p}{(}\PYG{l+m+mf}{2.4}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-Que da como resultado \sphinxcode{-0.73739371554125}, y ese sería el valor de dicha
+Que da como resultado \sphinxcode{\sphinxupquote{-0.73739371554125}}, y ese sería el valor de dicha
 expresión.
 
 El coseno es un ejemplo de función con un único argumento, pero hay funciones
-que admiten o requieren más argumentos. Es el caso de la función \sphinxhref{http://php.net/manual/es/function.max.php}{\sphinxcode{max()}}%
+que admiten o requieren más argumentos. Es el caso de la función \sphinxhref{http://php.net/manual/es/function.max.php}{\sphinxcode{\sphinxupquote{max()}}}%
 \begin{footnote}[4]\sphinxAtStartFootnote
 \sphinxnolinkurl{http://php.net/manual/es/function.max.php}
 %
 \end{footnote}, que
 devuelve el valor máximo de todos los indicados en su lista de argumentos:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nb}{max}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-Devuelve \sphinxcode{8}.
+Devuelve \sphinxcode{\sphinxupquote{8}}.
 
 \begin{sphinxadmonition}{note}{Nota:}
 Cuando usamos una función en una expresión, decimos que estamos \sphinxstyleemphasis{llamando} o
@@ -712,14 +742,14 @@ Cuando usamos una función en una expresión, decimos que estamos \sphinxstyleem
 \index{efectos laterales}\index{var\_dump()}\ignorespaces 
 En PHP, a diferencia de lo que ocurre en Matemáticas, existen funciones que no
 devuelven ningún valor, ya que su objetivo es provocar un \sphinxstyleemphasis{efecto lateral}. La
-más conocida podría ser, sin temor a equivocarnos, la función \sphinxhref{http://php.net/manual/es/function.var-dump.php}{\sphinxcode{var\_dump()}}%
+más conocida podría ser, sin temor a equivocarnos, la función \sphinxhref{http://php.net/manual/es/function.var-dump.php}{\sphinxcode{\sphinxupquote{var\_dump()}}}%
 \begin{footnote}[5]\sphinxAtStartFootnote
 \sphinxnolinkurl{http://php.net/manual/es/function.var-dump.php}
 %
 \end{footnote}. Esta
 función muestra en la salida información estructurada sobre las expresiones que
 se le pasan como argumento, incluyendo su valor y su tipo. En cierto sentido,
-podría considerarse un versión especializada del comando \sphinxcode{echo}, pero en forma
+podría considerarse un versión especializada del comando \sphinxcode{\sphinxupquote{echo}}, pero en forma
 de función y más orientada a la \sphinxstyleemphasis{depuración} de programas.
 
 Es importante destacar que esa información que muestra se vuelca \sphinxstyleemphasis{en la salida}
@@ -729,6 +759,7 @@ llamada a la función. De hecho, estamos hablamos de llamar a la función como s
 fuera una sentencia (una sentencia formada únicamente por la llamada a la
 función y el punto y coma final):
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nb}{var\PYGZus{}dump}\PYG{p}{(}\PYG{l+m+mi}{14} \PYG{o}{+} \PYG{l+m+mi}{3}\PYG{p}{);}
 \end{sphinxVerbatim}
@@ -738,42 +769,47 @@ terminada en punto y coma), como cualquier otra sentencia, no devuelve ningún
 valor, sino que produce un efecto lateral. En este caso, mostrar a la salida
 (la pantalla) lo siguiente:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nx}{int}\PYG{p}{(}\PYG{l+m+mi}{17}\PYG{p}{)}
 \end{sphinxVerbatim}
 
 \index{enteros}\index{números}\ignorespaces 
-Observamos que \sphinxcode{var\_dump()} nos informa del valor de la expresión (\sphinxcode{17}) y de
-su tipo (\sphinxcode{int}, que significa \sphinxstylestrong{número entero}). La importancia de conocer
+Observamos que \sphinxcode{\sphinxupquote{var\_dump()}} nos informa del valor de la expresión (\sphinxcode{\sphinxupquote{17}}) y de
+su tipo (\sphinxcode{\sphinxupquote{int}}, que significa \sphinxstylestrong{número entero}). La importancia de conocer
 el valor y el tipo de toda expresión que aparezca en nuestros programas se
 apreciará en breve. Por ahora, veamos dos ejemplos más de utilización de
-\sphinxcode{var\_dump()}:
+\sphinxcode{\sphinxupquote{var\_dump()}}:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nb}{var\PYGZus{}dump}\PYG{p}{(}\PYG{l+m+mf}{12.3} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{4}\PYG{p}{);}
 \end{sphinxVerbatim}
 
 Muestra a la salida:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nx}{float}\PYG{p}{(}\PYG{l+m+mf}{8.3}\PYG{p}{)}
 \end{sphinxVerbatim}
 
 \index{reales}\index{números}\ignorespaces 
-Lo que nos indica que el valor de la expresión \sphinxcode{12.3 - 4} es el \sphinxstylestrong{número
-real} \sphinxcode{8.3}. Finalmente:
+Lo que nos indica que el valor de la expresión \sphinxcode{\sphinxupquote{12.3 - 4}} es el \sphinxstylestrong{número
+real} \sphinxcode{\sphinxupquote{8.3}}. Finalmente:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nb}{var\PYGZus{}dump}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Saludos}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{);}
 \end{sphinxVerbatim}
 
 Muestra:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nx}{string}\PYG{p}{(}\PYG{l+m+mi}{7}\PYG{p}{)} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Saludos}\PYG{l+s+s2}{\PYGZdq{}}
 \end{sphinxVerbatim}
 
-Que nos informa de que \sphinxcode{"Saludos"} es una cadena de siete caracteres.
+Que nos informa de que \sphinxcode{\sphinxupquote{"Saludos"}} es una cadena de siete caracteres.
 
 \index{tipos de datos}\ignorespaces 
 Los números (enteros y reales), así como las cadenas, son algunos de los
@@ -793,7 +829,7 @@ La ejecución de nuestro código se puede llevar a cabo de dos formas:
 \index{scripts}\ignorespaces \begin{description}
 \item[{Por lotes:}] \leavevmode
 Nuestro código fuente está almacenado en un archivo de texto (normalmente,
-con extensión \sphinxcode{.php}) y el intérprete lee dicho archivo, lo analiza
+con extensión \sphinxcode{\sphinxupquote{.php}}) y el intérprete lee dicho archivo, lo analiza
 sintáctica y semánticamente y ejecuta las instrucciones que lo forman. Estos
 archivos (que contienen el código fuente en PHP) se denominan \sphinxstylestrong{scripts}, y
 el objetivo final de este curso es desarrollar aplicaciones escribiendo los
@@ -807,9 +843,10 @@ web}, \sphinxstyleemphasis{embebiendo} (o \sphinxstyleemphasis{incrustando}) el 
 Hablaremos sobre ello en próximos capítulos.
 %
 \end{footnote}. Por ejemplo, si tenemos nuestro
-\sphinxstyleemphasis{script} almacenado en el archivo \sphinxcode{prueba.php}, podemos provocar la
+\sphinxstyleemphasis{script} almacenado en el archivo \sphinxcode{\sphinxupquote{prueba.php}}, podemos provocar la
 ejecución del mismo mediante la siguiente orden del sistema operativo:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{g+gp}{\PYGZdl{}} php prueba.php
 \end{sphinxVerbatim}
@@ -837,7 +874,7 @@ programa expresamente para tal fin. Por ello, su utilidad didáctica es
 innegable, así que empezaremos con él.
 
 
-\subsubsection{Intérprete interactivo integrado (\sphinxstyleliteralintitle{php -a})}
+\subsubsection{Intérprete interactivo integrado (\sphinxstyleliteralintitle{\sphinxupquote{php -a}})}
 \label{\detokenize{php:interprete-interactivo-integrado-php-a}}
 PHP dispone de un intérprete interactivo integrado que, si bien es algo
 espartano y no dispone de características adicionales que sí podemos encontrar
@@ -845,8 +882,9 @@ en otros intérpretes más avanzados, tiene lo justo y necesario para cumplir su
 función.
 
 Para empezar a trabajar con dicho intérprete de forma interactiva, usaremos el
-comando \sphinxcode{php} con la opción \sphinxcode{-a} desde la consola del sistema operativo:
+comando \sphinxcode{\sphinxupquote{php}} con la opción \sphinxcode{\sphinxupquote{-a}} desde la consola del sistema operativo:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{g+gp}{\PYGZdl{}} php \PYGZhy{}a
 \PYG{g+go}{Interactive mode enabled}
@@ -854,9 +892,10 @@ comando \sphinxcode{php} con la opción \sphinxcode{-a} desde la consola del sis
 \PYG{g+go}{php \PYGZgt{}}
 \end{sphinxVerbatim}
 
-El intérprete nos muestra el \sphinxstyleemphasis{prompt} \sphinxcode{php \textgreater{}}, indicándonos que está listo
+El intérprete nos muestra el \sphinxstyleemphasis{prompt} \sphinxcode{\sphinxupquote{php \textgreater{}}}, indicándonos que está listo
 para recibir nuestras sentencias PHP. Probamos:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{g+go}{php \PYGZgt{} echo 75;}
 \PYG{g+go}{75}
@@ -875,9 +914,10 @@ evaluar la expresión y mostrar el resultado en pantalla) y, a continuación,
 solicita un nuevo comando al usuario.
 
 La sentencia introducida debe ser sintácticamente correcta. Si, por ejemplo, nos
-olvidamos de escribir el punto y coma (\sphinxcode{;}), no obtendremos el resultado
+olvidamos de escribir el punto y coma (\sphinxcode{\sphinxupquote{;}}), no obtendremos el resultado
 esperado:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{g+go}{php \PYGZgt{} echo 73}
 \PYG{g+go}{php \PYGZgt{} echo 25;}
@@ -891,20 +931,22 @@ esperado:
 \end{sphinxVerbatim}
 
 El mensaje de error se debe a que el intérprete ha considerado los dos comandos
-\sphinxcode{echo} como si fueran una única sentencia:
+\sphinxcode{\sphinxupquote{echo}} como si fueran una única sentencia:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k}{echo} \PYG{l+m+mi}{73} \PYG{k}{echo} \PYG{l+m+mi}{25}\PYG{p}{;}
 \end{sphinxVerbatim}
 
-puesto que sólo ha encontrado un \sphinxcode{;} al final del todo. Por tanto, se queja de
-que se ha encontrado la palabra \sphinxcode{echo} detrás del \sphinxcode{73} cuando se esperaba
-una \sphinxcode{,} o un \sphinxcode{;}.
+puesto que sólo ha encontrado un \sphinxcode{\sphinxupquote{;}} al final del todo. Por tanto, se queja de
+que se ha encontrado la palabra \sphinxcode{\sphinxupquote{echo}} detrás del \sphinxcode{\sphinxupquote{73}} cuando se esperaba
+una \sphinxcode{\sphinxupquote{,}} o un \sphinxcode{\sphinxupquote{;}}.
 
-Por otra parte, si introducimos como sentencia una expresión acabada en \sphinxcode{;},
+Por otra parte, si introducimos como sentencia una expresión acabada en \sphinxcode{\sphinxupquote{;}},
 no obtendremos ningún resultado en pantalla, ya que la expresión se evaluará sin
 más pero no se hará nada con dicho valor:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{g+go}{php \PYGZgt{} 3 + 5;}
 \PYG{g+go}{php \PYGZgt{} 6 * 9;}
@@ -913,8 +955,9 @@ más pero no se hará nada con dicho valor:
 
 Lo que demuestra su nula utilidad práctica.
 
-Para salir del intérprete interactivo, pulsamos la combinación de teclas \sphinxcode{Control-D}:
+Para salir del intérprete interactivo, pulsamos la combinación de teclas \sphinxcode{\sphinxupquote{Control-D}}:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{g+go}{php \PYGZgt{} \PYGZca{}D}
 \PYG{g+gp}{\PYGZdl{}}
@@ -937,7 +980,7 @@ Un \sphinxstyleemphasis{depurador} integrado que facilita la introspección de l
 localización de errores.
 
 \item {} 
-Autocompletado pulsando \sphinxcode{Tab}.
+Autocompletado pulsando \sphinxcode{\sphinxupquote{Tab}}.
 
 \item {} 
 Uso adecuado de espacios de nombres.
@@ -959,6 +1002,7 @@ comprueba la diferencia y dime si tengo razón o no…
 
 La instalación de PsySH es muy sencilla:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{g+gp}{\PYGZdl{}} wget https://git.io/psysh
 \PYG{g+gp}{\PYGZdl{}} chmod +x psysh
@@ -967,6 +1011,7 @@ La instalación de PsySH es muy sencilla:
 
 Con esto tenemos la herramienta básica. Si además queremos disponer del manual de PHP en línea (cosa altamente recomendable), hacemos también lo siguiente:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{g+gp}{\PYGZdl{}} wget https://psysh.org/manual/es/php\PYGZus{}manual.sqlite
 \PYG{g+gp}{\PYGZdl{}} mkdir \PYGZhy{}p \PYGZti{}/.local/share/psysh
@@ -979,7 +1024,7 @@ Con esto tenemos la herramienta básica. Si además queremos disponer del manual
 ricpelo’s note: Se llaman \sphinxstyleemphasis{modo HTML} y \sphinxstyleemphasis{modo PHP}.
 
 
-\subsection{Etiquetas \sphinxstyleliteralintitle{\textless{}?php} y \sphinxstyleliteralintitle{?\textgreater{}}}
+\subsection{Etiquetas \sphinxstyleliteralintitle{\sphinxupquote{\textless{}?php}} y \sphinxstyleliteralintitle{\sphinxupquote{?\textgreater{}}}}
 \label{\detokenize{php:etiquetas-php-y}}
 
 \section{Variables}
@@ -1001,7 +1046,7 @@ ricpelo’s note: Se llaman \sphinxstyleemphasis{modo HTML} y \sphinxstyleemphas
 \label{\detokenize{php:operadores-de-asignacion-por-valor-y-por-referencia}}
 \textless{}\sphinxurl{http://php.net/manual/es/language.operators.assignment.php}\textgreater{}
 
-ricpelo’s note: En \sphinxcode{\$b =\& \$a;}, \sphinxcode{\$b} \sphinxstylestrong{NO} está apuntando a \sphinxcode{\$a}
+ricpelo’s note: En \sphinxcode{\sphinxupquote{\$b =\& \$a;}}, \sphinxcode{\sphinxupquote{\$b}} \sphinxstylestrong{NO} está apuntando a \sphinxcode{\sphinxupquote{\$a}}
 o viceversa. Ambos apuntan al mismo
 lugar. \textless{}\sphinxurl{http://php.net/manual/es/language.references.whatdo.php}\textgreater{}
 
@@ -1010,8 +1055,8 @@ lugar. \textless{}\sphinxurl{http://php.net/manual/es/language.references.whatdo
 \label{\detokenize{php:variables-predefinidas}}
 \textless{}\sphinxurl{http://php.net/manual/es/reserved.variables.php}\textgreater{}
 
-ricpelo’s note: \sphinxcode{\$\_ENV} no funciona en la instalación actual (ver
-\sphinxcode{variables\_order} en \sphinxcode{php.ini}. Habría que usar \sphinxcode{get\_env()}.
+ricpelo’s note: \sphinxcode{\sphinxupquote{\$\_ENV}} no funciona en la instalación actual (ver
+\sphinxcode{\sphinxupquote{variables\_order}} en \sphinxcode{\sphinxupquote{php.ini}}. Habría que usar \sphinxcode{\sphinxupquote{get\_env()}}.
 
 
 \section{Tipos básicos de datos}
@@ -1019,15 +1064,15 @@ ricpelo’s note: \sphinxcode{\$\_ENV} no funciona en la instalación actual (ve
 \textless{}\sphinxurl{http://php.net/manual/es/language.types.intro.php}\textgreater{}
 
 
-\subsection{Lógicos (\sphinxstyleliteralintitle{bool})}
+\subsection{Lógicos (\sphinxstyleliteralintitle{\sphinxupquote{bool}})}
 \label{\detokenize{php:logicos-bool}}
 \textless{}\sphinxurl{http://php.net/manual/es/language.types.boolean.php}\textgreater{}
 
 \begin{DUlineblock}{0em}
-\item[] ricpelo’s note: Se escriben en minúscula: \sphinxcode{false} y
-\sphinxcode{true}. \textless{}\sphinxurl{https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md\#51-types}\textgreater{}
-\item[] ricpelo’s note: \sphinxcode{boolean} es sinónimo de \sphinxcode{bool}, pero debería
-usarse \sphinxcode{bool}.
+\item[] ricpelo’s note: Se escriben en minúscula: \sphinxcode{\sphinxupquote{false}} y
+\sphinxcode{\sphinxupquote{true}}. \textless{}\sphinxurl{https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md\#51-types}\textgreater{}
+\item[] ricpelo’s note: \sphinxcode{\sphinxupquote{boolean}} es sinónimo de \sphinxcode{\sphinxupquote{bool}}, pero debería
+usarse \sphinxcode{\sphinxupquote{bool}}.
 \end{DUlineblock}
 
 
@@ -1037,14 +1082,14 @@ usarse \sphinxcode{bool}.
 
 \begin{DUlineblock}{0em}
 \item[] ricpelo’s note: \sphinxstyleemphasis{Cuidado}:
-\item[] - \sphinxcode{false and (true \&\& print('hola'))} no imprime nada y devuelve
-\sphinxcode{false}, por lo que \sphinxstylestrong{el código va en cortocircuito y se evalúa de
-izquierda a derecha} incluso aunque el \sphinxcode{\&\&} y los paréntesis tengan
-más prioridad que el \sphinxcode{and}.
+\item[] - \sphinxcode{\sphinxupquote{false and (true \&\& print('hola'))}} no imprime nada y devuelve
+\sphinxcode{\sphinxupquote{false}}, por lo que \sphinxstylestrong{el código va en cortocircuito y se evalúa de
+izquierda a derecha} incluso aunque el \sphinxcode{\sphinxupquote{\&\&}} y los paréntesis tengan
+más prioridad que el \sphinxcode{\sphinxupquote{and}}.
 \item[] - Otra forma de verlo es comprobar que
-\sphinxcode{print('uno') and (1 + print('dos'))} escribe \sphinxcode{unodos} (y devuelve
-\sphinxcode{true}), por lo que la evaluación de los operandos del \sphinxcode{and} se
-hace de izquierda a derecha aunque el \sphinxcode{+} tenga más prioridad (y
+\sphinxcode{\sphinxupquote{print('uno') and (1 + print('dos'))}} escribe \sphinxcode{\sphinxupquote{unodos}} (y devuelve
+\sphinxcode{\sphinxupquote{true}}), por lo que la evaluación de los operandos del \sphinxcode{\sphinxupquote{and}} se
+hace de izquierda a derecha aunque el \sphinxcode{\sphinxupquote{+}} tenga más prioridad (y
 encima vaya entre paréntesis).
 \item[] - En el \sphinxhref{http://php.net/manual/es/language.operators.precedence.php}{manual de
 PHP}%
@@ -1070,20 +1115,20 @@ StackOverflow}%
 \subsection{Numéricos}
 \label{\detokenize{php:numericos}}
 
-\subsubsection{Enteros (\sphinxstyleliteralintitle{int})}
+\subsubsection{Enteros (\sphinxstyleliteralintitle{\sphinxupquote{int}})}
 \label{\detokenize{php:enteros-int}}
 \textless{}\sphinxurl{http://php.net/manual/es/language.types.integer.php}\textgreater{}
 
-ricpelo’s note: \sphinxcode{integer} es sinónimo de \sphinxcode{int}, pero debería usarse
-\sphinxcode{int}.
+ricpelo’s note: \sphinxcode{\sphinxupquote{integer}} es sinónimo de \sphinxcode{\sphinxupquote{int}}, pero debería usarse
+\sphinxcode{\sphinxupquote{int}}.
 
 
-\subsubsection{Números en coma flotante (\sphinxstyleliteralintitle{float})}
+\subsubsection{Números en coma flotante (\sphinxstyleliteralintitle{\sphinxupquote{float}})}
 \label{\detokenize{php:numeros-en-coma-flotante-float}}
 \textless{}\sphinxurl{http://php.net/manual/es/language.types.float.php}\textgreater{}
 
-ricpelo’s note: \sphinxcode{double} es sinónimo de \sphinxcode{float}, pero debería usarse
-\sphinxcode{float}.
+ricpelo’s note: \sphinxcode{\sphinxupquote{double}} es sinónimo de \sphinxcode{\sphinxupquote{float}}, pero debería usarse
+\sphinxcode{\sphinxupquote{float}}.
 
 
 \subsubsection{Operadores}
@@ -1099,12 +1144,12 @@ ricpelo’s note: \sphinxcode{double} es sinónimo de \sphinxcode{float}, pero d
 \textless{}\sphinxurl{http://php.net/manual/es/language.operators.increment.php}\textgreater{}
 
 
-\subsection{Cadenas (\sphinxstyleliteralintitle{string})}
+\subsection{Cadenas (\sphinxstyleliteralintitle{\sphinxupquote{string}})}
 \label{\detokenize{php:cadenas-string}}
 \textless{}\sphinxurl{http://php.net/manual/es/language.types.string.php}\textgreater{}
 
-ricpelo’s note: Se usa \sphinxcode{\{\$var\}} y no
-\sphinxcode{\$\{var\}} \textless{}\sphinxurl{https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md\#variable-substitution}\textgreater{}
+ricpelo’s note: Se usa \sphinxcode{\sphinxupquote{\{\$var\}}} y no
+\sphinxcode{\sphinxupquote{\$\{var\}}} \textless{}\sphinxurl{https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md\#variable-substitution}\textgreater{}
 
 
 \subsubsection{Operadores de cadenas}
@@ -1120,8 +1165,8 @@ ricpelo’s note: Se usa \sphinxcode{\{\$var\}} y no
 \textless{}\sphinxurl{http://php.net/manual/es/language.types.string.php\#language.types.string.substr}\textgreater{}
 
 \begin{DUlineblock}{0em}
-\item[] ricpelo’s note: - \sphinxcode{echo \$a{[}3{]}}
-\item[] - \sphinxcode{\$a{[}3{]} = 'x';}
+\item[] ricpelo’s note: - \sphinxcode{\sphinxupquote{echo \$a{[}3{]}}}
+\item[] - \sphinxcode{\sphinxupquote{\$a{[}3{]} = 'x';}}
 \end{DUlineblock}
 
 
@@ -1140,9 +1185,9 @@ ricpelo’s note: Se usa \sphinxcode{\{\$var\}} y no
 \textless{}\sphinxurl{http://php.net/manual/en/book.mbstring.php}\textgreater{}
 
 \begin{DUlineblock}{0em}
-\item[] ricpelo’s note: - \sphinxcode{\$a{[}3{]}} equivale a \sphinxcode{mb\_substr(\$a, 3, 1)}
-\item[] - \sphinxcode{\$a{[}3{]} = 'x';} no tiene equivalencia directa. Se podría hacer:
-\item[] \sphinxcode{\$a = mb\_substr(\$a, 2, 1) . 'x' . mb\_substr(\$a, 4);}
+\item[] ricpelo’s note: - \sphinxcode{\sphinxupquote{\$a{[}3{]}}} equivale a \sphinxcode{\sphinxupquote{mb\_substr(\$a, 3, 1)}}
+\item[] - \sphinxcode{\sphinxupquote{\$a{[}3{]} = 'x';}} no tiene equivalencia directa. Se podría hacer:
+\item[] \sphinxcode{\sphinxupquote{\$a = mb\_substr(\$a, 2, 1) . 'x' . mb\_substr(\$a, 4);}}
 \end{DUlineblock}
 
 
@@ -1151,9 +1196,9 @@ ricpelo’s note: Se usa \sphinxcode{\{\$var\}} y no
 \textless{}\sphinxurl{http://php.net/manual/es/language.types.null.php}\textgreater{}
 
 \begin{DUlineblock}{0em}
-\item[] ricpelo’s note: \sphinxcode{{}`is\_null()} vs.
-\sphinxcode{=== null} \textless{}\sphinxurl{https://phpbestpractices.org/\#checking-for-null}\textgreater{}
-\item[] ricpelo’s note: El tipo \sphinxcode{null} y el valor \sphinxcode{null} se escriben en
+\item[] ricpelo’s note: \sphinxcode{\sphinxupquote{{}`is\_null()}} vs.
+\sphinxcode{\sphinxupquote{=== null}} \textless{}\sphinxurl{https://phpbestpractices.org/\#checking-for-null}\textgreater{}
+\item[] ricpelo’s note: El tipo \sphinxcode{\sphinxupquote{null}} y el valor \sphinxcode{\sphinxupquote{null}} se escriben en
 minúscula. \textless{}\sphinxurl{https://github.com/yiisoft/yii2/blob/master/docs/internals/core-code-style.md\#51-types}\textgreater{}
 \end{DUlineblock}
 
@@ -1165,7 +1210,7 @@ minúscula. \textless{}\sphinxurl{https://github.com/yiisoft/yii2/blob/master/do
 
 \subsection{Operadores de asignación compuesta}
 \label{\detokenize{php:operadores-de-asignacion-compuesta}}
-ricpelo’s note: \sphinxcode{\$x} \sphinxstyleemphasis{\textless{}op\textgreater{}}\sphinxcode{= \$y}
+ricpelo’s note: \sphinxcode{\sphinxupquote{\$x}} \sphinxstyleemphasis{\textless{}op\textgreater{}}\sphinxcode{\sphinxupquote{= \$y}}
 
 
 \subsection{Comprobaciones}
@@ -1174,28 +1219,28 @@ ricpelo’s note: \sphinxcode{\$x} \sphinxstyleemphasis{\textless{}op\textgreat
 \subsubsection{De tipos}
 \label{\detokenize{php:de-tipos}}
 
-\paragraph{\sphinxstyleliteralintitle{gettype()}}
+\paragraph{\sphinxstyleliteralintitle{\sphinxupquote{gettype()}}}
 \label{\detokenize{php:gettype}}
 \textless{}\sphinxurl{http://php.net/manual/en/function.gettype.php}\textgreater{}
 
 
-\paragraph{\sphinxstyleliteralintitle{is\_*()}}
+\paragraph{\sphinxstyleliteralintitle{\sphinxupquote{is\_*()}}}
 \label{\detokenize{php:is}}
 \textless{}\sphinxurl{http://php.net/manual/es/ref.var.php}\textgreater{}
 
 ricpelo’s note: Poco útiles en formularios, ya que sólo se reciben
-\sphinxcode{string}s.
+\sphinxcode{\sphinxupquote{string}}s.
 
 
 \subsubsection{De valores}
 \label{\detokenize{php:de-valores}}
 
-\paragraph{\sphinxstyleliteralintitle{is\_numeric()}}
+\paragraph{\sphinxstyleliteralintitle{\sphinxupquote{is\_numeric()}}}
 \label{\detokenize{php:is-numeric}}
 \textless{}\sphinxurl{http://php.net/manual/es/function.is-numeric.php}\textgreater{}
 
 
-\paragraph{\sphinxstyleliteralintitle{ctype\_*()}}
+\paragraph{\sphinxstyleliteralintitle{\sphinxupquote{ctype\_*()}}}
 \label{\detokenize{php:ctype}}
 \textless{}\sphinxurl{http://php.net/manual/es/book.ctype.php}\textgreater{}
 
@@ -1212,31 +1257,31 @@ ricpelo’s note: Poco útiles en formularios, ya que sólo se reciben
 ricpelo’s note: Conversión de cadena a número
 
 
-\paragraph{Conversión a \sphinxstyleliteralintitle{bool}}
+\paragraph{Conversión a \sphinxstyleliteralintitle{\sphinxupquote{bool}}}
 \label{\detokenize{php:conversion-a-bool}}
 \textless{}\sphinxurl{http://php.net/manual/es/language.types.boolean.php\#language.types.boolean.casting}\textgreater{}
 
 
-\paragraph{Conversión a \sphinxstyleliteralintitle{int}}
+\paragraph{Conversión a \sphinxstyleliteralintitle{\sphinxupquote{int}}}
 \label{\detokenize{php:conversion-a-int}}
 \textless{}\sphinxurl{http://php.net/manual/es/language.types.integer.php\#language.types.integer.casting}\textgreater{}
 
 
-\paragraph{Conversión a \sphinxstyleliteralintitle{float}}
+\paragraph{Conversión a \sphinxstyleliteralintitle{\sphinxupquote{float}}}
 \label{\detokenize{php:conversion-a-float}}
 \textless{}\sphinxurl{http://php.net/manual/es/language.types.float.php\#language.types.float.casting}\textgreater{}
 
 
-\paragraph{Conversión de \sphinxstyleliteralintitle{string} a número}
+\paragraph{Conversión de \sphinxstyleliteralintitle{\sphinxupquote{string}} a número}
 \label{\detokenize{php:conversion-de-string-a-numero}}
 \textless{}\sphinxurl{http://php.net/manual/es/language.types.string.php\#language.types.string.conversion}\textgreater{}
 
-ricpelo’s note: \sphinxstylestrong{¡Cuidado!}: La documentación dice que \sphinxcode{1 + "pepe"}
-o \sphinxcode{1 + "10 pepe"} funciona, pero en PHP7.1 da un \sphinxstylestrong{PHP Warning: A
+ricpelo’s note: \sphinxstylestrong{¡Cuidado!}: La documentación dice que \sphinxcode{\sphinxupquote{1 + "pepe"}}
+o \sphinxcode{\sphinxupquote{1 + "10 pepe"}} funciona, pero en PHP7.1 da un \sphinxstylestrong{PHP Warning: A
 non-numeric value encountered}.
 
 
-\paragraph{Conversión a \sphinxstyleliteralintitle{string}}
+\paragraph{Conversión a \sphinxstyleliteralintitle{\sphinxupquote{string}}}
 \label{\detokenize{php:conversion-a-string}}
 \textless{}\sphinxurl{http://php.net/manual/es/language.types.string.php\#language.types.string.casting}\textgreater{}
 
@@ -1248,22 +1293,22 @@ funciones en lugar de con operadores. Puede ser interesante porque las
 funciones se pueden guardar, usar con \sphinxstyleemphasis{map}, \sphinxstyleemphasis{reduce}, etc.
 
 
-\paragraph{\sphinxstyleliteralintitle{intval()}}
+\paragraph{\sphinxstyleliteralintitle{\sphinxupquote{intval()}}}
 \label{\detokenize{php:intval}}
 \textless{}\sphinxurl{http://php.net/manual/es/function.intval.php}\textgreater{}
 
 
-\paragraph{\sphinxstyleliteralintitle{floatval()}}
+\paragraph{\sphinxstyleliteralintitle{\sphinxupquote{floatval()}}}
 \label{\detokenize{php:floatval}}
 \textless{}\sphinxurl{http://php.net/manual/es/function.floatval.php}\textgreater{}
 
 
-\paragraph{\sphinxstyleliteralintitle{strval()}}
+\paragraph{\sphinxstyleliteralintitle{\sphinxupquote{strval()}}}
 \label{\detokenize{php:strval}}
 \textless{}\sphinxurl{http://php.net/manual/es/function.strval.php}\textgreater{}
 
 
-\paragraph{\sphinxstyleliteralintitle{boolval()}}
+\paragraph{\sphinxstyleliteralintitle{\sphinxupquote{boolval()}}}
 \label{\detokenize{php:boolval}}
 \textless{}\sphinxurl{http://php.net/manual/es/function.boolval.php}\textgreater{}
 
@@ -1271,22 +1316,22 @@ funciones se pueden guardar, usar con \sphinxstyleemphasis{map}, \sphinxstyleemp
 \subsubsection{Funciones de formateado numérico}
 \label{\detokenize{php:funciones-de-formateado-numerico}}
 
-\paragraph{\sphinxstyleliteralintitle{number\_format()}}
+\paragraph{\sphinxstyleliteralintitle{\sphinxupquote{number\_format()}}}
 \label{\detokenize{php:number-format}}
 \textless{}\sphinxurl{http://php.net/manual/es/function.number-format.php}\textgreater{}
 
 
-\paragraph{\sphinxstyleliteralintitle{money\_format()}}
+\paragraph{\sphinxstyleliteralintitle{\sphinxupquote{money\_format()}}}
 \label{\detokenize{php:money-format}}
 \textless{}\sphinxurl{http://php.net/manual/es/function.money-format.php}\textgreater{}
 
 
-\subparagraph{\sphinxstyleliteralintitle{setlocale()}}
+\subparagraph{\sphinxstyleliteralintitle{\sphinxupquote{setlocale()}}}
 \label{\detokenize{php:setlocale}}
 \textless{}\sphinxurl{http://php.net/manual/es/function.setlocale.php}\textgreater{}
 
 ricpelo’s note:
-\sphinxcode{setlocale(LC\_ALL, 'es\_ES.UTF-8'); // Hay que poner el *locale* completo, con la codificación y todo (.UTF-8)}
+\sphinxcode{\sphinxupquote{setlocale(LC\_ALL, 'es\_ES.UTF-8'); // Hay que poner el *locale* completo, con la codificación y todo (.UTF-8)}}
 
 
 \subsection{Comparaciones}
@@ -1297,26 +1342,26 @@ ricpelo’s note:
 \textless{}\sphinxurl{http://php.net/manual/es/language.operators.comparison.php}\textgreater{}
 
 
-\subsubsection{\sphinxstyleliteralintitle{==} vs. \sphinxstyleliteralintitle{===}}
+\subsubsection{\sphinxstyleliteralintitle{\sphinxupquote{==}} vs. \sphinxstyleliteralintitle{\sphinxupquote{===}}}
 \label{\detokenize{php:vs}}
 
-\subsubsection{Ternario (\sphinxstyleliteralintitle{?:})}
+\subsubsection{Ternario (\sphinxstyleliteralintitle{\sphinxupquote{?:}})}
 \label{\detokenize{php:ternario}}
 \textless{}\sphinxurl{http://php.net/manual/es/language.operators.comparison.php\#language.operators.comparison.ternary}\textgreater{}
 
 
-\subsubsection{Fusión de null (\sphinxstyleliteralintitle{??})}
+\subsubsection{Fusión de null (\sphinxstyleliteralintitle{\sphinxupquote{??}})}
 \label{\detokenize{php:fusion-de-null}}
 \textless{}\sphinxurl{https://wiki.php.net/rfc/isset\_ternary}\textgreater{}
 
-ricpelo’s note: Equivalente al \sphinxcode{COALESCE()} de SQL.
+ricpelo’s note: Equivalente al \sphinxcode{\sphinxupquote{COALESCE()}} de SQL.
 
 
 \subsubsection{Reglas de comparación de tipos}
 \label{\detokenize{php:reglas-de-comparacion-de-tipos}}
 \textless{}\sphinxurl{http://php.net/manual/es/types.comparisons.php}\textgreater{}
 
-ricpelo’s note: \sphinxcode{"250" \textless{} "27"} devuelve \sphinxcode{false}
+ricpelo’s note: \sphinxcode{\sphinxupquote{"250" \textless{} "27"}} devuelve \sphinxcode{\sphinxupquote{false}}
 
 
 \section{Constantes}
@@ -1325,24 +1370,24 @@ ricpelo’s note: \sphinxcode{"250" \textless{} "27"} devuelve \sphinxcode{false
 
 \begin{DUlineblock}{0em}
 \item[] ricpelo’s note: Diferencias entre constantes y variables:
-\item[] - Las constantes no llevan el signo dólar (\sphinxcode{\$}) como prefijo.
+\item[] - Las constantes no llevan el signo dólar (\sphinxcode{\sphinxupquote{\$}}) como prefijo.
 \item[] - Antes de PHP 5.3, las constantes solo podían ser definidas usando la
-función \sphinxcode{define()} y no por simple asignación.
+función \sphinxcode{\sphinxupquote{define()}} y no por simple asignación.
 \item[] - Las constantes pueden ser definidas y accedidas desde cualquier
 sitio sin importar las reglas de acceso de variables.
 \item[] - Las constantes no pueden ser redefinidas o eliminadas una vez se han
 definido.
 \item[] - Las constantes podrían evaluarse como valores escalares. A partir de
 PHP 5.6 es posible definir una constante de array con la palabra
-reservada \sphinxcode{const}, y, a partir de PHP 7, las constantes de array
-también se pueden definir con \sphinxcode{define()}. Se pueden utilizar arrays
+reservada \sphinxcode{\sphinxupquote{const}}, y, a partir de PHP 7, las constantes de array
+también se pueden definir con \sphinxcode{\sphinxupquote{define()}}. Se pueden utilizar arrays
 en expresiones escalares constantes (por ejemplo,
-\sphinxcode{const FOO = array(1,2,3){[}0{]};}), aunque el resultado final debe ser
+\sphinxcode{\sphinxupquote{const FOO = array(1,2,3){[}0{]};}}), aunque el resultado final debe ser
 un valor de un tipo permitido.
 \end{DUlineblock}
 
 
-\subsection{\sphinxstyleliteralintitle{define()} y \sphinxstyleliteralintitle{const}}
+\subsection{\sphinxstyleliteralintitle{\sphinxupquote{define()}} y \sphinxstyleliteralintitle{\sphinxupquote{const}}}
 \label{\detokenize{php:define-y-const}}
 
 \subsection{Constantes predefinidas}
@@ -1350,7 +1395,7 @@ un valor de un tipo permitido.
 \textless{}\sphinxurl{http://php.net/manual/es/language.constants.predefined.php}\textgreater{}
 
 
-\subsection{\sphinxstyleliteralintitle{defined()}}
+\subsection{\sphinxstyleliteralintitle{\sphinxupquote{defined()}}}
 \label{\detokenize{php:defined}}
 \textless{}\sphinxurl{http://php.net/manual/es/function.defined.php}\textgreater{}
 
@@ -1367,30 +1412,30 @@ un valor de un tipo permitido.
 \label{\detokenize{php:sintaxis-alternativa}}
 \textless{}\sphinxurl{http://php.net/manual/es/control-structures.alternative-syntax.php}\textgreater{}
 
-ricpelo’s note: El \sphinxcode{do \{ ... \} while (...);} \sphinxstylestrong{no} tiene sintaxis
+ricpelo’s note: El \sphinxcode{\sphinxupquote{do \{ ... \} while (...);}} \sphinxstylestrong{no} tiene sintaxis
 alternativa.
 
 
 \subsection{Inclusión de archivos}
 \label{\detokenize{php:inclusion-de-archivos}}
 
-\subsubsection{\sphinxstyleliteralintitle{include}, \sphinxstyleliteralintitle{require}}
+\subsubsection{\sphinxstyleliteralintitle{\sphinxupquote{include}}, \sphinxstyleliteralintitle{\sphinxupquote{require}}}
 \label{\detokenize{php:include-require}}
 \textless{}\sphinxurl{http://php.net/manual/es/function.include.php}\textgreater{}
 
 \begin{DUlineblock}{0em}
 \item[] ricpelo’s note: El nombre del archivo debe aparecer con su extensión.
-No vale hacer \sphinxcode{require 'pepe';}.
+No vale hacer \sphinxcode{\sphinxupquote{require 'pepe';}}.
 \item[] ricpelo’s note: Cuando un archivo es incluido, el intérprete abandona
 el modo PHP e ingresa al modo HTML al comienzo del archivo objetivo y
 se reanuda de nuevo al final.
-\item[] ricpelo’s note: Si el archivo incluido tiene un \sphinxcode{return ...;}, el
-\sphinxcode{include} o el \sphinxcode{require} que lo incluya devolverá el valor
-devuelto por el \sphinxcode{return}.
+\item[] ricpelo’s note: Si el archivo incluido tiene un \sphinxcode{\sphinxupquote{return ...;}}, el
+\sphinxcode{\sphinxupquote{include}} o el \sphinxcode{\sphinxupquote{require}} que lo incluya devolverá el valor
+devuelto por el \sphinxcode{\sphinxupquote{return}}.
 \end{DUlineblock}
 
 
-\subsubsection{\sphinxstyleliteralintitle{include\_once}, \sphinxstyleliteralintitle{require\_once}}
+\subsubsection{\sphinxstyleliteralintitle{\sphinxupquote{include\_once}}, \sphinxstyleliteralintitle{\sphinxupquote{require\_once}}}
 \label{\detokenize{php:include-once-require-once}}
 \textless{}\sphinxurl{http://php.net/manual/es/function.include-once.php}\textgreater{}
 
@@ -1398,22 +1443,23 @@ devuelto por el \sphinxcode{return}.
 \section{Funciones predefinidas destacadas}
 \label{\detokenize{php:funciones-predefinidas-destacadas}}
 
-\subsection{\sphinxstyleliteralintitle{isset()}}
+\subsection{\sphinxstyleliteralintitle{\sphinxupquote{isset()}}}
 \label{\detokenize{php:isset}}
 \textless{}\sphinxurl{http://php.net/manual/es/function.isset.php}\textgreater{}
 
 \begin{DUlineblock}{0em}
-\item[] ricpelo’s note: Cuidado si la variable contiene \sphinxcode{null}.
+\item[] ricpelo’s note: Cuidado si la variable contiene \sphinxcode{\sphinxupquote{null}}.
 \item[] ricpelo’s note: No da error ni advertencia si la variable no existe.
 \end{DUlineblock}
 
 
-\subsection{\sphinxstyleliteralintitle{empty()}}
+\subsection{\sphinxstyleliteralintitle{\sphinxupquote{empty()}}}
 \label{\detokenize{php:empty}}
 \textless{}\sphinxurl{http://php.net/manual/es/function.empty.php}\textgreater{}
 
-ricpelo’s note: Para evitar el problema de \sphinxcode{empty("0") === true}:
+ricpelo’s note: Para evitar el problema de \sphinxcode{\sphinxupquote{empty("0") === true}}:
 
+\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k}{function} \PYG{n+nf}{is\PYGZus{}blank}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}value}\PYG{p}{)} \PYG{p}{\PYGZob{}}
     \PYG{k}{return} \PYG{k}{empty}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}value}\PYG{p}{)} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{o}{!}\PYG{n+nb}{is\PYGZus{}numeric}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}value}\PYG{p}{);}
@@ -1423,7 +1469,7 @@ ricpelo’s note: Para evitar el problema de \sphinxcode{empty("0") === true}:
 ricpelo’s note: No da error ni advertencia si la variable no existe.
 
 
-\subsection{\sphinxstyleliteralintitle{var\_dump()}}
+\subsection{\sphinxstyleliteralintitle{\sphinxupquote{var\_dump()}}}
 \label{\detokenize{php:id6}}
 \textless{}\sphinxurl{http://php.net/manual/es/function.var-dump.php}\textgreater{}
 
@@ -1439,7 +1485,7 @@ ricpelo’s note: Las claves pueden ser enteros o cadenas.
 \label{\detokenize{php:operadores-para-arrays}}
 \textless{}\sphinxurl{http://php.net/manual/es/language.operators.array.php}\textgreater{}
 
-ricpelo’s note: \sphinxstylestrong{Comparaciones}: Un \sphinxcode{array} con menos elementos es
+ricpelo’s note: \sphinxstylestrong{Comparaciones}: Un \sphinxcode{\sphinxupquote{array}} con menos elementos es
 menor. De otra forma, compara valor por valor.
 
 
@@ -1459,28 +1505,28 @@ menor. De otra forma, compara valor por valor.
 \textless{}\sphinxurl{http://php.net/manual/es/array.sorting.php}\textgreater{}
 
 
-\subsubsection{\sphinxstyleliteralintitle{print\_r()}}
+\subsubsection{\sphinxstyleliteralintitle{\sphinxupquote{print\_r()}}}
 \label{\detokenize{php:print-r}}
 
-\subsubsection{\sphinxstyleliteralintitle{'+'} vs. \sphinxstyleliteralintitle{array\_merge()}}
+\subsubsection{\sphinxstyleliteralintitle{\sphinxupquote{'+'}} vs. \sphinxstyleliteralintitle{\sphinxupquote{array\_merge()}}}
 \label{\detokenize{php:vs-array-merge}}
 
-\subsubsection{\sphinxstyleliteralintitle{isset()} vs. \sphinxstyleliteralintitle{array\_key\_exists()}}
+\subsubsection{\sphinxstyleliteralintitle{\sphinxupquote{isset()}} vs. \sphinxstyleliteralintitle{\sphinxupquote{array\_key\_exists()}}}
 \label{\detokenize{php:isset-vs-array-key-exists}}
 \textless{}\sphinxurl{http://php.net/manual/es/function.array-key-exists.php\#107786}\textgreater{}
 
 
-\subsection{\sphinxstyleliteralintitle{foreach}}
+\subsection{\sphinxstyleliteralintitle{\sphinxupquote{foreach}}}
 \label{\detokenize{php:foreach}}
 \textless{}\sphinxurl{http://php.net/manual/es/control-structures.foreach.php}\textgreater{}
 
 
-\subsection{Conversión a \sphinxstyleliteralintitle{array}}
+\subsection{Conversión a \sphinxstyleliteralintitle{\sphinxupquote{array}}}
 \label{\detokenize{php:conversion-a-array}}
 \textless{}\sphinxurl{http://php.net/manual/es/language.types.array.php\#language.types.array.casting}\textgreater{}
 
 
-\subsection{\sphinxstyleemphasis{Ejemplo}: \sphinxstyleliteralintitle{\$argv} en CLI}
+\subsection{\sphinxstyleemphasis{Ejemplo}: \sphinxstyleliteralintitle{\sphinxupquote{\$argv}} en CLI}
 \label{\detokenize{php:ejemplo-argv-en-cli}}
 \textless{}\sphinxurl{http://php.net/manual/es/reserved.variables.argv.php}\textgreater{}
 
@@ -1505,7 +1551,7 @@ menor. De otra forma, compara valor por valor.
 \textless{}\sphinxurl{http://php.net/manual/es/functions.arguments.php\#functions.arguments.default}\textgreater{}
 
 ricpelo’s note:
-\sphinxcode{php   function prueba(\$opciones = {[}{]}) \{       extract(\$opciones);       // ...   \}}
+\sphinxcode{\sphinxupquote{php   function prueba(\$opciones = {[}{]}) \{       extract(\$opciones);       // ...   \}}}
 
 
 \subsection{Ámbito de variables}
@@ -1519,10 +1565,10 @@ ricpelo’s note:
 \subsubsection{Variables locales}
 \label{\detokenize{php:variables-locales}}
 
-\subsubsection{Uso de \sphinxstyleliteralintitle{global}}
+\subsubsection{Uso de \sphinxstyleliteralintitle{\sphinxupquote{global}}}
 \label{\detokenize{php:uso-de-global}}
-ricpelo’s note: Usar \sphinxcode{global \$x;} cuando \sphinxcode{\$x} no existe hace que
-\sphinxcode{\$x} empiece a existir y valga \sphinxcode{null}.
+ricpelo’s note: Usar \sphinxcode{\sphinxupquote{global \$x;}} cuando \sphinxcode{\sphinxupquote{\$x}} no existe hace que
+\sphinxcode{\sphinxupquote{\$x}} empiece a existir y valga \sphinxcode{\sphinxupquote{null}}.
 
 
 \subsubsection{Variables superglobales}
@@ -1532,7 +1578,7 @@ ricpelo’s note: Usar \sphinxcode{global \$x;} cuando \sphinxcode{\$x} no exist
 
 \subsection{Declaraciones de tipos}
 \label{\detokenize{php:declaraciones-de-tipos}}
-ricpelo’s note: \sphinxstylestrong{NO} se hacen conversiones implícitas a \sphinxcode{array}, ni
+ricpelo’s note: \sphinxstylestrong{NO} se hacen conversiones implícitas a \sphinxcode{\sphinxupquote{array}}, ni
 en argumentos ni en devolución.
 
 
@@ -1546,7 +1592,7 @@ en argumentos ni en devolución.
 \textless{}\sphinxurl{http://php.net/manual/es/functions.returning-values.php\#functions.returning-values.type-declaration}\textgreater{}
 
 
-\subsubsection{Tipos \sphinxstyleemphasis{nullable} (\sphinxstyleliteralintitle{?}) y \sphinxstyleliteralintitle{void}}
+\subsubsection{Tipos \sphinxstyleemphasis{nullable} (\sphinxstyleliteralintitle{\sphinxupquote{?}}) y \sphinxstyleliteralintitle{\sphinxupquote{void}}}
 \label{\detokenize{php:tipos-nullable-y-void}}
 \textless{}\sphinxurl{http://php.net/manual/es/migration71.new-features.php}\textgreater{}
 
@@ -1555,7 +1601,7 @@ en argumentos ni en devolución.
 \label{\detokenize{php:tipificacion-estricta}}
 \textless{}\sphinxurl{http://php.net/manual/es/functions.arguments.php\#functions.arguments.type-declaration.strict}\textgreater{}
 
-ricpelo’s note: El \sphinxcode{declare(strict\_types=1);} se pone en el archivo
+ricpelo’s note: El \sphinxcode{\sphinxupquote{declare(strict\_types=1);}} se pone en el archivo
 que hace la llamada, no en el que define la función.
 
 
