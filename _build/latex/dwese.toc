@@ -33,8 +33,8 @@
 \contentsline {subsection}{\numberline {2.3.4}Python/Django}{6}{subsection.2.3.4}
 \contentsline {subsection}{\numberline {2.3.5}PHP}{6}{subsection.2.3.5}
 \contentsline {subsection}{\numberline {2.3.6}El Kung-Fu de la programación}{6}{subsection.2.3.6}
-\contentsline {subsubsection}{Odoo}{7}{subsubsection*.6}
-\contentsline {subsubsection}{PrestaShop}{7}{subsubsection*.7}
+\contentsline {subsubsection}{Odoo}{6}{subsubsection*.6}
+\contentsline {subsubsection}{PrestaShop}{6}{subsubsection*.7}
 \contentsline {subsubsection}{Drupal}{7}{subsubsection*.8}
 \contentsline {subsubsection}{WordPress}{7}{subsubsection*.9}
 \contentsline {chapter}{\numberline {3}Protocolo HTTP y lenguaje HTML}{9}{chapter.3}
