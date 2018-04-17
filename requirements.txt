@@ -18,6 +18,7 @@ six
 snowballstemmer
 sphinxcontrib-phpdomain
 sphinxcontrib-programoutput
+sphinxcontrib-tikz
 sphinx-autobuild
 sphinx-rtd-theme
 wheel

@@ -28,3 +28,7 @@ dl.docutils dd {
 pre {
     font-family: 'Roboto Mono' !important;
 }
+
+.figure {
+    text-align: center;
+}

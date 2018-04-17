@@ -5,15 +5,15 @@
 \contentsline {subsection}{\numberline {1.1.1}Acciones previas}{3}{subsection.1.1.1}
 \contentsline {subsubsection}{Instalar \sphinxstyleliteralintitle {\sphinxupquote {git}}}{3}{subsubsection*.3}
 \contentsline {subsubsection}{Crear cuenta en GitHub}{3}{subsubsection*.4}
-\contentsline {subsubsection}{Usar https://github.com/ricpelo/conf y seguir las instrucciones del README.md}{3}{subsubsection*.5}
-\contentsline {section}{\numberline {1.2}Terminal}{3}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Zsh}{3}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Oh My Zsh}{3}{subsection.1.2.2}
-\contentsline {section}{\numberline {1.3}Navegador}{3}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Herramientas de desarrollador}{3}{subsection.1.3.1}
-\contentsline {section}{\numberline {1.4}Editores de texto}{3}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Vim y less}{3}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Atom}{3}{subsection.1.4.2}
+\contentsline {subsubsection}{Usar https://github.com/ricpelo/conf y seguir las instrucciones del README.md}{4}{subsubsection*.5}
+\contentsline {section}{\numberline {1.2}Terminal}{4}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Zsh}{4}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Oh My Zsh}{4}{subsection.1.2.2}
+\contentsline {section}{\numberline {1.3}Navegador}{4}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Herramientas de desarrollador}{4}{subsection.1.3.1}
+\contentsline {section}{\numberline {1.4}Editores de texto}{4}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Vim y less}{4}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Atom}{4}{subsection.1.4.2}
 \contentsline {chapter}{\numberline {2}Introducción al desarrollo web}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Conceptos básicos}{6}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Navegadores y servidores web}{6}{subsection.2.1.1}

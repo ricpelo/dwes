@@ -32,8 +32,12 @@
 extensions = [
     'sphinx.ext.githubpages',
     'sphinxcontrib.phpdomain',
-    'sphinxcontrib.programoutput'
+    'sphinxcontrib.programoutput',
+    'sphinxcontrib.tikz'
 ]
+
+#tikz_proc_suite = 'Netpbm'
+tikz_latex_preamble = '\usepackage{gitdags}'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
