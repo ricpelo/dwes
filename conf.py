@@ -276,9 +276,6 @@ latex_elements = {
 
     'preamble': open('source/preambulo.tex', 'r').read(),
 
-    # Ver https://github.com/sphinx-doc/sphinx/issues/4727:
-    'passoptionstopackages': '\\PassOptionsToPackage{warn}{textcomp}',
-
      # Latex figure (float) alignment
      #
      # 'figure_align': 'htbp',
