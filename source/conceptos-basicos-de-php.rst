@@ -312,9 +312,6 @@ Devuelve ``8``.
 
 .. index:: efectos laterales, var_dump()
 
-.. |var_dump| replace:: :php:func:`var_dump()`
-.. _var_dump: http://php.net/manual/es/function.var-dump.php
-
 En PHP, a diferencia de lo que ocurre en Matemáticas, existen funciones que no
 devuelven ningún valor, ya que su objetivo es provocar un *efecto lateral*. La
 más conocida podría ser, sin temor a equivocarnos, la función |var_dump|_. Esta
@@ -322,6 +319,9 @@ función muestra en la salida información estructurada sobre las expresiones qu
 se le pasan como argumento, incluyendo su valor y su tipo. En cierto sentido,
 podría considerarse un versión especializada del comando |echo|, pero en forma
 de función y más orientada a la *depuración* de programas.
+
+.. |var_dump| replace:: :php:func:`var_dump()`
+.. _var_dump: http://php.net/manual/es/function.var-dump.php
 
 Es importante destacar que esa información que muestra se vuelca *en la salida*
 (normalmente la pantalla). No estamos diciendo que la función *devuelva* dicha
