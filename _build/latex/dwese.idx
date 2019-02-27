@@ -1,26 +1,26 @@
-\indexentry{datos|hyperpage}{16}
-\indexentry{instrucciones|hyperpage}{16}
-\indexentry{sentencias|hyperpage}{16}
-\indexentry{expresiones|hyperpage}{16}
-\indexentry{expresiones, evaluación de|hyperpage}{16}
-\indexentry{evaluación|hyperindexformat{\see{expresiones}}}{16}
-\indexentry{sentencias|hyperpage}{16}
-\indexentry{comandos|hyperpage}{16}
-\indexentry{efectos laterales|hyperpage}{17}
-\indexentry{comandos|hyperpage}{17}
-\indexentry{palabras clave|hyperpage}{17}
-\indexentry{echo|hyperpage}{17}
-\indexentry{expresiones|hyperpage}{17}
-\indexentry{operadores|hyperpage}{18}
-\indexentry{asociatividad|hyperpage}{18}
-\indexentry{prioridad|hyperpage}{18}
-\indexentry{funciones|hyperpage}{19}
-\indexentry{cos()|hyperpage}{19}
-\indexentry{efectos laterales|hyperpage}{20}
-\indexentry{var\_dump()|hyperpage}{20}
-\indexentry{enteros|hyperpage}{20}
-\indexentry{números|hyperpage}{20}
-\indexentry{reales|hyperpage}{20}
-\indexentry{números|hyperpage}{20}
-\indexentry{tipos de datos|hyperpage}{20}
-\indexentry{scripts|hyperpage}{21}
+\indexentry{datos@\spxentry{datos}}{16}
+\indexentry{instrucciones@\spxentry{instrucciones}}{16}
+\indexentry{sentencias@\spxentry{sentencias}}{16}
+\indexentry{expresiones@\spxentry{expresiones}}{16}
+\indexentry{expresiones, evaluación de@\spxentry{expresiones, evaluación de}}{16}
+\indexentry{evaluación@\spxentry{evaluación}|see{expresiones}}{16}
+\indexentry{sentencias@\spxentry{sentencias}}{16}
+\indexentry{comandos@\spxentry{comandos}}{16}
+\indexentry{efectos laterales@\spxentry{efectos laterales}}{17}
+\indexentry{comandos@\spxentry{comandos}}{17}
+\indexentry{palabras clave@\spxentry{palabras clave}}{17}
+\indexentry{{}`{}`echo{}`{}`@\spxentry{{}`{}`echo{}`{}`}}{17}
+\indexentry{expresiones@\spxentry{expresiones}}{17}
+\indexentry{operadores@\spxentry{operadores}}{18}
+\indexentry{asociatividad@\spxentry{asociatividad}}{18}
+\indexentry{prioridad@\spxentry{prioridad}}{18}
+\indexentry{funciones@\spxentry{funciones}}{19}
+\indexentry{cos()@\spxentry{cos()}}{19}
+\indexentry{efectos laterales@\spxentry{efectos laterales}}{20}
+\indexentry{var\_dump()@\spxentry{var\_dump()}}{20}
+\indexentry{enteros@\spxentry{enteros}}{20}
+\indexentry{números@\spxentry{números}}{20}
+\indexentry{reales@\spxentry{reales}}{20}
+\indexentry{números@\spxentry{números}}{20}
+\indexentry{tipos de datos@\spxentry{tipos de datos}}{20}
+\indexentry{scripts@\spxentry{scripts}}{21}

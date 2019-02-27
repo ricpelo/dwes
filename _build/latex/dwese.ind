@@ -1,63 +1,84 @@
 \begin{sphinxtheindex}
-\def\bigletter#1{{\Large\sffamily#1}\nopagebreak\vspace{1mm}}
+\let\lettergroup\sphinxstyleindexlettergroup
+\let\lettergroupDefault\sphinxstyleindexlettergroupDefault
+\let\spxpagem\sphinxstyleindexpagemain
+\let\spxentry\sphinxstyleindexentry
+\let\spxextra\sphinxstyleindexextra
 
-  \bigletter A
-  \item asociatividad, \hyperpage{18}
 
-  \indexspace
-  \bigletter C
-  \item comandos, \hyperpage{16, 17}
-  \item cos(), \hyperpage{19}
-
-  \indexspace
-  \bigletter D
-  \item datos, \hyperpage{16}
+  \lettergroupDefault{default}
+  \item \spxentry{{}`{}`echo{}`{}`}, \hyperpage{17}
 
   \indexspace
-  \bigletter E
-  \item echo, \hyperpage{17}
-  \item efectos laterales, \hyperpage{17}, \hyperpage{20}
-  \item enteros, \hyperpage{20}
-  \item evaluación, \hyperindexformat{\see{expresiones}}{16}
-  \item expresiones, \hyperpage{16, 17}
-  \item expresiones, evaluación de, \hyperpage{16}
+
+  \lettergroup{A}
+  \item \spxentry{asociatividad}, \hyperpage{18}
 
   \indexspace
-  \bigletter F
-  \item funciones, \hyperpage{19}
+
+  \lettergroup{C}
+  \item \spxentry{comandos}, \hyperpage{16}, \hyperpage{17}
+  \item \spxentry{cos()}, \hyperpage{19}
 
   \indexspace
-  \bigletter I
-  \item instrucciones, \hyperpage{16}
+
+  \lettergroup{D}
+  \item \spxentry{datos}, \hyperpage{16}
 
   \indexspace
-  \bigletter N
-  \item números, \hyperpage{20}
+
+  \lettergroup{E}
+  \item \spxentry{efectos laterales}, \hyperpage{17}, \hyperpage{20}
+  \item \spxentry{enteros}, \hyperpage{20}
+  \item \spxentry{evaluación}, \see{expresiones}{}
+  \item \spxentry{expresiones}, \hyperpage{16}, \hyperpage{17}
+  \item \spxentry{expresiones, evaluación de}, \hyperpage{16}
 
   \indexspace
-  \bigletter O
-  \item operadores, \hyperpage{18}
+
+  \lettergroup{F}
+  \item \spxentry{funciones}, \hyperpage{19}
 
   \indexspace
-  \bigletter P
-  \item palabras clave, \hyperpage{17}
-  \item prioridad, \hyperpage{18}
+
+  \lettergroup{I}
+  \item \spxentry{instrucciones}, \hyperpage{16}
 
   \indexspace
-  \bigletter R
-  \item reales, \hyperpage{20}
+
+  \lettergroup{N}
+  \item \spxentry{números}, \hyperpage{20}
 
   \indexspace
-  \bigletter S
-  \item scripts, \hyperpage{21}
-  \item sentencias, \hyperpage{16}
+
+  \lettergroup{O}
+  \item \spxentry{operadores}, \hyperpage{18}
 
   \indexspace
-  \bigletter T
-  \item tipos de datos, \hyperpage{20}
+
+  \lettergroup{P}
+  \item \spxentry{palabras clave}, \hyperpage{17}
+  \item \spxentry{prioridad}, \hyperpage{18}
 
   \indexspace
-  \bigletter V
-  \item var\_dump(), \hyperpage{20}
+
+  \lettergroup{R}
+  \item \spxentry{reales}, \hyperpage{20}
+
+  \indexspace
+
+  \lettergroup{S}
+  \item \spxentry{scripts}, \hyperpage{21}
+  \item \spxentry{sentencias}, \hyperpage{16}
+
+  \indexspace
+
+  \lettergroup{T}
+  \item \spxentry{tipos de datos}, \hyperpage{20}
+
+  \indexspace
+
+  \lettergroup{V}
+  \item \spxentry{var\_dump()}, \hyperpage{20}
 
 \end{sphinxtheindex}

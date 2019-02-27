@@ -3,7 +3,7 @@
 %
 
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{sphinxhowto}[2017/03/26 v1.6 Document class (Sphinx HOWTO)]
+\ProvidesClass{sphinxhowto}[2018/12/22 v1.8.3 Document class (Sphinx howto)]
 
 % 'oneside' option overriding the 'twoside' default
 \newif\if@oneside
@@ -30,7 +30,7 @@
 % Change the title page to look a bit better, and fit in with the fncychap
 % ``Bjarne'' style a bit better.
 %
-\renewcommand{\maketitle}{%
+\newcommand{\sphinxmaketitle}{%
   \noindent\rule{\textwidth}{1pt}\par
     \begingroup % for PDF information dictionary
        \def\endgraf{ }\def\and{\& }%
@@ -66,12 +66,7 @@
   \vspace{12pt}
 }  
 
-\@ifundefined{fancyhf}{
-  \pagestyle{plain}}{
-  \pagestyle{normal}}		% start this way; change for
-\pagenumbering{arabic}		% ToC & chapters
-
-\thispagestyle{empty}
+\pagenumbering{arabic}
 
 % Fix the bibliography environment to add an entry to the Table of
 % Contents.
@@ -80,7 +75,7 @@
 %
 \newenvironment{sphinxthebibliography}[1]{%
   % \phantomsection % not needed here since TeXLive 2010's hyperref
-  \begin{thebibliography}{1}%
+  \begin{thebibliography}{#1}%
   \addcontentsline{toc}{section}{\ifdefined\refname\refname\else\ifdefined\bibname\bibname\fi\fi}}{\end{thebibliography}}
 
 

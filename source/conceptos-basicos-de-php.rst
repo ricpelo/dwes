@@ -149,7 +149,8 @@ sentencia.
 El comando ``echo``
 ~~~~~~~~~~~~~~~~~~~
 
-.. index:: echo
+.. index::
+   single: ``echo``
 
 .. |echo| replace:: :php:func:`echo`
 .. _echo: http://php.net/manual/es/function.echo.php

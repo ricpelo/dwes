@@ -4,6 +4,9 @@
 \ifdefined\pdfpxdimen
    \let\sphinxpxdimen\pdfpxdimen\else\newdimen\sphinxpxdimen
 \fi \sphinxpxdimen=.75bp\relax
+%% turn off hyperref patch of \index as sphinx.xdy xindy module takes care of
+%% suitable \hyperpage mark-up, working around hyperref-xindy incompatibility
+\PassOptionsToPackage{hyperindex=false}{hyperref}
 
 \PassOptionsToPackage{warn}{textcomp}
 
@@ -23,11 +26,14 @@
             Scale=MatchLowercase
         ]{FiraMono-Medium.ttf}
 \usepackage[Sonny]{fncychap}
+\ChNameVar{\Large\normalfont\sffamily}
+\ChTitleVar{\Large\normalfont\sffamily}
 \usepackage{sphinx}
 \sphinxsetup{
         verbatimwithframe=false,
         noteBorderColor={rgb}{0.208,0.374,0.486},
         noteborder=1pt}
+\fvset{fontsize=auto}
 \usepackage{geometry}
 \usepackage{sphinxcontribtikz}
 % Include hyperref last.
@@ -37,12 +43,21 @@
 % Set up styles of URL: it should be placed after hyperref.
 \urlstyle{same}
 
-\addto\captionsspanish{\renewcommand{\figurename}{Figura}}
-\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
+\addto\captionsspanish{\renewcommand{\figurename}{Figura }}
+\makeatletter
+\def\fnum@figure{\figurename\thefigure{}}
+\makeatother
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla }}
+\makeatletter
+\def\fnum@table{\tablename\thetable{}}
+\makeatother
 \addto\captionsspanish{\renewcommand{\literalblockname}{Lista}}
 
 \addto\captionsspanish{\renewcommand{\literalblockcontinuedname}{proviene de la página anterior}}
-\addto\captionsspanish{\renewcommand{\literalblockcontinuesname}{continues on next page}}
+\addto\captionsspanish{\renewcommand{\literalblockcontinuesname}{continué en la próxima página}}
+\addto\captionsspanish{\renewcommand{\sphinxnonalphabeticalgroupname}{Non-alphabetical}}
+\addto\captionsspanish{\renewcommand{\sphinxsymbolsname}{Símbolos}}
+\addto\captionsspanish{\renewcommand{\sphinxnumbersname}{Numbers}}
 
 \def\pageautorefname{página}
 
@@ -107,25 +122,30 @@
 %    }
 %    {\end{tcolorbox}}
 
+\renewcommand{\sphinxstyleindexentry}[1]{#1}
+\addto\captionsspanish{\renewcommand{\sphinxnonalphabeticalgroupname}{S\'{\i}mbolos}}
+
 
 \title{Desarrollo web en entorno servidor}
-\date{abril de 2018}
+\date{febrero de 2019}
 \release{1.0}
 \author{Ricardo Pérez López}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{php-cover.png}\par}
 \renewcommand{\releasename}{Versión}
 \makeindex
-
 \begin{document}
 
-\maketitle
+\pagestyle{empty}
+\sphinxmaketitle
+\pagestyle{plain}
 \sphinxtableofcontents
+\pagestyle{normal}
 \phantomsection\label{\detokenize{index_latex::doc}}
 
 
 
 \part{Introducción}
-\label{\detokenize{introduccion:introduccion}}\label{\detokenize{introduccion:desarrollo-web-en-entorno-servidor}}\label{\detokenize{introduccion::doc}}
+\label{\detokenize{introduccion:introduccion}}\label{\detokenize{introduccion::doc}}
 
 \chapter{Preparación del entorno de desarrollo}
 \label{\detokenize{introduccion:preparacion-del-entorno-de-desarrollo}}\begin{figure}[htp]\centering\begin{tikzpicture}
@@ -351,6 +371,9 @@
 
 \section{Git básico}
 \label{\detokenize{introduccion:git-basico}}\begin{enumerate}
+\def\theenumi{\roman{enumi}}
+\def\labelenumi{\theenumi .}
+\makeatletter\def\p@enumii{\p@enumi \theenumi .}\makeatother
 \item {} 
 config, init, add, commit
 
@@ -377,6 +400,9 @@ Atom y Git
 
 \section{Git avanzado}
 \label{\detokenize{introduccion:git-avanzado}}\begin{enumerate}
+\def\theenumi{\roman{enumi}}
+\def\labelenumi{\theenumi .}
+\makeatletter\def\p@enumii{\p@enumi \theenumi .}\makeatother
 \item {} 
 Ramas: branch
 
@@ -391,6 +417,9 @@ Resolución de conflictos
 
 \section{Ramas remotas}
 \label{\detokenize{introduccion:ramas-remotas}}\begin{enumerate}
+\def\theenumi{\roman{enumi}}
+\def\labelenumi{\theenumi .}
+\makeatletter\def\p@enumii{\p@enumi \theenumi .}\makeatother
 \item {} 
 clone, fetch, push, pull
 
@@ -410,12 +439,10 @@ Ramas de seguimiento (tracking branch)
 \label{\detokenize{php:conceptos-basicos-de-php-i}}
 ricpelo’s note: Programada inicialmente para empezar el 23-10-2017. \sphinxcode{\sphinxupquote{\_\_\_\_\_\_}}
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 Could not open input file: ../../p.php
 \end{sphinxVerbatim}
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYGZdl{} php ../../p.php
 Could not open input file: ../../p.php
@@ -462,7 +489,7 @@ Could not open input file: ../../p.php
 
 \subsection{Datos e instrucciones}
 \label{\detokenize{php:datos-e-instrucciones}}
-\index{datos}\index{instrucciones}\ignorespaces 
+\index{datos@\spxentry{datos}}\index{instrucciones@\spxentry{instrucciones}}\ignorespaces 
 En todo lenguaje de programación existen dos elementos básicos: los \sphinxstylestrong{datos} y
 las \sphinxstylestrong{instrucciones}. Los datos son las porciones de información con las que
 trabajan los programas, y las instrucciones son las acciones que manipulan esos
@@ -470,14 +497,14 @@ datos para llevar a cabo la tarea para la que fue concebido el programa. Ambos
 elementos, datos e instrucciones, constituyen los pilares del lenguaje y de los
 programas que se escriben con él.
 
-\index{sentencias}\index{expresiones}\ignorespaces 
+\index{sentencias@\spxentry{sentencias}}\index{expresiones@\spxentry{expresiones}}\ignorespaces 
 Desde un punto de vista sintáctico, en el código fuente del programa, los datos
 se codifican en forma de \sphinxstylestrong{expresiones}, y las instrucciones toman la forma
 de \sphinxstylestrong{sentencias}.
 
 La diferencia fundamental entre una expresión y una sentencia es la siguiente:
 
-\index{expresiones, evaluación de}\index{evaluación|see{expresiones}}\ignorespaces \begin{itemize}
+\index{expresiones, evaluación de@\spxentry{expresiones, evaluación de}}\index{evaluación@\spxentry{evaluación}|see{expresiones}}\ignorespaces \begin{itemize}
 \item {} 
 Una expresión tiene un valor (se dice que \sphinxstyleemphasis{denota} o \sphinxstyleemphasis{representa} un valor),
 y por eso decimos que una expresión \sphinxstyleemphasis{se puede evaluar}, y al evaluarse, se
@@ -494,7 +521,6 @@ Las expresiones se evalúan. Las sentencias se ejecutan.
 
 \begin{sphinxadmonition}{note}{Ejemplos de expresiones}
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{5} \PYG{o}{*} \PYG{p}{(}\PYG{l+m+mi}{3} \PYG{o}{+} \PYG{l+m+mi}{6}\PYG{p}{)}
 \end{sphinxVerbatim}
@@ -502,7 +528,6 @@ Las expresiones se evalúan. Las sentencias se ejecutan.
 Es una expresión aritmética que involucra números enteros y cuyo valor es
 \sphinxcode{\sphinxupquote{45}}.
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mf}{1.6} \PYG{o}{+} \PYG{l+m+mf}{2.3}
 \end{sphinxVerbatim}
@@ -510,7 +535,6 @@ Es una expresión aritmética que involucra números enteros y cuyo valor es
 Es una expresión aritmética que involucra números reales y cuyo valor es
 \sphinxcode{\sphinxupquote{3.9}}.
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{74}
 \end{sphinxVerbatim}
@@ -521,7 +545,7 @@ Es una constante literal numérica cuyo valor es, precisamente, \sphinxcode{\sph
 
 \subsection{Sentencias y comandos}
 \label{\detokenize{php:sentencias-y-comandos}}
-\index{sentencias}\index{comandos}\ignorespaces 
+\index{sentencias@\spxentry{sentencias}}\index{comandos@\spxentry{comandos}}\ignorespaces 
 Las sentencias en PHP pueden ser \sphinxstyleemphasis{simples} o \sphinxstyleemphasis{compuestas}.
 \begin{itemize}
 \item {} 
@@ -537,7 +561,6 @@ se estudiarán posteriormente en este capítulo.
 Se puede construir una sentencia simple usando sencillamente una expresión y
 acabándola en punto y coma, como por ejemplo:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{8} \PYG{o}{+} \PYG{l+m+mi}{3}\PYG{p}{;}
 \end{sphinxVerbatim}
@@ -546,14 +569,14 @@ Pero una sentencia así no tendría mucha utilidad, ya que el intérprete de PHP
 se limitaría a evaluar la expresión pero no haría nada más con el valor
 calculado.
 
-\index{efectos laterales}\ignorespaces 
+\index{efectos laterales@\spxentry{efectos laterales}}\ignorespaces 
 Las sentencias realmente útiles son aquellas que provocan \sphinxstylestrong{efectos
 laterales}, es decir, acciones que provocan cambios en el estado interno del
 programa o que producen resultados que se vuelcan hacia la \sphinxstyleemphasis{salida} (siendo
 esta cualquier dispositivo de salida, como por ejemplo la pantalla, un archivo
 del disco o una fila de una tabla de una base de datos relacional).
 
-\index{comandos}\index{palabras clave}\ignorespaces 
+\index{comandos@\spxentry{comandos}}\index{palabras clave@\spxentry{palabras clave}}\ignorespaces 
 Otra forma de construir una sentencia simple es usar \sphinxstylestrong{comandos}. PHP dispone
 de varios comandos con los que se pueden escribir sentencias para llevar a cabo
 instrucciones sencillas. Cada comando consta de una \sphinxstylestrong{palabra clave}, que
@@ -563,7 +586,7 @@ sentencia.
 
 \subsubsection{El comando \sphinxstyleliteralintitle{\sphinxupquote{echo}}}
 \label{\detokenize{php:el-comando-echo}}
-\index{echo}\ignorespaces 
+\index{{}`{}`echo{}`{}`@\spxentry{{}`{}`echo{}`{}`}}\ignorespaces 
 El ejemplo clásico de comando en PHP es \sphinxhref{http://php.net/manual/es/function.echo.php}{\sphinxcode{\sphinxupquote{echo}}}%
 \begin{footnote}[1]\sphinxAtStartFootnote
 \sphinxnolinkurl{http://php.net/manual/es/function.echo.php}
@@ -572,14 +595,12 @@ El ejemplo clásico de comando en PHP es \sphinxhref{http://php.net/manual/es/fu
 la salida el valor de las expresiones que se indican como parámetro en la
 sentencia. Por ejemplo:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k}{echo} \PYG{l+m+mi}{25} \PYG{o}{*} \PYG{l+m+mi}{3}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 Muestra \sphinxcode{\sphinxupquote{75}} por la salida (normalmente la pantalla). O bien:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k}{echo} \PYG{l+s+s1}{\PYGZsq{}¡Hola a todos!\PYGZsq{}}\PYG{p}{;}
 \end{sphinxVerbatim}
@@ -589,14 +610,13 @@ Muestra \sphinxcode{\sphinxupquote{¡Hola a todos!}}.
 Puede mostrar varios valores, separando cada uno de ellos entre sí con una
 coma:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k}{echo} \PYG{l+s+s1}{\PYGZsq{}El resultado es: \PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{4} \PYG{o}{*} \PYG{l+m+mi}{2}\PYG{p}{;}
 \end{sphinxVerbatim}
 
 Mostraría \sphinxcode{\sphinxupquote{El resultado es: 8}}.
 
-\index{expresiones}\ignorespaces 
+\index{expresiones@\spxentry{expresiones}}\ignorespaces 
 
 \subsection{Expresiones}
 \label{\detokenize{php:expresiones}}\label{\detokenize{php:index-7}}
@@ -610,7 +630,7 @@ una única expresión.
 
 \subsubsection{Operadores}
 \label{\detokenize{php:operadores}}
-\index{operadores}\ignorespaces 
+\index{operadores@\spxentry{operadores}}\ignorespaces 
 Un \sphinxstylestrong{operador} es un símbolo que representa una operación que se desea
 realizar sobre sus \sphinxstylestrong{operandos} %
 \begin{footnote}[2]\sphinxAtStartFootnote
@@ -622,7 +642,6 @@ respectivamente.
 sobre los que actúa el operador para llevar a cabo la operación deseada. Por
 ejemplo:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{4} \PYG{o}{+} \PYG{l+m+mi}{3}
 \end{sphinxVerbatim}
@@ -631,7 +650,6 @@ Aquí, el operador \sphinxcode{\sphinxupquote{+}} representa la operación \sphi
 números \sphinxcode{\sphinxupquote{4}} y \sphinxcode{\sphinxupquote{3}}, que son sus operandos. Como el operador actúa sobre dos
 operandos, se dice que es un operador \sphinxstyleemphasis{binario}. En cambio:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{17}
 \end{sphinxVerbatim}
@@ -644,14 +662,12 @@ En PHP existe un único operador \sphinxstyleemphasis{ternario} que se estudiar�
 
 En una misma expresión pueden actuar varios operadores, como en:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{4} \PYG{o}{+} \PYG{l+m+mi}{3} \PYG{o}{+} \PYG{l+m+mi}{5}
 \end{sphinxVerbatim}
 
 Que denota el valor \sphinxcode{\sphinxupquote{12}}, o con varios operadores diferentes:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{4} \PYG{o}{+} \PYG{l+m+mi}{3} \PYG{o}{*} \PYG{l+m+mi}{5}
 \end{sphinxVerbatim}
@@ -661,7 +677,7 @@ Que evalúa a \sphinxcode{\sphinxupquote{19}}.
 
 \paragraph{Asociatividad y prioridad}
 \label{\detokenize{php:asociatividad-y-prioridad}}
-\index{asociatividad}\index{prioridad}\ignorespaces 
+\index{asociatividad@\spxentry{asociatividad}}\index{prioridad@\spxentry{prioridad}}\ignorespaces 
 Todas las expresiones anteriores son ejemplos de expresiones \sphinxstyleemphasis{artiméticas},
 donde se realizan las operaciones matemáticas usuales (suma, resta, producto y
 división) sobre números. La evaluación de una expresión (ya sea aritmética o de
@@ -676,7 +692,6 @@ En una expresión en la que un operando está rodeado a izquierda y derecha por
 \sphinxstyleemphasis{el mismo operador}, se aplica la regla de la \sphinxstyleemphasis{asociatividad}. Por ejemplo,
 en la expresión:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{4} \PYG{o}{+} \PYG{l+m+mi}{3} \PYG{o}{+} \PYG{l+m+mi}{5}
 \end{sphinxVerbatim}
@@ -685,7 +700,6 @@ el operando \sphinxcode{\sphinxupquote{3}} tiene el mismo operador a izquierda y
 como dicho operador es \sphinxstyleemphasis{asociativo por la izquierda}, la expresión se evalúa
 igual que si se hubiera escrito como:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{p}{(}\PYG{l+m+mi}{4} \PYG{o}{+} \PYG{l+m+mi}{3}\PYG{p}{)} \PYG{o}{+} \PYG{l+m+mi}{5}
 \end{sphinxVerbatim}
@@ -695,7 +709,6 @@ En una expresión en la que un operando está rodeado a izquierda y derecha por
 \sphinxstyleemphasis{distintos operadores}, se aplica la regla de la \sphinxstyleemphasis{prioridad}. Por ejemplo,
 en la expresión:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{4} \PYG{o}{+} \PYG{l+m+mi}{3} \PYG{o}{*} \PYG{l+m+mi}{5}
 \end{sphinxVerbatim}
@@ -704,7 +717,6 @@ el operando \sphinxcode{\sphinxupquote{3}} tiene el operador \sphinxcode{\sphinx
 derecha, pero como el producto tiene más prioridad que la suma, la expresión
 se evalúa igual que si se hubiera escrito como:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{l+m+mi}{4} \PYG{o}{+} \PYG{p}{(}\PYG{l+m+mi}{3} \PYG{o}{*} \PYG{l+m+mi}{5}\PYG{p}{)}
 \end{sphinxVerbatim}
@@ -715,7 +727,6 @@ Como se aprecia en los ejemplos anteriores, se pueden usar \sphinxstylestrong{pa
 agrupar sub-expresiones dentro de una expresión y así aumentar la prioridad de
 los operadores que vayan entre paréntesis. Por ejemplo, en la expresión:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{p}{(}\PYG{l+m+mi}{4} \PYG{o}{+} \PYG{l+m+mi}{3}\PYG{p}{)} \PYG{o}{*} \PYG{l+m+mi}{5}
 \end{sphinxVerbatim}
@@ -726,7 +737,7 @@ mayor prioridad. El resultado de dicha expresión es el valor \sphinxcode{\sphin
 
 \subsubsection{Funciones}
 \label{\detokenize{php:funciones}}
-\index{funciones}\index{cos()}\ignorespaces 
+\index{funciones@\spxentry{funciones}}\index{cos()@\spxentry{cos()}}\ignorespaces 
 Las funciones en las expresiones cumplen el mismo papel que en Matemáticas:
 realizan un cálculo a partir de unos valores de entrada indicados en sus
 argumentos y \sphinxstyleemphasis{devuelven} el resultado de dicho cálculo. Por ejemplo, la
@@ -740,7 +751,6 @@ función y, a continuación, la lista de sus argumentos entre paréntesis y
 separados por comas. Así, para calcular el coseno de 2.4 radianes, podemos
 escribir:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nb}{cos}\PYG{p}{(}\PYG{l+m+mf}{2.4}\PYG{p}{)}
 \end{sphinxVerbatim}
@@ -756,7 +766,6 @@ que admiten o requieren más argumentos. Es el caso de la función \sphinxhref{h
 \end{footnote}, que
 devuelve el valor máximo de todos los indicados en su lista de argumentos:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nb}{max}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}
 \end{sphinxVerbatim}
@@ -769,7 +778,7 @@ Cuando usamos una función en una expresión, decimos que estamos \sphinxstyleem
 \sphinxstyleemphasis{llamada} a la función.
 \end{sphinxadmonition}
 
-\index{efectos laterales}\index{var\_dump()}\ignorespaces 
+\index{efectos laterales@\spxentry{efectos laterales}}\index{var\_dump()@\spxentry{var\_dump()}}\ignorespaces 
 En PHP, a diferencia de lo que ocurre en Matemáticas, existen funciones que no
 devuelven ningún valor, ya que su objetivo es provocar un \sphinxstyleemphasis{efecto lateral}. La
 más conocida podría ser, sin temor a equivocarnos, la función \sphinxhref{http://php.net/manual/es/function.var-dump.php}{\sphinxcode{\sphinxupquote{var\_dump()}}}%
@@ -789,7 +798,6 @@ llamada a la función. De hecho, estamos hablamos de llamar a la función como s
 fuera una sentencia (una sentencia formada únicamente por la llamada a la
 función y el punto y coma final):
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nb}{var\PYGZus{}dump}\PYG{p}{(}\PYG{l+m+mi}{14} \PYG{o}{+} \PYG{l+m+mi}{3}\PYG{p}{);}
 \end{sphinxVerbatim}
@@ -799,49 +807,44 @@ terminada en punto y coma), como cualquier otra sentencia, no devuelve ningún
 valor, sino que produce un efecto lateral. En este caso, mostrar a la salida
 (la pantalla) lo siguiente:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nx}{int}\PYG{p}{(}\PYG{l+m+mi}{17}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-\index{enteros}\index{números}\ignorespaces 
+\index{enteros@\spxentry{enteros}}\index{números@\spxentry{números}}\ignorespaces 
 Observamos que \sphinxcode{\sphinxupquote{var\_dump()}} nos informa del valor de la expresión (\sphinxcode{\sphinxupquote{17}}) y de
 su tipo (\sphinxcode{\sphinxupquote{int}}, que significa \sphinxstylestrong{número entero}). La importancia de conocer
 el valor y el tipo de toda expresión que aparezca en nuestros programas se
 apreciará en breve. Por ahora, veamos dos ejemplos más de utilización de
 \sphinxcode{\sphinxupquote{var\_dump()}}:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nb}{var\PYGZus{}dump}\PYG{p}{(}\PYG{l+m+mf}{12.3} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{4}\PYG{p}{);}
 \end{sphinxVerbatim}
 
 Muestra a la salida:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nx}{float}\PYG{p}{(}\PYG{l+m+mf}{8.3}\PYG{p}{)}
 \end{sphinxVerbatim}
 
-\index{reales}\index{números}\ignorespaces 
+\index{reales@\spxentry{reales}}\index{números@\spxentry{números}}\ignorespaces 
 Lo que nos indica que el valor de la expresión \sphinxcode{\sphinxupquote{12.3 - 4}} es el \sphinxstylestrong{número
 real} \sphinxcode{\sphinxupquote{8.3}}. Finalmente:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nb}{var\PYGZus{}dump}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Saludos}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{);}
 \end{sphinxVerbatim}
 
 Muestra:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nx}{string}\PYG{p}{(}\PYG{l+m+mi}{7}\PYG{p}{)} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{Saludos}\PYG{l+s+s2}{\PYGZdq{}}
 \end{sphinxVerbatim}
 
 Que nos informa de que \sphinxcode{\sphinxupquote{"Saludos"}} es una cadena de siete caracteres.
 
-\index{tipos de datos}\ignorespaces 
+\index{tipos de datos@\spxentry{tipos de datos}}\ignorespaces 
 Los números (enteros y reales), así como las cadenas, son algunos de los
 \sphinxstylestrong{tipos de datos} que el lenguaje PHP nos proporciona para ayudarnos a
 manipular la información. Su estudio detallado se hará posteriormente.
@@ -856,7 +859,7 @@ lenguaje.
 
 La ejecución de nuestro código se puede llevar a cabo de dos formas:
 
-\index{scripts}\ignorespaces \begin{description}
+\index{scripts@\spxentry{scripts}}\ignorespaces \begin{description}
 \item[{Por lotes:}] \leavevmode
 Nuestro código fuente está almacenado en un archivo de texto (normalmente,
 con extensión \sphinxcode{\sphinxupquote{.php}}) y el intérprete lee dicho archivo, lo analiza
@@ -876,7 +879,6 @@ Hablaremos sobre ello en próximos capítulos.
 \sphinxstyleemphasis{script} almacenado en el archivo \sphinxcode{\sphinxupquote{prueba.php}}, podemos provocar la
 ejecución del mismo mediante la siguiente orden del sistema operativo:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{g+gp}{\PYGZdl{}} php prueba.php
 \end{sphinxVerbatim}
@@ -914,7 +916,6 @@ función.
 Para empezar a trabajar con dicho intérprete de forma interactiva, usaremos el
 comando \sphinxcode{\sphinxupquote{php}} con la opción \sphinxcode{\sphinxupquote{-a}} desde la consola del sistema operativo:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{g+gp}{\PYGZdl{}} php \PYGZhy{}a
 \PYG{g+go}{Interactive mode enabled}
@@ -925,7 +926,6 @@ comando \sphinxcode{\sphinxupquote{php}} con la opción \sphinxcode{\sphinxupquo
 El intérprete nos muestra el \sphinxstyleemphasis{prompt} \sphinxcode{\sphinxupquote{php \textgreater{}}}, indicándonos que está listo
 para recibir nuestras sentencias PHP. Probamos:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{g+go}{php \PYGZgt{} echo 75;}
 \PYG{g+go}{75}
@@ -947,7 +947,6 @@ La sentencia introducida debe ser sintácticamente correcta. Si, por ejemplo, no
 olvidamos de escribir el punto y coma (\sphinxcode{\sphinxupquote{;}}), no obtendremos el resultado
 esperado:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{g+go}{php \PYGZgt{} echo 73}
 \PYG{g+go}{php \PYGZgt{} echo 25;}
@@ -963,7 +962,6 @@ esperado:
 El mensaje de error se debe a que el intérprete ha considerado los dos comandos
 \sphinxcode{\sphinxupquote{echo}} como si fueran una única sentencia:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k}{echo} \PYG{l+m+mi}{73} \PYG{k}{echo} \PYG{l+m+mi}{25}\PYG{p}{;}
 \end{sphinxVerbatim}
@@ -976,7 +974,6 @@ Por otra parte, si introducimos como sentencia una expresión acabada en \sphinx
 no obtendremos ningún resultado en pantalla, ya que la expresión se evaluará sin
 más pero no se hará nada con dicho valor:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{g+go}{php \PYGZgt{} 3 + 5;}
 \PYG{g+go}{php \PYGZgt{} 6 * 9;}
@@ -987,7 +984,6 @@ Lo que demuestra su nula utilidad práctica.
 
 Para salir del intérprete interactivo, pulsamos la combinación de teclas \sphinxcode{\sphinxupquote{Control-D}}:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{g+go}{php \PYGZgt{} \PYGZca{}D}
 \PYG{g+gp}{\PYGZdl{}}
@@ -1032,7 +1028,6 @@ comprueba la diferencia y dime si tengo razón o no…
 
 La instalación de PsySH es muy sencilla:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{g+gp}{\PYGZdl{}} wget https://git.io/psysh
 \PYG{g+gp}{\PYGZdl{}} chmod +x psysh
@@ -1041,7 +1036,6 @@ La instalación de PsySH es muy sencilla:
 
 Con esto tenemos la herramienta básica. Si además queremos disponer del manual de PHP en línea (cosa altamente recomendable), hacemos también lo siguiente:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{g+gp}{\PYGZdl{}} wget https://psysh.org/manual/es/php\PYGZus{}manual.sqlite
 \PYG{g+gp}{\PYGZdl{}} mkdir \PYGZhy{}p \PYGZti{}/.local/share/psysh
@@ -1489,7 +1483,6 @@ devuelto por el \sphinxcode{\sphinxupquote{return}}.
 
 ricpelo’s note: Para evitar el problema de \sphinxcode{\sphinxupquote{empty("0") === true}}:
 
-\fvset{hllines={, ,}}%
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{k}{function} \PYG{n+nf}{is\PYGZus{}blank}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}value}\PYG{p}{)} \PYG{p}{\PYGZob{}}
     \PYG{k}{return} \PYG{k}{empty}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}value}\PYG{p}{)} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{o}{!}\PYG{n+nb}{is\PYGZus{}numeric}\PYG{p}{(}\PYG{n+nv}{\PYGZdl{}value}\PYG{p}{);}
