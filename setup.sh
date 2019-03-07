@@ -12,4 +12,4 @@ unzip titlesec.zip -d ~/texmf/tex/latex
 
 # Instala editor Leo:
 sudo apt install python-pyqt5
-pip install leo
+pip install --user leo
