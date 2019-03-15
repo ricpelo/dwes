@@ -1,5 +1,5 @@
-!_build/*
-_build/*
+_build/latex/*
+_build/doctrees
 !_build/latex/dwese.pdf
 docs/_sources
 *.swp

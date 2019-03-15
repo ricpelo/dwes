@@ -1,4 +1,4 @@
-PWD /home/ricardo/src/libro-dwese/_build/latex
+PWD /home/ricardo/libro-dwese/_build/latex
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
@@ -147,8 +147,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/capt-of/capt-of.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/capt-of/capt-of.sty
-INPUT needspace.sty
-INPUT needspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/needspace/needspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/needspace/needspace.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/carlisle/remreset.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/carlisle/remreset.sty
 INPUT sphinxhighlight.sty

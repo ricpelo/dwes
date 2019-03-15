@@ -22,6 +22,9 @@ latexpdf:
 pdf:
 	make latexpdf LATEXMKOPTS="-xelatex -silent"
 
+clean:
+	rm -rf docs _build && mkdir docs _build && ln -s ../docs _build/html
+
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
