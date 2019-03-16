@@ -12,7 +12,7 @@ BUILDDIR      = _build
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-.PHONY: help Makefile
+.PHONY: help Makefile all clean
 
 latexpdf:
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) \
@@ -21,6 +21,8 @@ latexpdf:
 
 pdf:
 	make latexpdf LATEXMKOPTS="-xelatex -silent"
+
+all: pdf html
 
 clean:
 	rm -rf docs _build && mkdir docs _build && ln -s ../docs _build/html
